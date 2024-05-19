@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+
+
+:root {
+    --maincolor: #fff5dc; 
+    --navbuttons: #e6842a;
+    --background: #a6da95;
+    --home-button: #ffa450;
+}
+
+body {
+    /* background-image: url('../imgs/nordwood-themes-R53t-Tg6J4c-unsplash.jpg'); */
+    background-color: #00aeff8e;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    background-color: var(--background);
+    box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
+}
+
+.course-div {
+    width: 93%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: var(--maincolor);
+
+    .course-nav {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .course-nav li {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .course-nav > li:not(:first-child):not(:last-child){
+        ::after {
+            position: absolute;
+            content: "";
+            height: 60%;
+            border-right: 1px solid black;
+            right: 0;
+            margin: auto 0;
+            top: 0;
+            transform: translateY(30%);
+        }
+    }
+    
+    .course-nav li:not(:first-child) {
+        position: relative;
+        flex: 1;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ul.dropdown {
+            display: none;
+            width: 100%;
+            position: absolute;
+            background-color: rgb(248, 190, 65);
+            top: 52px;
+        }
+
+        ul.dropdown li::after, ul.dropdown::after, ul.dropdown li a::after {
+            content: none;
+        }        
+
+        ul.dropdown li {
+            padding: 10px 0px;
+        }
+
+
+        ul.dropdown li:hover {
+            background-color: rgb(224, 162, 28);
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: #faedd1;
+            ul.dropdown {
+                display: block;
+            }
+        }
+
+        a {
+            height: 20px;
+        }
+        
+    }
+
+    .course-nav > li:first-child {
+        padding: 10px 10px;
+        background-color: var(--oxford-blue);
+
+        i {
+            color: var(--home-button);
+        }
+    }
+}

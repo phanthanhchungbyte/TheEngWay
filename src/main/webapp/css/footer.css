@@ -1,0 +1,59 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff5dc;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px 0px;
+    
+    div:not(:first-child){
+        text-align: center;
+    }
+
+    > div {
+        flex: 1;
+        position: relative;
+    }
+
+    > div:not(:last-of-type):after {
+        position: absolute;
+        content: "";
+        border-right: 1px solid black;
+        height: 80%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+    }
+
+    .copyright p {
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .copyright img {
+        max-width: 50%;
+        margin-left: 15%;
+    }
+
+    .contact-information {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-information .contact-line {
+        margin-top: 10px;
+        width: fit-content;
+        margin-left: 20%;
+    }
+
+    .contact-information i {
+        margin-right: 12px;
+    }
+
+
+
+}

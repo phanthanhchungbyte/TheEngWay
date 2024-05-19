@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+
+:root {
+    --maincolor: #fff5dc; 
+    --navbuttons: #e6842a;
+    --background: #a6da95;
+    --oxford-blue: #011638;
+}
+
+@font-face {
+    font-family: Libre_Franklin;
+    src: url(../fonts/LibreFranklin-Regular.ttf);
+}
+
+.banner {
+    width: 93%;
+    margin: 0 auto;
+    display:block;
+    margin-top: 20px;
+}
+.banner img {
+    width: 100%;
+}
+
+.content {
+    float: left;
+    align-items: center;
+    width: 65%;
+    margin-top:50px;
+    margin-left: 45px;
+}
+
+/* Used to clear from float */
+.clear {
+    clear: both;
+}
+
+.content .card {
+    border: solid black 1px;
+    display: flex;
+    background-color: var(--maincolor);
+    font-family: Libre_Franklin, sans-serif;
+    margin-bottom: 75px;
+    box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
+    position: relative;
+
+    .text-content {
+        padding:20px 30px;
+        p.skill-title {
+            font-size: 2em;
+            font-weight: bold;
+            padding: 10px;
+        }
+    
+        p.skill-description {
+            font-size: 1.3em;
+            padding: 10px;
+        }
+    
+        p.contest {
+            font-size: 2em;
+            font-weight: bold;
+            padding: 10px;
+        }
+    
+        p.contest-description {
+            font-size: 1.3em;
+            padding: 10px;
+        }
+
+        li::before{
+            content: '\2722  ';
+            color: #011638;
+        }
+
+        li a {
+            font-size: 1.1em;
+        }
+    }
+
+    img {
+        margin-left: auto;
+        text-align: right;
+        width:35%;
+    }
+}
+.content .card .text-content li{
+    padding: 10px 10px;
+}
+
+.card .text-content {
+    flex: 1;
+}
