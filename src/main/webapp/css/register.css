@@ -9,10 +9,16 @@
 
 
 :root {
-    --maincolor: #fff5dc; 
+    --maincolor: #fff5dc;
     --navbuttons: #e6842a;
     --background: #a6da95;
     --home-button: #ffa450;
+    --validation-success: #d3ffc5;
+    --validation-fail: #f7b0b0;
+    --validation-warning: #ffe998;
+    --validation-success-icon: #37ca37;
+    --validation-fail-icon: #f36767;
+    --tooltip-message: #8d8d8d;
 }
 
 @font-face {
@@ -55,10 +61,7 @@
         -webkit-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
         z-index: 0;
-        padding-left: 7%;
-        padding-top: 8%;
-        padding-right: 7%;
-        padding-bottom: 5%;
+        padding: 8% 7% 5%;
 
         &::after {
             position: absolute;
@@ -79,8 +82,7 @@
             margin-bottom: 3%;
             position: relative;
             z-index: 2;
-            i {
-                
+            > i {
                 padding: 1% 1%;
                 width: 42px;
                 background-color: #033e9e;
@@ -107,8 +109,62 @@
                 font-size: 1.25em;
                 border-left: none;
             }
-        }
 
+            .message {
+                visibility: hidden;
+                i.fa-times-circle {
+                    color: var(--validation-fail-icon);
+                    font-size: 2em;
+                }
+
+                i.fa-check-circle {
+                    color: var(--validation-success-icon);
+                    font-size: 2em;
+                }
+
+                p {
+                    opacity: 0;
+                    color: whitesmoke;
+                    margin-left: 4%;
+                    padding: 10px 50px 10px 10px;
+                    border-radius: 7px;
+                    background-color: var(--tooltip-message);
+                    position: relative;
+                    box-shadow: 0px 1px 31px -2px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 0px 1px 31px -2px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 1px 31px -2px rgba(0,0,0,0.75);
+                    transition: opacity 0.2s ease-out;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 100%;
+                        margin-top: 5px;
+                        border-right: 14px solid var(--tooltip-message);
+                        border-top: 7px solid transparent;
+                        border-bottom: 7px solid transparent;
+                    }
+                }
+                width: 500px;
+                display: flex;
+                position: absolute;
+                right: -77%;
+                top: 25%;
+            }
+
+            .success[type="text"],  .success[type="password"], .success[type="email"]{
+                background-color: var(--validation-success);
+            }
+
+            .fail[type="text"], .fail[type="password"], .fail[type="email"]{
+                background-color: var(--validation-fail);
+            }
+
+            .warning[type="text"], .warning[type="password"], .warning[type="email"]{
+                background-color: var(--validation-warning);
+            }
+        }
     }
     .register-confirmation {
         margin-top:7%;
