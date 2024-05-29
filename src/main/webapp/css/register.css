@@ -53,7 +53,7 @@
         clip-path: polygon(0% 0%, 80% 0%, 99% 100%, 0% 100%);
         background: linear-gradient(to right, #ffa450 0%, #fdcfa4 100%);
     }
-    
+
     .register-input {
         background: url('../imgs/papertexture.png');
         position: relative;

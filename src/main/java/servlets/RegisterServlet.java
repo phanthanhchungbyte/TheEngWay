@@ -7,6 +7,9 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.xml.bind.DatatypeConverter;
+import utils.SecurityUtils;
+
 import java.util.regex.*;
 
 import java.io.IOException;
@@ -62,7 +65,17 @@ public class RegisterServlet extends HttpServlet {
             String password = request.getParameter("password");
             String email = request.getParameter("email");
             // Tạo tài khoản mới
-            if (dao.insertAccount(username, password, email, usertype)) {
+            String saltString= null;
+            byte[] salt = null;
+
+            try {
+                salt = SecurityUtils.getSalt();
+                saltString = DatatypeConverter.printHexBinary(salt);
+            } catch (Exception e) {
+                logger.log(Level.SEVERE, e.getMessage(), e);
+            }
+            String hashed_password = SecurityUtils.getSHA_256_HashedPassword(password, salt);
+            if (dao.insertAccount(username, hashed_password, saltString, email, usertype)) {
                 request.setAttribute("message", "Tạo tài khoản thành công");
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             } else {
@@ -96,9 +109,9 @@ public class RegisterServlet extends HttpServlet {
         responseMap.put("field", "2");
         if(!matcher.matches()) {
             responseMap.put("error_message2", "Password must be at least 8 characters and has at least" +
-                                            "\n - 1 uppercase letter" +
-                                            "\n - 1 digit" +
-                                            "\n - 1 special character");
+                    "\n - 1 uppercase letter" +
+                    "\n - 1 digit" +
+                    "\n - 1 special character");
         } else {
             // Success case
             responseMap.put("success_message2", "Good password");

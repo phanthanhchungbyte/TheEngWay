@@ -1,20 +1,24 @@
 package model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable{
 
     private int userID;
     private String userName;
-    private String password;
+    private String passwordHash;
+    private String passwordSalt;
     private String email;
     private String firstName;
     private String lastName;
     private String userType;
     private String imgsrc;
 
-    public User(int userID, String userName, String password, String email, String firstName, String lastName, String userType, String imgsrc) {
+    public User(int userID, String userName,String passwordHash, String passwordSalt, String email, String firstName, String lastName, String userType, String imgsrc) {
         this.userID = userID;
         this.userName = userName;
-        this.password = password;
+        this.passwordHash = passwordHash;
+        this.passwordSalt = passwordSalt;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -22,10 +26,11 @@ public class User {
         this.imgsrc = imgsrc;
     }
 
-    public User(int userID, String userName, String password, String email) {
+    public User(int userID, String userName, String passwordHash, String passwordSalt, String email) {
         this.userID = userID;
         this.userName = userName;
-        this.password = password;
+        this.passwordHash = passwordHash;
+        this.passwordSalt = passwordSalt;
         this.email = email;
     }
 
@@ -56,13 +61,13 @@ public class User {
         this.userName = userName;
     }
 
-    public String getPassword() {
-        return password;
-    }
+    public String getPasswordHash() { return passwordHash; }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    public void setPasswordHash(String passwordHash) {this.passwordHash = passwordHash;}
+
+    public String getPasswordSalt() { return passwordSalt; }
+
+    public void setPasswordSalt(String passwordSalt) {this.passwordSalt = passwordSalt;}
 
     public String getEmail() {
         return email;
@@ -97,6 +102,6 @@ public class User {
     }
     @Override
     public String toString() {
-        return "User{" + "userID=" + userID + ", userName=" + userName + ", password=" + password + ", email=" + email + ", firstName=" + firstName + ", lastName=" + lastName + ", userType=" + userType + ", imgsrc=" + imgsrc + '}';
+        return "User{" + "userID=" + userID + ", userName=" + userName + ", password_hash=" + passwordHash + ", password_salt" + passwordSalt +", email=" + email + ", firstName=" + firstName + ", lastName=" + lastName + ", userType=" + userType + ", imgsrc=" + imgsrc + '}';
     }
 }

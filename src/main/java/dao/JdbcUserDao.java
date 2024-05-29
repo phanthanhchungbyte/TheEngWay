@@ -6,12 +6,6 @@ import de.vandermeer.asciitable.CWC_LongestLine;
 import model.User;
 import utils.SqlUtils;
 
-import java.net.URI;
-import java.sql.Types;
-
-import javax.sql.rowset.CachedRowSet;
-import javax.sql.rowset.RowSetFactory;
-import javax.sql.rowset.RowSetProvider;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -24,11 +18,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class JdbcUserDao implements UserDao {
-    private static final String LOGIN = "SELECT USER.* FROM USER WHERE USERNAME=? AND PASSWORD=?";
+    private static final String LOGIN = "SELECT USER.* FROM USER WHERE USERNAME=? AND PASSWORD_HASH=?";
     private static final String CHECK_EMAIL_AVAILABLE = "SELECT COUNT(*) FROM USER WHERE EMAIL=?";
     private static final String CHECK_USERNAME_AVAILABLE = "SELECT COUNT(*) FROM USER WHERE USERNAME=?";
-    private static final String ADD_NEW_ACCOUNT = "INSERT INTO USER (USERNAME, PASSWORD, EMAIL, USERTYPE) VALUES (?,?,?,?)";
+    private static final String ADD_NEW_ACCOUNT = "INSERT INTO USER (USERNAME, PASSWORD_HASH, PASSWORD_SALT, EMAIL, USERTYPE) VALUES (?,?,?,?,?)";
     private static final String GET_USER = "SELECT USER.* FROM USER WHERE USERID=?";
+    private static final String GET_USER_SALT = "SELECT USER.PASSWORD_SALT FROM USER WHERE USERNAME=?";
+    private static final String UPDATE_USERINFO = "UPDATE USER Set Email=?,FirstName=?,LastName=?,imgsrc=? where USERID=?";
+
 
     private final Connection connection;
     private PreparedStatement ptm = null;
@@ -42,27 +39,28 @@ public class JdbcUserDao implements UserDao {
         connection = Connect.getConnection();
     }
 
-    public User userLogin(String username, String password) {
+    public User userLogin(String username, String password_hash) {
         User user = null;
         try {
             ptm = connection.prepareStatement(LOGIN);
             ptm.setString(1, username);
-            ptm.setString(2, password);
+            ptm.setString(2, password_hash);
             rs = ptm.executeQuery();
             if (rs.next()) {
                 user = new User(
-                    rs.getInt("USERID"),
-                    rs.getString("PASSWORD"),
-                    rs.getString("USERNAME"),
-                    rs.getString("EMAIL"),
-                    rs.getString("FIRSTNAME"),
-                    rs.getString("LASTNAME"),
-                    rs.getString("USERTYPE"),
-                    rs.getString("IMGSRC")
+                        rs.getInt("USERID"),
+                        rs.getString("USERNAME"),
+                        rs.getString("PASSWORD_HASH"),
+                        rs.getString("PASSWORD_SALT"),
+                        rs.getString("EMAIL"),
+                        rs.getString("FIRSTNAME"),
+                        rs.getString("LASTNAME"),
+                        rs.getString("USERTYPE"),
+                        rs.getString("IMGSRC")
                 );
             }
         } catch (Exception e) {
-            logger.log(Level.SEVERE, e.getMessage());
+            logger.log(Level.SEVERE, e.getMessage(), e);
         } finally {
             SqlUtils.close(ptm, rs);
         }
@@ -123,13 +121,14 @@ public class JdbcUserDao implements UserDao {
     }
 
     // Phương thức chèn tài khoản mới
-    public boolean insertAccount(String username, String password, String email, String usertype) {
+    public boolean insertAccount(String username, String password_hash, String password_salt, String email, String usertype) {
         try {
             ptm = connection.prepareStatement(ADD_NEW_ACCOUNT);
             ptm.setString(1, username);
-            ptm.setString(2, password);
-            ptm.setString(3, email);
-            ptm.setString(4, usertype);
+            ptm.setString(2, password_hash);
+            ptm.setString(3, password_salt);
+            ptm.setString(4, email);
+            ptm.setString(5, usertype);
             ptm.executeUpdate();
             return true;
         } catch (Exception e) {
@@ -148,14 +147,15 @@ public class JdbcUserDao implements UserDao {
             rs = ptm.executeQuery();
             if (rs.next()) {
                 user = new User(
-                    rs.getInt("USERID"),
-                    rs.getString("USERNAME"),
-                    rs.getString("PASSWORD"),
-                    rs.getString("EMAIL"),
-                    rs.getString("FIRSTNAME"),
-                    rs.getString("LASTNAME"),
-                    rs.getString("USERTYPE"),
-                    rs.getString("IMGSRC")
+                        rs.getInt("IDUSER"),
+                        rs.getString("USERNAME"),
+                        rs.getString("PASSWORD_HASH"),
+                        rs.getString("PASSWORD_SALT"),
+                        rs.getString("EMAIL"),
+                        rs.getString("FIRSTNAME"),
+                        rs.getString("LASTNAME"),
+                        rs.getString("USERTYPE"),
+                        rs.getString("IMGSRC")
                 );
             }
         } catch (Exception e) {
@@ -164,6 +164,23 @@ public class JdbcUserDao implements UserDao {
             SqlUtils.close(ptm, rs);
         }
         return user;
+    }
+
+    public String getUserSalt(String userName) {
+        String salt = null;
+        try {
+            ptm = connection.prepareStatement(GET_USER_SALT);
+            ptm.setString(1, userName);
+            rs = ptm.executeQuery();
+            if(rs.next()) {
+                salt = rs.getString("PASSWORD_SALT");
+            }
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, e.getMessage());
+        } finally {
+            SqlUtils.close(ptm, rs);
+        }
+        return salt;
     }
 
 //    public void typeCreate(ArrayList<Object> colValues, int type, ResultSet rs, int col) {
@@ -223,5 +240,25 @@ public class JdbcUserDao implements UserDao {
         } catch (IOException e) {
             logger.log(Level.SEVERE, e.getMessage());
         }
+    }
+    public static boolean Update(int userID, String email, String firstName, String lastName, String imgsrc) {
+        PreparedStatement ptm = null;
+        try ( Connection con = Connect.getConnection()) {
+            if (con != null) {
+                ptm = con.prepareStatement(UPDATE_USERINFO);
+                ptm.setString(1, email);
+                ptm.setString(2, firstName);
+                ptm.setString(3, lastName);
+                ptm.setString(4, imgsrc);
+                ptm.setInt(5, userID);
+                int rowsAffected = ptm.executeUpdate();
+                return rowsAffected > 0;
+            }
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, e.getMessage());
+        } finally {
+            SqlUtils.close(ptm);
+        }
+        return false;
     }
 }

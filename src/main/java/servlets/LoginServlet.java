@@ -6,8 +6,12 @@ import model.User;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import jakarta.xml.bind.DatatypeConverter;
+import utils.SecurityUtils;
 
 import java.io.IOException;
+import java.util.logging.Logger;
+
 @WebServlet(name = "LoginServlet",urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     @Override
@@ -21,19 +25,24 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        User loggedInUser = dao.userLogin(username, password);
+
+        String salt = dao.getUserSalt(username);
+        byte[] newsalt = DatatypeConverter.parseHexBinary(salt);
+        String hashedPassword = SecurityUtils.getSHA_256_HashedPassword(password, newsalt);
+
+        User loggedInUser = dao.userLogin(username, hashedPassword);
         if (loggedInUser != null) {
             String type = loggedInUser.getUserType();
             if (type.equalsIgnoreCase("admin")) {
                 session.setAttribute("loggedInUser", loggedInUser);
-                response.sendRedirect("controller.HomeServlet");
+                response.sendRedirect("AdminServlet");
             } else {
                 session.setAttribute("loggedInUser", loggedInUser);
-                response.sendRedirect("controller.HomeServlet");
+                response.sendRedirect("home.jsp");
             }
         } else {
             request.setAttribute("loginMessage", "Sai Tài Khoản");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }
     }
 }
