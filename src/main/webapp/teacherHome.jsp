@@ -25,7 +25,7 @@
 <div class="container">
     <div>
         <nav class="top-nav">
-            <a class="logo" href="home.jsp">
+            <a class="logo" href="teacherHome.jsp">
                 <img src="imgs/TheEngWayLogo.png" alt="The Logo">
             </a>
             <div class="search">
@@ -50,7 +50,7 @@
     <div class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
-                <a href="home.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                <a href="teacherHome.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
                 <a href="#">Nghe</a>

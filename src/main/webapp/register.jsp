@@ -20,7 +20,7 @@
     <div class="container">
         <div>
             <nav class="top-nav">
-                <a class="logo" href="index.jsp">
+                <a class="logo" href="home.jsp">
                     <img src="imgs/TheEngWayLogo.png" alt="The Logo">
                 </a>
                 <div class="search">
@@ -38,7 +38,7 @@
         <div class="course-div">
             <ul class="course-nav" aria-label="nav">
                 <li>
-                    <a href="index.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                    <a href="home.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
                 </li>
                 <li>
                     <a href="#">Nghe</a>
@@ -147,6 +147,18 @@
                                 <div class="message email-message">
                                     <i class="far icon"></i>
                                     <p id="email-new-message"></p>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-envelope fa-2x"></i>
+                                <div class="label"><label>Select User Type:</label><br></div>
+                                <div class="input"><input type="radio" id="student" name="usertype" value="Student" required></div>
+                                <div class="label"><label for="student">Student</label><br></div>
+                                <div class="input"><input type="radio" id="teacher" name="usertype" value="Teacher" required></div>
+                                <div class="label"><label for="teacher">Teacher</label><br></div>
+                                <div class="message usertype-message">
+                                    <i class="far icon"></i>
+                                    <p id="usertype-new-message"></p>
                                 </div>
                             </div>
                             <div class="register-confirmation">

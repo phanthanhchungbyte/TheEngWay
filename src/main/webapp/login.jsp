@@ -120,7 +120,7 @@
                             <div class="input"><input type="password" id="password" name="password" placeholder="Mật khẩu"></div>
                         </div>
                         <div class="login-confirmation">
-                            <a href="index.jsp">Quên mật khẩu?</a>
+                            <a href="forgotpassword.jsp">Quên mật khẩu?</a>
                             <button type="submit">Đăng nhập</button>
                         </div>
                     </form>

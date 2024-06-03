@@ -33,16 +33,23 @@ public class LoginServlet extends HttpServlet {
         User loggedInUser = dao.userLogin(username, hashedPassword);
         if (loggedInUser != null) {
             String type = loggedInUser.getUserType();
-            if (type.equalsIgnoreCase("admin")) {
-                session.setAttribute("loggedInUser", loggedInUser);
-                response.sendRedirect("AdminServlet");
-            } else {
-                session.setAttribute("loggedInUser", loggedInUser);
-                response.sendRedirect("home.jsp");
+            switch (type) {
+                case "Admin":
+                    response.sendRedirect("AdminServlet");
+                    break;
+                case "Student":
+                    response.sendRedirect("studentHome.jsp");
+                    break;
+                case "Teacher":
+                    response.sendRedirect("teacherHome.jsp");
+                    break;
+                default:
+                    response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid user type");
+                    break;
             }
         } else {
             request.setAttribute("loginMessage", "Sai Tài Khoản");
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }
 }

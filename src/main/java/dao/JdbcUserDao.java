@@ -25,6 +25,8 @@ public class JdbcUserDao implements UserDao {
     private static final String GET_USER = "SELECT USER.* FROM USER WHERE USERID=?";
     private static final String GET_USER_SALT = "SELECT USER.PASSWORD_SALT FROM USER WHERE USERNAME=?";
     private static final String UPDATE_USERINFO = "UPDATE USER Set Email=?,FirstName=?,LastName=?,imgsrc=? where USERID=?";
+    private static final String LOGINWITHEMAIL = "SELECT * FROM.[USER] where EMAIL=?";
+    private static final String UPDATEPASSWORD = "UPDATE USER Set PASSWORD_HASH=? where EMAIL=?";
 
 
     private final Connection connection;
@@ -258,6 +260,49 @@ public class JdbcUserDao implements UserDao {
             logger.log(Level.SEVERE, e.getMessage());
         } finally {
             SqlUtils.close(ptm);
+        }
+        return false;
+    }
+    public static User userLoginWithEmail(String email) {
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        User user = null;
+        try ( Connection con = Connect.getConnection()) {
+            if (con != null) {
+                ptm = con.prepareStatement(LOGINWITHEMAIL);
+                ptm.setString(1, email);
+                rs = ptm.executeQuery();
+                if (rs.next()) {
+                    user = new User(
+                            rs.getInt("USERID"),
+                            rs.getString("USERNAME"),
+                            rs.getString("PASSWORD_HASH"),
+                            rs.getString("PASSWORD_SALT"),
+                            rs.getString("EMAIL"),
+                            rs.getString("FIRSTNAME"),
+                            rs.getString("LASTNAME"),
+                            rs.getString("USERTYPE"),
+                            rs.getString("IMGSRC")
+                    );
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
+    public static boolean UpdatePassword(String Password, String Email) {
+        PreparedStatement ptm = null;
+        try ( Connection con = Connect.getConnection()) {
+            if (con != null) {
+                ptm = con.prepareStatement(UPDATEPASSWORD);
+                ptm.setString(1, Password);
+                ptm.setString(2, Email);
+                int rowsAffected = ptm.executeUpdate();
+                return rowsAffected > 0;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return false;
     }
