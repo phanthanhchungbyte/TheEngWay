@@ -350,7 +350,7 @@
                     processMessage(data, 'confirm-password', 'repassword-message', 3);
                     break;
                 case "4":
-                    processMessage(data, 'email', 'email-message', 4);
+                    processMessage(data, 'emai6l', 'email-message', 4);
                     break;
             }
         }

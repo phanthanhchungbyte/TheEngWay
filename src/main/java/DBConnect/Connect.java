@@ -1,45 +1,44 @@
 package DBConnect;
 
-import DBConnect.DBInfo;
-
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
+import com.zaxxer.hikari.HikariDataSource;
+import dao.JdbcUserDao;
+import model.User;
 
 public class Connect {
-    private static Connection connection = null;
+    private static final HikariDataSource dataSource;
 
     private Connect() {
 
     }
 
-    public static Connection getConnection() {
-        if(connection == null) {
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
+    static {
+        HikariDataSource ds = new HikariDataSource();
+        ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        ds.setJdbcUrl(DBInfo.dbURL);
+        ds.setUsername(DBInfo.dbUSER);
+        ds.setPassword(DBInfo.dbPASSWORD);
+        ds.setMaximumPoolSize(50);
+        ds.setMinimumIdle(5);
+        ds.setMaxLifetime(1900000);
+        dataSource = ds;
+    }
 
-            try {
-                connection = DriverManager.getConnection(
-                    DBInfo.dbURL,
-                    DBInfo.dbUSER,
-                    DBInfo.dbPASSWORD
-                );
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
+    public static Connection getConnection() throws SQLException{
+        return dataSource.getConnection();
+    }
+
+    public static void closeDataSource() {
+        if(dataSource != null && !dataSource.isClosed()) {
+            dataSource.close();
         }
-        return connection;
     }
 
     public static void main(String[] args) {
-        Connection conn = getConnection();
-        if(conn != null) {
-            System.out.println("Connection Established");
-        } else {
-            System.out.println("Connection Not Established");
-        }
+        JdbcUserDao dao = new JdbcUserDao();
+        User test = dao.getUserWithEmail("phanthanhchung8c8@gmail.com");
+        System.out.println(test.getUserName());
+        System.out.println(test.getUserID());
     }
 }

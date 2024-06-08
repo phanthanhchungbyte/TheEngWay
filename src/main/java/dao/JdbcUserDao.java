@@ -1,11 +1,13 @@
 package dao;
 
 import DBConnect.Connect;
+import DBConnect.DBInfo;
 import de.vandermeer.asciitable.AsciiTable;
 import de.vandermeer.asciitable.CWC_LongestLine;
 import model.User;
 import utils.SqlUtils;
 
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -25,23 +27,29 @@ public class JdbcUserDao implements UserDao {
     private static final String GET_USER = "SELECT USER.* FROM USER WHERE USERID=?";
     private static final String GET_USER_SALT = "SELECT USER.PASSWORD_SALT FROM USER WHERE USERNAME=?";
     private static final String UPDATE_USERINFO = "UPDATE USER Set Email=?,FirstName=?,LastName=?,imgsrc=? where USERID=?";
+    private static final String GETUSERWITHEMAIL = "SELECT * FROM USER WHERE EMAIL=?";
+    private static final String UPDATEPASSWORD = "UPDATE USER SET PASSWORD_HASH=?, PASSWORD_SALT=? WHERE EMAIL=?";
 
-
-    private final Connection connection;
-    private PreparedStatement ptm = null;
-    private ResultSet rs = null;
     private static final Logger logger = Logger.getLogger(JdbcUserDao.class.getName());
 
     public JdbcUserDao() {
         // Use logger to log errors and exceptions instead of system.
         logger.setLevel(Level.FINE);
         logger.info("Logger Initialized");
-        connection = Connect.getConnection();
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public User userLogin(String username, String password_hash) {
         User user = null;
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        Connection connection = null;
         try {
+            connection = Connect.getConnection();
             ptm = connection.prepareStatement(LOGIN);
             ptm.setString(1, username);
             ptm.setString(2, password_hash);
@@ -62,13 +70,67 @@ public class JdbcUserDao implements UserDao {
         } catch (Exception e) {
             logger.log(Level.SEVERE, e.getMessage(), e);
         } finally {
-            SqlUtils.close(ptm, rs);
+            SqlUtils.close(ptm, rs, connection);
         }
         return user;
     }
 
-    public boolean checkEmailAvailable(String email) {
+    public User getUserWithEmail(String email) {
+        User user = null;
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        Connection connection = null;
         try {
+            connection = Connect.getConnection();
+            ptm = connection.prepareStatement(GETUSERWITHEMAIL);
+            ptm.setString(1, email);
+            rs = ptm.executeQuery();
+            if (rs.next()) {
+                user = new User(
+                        rs.getInt("USERID"),
+                        rs.getString("USERNAME"),
+                        rs.getString("PASSWORD_HASH"),
+                        rs.getString("PASSWORD_SALT"),
+                        rs.getString("EMAIL"),
+                        rs.getString("FIRSTNAME"),
+                        rs.getString("LASTNAME"),
+                        rs.getString("USERTYPE"),
+                        rs.getString("IMGSRC")
+                );
+            }
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+            SqlUtils.close(ptm, rs, connection);
+        }
+        return user;
+    }
+
+    public boolean updatePassword( String Password_Hash, String Password_Salt, String Email) {
+        PreparedStatement ptm = null;
+        Connection connection = null;
+        try {
+            connection = Connect.getConnection();
+            ptm = connection.prepareStatement(UPDATEPASSWORD);
+            ptm.setString(1, Password_Hash);
+            ptm.setString(2, Password_Salt);
+            ptm.setString(3, Email);
+            int rowsAffected = ptm.executeUpdate();
+            return rowsAffected > 0;
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+            SqlUtils.close(ptm, connection);
+        }
+        return false;
+    }
+
+    public boolean checkEmailAvailable(String email) {
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        Connection connection = null;
+        try {
+            connection = Connect.getConnection();
             ptm = connection.prepareStatement(CHECK_EMAIL_AVAILABLE);
             ptm.setString(1, email);
             rs = ptm.executeQuery();
@@ -82,14 +144,18 @@ public class JdbcUserDao implements UserDao {
         } catch (Exception e) {
             logger.log(Level.SEVERE, e.getMessage());
         } finally {
-            SqlUtils.close(ptm, rs);
+            SqlUtils.close(ptm, rs, connection);
         }
         return true;
     }
 
     // Phương thức kiểm tra username đã tồn tại chưa
     public boolean checkUsernameAvailable(String username) {
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        Connection connection = null;
         try {
+            connection = Connect.getConnection();
             ptm = connection.prepareStatement(CHECK_USERNAME_AVAILABLE);
             ptm.setString(1, username);
             rs = ptm.executeQuery();
@@ -115,14 +181,17 @@ public class JdbcUserDao implements UserDao {
         } catch (Exception e) {
             logger.log(Level.SEVERE, e.getMessage());
         } finally {
-            SqlUtils.close(ptm, rs);
+            SqlUtils.close(ptm, rs, connection);
         }
         return true;
     }
 
     // Phương thức chèn tài khoản mới
     public boolean insertAccount(String username, String password_hash, String password_salt, String email, String usertype) {
+        PreparedStatement ptm = null;
+        Connection connection = null;
         try {
+            connection = Connect.getConnection();
             ptm = connection.prepareStatement(ADD_NEW_ACCOUNT);
             ptm.setString(1, username);
             ptm.setString(2, password_hash);
@@ -134,41 +203,49 @@ public class JdbcUserDao implements UserDao {
         } catch (Exception e) {
             logger.log(Level.SEVERE, e.getMessage());
         } finally {
-            SqlUtils.close(ptm, rs);
+            SqlUtils.close(ptm, connection);
         }
         return false;
     }
 
     public User getUser(int UserID) {
         User user = null;
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        Connection connection = null;
         try {
+            connection = Connect.getConnection();
             ptm = connection.prepareStatement(GET_USER);
             ptm.setInt(1, UserID);
             rs = ptm.executeQuery();
             if (rs.next()) {
                 user = new User(
-                        rs.getInt("IDUSER"),
-                        rs.getString("USERNAME"),
-                        rs.getString("PASSWORD_HASH"),
-                        rs.getString("PASSWORD_SALT"),
-                        rs.getString("EMAIL"),
-                        rs.getString("FIRSTNAME"),
-                        rs.getString("LASTNAME"),
-                        rs.getString("USERTYPE"),
-                        rs.getString("IMGSRC")
+                    rs.getInt("IDUSER"),
+                    rs.getString("USERNAME"),
+                    rs.getString("PASSWORD_HASH"),
+                    rs.getString("PASSWORD_SALT"),
+                    rs.getString("EMAIL"),
+                    rs.getString("FIRSTNAME"),
+                    rs.getString("LASTNAME"),
+                    rs.getString("USERTYPE"),
+                    rs.getString("IMGSRC")
                 );
             }
-        } catch (Exception e) {
+        }catch (Exception e) {
             logger.log(Level.SEVERE, e.getMessage());
         } finally {
-            SqlUtils.close(ptm, rs);
+            SqlUtils.close(ptm, rs, connection);
         }
         return user;
     }
 
     public String getUserSalt(String userName) {
         String salt = null;
-        try {
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        Connection connection = null;
+        try{
+            connection = Connect.getConnection();
             ptm = connection.prepareStatement(GET_USER_SALT);
             ptm.setString(1, userName);
             rs = ptm.executeQuery();
@@ -178,7 +255,7 @@ public class JdbcUserDao implements UserDao {
         } catch (Exception e) {
             logger.log(Level.SEVERE, e.getMessage());
         } finally {
-            SqlUtils.close(ptm, rs);
+            SqlUtils.close(ptm, rs, connection);
         }
         return salt;
     }
@@ -243,9 +320,11 @@ public class JdbcUserDao implements UserDao {
     }
     public static boolean Update(int userID, String email, String firstName, String lastName, String imgsrc) {
         PreparedStatement ptm = null;
-        try ( Connection con = Connect.getConnection()) {
-            if (con != null) {
-                ptm = con.prepareStatement(UPDATE_USERINFO);
+        Connection connection = null;
+        try {
+            connection = Connect.getConnection();
+            if (connection != null) {
+                ptm = connection.prepareStatement(UPDATE_USERINFO);
                 ptm.setString(1, email);
                 ptm.setString(2, firstName);
                 ptm.setString(3, lastName);
@@ -260,5 +339,12 @@ public class JdbcUserDao implements UserDao {
             SqlUtils.close(ptm);
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        JdbcUserDao dao = new JdbcUserDao();
+        User user = dao.getUserWithEmail("phanthanhchung8c8@gmail.com");
+        System.out.println(user.getUserID());
+        System.out.println(user.getUserName());
     }
 }

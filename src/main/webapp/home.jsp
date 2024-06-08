@@ -14,36 +14,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/homebar.css">
     <link rel="stylesheet" href="css/coursenav.css">
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/home.css">
+
 </head>
 <body>
 <div class="container">
-
-    <div>
-        <nav class="top-nav">
-            <a class="logo" href="index.jsp">
+    <nav class="top-nav">
+        <div class="logo-div">
+            <a class="logo" href="home.jsp">
                 <img src="imgs/TheEngWayLogo.png" alt="The Logo">
             </a>
-            <div class="search">
-                <i class="fad fa-search"></i>
-                <input class="search-bar" placeholder="Search lessons here">
+        </div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="home-page">
+            <div class="menu-items-div">
+                <ul class="menu-items">
+                    <li class="search">
+                        <i class="fad fa-search"></i>
+                        <input class="search-bar" placeholder="Search lessons here">
+                    </li>
+                </ul>
             </div>
-            </input>
-            <div class="buttons">
-                <a href="login.jsp"><button>Đăng nhập</button></a>
-                <a href="register.jsp"><button>Đăng ký</button></a>
+            <div class="profile-home-card">
+                <img src="imgs/stock-avatar.jpg" alt="">
+                <div class="shown-info">
+                    <p class="username-profile">${sessionScope.loggedInUser.getUserName()}</p>
+                    <p class="level-profile">LV1</p>
+                    <p><span>0</span> thông báo mới</p>
+                </div>
+                <div>
+                    <a href="student_profile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                    <li class="setting-cog"><a href="index.jsp">Exit</a></li>
+                </div>
             </div>
-        </nav>
-    </div>
+            <div class="profile-home-card-mini">
+                <img src="imgs/stock-avatar.jpg" alt="Avatar"/>
+                <i class="fas fa-caret-down fa-2x"></i>
+                <ul class="mini-profile-dropdown">
+                    <li class="settings">
+                        <a href="student_profile.jsp">Settings</a>
+                    </li>
+                    <li class="exit">
+                        <a href="index.jsp">Exit</a>
+                    </li>
+                </ul>
+            </div>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </div>
+    </nav>
 
     <div class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
-                <a href="index.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                <a href="home.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
                 <a href="#">Nghe</a>

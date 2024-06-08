@@ -12,5 +12,9 @@ public interface UserDao {
 
     boolean insertAccount(String username, String password_hash, String password_salt, String email, String usertype);
 
+    User getUserWithEmail(String email);
+
+    boolean updatePassword(String username, String password_hash, String email);
+
     User getUser(int userID);
 }

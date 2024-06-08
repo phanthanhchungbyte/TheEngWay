@@ -5,12 +5,13 @@
     list-style-type: none;
     text-decoration: none;
     color: black;
+
 }
 
 :root {
-    --maincolor: #fff5dc; 
+    --maincolor: #fff5dc;
     --orange: #e6842a;
-    --background: #a6da95;
+    --background: #97CECC;
     --oxford-blue: #011638;
 }
 
@@ -20,7 +21,6 @@
 }
 
 aside {
-    float: right;
     width: 23%;
     margin-right: 3%;
     margin-top: 50px;
@@ -36,6 +36,9 @@ aside {
 }
 
 .top-5 {
+    box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
     h1 {
         text-align: center;
         padding: 20px;
@@ -72,12 +75,12 @@ aside {
         }
 
         td:nth-child(even), th:nth-child(even) {
-            background-color: #050c3b;    
+            background-color: #050c3b;
             color: white;
             border: solid 1px white;
         }
         td:nth-child(odd), th:nth-child(odd) {
-            background-color: #ffa450;    
+            background-color: #ffa450;
             border: solid 1px white;
         }
     }
@@ -88,17 +91,21 @@ aside {
     padding-top: 5%;
     font-family: Libre_Franklin, sans-serif;
     background-color: var(--maincolor);
+    box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
 
     .questions_and_answers-title {
         background-color: #e4f3f6;
         margin-bottom: 5%;
-        
+        border: 1px solid black;
+
         h1 {
             text-align: center;
             padding: 20px;
         }
     }
-    
+
     .questions_and_answers-commentbox {
         padding: 0 5%;
         margin-bottom: 10px;
@@ -172,4 +179,14 @@ aside {
 }
 .kinh-nghiem img{
     width: 100%;
+}
+
+@media only screen and (width < 1000px) {
+
+    aside {
+        margin: 1rem auto;
+        width: 90%;
+        justify-content: center;
+    }
+
 }

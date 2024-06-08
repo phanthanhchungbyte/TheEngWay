@@ -14,24 +14,25 @@
 </head>
 <body>
     <div class="container">
-
-        <div>
-            <nav class="top-nav">
+        <nav class="top-nav">
+            <div>
                 <a class="logo" href="index.jsp">
                     <img src="imgs/TheEngWayLogo.png" alt="The Logo">
                 </a>
-                <div class="search">
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <ul class="menu-items">
+                <li class="search">
                     <i class="fad fa-search"></i>
-                    <input class="search-bar" placeholder="Search lessons here" label="search">
-
-                    </input>
-                </div>
-                <div class="buttons">
-                    <a href="login.jsp"><button>Đăng nhập</button></a>
-                    <a href="register.jsp"><button>Đăng ký</button></a>
-                </div>
-            </nav>
-        </div>
+                    <input class="search-bar" placeholder="Search lessons here">
+                </li>
+                <li> <a href="login.jsp" class="navlogin">Đăng nhập</a> </li>
+                <li> <a href="register.jsp" class="registerlogin">Đăng ký</a> </li>
+            </ul>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </nav>
 
         <div class="course-div">
             <ul class="course-nav" aria-label="nav">
