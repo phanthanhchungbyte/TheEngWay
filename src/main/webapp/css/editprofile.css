@@ -23,15 +23,15 @@
     --fs-300: 0.75rem;
     --fs-200: 0.5rem;
     --progress:
-            linear-gradient(#fff8,#fff0),
-            repeating-linear-gradient(135deg,#0003 0 10px,#0000 0 20px),
+            linear-gradient(#fff8, #fff0),
+            repeating-linear-gradient(135deg, #0003 0 10px, #0000 0 20px),
             #31c6f7;
 }
 
 .banner {
     width: 93%;
     margin: 0 auto;
-    display:block;
+    display: block;
     margin-top: 20px;
 }
 
@@ -70,11 +70,11 @@
             text-align: center;
         }
 
-        .student-info .student-avatar h2{
+        .student-info .student-avatar h2 {
             margin-top: 0.5em;
         }
 
-        .student-info .student-bio{
+        .student-info .student-bio {
             margin-left: 15%;
             line-height: 2.15rem;
 
@@ -87,7 +87,7 @@
                 font-style: italic;
             }
 
-            p:last-child > a {
+            p:last-child>a {
                 color: blue;
 
                 &:hover {
@@ -205,7 +205,8 @@
             }
         }
 
-        p::before, p::after {
+        p::before,
+        p::after {
             content: "";
             width: 2.4em;
             height: 100%;
@@ -240,7 +241,7 @@
         justify-content: space-around;
         padding: 1em 0;
 
-        > div {
+        >div {
             width: 40%;
             padding: 2em 0.5em;
             border-radius: 10px;
@@ -256,6 +257,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 position: relative;
+
                 label {
                     font-size: calc(var(--fs-600));
                     font-weight: bold;
@@ -264,6 +266,7 @@
                 .progress {
                     width: 90%;
                     margin-inline: auto;
+
                     progress {
                         padding: 1rem 0px;
                         width: 100%;
@@ -275,6 +278,7 @@
                     margin-inline: auto;
                     width: 90%;
                     justify-content: space-between;
+
                     span {
                         font-size: var(--fs-lg);
                     }
@@ -293,6 +297,7 @@
                 background-position: center;
 
             }
+
             background: linear-gradient(180deg, #5BE22B 0%, #70E049 52%, #3B8B1F 100%);
         }
 
@@ -302,7 +307,8 @@
                 height: 100%;
                 margin-inline: auto;
             }
-            background-image: linear-gradient(180deg, #FFF5D3  0%, #FDF8E7 51%, #C7BD9D 100%);
+
+            background-image: linear-gradient(180deg, #FFF5D3 0%, #FDF8E7 51%, #C7BD9D 100%);
 
             .profile-streak-info {
                 display: flex;
@@ -332,69 +338,7 @@
     }
 }
 
-.wall-profile-achievements {
-    background-color: #a6d283;
-    padding: 1.5em;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: var(--fs-400);
-    align-items: center;
-    width: 90%;
-    margin: auto;
-    .achievement-title {
-        text-align: center;
-        font-family: Send_Flowers;
-        font-size: var(--fs-600);
-        margin-bottom: 0.9rem;
-    }
-    .achievement-card {
-        display: flex;
-        border: 1px solid black;
-        border-top: none;
-        .achievement-cup {
-            width: 15%;
-            img {
-                width: 85%;
-            }
-        }
-        .achievement-progress {
-            width: 100%;
-            justify-content: space-between;
-            margin: auto 0px;
-            position: relative;
-            h2 {
-                margin-bottom: 0.7rem;
-                font-size: var(--fs-600);
-            }
-            progress {
-                width: 90%;
-                padding: 1rem 0;
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            progress::after {
-                content: "30/100";
-                text-align: center;
-                font-size: var(--fs-300);
-                position: absolute;
-                width: 100%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                pointer-events: none;
-                background-color: transparent;
-            }
-
-
-        }
-    }
-
-}
-
-.wall-comment {
+.edit-section {
     background-color: #a6d283;
     padding: 1.5em;
     border: 1px solid black;
@@ -403,38 +347,143 @@
     align-items: center;
     width: 90%;
     margin: 1.5rem auto;
-    .comment-title {
+
+    .edit-title {
         font-family: Send_Flowers, sans-serif;
+        text-align: left;
         margin-bottom: 0.9rem;
         font-size: var(--fs-600);
-        text-align: center;
     }
-    .comment-bar {
+
+    .edit-form-section {
+        background-color: var(--skin-color);
+        padding: 1em 0px;
+        font-size: var(--fs-500);
+    }
+
+    .edit-form-section .input-row {
         display: flex;
-        border: 1px solid black;
-        border-top: none;
-        .comment-avatar {
-            width: 10%;
-            align-items: center;
-            img {
-                border-radius: 50%;
-                width: 70%;
-                margin: 0.4rem 0.4rem;
-            }
+        flex-wrap: wrap;
+        width: 80%;
+        margin-inline: auto;
+        justify-content: space-between;
+        padding: 0.45rem 0px;
+        align-items: center;
+    }
+
+    .edit-form-section .input-row {
+        > label {
+            width: max(150px, 20%);
         }
-        .comment-content {
-            p {
-                margin-top: 0.4rem;
-            }
-            p:last-child {
-                margin-top: 2.3rem;
-            }
+
+        input {
+            width: max(40%, 250px);
+            padding: 10px 0px;
+            padding-right: 1em;
+            border-radius: 5px;
+            border: none;
+            padding-left: 1em;
+            box-shadow: inset 0 0 5px 2px #cac9c9e6;
         }
     }
 
+    .input-row .toggle {
+        padding: 0.5em 0px;
+
+        input[type="checkbox"] {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            /* Right: 100vh to make the checkbox still interactable, but not visible on screen. */
+            right: 100vh;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] + label {
+            position: relative;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        input[type="checkbox"] + label::before {
+            display: inline-block;
+            margin-right: 0.5em;
+            content: "";
+            width: 4em;
+            height: 2em;
+            border-radius: 2em;
+            background-color: #DDD;
+            transition: background-color 200ms ease-in-out;
+        }
+
+        input[type="checkbox"]:focus + label::before {
+            outline: 1px solid rgb(149, 149, 149);
+        }
+
+        input[type="checkbox"]:checked + label::before {
+            background-color: rgb(155, 255, 92);
+        }
+
+        input[type="checkbox"] + label::after {
+            position: absolute;
+            content: "";
+            height: 1.7em;
+            width: 1.7em;
+            background-color: white;
+            left: 0.2em;
+            border-radius: 50%;
+            transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+        }
+
+        input[type="checkbox"]:checked + label::after {
+            transform: translateX(110%);
+            background-color: hsl(133, 100%, 93%);
+        }
+
+        input[type="checkbox"]:checked + label{
+            color: red;
+        }
+    }
+
+    .gender-row {
+        width: 80%;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    .button-group {
+        width: 30%;
+        display: flex;
+        margin-right: 35%;
+        justify-content: space-between;
+    }
+
+    .submit-button {
+        margin-top: 2em;
+        text-align: center;
+
+        button {
+            padding: 13px 8px;
+            background-color: #31c6f7;
+            border: none;
+            color: white;
+            border-radius: 7px;
+            box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+    }
 }
 
-@media only screen and (1000px <= width <= 1589px) {
+@media only screen and (1000px <=width <=1589px) {
     :root {
         --fs-600: 1.25rem;
         --fs-xl: 2rem;
@@ -445,6 +494,7 @@
         flex-direction: column;
         text-align: center;
     }
+
     .student-profile .student-maininfo .student-info {
         .student-bio {
             margin-left: 0;
@@ -457,147 +507,14 @@
             margin: 0 auto;
         }
 
-        .student-buttons li{
+        .student-buttons li {
             margin-top: 0.75em;
         }
     }
 }
 
-/* Styling the popup for avatar changing */
-.modal {
-    max-width: 50ch;
-    padding: 2.5em 2em;
-    text-align: center;
-    align-items: center;
-    margin-inline: auto;
-    margin-top: 40vh;
-    z-index: 4;
-
-    .input-avatar {
-        display: flex;
-        justify-content: center;
-
-        > * {
-            width: 70%;
-        }
-    }
-}
-
-.modal h3 {
-    margin-bottom: 1em;
-}
-
-.modal img{
-    border-radius: 50%;
-}
-
-.modal button {
-    display: block;
-    margin-inline: auto;
-    margin-top: 1em;
-    width: max-content;
-    padding: 0.35em 0.75em;
-    border-radius: 5px;
-    background-color: rgb(255, 170, 170);
-    border: none;
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-.modal .submit-avatar {
-    background-color: #a6d283;
-}
-
-#modal2 {
-    z-index: 5;
-    margin-inline: auto;
-    padding: 1em;
-    text-align: center;
-    margin-top: 10vh;
-
-    img {
-        margin: 10px 0;
-    }
-
-    button {
-        margin-top: 0.5em;
-        padding: 0.5em 1.5em;
-        background-color: #31c6f7;
-        border: none;
-        border-radius: 6px;
-    }
-
-    button:hover {
-        cursor: pointer;
-    }
-}
-
-.personalinfo-section {
-    background-color: #a6d283;
-    padding: 1.5em;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: var(--fs-400);
-    align-items: center;
-    width: 90%;
-    margin: 1.5rem auto;
-
-    .personalinfo-title {
-        display: flex;
-        justify-content: space-between;
-        font-family: Send_Flowers, sans-serif;
-        text-align: left;
-        margin-bottom: 0.9rem;
-        font-size: var(--fs-600);
-    }
-
-    .changeinfo-button {
-        position: relative;
-    }
-
-    .changeinfo-button i {
-        position: absolute;
-        top: 25%;
-        left: 5%;
-        font-size: var(--fs-400);
-    }
-
-    .changeinfo-button button{
-        padding: 0.7em 2em;
-        padding-left: 2.2em;
-        border-radius: 10px;
-        font-family: Libre_Franklin;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    .profile-section {
-        background-color: var(--skin-color);
-        padding: 1em 0px;
-        font-size: var(--fs-500);
-    }
-
-    .profile-section .profile-row {
-        display: flex;
-        flex-wrap: wrap;
-        width: 80%;
-        margin-inline: auto;
-        justify-content: space-between;
-        padding: 0.6rem 0px;
-        align-items: center;
-    }
-
-    .profile-section .profile-row p {
-        width: 50%;
-        text-align: left;
-    }
-}
-
 @media only screen and (width < 1000px) {
-    .student-profile section.wall-profile-statcard > div {
+    .student-profile section.wall-profile-statcard>div {
         margin-top: 2em;
         width: max(60%, 350px);
     }
@@ -608,7 +525,7 @@
         justify-content: center;
     }
 
-    .student-profile .student-maininfo .student-buttons{
+    .student-profile .student-maininfo .student-buttons {
         margin-top: 1em;
         margin-inline: auto;
         width: 100%;

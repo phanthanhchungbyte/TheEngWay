@@ -3,6 +3,8 @@ package dao;
 
 import model.User;
 
+import java.sql.Date;
+
 public interface UserDao {
     User userLogin(String username, String password_hash);
 
@@ -15,6 +17,10 @@ public interface UserDao {
     User getUserWithEmail(String email);
 
     boolean updatePassword(String username, String password_hash, String email);
+
+    boolean updateAvatar(String username, String avatar);
+
+    boolean updateUserProfile(String fullName, Date dateOfBirth, String gender, String address, String phoneNumber, int userID);
 
     User getUser(int userID);
 }

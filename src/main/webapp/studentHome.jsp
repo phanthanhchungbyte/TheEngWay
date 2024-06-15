@@ -1,14 +1,7 @@
 <%@page contentType="text/html" pageEncoding="utf-8" %>
 <!DOCTYPE html>
 <html lang="en">
-<%@page import="model.User" %>
-<%@page import="jakarta.servlet.http.HttpSession" %>
-<%@page import="jakarta.servlet.http.HttpServletRequest" %>
-<%@page import="jakarta.servlet.http.HttpServletResponse" %>
-<%
-    HttpSession session1 = request.getSession(false);
-    User loggedInUser = (User) session1.getAttribute("loggedInUser");
-%>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +34,7 @@
                 </ul>
             </div>
             <div class="profile-home-card">
-                <img src="imgs/stock-avatar.jpg" alt="">
+                <img src="${sessionScope.loggedInUser.getAvatar()}" alt="">
                 <div class="shown-info">
                     <p class="username-profile">${sessionScope.loggedInUser.getUserName()}</p>
                     <p class="level-profile">LV1</p>
@@ -53,7 +46,7 @@
                 </div>
             </div>
             <div class="profile-home-card-mini">
-                <img src="imgs/stock-avatar.jpg" alt="Avatar"/>
+                <img src="${sessionScope.loggedInUser.getAvatar()}" alt="Avatar"/>
                 <i class="fas fa-caret-down fa-2x"></i>
                 <ul class="mini-profile-dropdown">
                     <li class="settings">
@@ -261,23 +254,37 @@
 
                 <div class="comment-div">
                     <div class="comment">
-                        <h4>genericUsername26 (VIP)</h4>
-                        <p>ﾚの尺乇ﾶ　ﾉｱ丂ひﾶ　りのﾚの尺　丂ﾉｲ　ﾑﾶ乇ｲ　ᄃの刀丂乇ᄃｲ乇ｲひ尺　ﾑりﾉｱﾉ丂ﾉᄃﾉ刀ム　乇ﾚﾉｲ．　乇の丂，　√のﾚひｱｲﾑ丂．　ﾉﾚﾚの　ｱ尺の√ﾉり乇刀ｲ，　乇ｲ　乇ひﾶ　ﾑひｲ乇ﾶ　ゐひﾑ乇　んﾉᄃ　乇ﾉひ丂！　ﾉ丂ｲ乇　ﾶのﾚﾚﾉｲﾉﾑ　乇√乇刀ﾉ乇ｲ　乇ひﾶ　んﾑ尺ひﾶ　√乇刀ﾉﾑﾶ　√乇尺の　ｱ乇尺ｷ乇尺乇刀りﾉ丂，　ﾚﾑ乃の尺ﾉの丂ﾑﾶ　√乇ﾚ　ᄃひﾶゐひ乇</p>
-                        <button><i class="fas fa-comments"></i> Ans (10)</button>
+                        <h4>languageLearner88 (VIP)</h4>
+                        <p>What are some effective methods for expanding your English vocabulary quickly?</p>
+                        <button><i class="fas fa-comments"></i> Ans (15)</button>
                     </div>
                 </div>
                 <div class="comment-div">
                     <div class="comment">
-                        <h4>Benjamin Wong (VIP)</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat numquam ea recusandae porro perferendis nostrum autem reiciendis veritatis cupiditate dicta eos, harum voluptatum sed eum voluptates alias? Ratione, exercitationem dolorum?</p>
-                        <button><i class="fas fa-comments"></i> Ans (10)</button>
+                        <h4>grammarGuru (VIP)</h4>
+                        <p>Can anyone explain the difference between "affect" and "effect" with examples?</p>
+                        <button><i class="fas fa-comments"></i> Ans (20)</button>
                     </div>
                 </div>
                 <div class="comment-div">
                     <div class="comment">
-                        <h4>joebidenusapresident70(VIP)</h4>
-                        <p>,-*'^'~*-.,_,.-*~   🎀  𝐿🍪𝓇𝑒𝓂 𝒾𝓅𝓈𝓊𝓂 𝒹🍪𝓁🍑𝓇 𝓈𝒾𝓉 𝒶𝓂𝑒𝓉 𝒸☯𝓃𝓈𝑒𝒸𝓉𝑒𝓉𝓊𝓇 𝒶𝒹𝒾𝓅𝒾𝓈𝒾𝒸𝒾𝓃𝑔 𝑒𝓁𝒾𝓉. 𝐸🍑𝓈, 𝓋💙𝓁𝓊𝓅𝓉𝒶𝓈. 𝐼𝓁𝓁❤ 𝓅𝓇♡𝓋𝒾𝒹𝑒𝓃𝓉, 𝑒𝓉 𝑒𝓊𝓂 𝒶𝓊𝓉𝑒𝓂 𝓆𝓊𝒶𝑒 𝒽𝒾𝒸 𝑒𝒾𝓊𝓈❣ 𝐼𝓈𝓉𝑒 𝓂🍑𝓁𝓁𝒾𝓉𝒾𝒶 𝑒𝓋𝑒𝓃𝒾𝑒𝓉 𝑒𝓊𝓂 𝒽𝒶𝓇𝓊𝓂 𝓋𝑒𝓃𝒾𝒶𝓂 𝓋𝑒𝓇💗 𝓅𝑒𝓇𝒻𝑒𝓇𝑒𝓃𝒹𝒾𝓈, 𝓁𝒶𝒷💮𝓇𝒾🍬𝓈𝒶𝓂 𝓋𝑒𝓁 𝒸𝓊𝓂𝓆𝓊𝑒  🎀 </p>
-                        <button><i class="fas fa-comments"></i> Ans (10)</button>
+                        <h4>readingRocks (VIP)</h4>
+                        <p>What are some engaging books for intermediate English learners?</p>
+                        <button><i class="fas fa-comments"></i> Ans (12)</button>
+                    </div>
+                </div>
+                <div class="comment-div">
+                    <div class="comment">
+                        <h4>pronunciationPro (VIP)</h4>
+                        <p>What's the best way to practice English pronunciation at home?</p>
+                        <button><i class="fas fa-comments"></i> Ans (18)</button>
+                    </div>
+                </div>
+                <div class="comment-div">
+                    <div class="comment">
+                        <h4>idiomExpert (VIP)</h4>
+                        <p>What are some common English idioms and their meanings?</p>
+                        <button><i class="fas fa-comments"></i> Ans (25)</button>
                     </div>
                 </div>
                 <div class="questions_and_answers-page">

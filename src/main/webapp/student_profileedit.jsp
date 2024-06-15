@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="utf-8" %>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +8,12 @@
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/homebar.css">
     <link rel="stylesheet" href="css/coursenav.css">
-    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/editprofile.css">
     <link rel="stylesheet" href="css/footer.css">
-    <%--  Include the cropper css  --%>
+    <!-- Include the cropper css -->
     <link rel="stylesheet" href="cropperjs/cropper.css">
-    <%--  Include the cropper script  --%>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <!-- Include the cropper script -->
     <script src="cropperjs/cropper.js"></script>
 </head>
 
@@ -36,7 +37,7 @@
                 </ul>
             </div>
             <div class="profile-home-card">
-                <img src="${sessionScope.loggedInUser.getAvatar()}" alt="">
+                <img src="${sessionScope.loggedInUser.getAvatar()}" alt="" class="cur-avatar">
                 <div class="shown-info">
                     <p class="username-profile">${sessionScope.loggedInUser.getUserName()}</p>
                     <p class="level-profile">LV1</p>
@@ -44,9 +45,7 @@
                 </div>
                 <div>
                     <a href="student_profile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
-                    <ul>
-                        <li class="setting-cog"><a href="index.jsp">Exit</a></li>
-                    </ul>
+                    <li class="setting-cog"><a href="index.jsp">Exit</a></li>
                 </div>
             </div>
             <div class="profile-home-card-mini">
@@ -66,7 +65,6 @@
             </label>
         </div>
     </nav>
-
     <div class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
@@ -164,11 +162,11 @@
                     <div class="student-buttonside">
                         <ul class="student-buttons">
                             <li>
-                                <button class="personal-info" onclick="location.href='student_profileShow2.jsp';"><i class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân</button>
+                                <button><i class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân</button>
                             </li>
 
                             <li>
-                                <button class="changeavatar-button"><i class="far fa-image-polaroid fa-lg"></i>Thay đổi avatar</button>
+                                <button><i class="far fa-image-polaroid fa-lg"></i>Thay đổi avatar</button>
                             </li>
 
                             <li>
@@ -209,8 +207,7 @@
                     <div class="cropped-container">
                         <img src="#" alt="Testing2" id="output">
                     </div>
-                    <button class="go-back">Close</button>
-                    <button class="return-to-main">Save</button>
+                    <button class="return-to-main">Close</button>
                 </dialog>
 
                 <div class="separator">
@@ -270,7 +267,7 @@
                         <!--Level progress bar should fetch data from server or database-->
                         <label for="levelbar">Level <span>0</span></label>
                         <div class="progress">
-                            <progress id="levelbar" value="30" max="100"> 1 </progress>
+                            <progress id="levelbar"  value="30" max="100"> 1 </progress>
                         </div>
                         <div class="start-end">
                             <span>0</span>
@@ -334,111 +331,81 @@
 
             </section>
 
-            <section class="wall-profile-achievements">
-
-                <div class="achievement-title">
-                    <h1>Tất cả thành tích</h1>
+            <section class="edit-section">
+                <div class="edit-title">
+                    <h2>Chỉnh sửa thông tin</h2>
                 </div>
 
-                <div class="separator"></div>
-
-                <div class="achievement-list">
-
-                    <div class="achievement-card">
-                        <div class="achievement-cup">
-                            <img src="imgs/trophy-white.png" alt="trophy">
+                <div class="edit-form-section">
+                    <form action="${pageContext.request.contextPath}/update" method="post">
+                        <div class="input-row">
+                            <label for="full_name">Tên đầy đủ:</label>
+                            <input type="text" name="full_name" id="full_name">
+                            <div class="toggle">
+                                <input type="checkbox" id="full_name_checkbox" value="${sessionScope.loggedInUser.getDateOfBirth()}">
+                                <label for="full_name_checkbox">Ẩn</label>
+                            </div>
                         </div>
 
-                        <div class="achievement-progress">
-                            <h2>Lửa rừng</h2>
-                            <progress id="progress1" value="30" max="100"></progress>
-                            <p>Đăng nhập 30 ngày liên tiếp</p>
-                        </div>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-cup">
-                            <img src="imgs/trophy-white.png" alt="trophy">
+                        <div class="input-row">
+                            <label for="date_of_birth">Ngày sinh:</label>
+                            <input type="date" name="date_of_birth" id="date_of_birth" value="${sessionScope.loggedInUser.getDateOfBirth()}">
+                            <div class="toggle">
+                                <input type="checkbox" id="dob_checkbox">
+                                <label for="dob_checkbox">Ẩn</label>
+                            </div>
                         </div>
 
-                        <div class="achievement-progress">
-                            <h2>Cao thủ</h2>
-                            <progress id="progress2" value="30" max="100"></progress>
-                            <p>Hoàn thành 100 khóa học</p>
-                        </div>
-                    </div>
+                        <div class="gender-row">
+                            <div>
+                                <p for="gender">Giới tính</p>
+                            </div>
 
-                    <div class="achievement-card">
-                        <div class="achievement-cup">
-                            <img src="imgs/trophy-white.png" alt="trophy">
+                            <div class="button-group">
+                                <div>
+                                    <input type="radio" id="Male" name="gender" value="Nam" checked>
+                                    <label for="Male">Nam</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" id="Female" name="gender" value="Nữ">
+                                    <label for="Female">Nữ</label>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="achievement-progress">
-                            <h2>Pháp sư</h2>
-                            <progress id="progress3" value="30" max="100"></progress>
-                            <p>Đạt điểm tuyệt đối 5 lần liên tiếp</p>
+                        <div class="input-row">
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" name="address" id="address">
+                            <div class="toggle">
+                                <input type="checkbox" id="address_checkbox" value="${sessionScope.loggedInUser.getAddress()}">
+                                <label for="address_checkbox">Ẩn</label>
+                            </div>
                         </div>
-                    </div>
 
+                        <div class="input-row">
+                            <label for="phone">Số ĐT:</label>
+                            <input type="tel" name="phone" id="phone">
+                            <div class="toggle">
+                                <input type="checkbox" id="phone_checkbox" value="${sessionScope.loggedInUser.getPhoneNumber()}">
+                                <label for="phone_checkbox">Ẩn</label>
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email">
+                            <div class="toggle">
+                                <input type="checkbox" id="email_checkbox" value="${sessionScope.loggedInUser.getEmail()}" disabled>
+                                <label for="email_checkbox">Ẩn</label>
+                            </div>
+                        </div>
+
+                        <div class="submit-button">
+                            <button type="submit">Lưu thông tin</button>
+                        </div>
+                    </form>
                 </div>
-
-            </section>
-
-            <section class="wall-comment">
-                <div class="comment-section">
-
-                    <div class="comment-title">
-                        <h2>Bình luận</h2>
-                    </div>
-
-                    <div class="separator"></div>
-
-                    <div class="comment-bar">
-                        <div class="comment-avatar">
-                            <img src="imgs/stock-avatar.jpg" alt="Avatar">
-                        </div>
-
-                        <div class="comment-content">
-                            <p>JohnDoe17 - <span>17:24:46 ngày 29-11-2018</span></p>
-                            <p>No comment.</p>
-                        </div>
-                    </div>
-
-                    <div class="comment-bar">
-                        <div class="comment-avatar">
-                            <img src="imgs/stock-avatar.jpg" alt="Avatar">
-                        </div>
-
-                        <div class="comment-content">
-                            <p>JohnDoe17 - <span>17:24:46 ngày 29-11-2018</span></p>
-                            <p>No comment.</p>
-                        </div>
-                    </div>
-
-                    <div class="comment-bar">
-                        <div class="comment-avatar">
-                            <img src="imgs/stock-avatar.jpg" alt="Avatar">
-                        </div>
-
-                        <div class="comment-content">
-                            <p>JohnDoe17 - <span>17:24:46 ngày 29-11-2018</span></p>
-                            <p>No comment.</p>
-                        </div>
-                    </div>
-
-                    <div class="comment-bar">
-                        <div class="comment-avatar">
-                            <img src="imgs/stock-avatar.jpg" alt="Avatar">
-                        </div>
-
-                        <div class="comment-content">
-                            <p>JohnDoe17 - <span>17:24:46 ngày 29-11-2018</span></p>
-                            <p>No comment.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <button>Xem thêm</button>
             </section>
         </div>
     </div>
@@ -470,6 +437,7 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
     let contextPath = `${pageContext.request.contextPath}`;
 </script>

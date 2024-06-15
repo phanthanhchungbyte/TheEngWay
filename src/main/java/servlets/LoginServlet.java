@@ -10,10 +10,13 @@ import jakarta.xml.bind.DatatypeConverter;
 import utils.SecurityUtils;
 
 import java.io.IOException;
+import java.util.Date;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @WebServlet(name = "LoginServlet",urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
+    private static final Logger logger = Logger.getLogger(LoginServlet.class.getName());
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -31,6 +34,9 @@ public class LoginServlet extends HttpServlet {
         String hashedPassword = SecurityUtils.getSHA_256_HashedPassword(password, newsalt);
 
         User loggedInUser = dao.userLogin(username, hashedPassword);
+//        Date date = loggedInUser.getDateOfBirth();
+//        logger.log(Level.INFO, date.toString());
+
         if (loggedInUser != null) {
             session.setAttribute("loggedInUser", loggedInUser);
             String type = loggedInUser.getUserType();

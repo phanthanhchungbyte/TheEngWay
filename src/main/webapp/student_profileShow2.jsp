@@ -1,18 +1,22 @@
-<%@page contentType="text/html" pageEncoding="utf-8" %>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+          type="text/css" />
     <link rel="stylesheet" href="css/homebar.css">
     <link rel="stylesheet" href="css/coursenav.css">
-    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/showprofile.css">
     <link rel="stylesheet" href="css/footer.css">
-    <%--  Include the cropper css  --%>
+    <!-- Include the cropper css -->
     <link rel="stylesheet" href="cropperjs/cropper.css">
-    <%--  Include the cropper script  --%>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <!-- Include the cropper script -->
     <script src="cropperjs/cropper.js"></script>
 </head>
 
@@ -36,7 +40,7 @@
                 </ul>
             </div>
             <div class="profile-home-card">
-                <img src="${sessionScope.loggedInUser.getAvatar()}" alt="">
+                <img src="${sessionScope.loggedInUser.getAvatar()}" alt="" class="cur-avatar">
                 <div class="shown-info">
                     <p class="username-profile">${sessionScope.loggedInUser.getUserName()}</p>
                     <p class="level-profile">LV1</p>
@@ -66,7 +70,6 @@
             </label>
         </div>
     </nav>
-
     <div class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
@@ -164,11 +167,12 @@
                     <div class="student-buttonside">
                         <ul class="student-buttons">
                             <li>
-                                <button class="personal-info" onclick="location.href='student_profileShow2.jsp';"><i class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân</button>
+                                <button><i class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân</button>
                             </li>
 
                             <li>
-                                <button class="changeavatar-button"><i class="far fa-image-polaroid fa-lg"></i>Thay đổi avatar</button>
+                                <button class="changeavatar-button"><i class="far fa-image-polaroid fa-lg"></i>Thay đổi
+                                    avatar</button>
                             </li>
 
                             <li>
@@ -184,18 +188,18 @@
                             </li>
                         </ul>
                     </div>
-                </div>
 
-                <%--Modal to serve change avatar, modal = popup--%>
+
+                </div>
                 <dialog class="modal" id="modal">
                     <h3>Đổi avatar</h3>
-                    <img src="${sessionScope.loggedInUser.getAvatar()}" alt="avatar" class="cur-avatar">
+                    <img src="${sessionScope.loggedInUser.getAvatar()}" alt="" class="cur-avatar">
                     <form action="" method="dialog" enctype="multipart/form-data">
                         <div class="input-avatar">
                             <input type="file" alt="insert one" id="imageInput" accept="image/*"/>
                         </div>
                         <!-- Initially put the crop image modal to none -->
-                        <button class="submit-avatar" type="submit" disabled>Submit</button>
+                        <button class="submit-avatar" type="submit" onclick="changeAvatar()" disabled>Submit</button>
                     </form>
                     <button class="button close-button">Close</button>
                     <button class="shownextmodal" style="display: none;">Open modal 2</button>
@@ -210,9 +214,8 @@
                         <img src="#" alt="Testing2" id="output">
                     </div>
                     <button class="go-back">Close</button>
-                    <button class="return-to-main">Save</button>
+                    <button class="return-to-main">Close</button>
                 </dialog>
-
                 <div class="separator">
 
                 </div>
@@ -268,9 +271,9 @@
                 <div class="profile-level">
                     <div class="profile-level-inner">
                         <!--Level progress bar should fetch data from server or database-->
-                        <label for="levelbar">Level <span>0</span></label>
+                        <label for="file">Level <span>0</span></label>
                         <div class="progress">
-                            <progress id="levelbar" value="30" max="100"> 1 </progress>
+                            <progress id="file" value="30" max="100"> 1 </progress>
                         </div>
                         <div class="start-end">
                             <span>0</span>
@@ -334,111 +337,87 @@
 
             </section>
 
-            <section class="wall-profile-achievements">
-
-                <div class="achievement-title">
-                    <h1>Tất cả thành tích</h1>
-                </div>
-
-                <div class="separator"></div>
-
-                <div class="achievement-list">
-
-                    <div class="achievement-card">
-                        <div class="achievement-cup">
-                            <img src="imgs/trophy-white.png" alt="trophy">
-                        </div>
-
-                        <div class="achievement-progress">
-                            <h2>Lửa rừng</h2>
-                            <progress id="progress1" value="30" max="100"></progress>
-                            <p>Đăng nhập 30 ngày liên tiếp</p>
-                        </div>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-cup">
-                            <img src="imgs/trophy-white.png" alt="trophy">
-                        </div>
-
-                        <div class="achievement-progress">
-                            <h2>Cao thủ</h2>
-                            <progress id="progress2" value="30" max="100"></progress>
-                            <p>Hoàn thành 100 khóa học</p>
-                        </div>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-cup">
-                            <img src="imgs/trophy-white.png" alt="trophy">
-                        </div>
-
-                        <div class="achievement-progress">
-                            <h2>Pháp sư</h2>
-                            <progress id="progress3" value="30" max="100"></progress>
-                            <p>Đạt điểm tuyệt đối 5 lần liên tiếp</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section class="wall-comment">
-                <div class="comment-section">
-
-                    <div class="comment-title">
-                        <h2>Bình luận</h2>
-                    </div>
-
-                    <div class="separator"></div>
-
-                    <div class="comment-bar">
-                        <div class="comment-avatar">
-                            <img src="imgs/stock-avatar.jpg" alt="Avatar">
-                        </div>
-
-                        <div class="comment-content">
-                            <p>JohnDoe17 - <span>17:24:46 ngày 29-11-2018</span></p>
-                            <p>No comment.</p>
-                        </div>
-                    </div>
-
-                    <div class="comment-bar">
-                        <div class="comment-avatar">
-                            <img src="imgs/stock-avatar.jpg" alt="Avatar">
-                        </div>
-
-                        <div class="comment-content">
-                            <p>JohnDoe17 - <span>17:24:46 ngày 29-11-2018</span></p>
-                            <p>No comment.</p>
-                        </div>
-                    </div>
-
-                    <div class="comment-bar">
-                        <div class="comment-avatar">
-                            <img src="imgs/stock-avatar.jpg" alt="Avatar">
-                        </div>
-
-                        <div class="comment-content">
-                            <p>JohnDoe17 - <span>17:24:46 ngày 29-11-2018</span></p>
-                            <p>No comment.</p>
-                        </div>
-                    </div>
-
-                    <div class="comment-bar">
-                        <div class="comment-avatar">
-                            <img src="imgs/stock-avatar.jpg" alt="Avatar">
-                        </div>
-
-                        <div class="comment-content">
-                            <p>JohnDoe17 - <span>17:24:46 ngày 29-11-2018</span></p>
-                            <p>No comment.</p>
-                        </div>
+            <section class="personalinfo-section">
+                <div class="personalinfo-title">
+                    <h2>Thông tin cá nhân</h2>
+                    <div class="changeinfo-button">
+                        <i class="fas fa-pencil-alt"></i>
+                        <button onclick="location.href='student_profileedit.jsp';">Thay đổi profile</button>
                     </div>
                 </div>
 
-                <button>Xem thêm</button>
+                <div class="profile-section">
+                <%--Do a c-set here --%>
+                    <div class="profile-row">
+                        <p>Tên đầy đủ:</p>
+                        <c:choose>
+                            <c:when test="${not empty sessionScope.loggedInUser and sessionScope.loggedInUser.getFullName() ne null}">
+                                <p>${sessionScope.loggedInUser.getFullName()}</p>
+                            </c:when>
+
+                            <c:otherwise>
+                                <p><i style="color: gray;">Not set yet</i></p>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
+
+                    <div class="profile-row">
+                        <p>Ngày sinh:</p>
+                        <c:choose>
+                            <c:when test="${not empty sessionScope.loggedInUser and sessionScope.loggedInUser.getDateOfBirth() ne null}">
+                                <p>${sessionScope.loggedInUser.getDateOfBirthString()}</p>
+                            </c:when>
+
+                            <c:otherwise>
+                                <p><i style="color: gray;">Not set yet</i></p>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
+
+                    <div class="profile-row">
+                        <p>Giới tính:</p>
+                        <c:choose>
+                            <c:when test="${not empty sessionScope.loggedInUser and sessionScope.loggedInUser.getGender() ne null}">
+                                <p>${sessionScope.loggedInUser.getGender()}</p>
+                            </c:when>
+
+                            <c:otherwise>
+                                <p><i style="color: gray;">Not set yet</i></p>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
+
+                    <div class="profile-row">
+                        <p>Địa chỉ:</p>
+                        <c:choose>
+                            <c:when test="${not empty sessionScope.loggedInUser and sessionScope.loggedInUser.getAddress() ne null}">
+                                <p>${sessionScope.loggedInUser.getAddress()}</p>
+                            </c:when>
+
+                            <c:otherwise>
+                                <p><i style="color: gray;">Not set yet</i></p>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
+
+                    <div class="profile-row">
+                        <p>Số điện thoại:</p>
+                        <c:choose>
+                            <c:when test="${not empty sessionScope.loggedInUser and sessionScope.loggedInUser.getPhoneNumber() ne null}">
+                                <p>${sessionScope.loggedInUser.getPhoneNumber()}</p>
+                            </c:when>
+
+                            <c:otherwise>
+                                <p><i style="color: gray;">Not set yet</i></p>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
+
+                    <div class="profile-row">
+                        <p>Email:</p>
+                        <p>${sessionScope.loggedInUser.getEmail()}</p>
+                    </div>
+                </div>
             </section>
         </div>
     </div>
@@ -475,4 +454,5 @@
 </script>
 <script type="text/javascript" src="js/changeAvatar.js"></script>
 </body>
+
 </html>

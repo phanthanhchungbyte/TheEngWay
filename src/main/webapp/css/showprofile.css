@@ -23,15 +23,15 @@
     --fs-300: 0.75rem;
     --fs-200: 0.5rem;
     --progress:
-            linear-gradient(#fff8,#fff0),
-            repeating-linear-gradient(135deg,#0003 0 10px,#0000 0 20px),
+            linear-gradient(#fff8, #fff0),
+            repeating-linear-gradient(135deg, #0003 0 10px, #0000 0 20px),
             #31c6f7;
 }
 
 .banner {
     width: 93%;
     margin: 0 auto;
-    display:block;
+    display: block;
     margin-top: 20px;
 }
 
@@ -43,7 +43,7 @@
     width: 93%;
     margin: 0 auto;
     margin-top: 2em;
-    font-family: Libre_Franklin;
+    font-family: Libre_Franklin, sans-serif;
 }
 
 .student-profile {
@@ -70,11 +70,11 @@
             text-align: center;
         }
 
-        .student-info .student-avatar h2{
+        .student-info .student-avatar h2 {
             margin-top: 0.5em;
         }
 
-        .student-info .student-bio{
+        .student-info .student-bio {
             margin-left: 15%;
             line-height: 2.15rem;
 
@@ -87,7 +87,7 @@
                 font-style: italic;
             }
 
-            p:last-child > a {
+            p:last-child>a {
                 color: blue;
 
                 &:hover {
@@ -113,6 +113,21 @@
 
             li {
                 margin-top: 0.5em;
+            }
+
+            li a {
+                width: 100%;
+                padding: 0.45rem;
+                min-width: fit-content;
+                border-radius: 10px;
+                border: 1px solid black;
+                display: flex;
+                justify-content: flex-start;
+                font-size: var(--fs-400);
+
+                i {
+                    margin-right: 10px;
+                }
             }
 
             li button {
@@ -150,7 +165,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        font-family: Segoe_Script;
+        font-family: Segoe_Script, sans-serif;
 
         .student-individual-statistic {
             padding: 10px;
@@ -205,7 +220,8 @@
             }
         }
 
-        p::before, p::after {
+        p::before,
+        p::after {
             content: "";
             width: 2.4em;
             height: 100%;
@@ -240,7 +256,7 @@
         justify-content: space-around;
         padding: 1em 0;
 
-        > div {
+        >div {
             width: 40%;
             padding: 2em 0.5em;
             border-radius: 10px;
@@ -256,6 +272,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 position: relative;
+
                 label {
                     font-size: calc(var(--fs-600));
                     font-weight: bold;
@@ -264,6 +281,7 @@
                 .progress {
                     width: 90%;
                     margin-inline: auto;
+
                     progress {
                         padding: 1rem 0px;
                         width: 100%;
@@ -275,6 +293,7 @@
                     margin-inline: auto;
                     width: 90%;
                     justify-content: space-between;
+
                     span {
                         font-size: var(--fs-lg);
                     }
@@ -293,6 +312,7 @@
                 background-position: center;
 
             }
+
             background: linear-gradient(180deg, #5BE22B 0%, #70E049 52%, #3B8B1F 100%);
         }
 
@@ -302,7 +322,8 @@
                 height: 100%;
                 margin-inline: auto;
             }
-            background-image: linear-gradient(180deg, #FFF5D3  0%, #FDF8E7 51%, #C7BD9D 100%);
+
+            background-image: linear-gradient(180deg, #FFF5D3 0%, #FDF8E7 51%, #C7BD9D 100%);
 
             .profile-streak-info {
                 display: flex;
@@ -332,69 +353,7 @@
     }
 }
 
-.wall-profile-achievements {
-    background-color: #a6d283;
-    padding: 1.5em;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: var(--fs-400);
-    align-items: center;
-    width: 90%;
-    margin: auto;
-    .achievement-title {
-        text-align: center;
-        font-family: Send_Flowers;
-        font-size: var(--fs-600);
-        margin-bottom: 0.9rem;
-    }
-    .achievement-card {
-        display: flex;
-        border: 1px solid black;
-        border-top: none;
-        .achievement-cup {
-            width: 15%;
-            img {
-                width: 85%;
-            }
-        }
-        .achievement-progress {
-            width: 100%;
-            justify-content: space-between;
-            margin: auto 0px;
-            position: relative;
-            h2 {
-                margin-bottom: 0.7rem;
-                font-size: var(--fs-600);
-            }
-            progress {
-                width: 90%;
-                padding: 1rem 0;
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            progress::after {
-                content: "30/100";
-                text-align: center;
-                font-size: var(--fs-300);
-                position: absolute;
-                width: 100%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                pointer-events: none;
-                background-color: transparent;
-            }
-
-
-        }
-    }
-
-}
-
-.wall-comment {
+.personalinfo-section {
     background-color: #a6d283;
     padding: 1.5em;
     border: 1px solid black;
@@ -403,38 +362,61 @@
     align-items: center;
     width: 90%;
     margin: 1.5rem auto;
-    .comment-title {
+
+    .personalinfo-title {
+        display: flex;
+        justify-content: space-between;
         font-family: Send_Flowers, sans-serif;
+        text-align: left;
         margin-bottom: 0.9rem;
         font-size: var(--fs-600);
-        text-align: center;
     }
-    .comment-bar {
-        display: flex;
-        border: 1px solid black;
-        border-top: none;
-        .comment-avatar {
-            width: 10%;
-            align-items: center;
-            img {
-                border-radius: 50%;
-                width: 70%;
-                margin: 0.4rem 0.4rem;
-            }
-        }
-        .comment-content {
-            p {
-                margin-top: 0.4rem;
-            }
-            p:last-child {
-                margin-top: 2.3rem;
-            }
+
+    .changeinfo-button {
+        position: relative;
+    }
+
+    .changeinfo-button i {
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        font-size: var(--fs-400);
+    }
+
+    .changeinfo-button button{
+        padding: 0.7em 2em;
+        padding-left: 2.2em;
+        border-radius: 10px;
+        font-family: Libre_Franklin;
+
+        &:hover {
+            cursor: pointer;
         }
     }
 
+    .profile-section {
+        background-color: var(--skin-color);
+        padding: 1em 0px;
+        font-size: var(--fs-500);
+    }
+
+    .profile-section .profile-row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin-inline: auto;
+        justify-content: space-between;
+        padding: 0.6rem 0px;
+        align-items: center;
+    }
+
+    .profile-section .profile-row p {
+        width: 50%;
+        text-align: left;
+    }
 }
 
-@media only screen and (1000px <= width <= 1589px) {
+@media only screen and (1000px <=width <=1589px) {
     :root {
         --fs-600: 1.25rem;
         --fs-xl: 2rem;
@@ -445,6 +427,7 @@
         flex-direction: column;
         text-align: center;
     }
+
     .student-profile .student-maininfo .student-info {
         .student-bio {
             margin-left: 0;
@@ -457,7 +440,11 @@
             margin: 0 auto;
         }
 
-        .student-buttons li{
+        .student-buttons li:hover {
+            cursor: pointer;
+        }
+
+        .student-buttons li {
             margin-top: 0.75em;
         }
     }
@@ -533,71 +520,8 @@
     }
 }
 
-.personalinfo-section {
-    background-color: #a6d283;
-    padding: 1.5em;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: var(--fs-400);
-    align-items: center;
-    width: 90%;
-    margin: 1.5rem auto;
-
-    .personalinfo-title {
-        display: flex;
-        justify-content: space-between;
-        font-family: Send_Flowers, sans-serif;
-        text-align: left;
-        margin-bottom: 0.9rem;
-        font-size: var(--fs-600);
-    }
-
-    .changeinfo-button {
-        position: relative;
-    }
-
-    .changeinfo-button i {
-        position: absolute;
-        top: 25%;
-        left: 5%;
-        font-size: var(--fs-400);
-    }
-
-    .changeinfo-button button{
-        padding: 0.7em 2em;
-        padding-left: 2.2em;
-        border-radius: 10px;
-        font-family: Libre_Franklin;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    .profile-section {
-        background-color: var(--skin-color);
-        padding: 1em 0px;
-        font-size: var(--fs-500);
-    }
-
-    .profile-section .profile-row {
-        display: flex;
-        flex-wrap: wrap;
-        width: 80%;
-        margin-inline: auto;
-        justify-content: space-between;
-        padding: 0.6rem 0px;
-        align-items: center;
-    }
-
-    .profile-section .profile-row p {
-        width: 50%;
-        text-align: left;
-    }
-}
-
 @media only screen and (width < 1000px) {
-    .student-profile section.wall-profile-statcard > div {
+    .student-profile section.wall-profile-statcard>div {
         margin-top: 2em;
         width: max(60%, 350px);
     }
@@ -608,7 +532,7 @@
         justify-content: center;
     }
 
-    .student-profile .student-maininfo .student-buttons{
+    .student-profile .student-maininfo .student-buttons {
         margin-top: 1em;
         margin-inline: auto;
         width: 100%;
