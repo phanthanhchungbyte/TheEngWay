@@ -12,7 +12,7 @@ public interface UserDao {
 
     boolean checkUsernameAvailable(String username);
 
-    boolean insertAccount(String username, String password_hash, String password_salt, String email, String usertype);
+    boolean insertAccount(String username, String password_hash, String password_salt, String email, String usertype, String avatar);
 
     User getUserWithEmail(String email);
 

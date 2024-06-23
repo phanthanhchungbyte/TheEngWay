@@ -88,6 +88,7 @@ public class RegisterServlet extends HttpServlet {
             u.setUserName(username);
             u.setPasswordHash(hashed_password);
             u.setPasswordSalt(saltString);
+            u.setAvatar("");
             int otpvalue = 0 ;
             if(email!=null || !email.equals("")) {
                 // sending otp

@@ -1,0 +1,401 @@
+@font-face {
+    font-family: Libre_Franklin;
+    src: url(../../fonts/LibreFranklin-Regular.ttf);
+}
+
+@font-face {
+    font-family: Segoe_Script;
+    src: url(../../fonts/Segoe-Script.ttf);
+}
+
+@font-face {
+    font-family: Send_Flowers;
+    src: url(../../fonts/SendFlowers-Regular.ttf);
+}
+
+:root {
+    --skin-color: #fff5dc;
+    --fs-xl: 3rem;
+    --fs-lg: 1.75rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+    --fs-300: 0.75rem;
+    --fs-200: 0.5rem;
+    --progress:
+            linear-gradient(#fff8, #fff0),
+            repeating-linear-gradient(135deg, #0003 0 10px, #0000 0 20px),
+            #31c6f7;
+}
+
+.banner {
+    width: 93%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.main-content {
+    width: 93%;
+    margin: 0 auto;
+    margin-top: 2em;
+    font-family: Libre_Franklin;
+}
+
+.student-profile {
+    section.wall-student-card {
+        background-color: #a6d283;
+        padding: 1.5em;
+        border: 1px solid black;
+        border-radius: 10px;
+        font-size: var(--fs-400);
+    }
+
+    .student-maininfo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+
+        .student-info {
+            display: flex;
+            width: 50%;
+        }
+
+        .student-info .student-avatar {
+            text-align: center;
+        }
+
+        .student-info .student-avatar h2 {
+            margin-top: 0.5em;
+        }
+
+        .student-info .student-bio {
+            margin-left: 15%;
+            line-height: 2.15rem;
+
+            p {
+                padding-left: 1em;
+            }
+
+            p:last-child {
+                margin-top: 1em;
+                font-style: italic;
+            }
+
+            p:last-child>a {
+                color: blue;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .student-info .student-avatar img {
+            border-radius: 50%;
+        }
+
+        .student-buttonside {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .student-buttons {
+            width: 30%;
+            margin-right: 10%;
+
+            li {
+                margin-top: 0.5em;
+            }
+
+            li button {
+                width: 100%;
+                padding: 0.45rem;
+                min-width: fit-content;
+                border-radius: 10px;
+                display: flex;
+                justify-content: flex-start;
+                font-size: var(--fs-400);
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+
+            li:last-child button {
+                background-color: #ff5a5a;
+                color: white;
+
+                i {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .student-statistics {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        font-family: Segoe_Script;
+
+        .student-individual-statistic {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .student-individual-statistic h1 {
+            font-size: var(--fs-600);
+            margin-bottom: 0.25em;
+        }
+
+        .student-individual-statistic span {
+            font-size: var(--fs-xl);
+        }
+    }
+
+    section.profile-sections {
+        border: black solid 1px;
+        margin-top: 2vh;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        font-size: var(--fs-600);
+        padding: 0.5em 0px;
+        text-decoration: underline;
+        background-color: #a6d283;
+
+        .section-link {
+            width: 33%;
+            text-align: center;
+        }
+
+        .section-link:not(:last-child) {
+            border-right: 2px solid black;
+        }
+    }
+
+    .viewlesson-section {
+        background-color: #a6d283;
+        padding: 1.5em;
+        border: 1px solid black;
+        border-radius: 10px;
+        font-size: var(--fs-400);
+        align-items: center;
+        margin: 1.5rem auto;
+
+        .viewlesson-title {
+            display: flex;
+            justify-content: space-between;
+            font-family: Send_Flowers, sans-serif;
+            text-align: left;
+            margin-bottom: 0.9rem;
+            font-size: var(--fs-600);
+        }
+
+        .viewlesson-title .createlesson-button {
+            position: relative;
+        }
+
+        .viewlesson-title .createlesson-button i {
+            position: absolute;
+            top: 25%;
+            left: 5%;
+            font-size: var(--fs-500);
+            color: white;
+        }
+
+        .viewlesson-title .createlesson-button button {
+            padding: 0.7em 2em;
+            padding-left: 2.2em;
+            border-radius: 10px;
+            border: 1px solid black;
+            box-shadow: 0px 0px 20px -7px rgba(0,0,0,0.62);
+            -webkit-box-shadow: 0px 0px 20px -7px rgba(0,0,0,0.62);
+            -moz-box-shadow: 0px 0px 20px -7px rgba(0,0,0,0.62);
+            font-family: Libre_Franklin, sans-serif;
+            font-size: var(--fs-400);
+            background-color: #52a356;
+            color: white;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .createdlessons-section {
+            margin-bottom: 10vh;
+            .created-lesson-card {
+                &:not(:last-child) {
+                    border-bottom: 1px dashed brown;
+                }
+
+                background-color: #F5E0DC;
+                display: flex;
+                max-width: 1000px;
+                margin-inline: auto;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.6em 1em;
+
+                .created-lesson-info {
+                    flex-grow: 1;
+                    margin-inline: 2em;
+                    p {
+                        margin: 0.7em 0;
+                    }
+                }
+
+                .lesson-creator-buttons {
+                    display: flex;
+                    flex-direction: column;
+
+                    > div {
+                        position: relative;
+                        margin-bottom: 0.3em;
+                    }
+
+                    i {
+                        position: absolute;
+                        top: 25%;
+                        left: 5%;
+                        color: white;
+                    }
+
+                    button {
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        width: 100%;
+                        padding: 0.4em 3em;
+                        border-radius:6px;
+                        border-color: white;
+                        background-color: mediumaquamarine;
+                        color: white;
+                    }
+
+                    .lesson-edit-button button {
+                        background-color: mediumaquamarine;
+                    }
+
+                    .lesson-delete-button button {
+                        background-color: red;
+                    }
+                }
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+
+        }
+
+        .createdlessons-navigation {
+            max-width: 250px;
+            margin: 0 auto;
+            margin-top: 2em;
+            display: flex;
+            justify-content: space-between;
+
+            .navigation-buttons i {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .navigation-buttons {
+                position: relative;
+
+                &:first-child i{
+                    left: 5%;
+                }
+
+                &:last-child i {
+                    right: 5%;
+                }
+            }
+
+
+            .navigation-buttons button {
+                padding: 0.7em 1.2em;
+                background-color: orange;
+                border-color: orange;
+                /* border: 1px solid black; */
+            }
+            .navigation-page-indicator {
+                h2 {
+                    color: gray;
+                    font-weight: bold;
+                }
+                display: flex;
+                border: 1px solid white;
+                flex-grow: 1;
+                justify-content: center;
+                align-items: center;
+                background: rgb(216,255,203);
+                background: linear-gradient(180deg, rgba(216,255,203,1) 0%, rgba(124,255,153,1) 49%, rgba(40,251,73,1) 50%, rgba(96,255,198,1) 100%);
+            }
+        }
+    }
+}
+
+@media only screen and (1000px <=width <=1589px) {
+    :root {
+        --fs-600: 1.25rem;
+        --fs-xl: 2rem;
+        --fs-400: 1.1rem;
+    }
+
+    .student-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .student-profile .student-maininfo .student-info {
+        .student-bio {
+            margin-left: 0;
+        }
+    }
+
+    .student-profile .student-maininfo {
+        .student-buttonside {
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .student-buttons li {
+            margin-top: 0.75em;
+        }
+    }
+}
+
+@media only screen and (width < 1000px) {
+    .student-profile section.wall-profile-statcard> div {
+        margin-top: 2em;
+        width: max(60%, 350px);
+    }
+
+    .student-profile .student-maininfo .student-info,
+    .student-profile .student-maininfo .student-buttonside {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .student-profile .student-maininfo .student-buttons {
+        margin-top: 1em;
+        margin-inline: auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}

@@ -41,7 +41,7 @@
                     <p><span>0</span> thông báo mới</p>
                 </div>
                 <div>
-                    <a href="student_profile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                    <a href="userProfile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
                     <li class="setting-cog"><a href="index.jsp">Exit</a></li>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 <i class="fas fa-caret-down fa-2x"></i>
                 <ul class="mini-profile-dropdown">
                     <li class="settings">
-                        <a href="student_profile.jsp">Settings</a>
+                        <a href="userProfile.jsp">Settings</a>
                     </li>
                     <li class="exit">
                         <a href="index.jsp">Exit</a>

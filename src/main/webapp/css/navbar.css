@@ -16,7 +16,7 @@
 :root {
     --maincolor: #fff5dc;
     --navbuttons: #e6842a;
-    --background: #a6da95;
+    --background: #97cecc;
     --oxford-blue: #011638;
     --fs-xl: 3rem;
     --fs-lg: 1.75rem;
@@ -30,7 +30,7 @@
 .container {
     max-width: 1284px;
     margin: 0 auto;
-    background-color: var(--background);
+    background-color: #97CECC;
 }
 
 @media only screen and (width >= 1000px) {

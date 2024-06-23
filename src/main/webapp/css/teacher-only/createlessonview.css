@@ -1,0 +1,931 @@
+@font-face {
+    font-family: Libre_Franklin;
+    src: url(../../fonts/LibreFranklin-Regular.ttf);
+}
+
+@font-face {
+    font-family: Segoe_Script;
+    src: url(../../fonts/Segoe-Script.ttf);
+}
+
+@font-face {
+    font-family: Send_Flowers;
+    src: url(../../fonts/SendFlowers-Regular.ttf);
+}
+
+:root {
+    --skin-color: #fff5dc;
+    --fs-xl: 3rem;
+    --fs-lg: 1.75rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+    --fs-300: 0.75rem;
+    --fs-200: 0.5rem;
+    --progress:
+            linear-gradient(#fff8, #fff0),
+            repeating-linear-gradient(135deg, #0003 0 10px, #0000 0 20px),
+            #31c6f7;
+}
+
+.banner {
+    width: 93%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.main-content {
+    width: 93%;
+    margin: 2em auto 0;
+}
+
+.student-profile {
+    section.wall-student-card {
+        background-color: #a6d283;
+        padding: 1.5em;
+        border: 1px solid black;
+        border-radius: 10px;
+        font-size: var(--fs-400);
+        font-family: Libre_Franklin, sans-serif;
+    }
+
+    .student-maininfo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+
+        .student-info {
+            display: flex;
+            width: 50%;
+        }
+
+        .student-info .student-avatar {
+            text-align: center;
+        }
+
+        .student-info .student-avatar h2 {
+            margin-top: 0.5em;
+        }
+
+        .student-info .student-bio {
+            margin-left: 15%;
+            line-height: 2.15rem;
+
+            p {
+                padding-left: 1em;
+            }
+
+            p:last-child {
+                margin-top: 1em;
+                font-style: italic;
+            }
+
+            p:last-child>a {
+                color: blue;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .student-info .student-avatar img {
+            border-radius: 50%;
+        }
+
+        .student-buttonside {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .student-buttons {
+            width: 30%;
+            margin-right: 10%;
+
+            li {
+                margin-top: 0.5em;
+            }
+
+            li button {
+                width: 100%;
+                padding: 0.45rem;
+                min-width: fit-content;
+                border-radius: 10px;
+                display: flex;
+                justify-content: flex-start;
+                font-size: var(--fs-400);
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+
+            li:last-child button {
+                background-color: #ff5a5a;
+                color: white;
+
+                i {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .student-statistics {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        font-family: Segoe_Script;
+
+        .student-individual-statistic {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .student-individual-statistic h1 {
+            font-size: var(--fs-600);
+            margin-bottom: 0.25em;
+        }
+
+        .student-individual-statistic span {
+            font-size: var(--fs-xl);
+        }
+    }
+
+    section.profile-sections {
+        border: black solid 1px;
+        margin-top: 2vh;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        font-size: var(--fs-600);
+        padding: 0.5em 0;
+        text-decoration: underline;
+        background-color: #a6d283;
+        font-family: Libre_Franklin, sans-serif;
+
+        .section-link {
+            width: 33%;
+            text-align: center;
+        }
+
+        .section-link:not(:last-child) {
+            border-right: 2px solid black;
+        }
+    }
+
+    .VIP-status-ribbon {
+        p {
+            position: relative;
+            margin: 0.7em;
+            padding: 0.5em 0.6em;
+            text-align: center;
+            margin-inline: auto;
+            width: 50%;
+            font-size: 1.75rem;
+            background-color: #e10c54;
+            z-index: 1;
+            color: whitesmoke;
+
+            span {
+                color: gold;
+            }
+        }
+
+        p::before,
+        p::after {
+            content: "";
+            width: 2.4em;
+            height: 100%;
+
+            position: absolute;
+            top: 14px;
+            z-index: -1;
+
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25% 50%);
+
+            background-color: #e10c54;
+            background-image: linear-gradient(45deg, transparent 50%, #c11a54 50%);
+            background-size: 0.5em 0.5em;
+            background-repeat: no-repeat;
+            background-position: bottom right;
+        }
+
+        p::before {
+            left: -2em;
+        }
+
+        p::after {
+            right: -2em;
+            transform: scaleX(-1);
+        }
+    }
+
+    .wall-profile-statcard {
+        margin-top: 4vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1em 0;
+
+        >div {
+            width: 40%;
+            padding: 2em 0.5em;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.445);
+        }
+
+        .profile-level {
+            .profile-level-inner {
+                height: 100%;
+                width: 90%;
+                margin-inline: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position: relative;
+
+                label {
+                    font-size: calc(var(--fs-600));
+                    font-weight: bold;
+                }
+
+                .progress {
+                    width: 90%;
+                    margin-inline: auto;
+
+                    progress {
+                        padding: 1rem 0;
+                        width: 100%;
+                    }
+                }
+
+                .start-end {
+                    display: flex;
+                    margin-inline: auto;
+                    width: 90%;
+                    justify-content: space-between;
+
+                    span {
+                        font-size: var(--fs-lg);
+                    }
+                }
+
+
+                p {
+                    text-align: center;
+                    font-size: var(--fs-lg);
+                    font-weight: 600;
+                }
+
+                background-size: 45%;
+                background: url(../../imgs/profile_assets/swsh.png) no-repeat center;
+
+            }
+
+            background: linear-gradient(180deg, #5BE22B 0%, #70E049 52%, #3B8B1F 100%);
+        }
+
+        .profile-streak {
+            .profile-streak-inner {
+                width: 90%;
+                height: 100%;
+                margin-inline: auto;
+            }
+
+            background-image: linear-gradient(180deg, #FFF5D3 0%, #FDF8E7 51%, #C7BD9D 100%);
+
+            .profile-streak-info {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .profile-streak-weekbar {
+                margin-top: 1em;
+                display: flex;
+                justify-content: space-between;
+
+
+                i {
+                    color: #bababa;
+                }
+
+                i.on {
+                    color: #00ff09;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: var(--fs-500);
+                }
+            }
+        }
+    }
+}
+
+.createlesson-section {
+    background-color: #a6d283;
+    padding: 1.5em;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: var(--fs-400);
+    align-items: center;
+    margin: 5rem auto;
+    font-family: Libre_Franklin, sans-serif;
+
+    .edit-title {
+        font-family: Send_Flowers, sans-serif;
+        text-align: left;
+        margin-bottom: 0.9rem;
+        font-size: var(--fs-600);
+    }
+
+    .edit-form-section {
+        /* background-color: var(--skin-color); */
+        padding: 1em 0;
+        font-size: var(--fs-500);
+
+        .skills {
+            display: flex;
+            margin-inline: auto;
+            margin-top: 1em;
+            width: 95%;
+        }
+
+        .skills > p {
+            font-weight: bold;
+            width: 30%;
+        }
+
+        .skills > .skill-config {
+            margin-left: 2em;
+
+            > div {
+                margin-bottom: 0.75em;
+            }
+
+            select {
+                width: 30%;
+                min-width: 250px;
+                border: none;
+                padding: 0.75em 0 0.75em 1em;
+                font-size: medium;
+                box-shadow: 0 0 10px 0 rgba(0,0,0,0.24) inset;
+                -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.24) inset;
+                -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,0.24) inset;
+                border-radius: 5px;
+            }
+        }
+        /* For lesson-content */
+        .lesson-content {
+            margin-top: 1em;
+        }
+
+        /* The global style for every div inside the lesson-content */
+        .lesson-content > div {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .lesson-content p {
+            font-weight: bold;
+            margin-bottom: 1.5em;
+        }
+
+        .textarea-centering {
+            display: flex;
+            justify-content: center;
+        }
+
+        .lesson-content textarea {
+            width: 90%;
+        }
+
+        /* For quiz section */
+        .createquiz-section div{
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 1.5em;
+            font-weight: bold;
+        }
+    }
+
+    .quiz-section {
+        border: 1px solid black;
+        border-radius: 10px;
+        /* height: 50vh; */
+        background-color: white;
+    }
+
+    .quiz-specification {
+        .title-input {
+            margin-left: 1em;
+            padding: 0.5em 0;
+            width: 50%;
+        }
+
+        .config-inputdiv {
+            /* background-color: #bababa; */
+
+            label {
+                margin-left: 0.5em;
+            }
+
+            p {
+                margin-left: 0.5em;
+            }
+        }
+
+        .config-inputdiv input {
+            padding-left: 1em;
+            font-size: var(--fs-400);
+        }
+
+        .config-inputdiv textarea {
+            width: 95%;
+            max-width: 100%;
+            font-size: var(--fs-400);
+            margin-top: 1em;
+            margin-left: 1.5em;
+            padding-left: 1.5em;
+            padding-top: 1em;
+        }
+
+        .config-inputdiv:last-child{
+            display: flex;
+            p {
+                width: 30%;
+            }
+
+            .toggle {
+                width: max-content;
+                margin-top: 0;
+                margin-left: 0;
+            }
+        }
+
+        .config-inputdiv:last-child p{
+            padding: 0.5em 0;
+        }
+    }
+
+    .toggle {
+        padding: 0.5em 0;
+
+        input[type="checkbox"] {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            /* Right: 100vh to make the checkbox still interactable, but not visible on screen. */
+            right: 100vh;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] + label {
+            position: relative;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        input[type="checkbox"] + label::before {
+            display: inline-block;
+            margin-right: 0.5em;
+            content: "";
+            width: 4em;
+            height: 2em;
+            border-radius: 2em;
+            background-color: #DDD;
+            transition: background-color 200ms ease-in-out;
+        }
+
+        input[type="checkbox"]:focus + label::before {
+            outline: 1px solid rgb(149, 149, 149);
+        }
+
+        input[type="checkbox"]:checked + label::before {
+            background-color: rgb(155, 255, 92);
+        }
+
+        input[type="checkbox"] + label::after {
+            position: absolute;
+            content: "";
+            height: 1.7em;
+            width: 1.7em;
+            background-color: white;
+            left: 0.2em;
+            border-radius: 50%;
+            transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+        }
+
+        input[type="checkbox"]:checked + label::after {
+            transform: translateX(110%);
+            background-color: hsl(133, 100%, 93%);
+        }
+
+    }
+
+    .quiz-creator {
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding-bottom: 1em;
+    }
+
+    .quiz-creator .button-row {
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+
+        > div:first-child {
+            width: 40%;
+            margin: 0;
+        }
+
+        > div:first-child button {
+            margin-left: 2em;
+            padding: 0.5em 1em;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        > div:first-child .add {
+            background-color: #fff5dc;
+            border: 1px solid orange;
+            border-radius: 5px;
+        }
+
+        > div:first-child .deleteall {
+            background-color: #ff5a5a;
+            border: 1px solid black;
+            border-radius: 5px;
+            color: aliceblue;
+        }
+
+        .question-navigator {
+            margin: 0;
+            margin-right: 1em;
+            display: inline-block;
+            width: fit-content;
+        }
+
+        .question-navigator input {
+            width: 3em;
+            height: 90%;
+        }
+    }
+    .question-creator {
+        display: flex;
+
+        > div:first-child, > div:last-child {
+            min-width: 50px;
+            width: 10%;
+
+            i {
+                margin: 0 auto;
+            }
+        }
+
+        .question-card {
+            border: 1px solid black;
+            padding: 1em;
+        }
+
+        .question-card .question-part{
+            div {
+                display: flex;
+                justify-content: space-between;
+                margin: 0.5em 0;
+            }
+            textarea {
+                width: 100%;
+                resize: vertical;
+                max-width: 100%;
+                padding: 1em;
+                font-size: var(--fs-400)
+            }
+
+            button {
+                padding: 0.5em 0.75em;
+                border-radius: 5px;
+                border: 1px solid green;
+                font-weight: bold;
+            }
+
+            .update-question {
+                margin-left: auto;
+                margin-right: 1em;
+                background-color: skyblue;
+                color: rgb(0, 0, 0);
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .delete-single {
+                padding: 0.5em 0.75em;
+                border-radius: 5px;
+                border: 1px solid black;
+                font-weight: bold;
+            }
+
+            .delete-single:hover {
+                cursor: pointer;
+            }
+        }
+
+        .right-button, .left-button {
+            &:hover {
+                cursor: crosshair;
+            }
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                color: white;
+            }
+        }
+
+        .left-button {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .right-button {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .mc-option {
+            background-color: orange;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            position: relative; /* to absolutely position the checkbox field */
+            label {
+                padding-left: 1em;
+            }
+            input {
+                width: 90%;
+                height: 2.3em;
+                padding-left: 1em;
+            }
+            input[type = checkbox] {
+                position: absolute;
+                right: 0;
+                transform: translateX(110%);
+                width: 2em;
+            }
+        }
+    }
+
+    .submitbutton-row {
+        /* border: 1px solid red; */
+        margin-top: 2em;
+        display: flex;
+        justify-content: flex-end;
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    .submitbutton-row button {
+        padding: 0.5em 0.75em;
+        border-radius: 5px;
+        margin-right: 2em;
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:first-child {
+            background-color: #fdd05d;
+        }
+
+        &:last-child {
+            i {
+                color: aliceblue;
+            }
+            background-color: #52a356;
+            color: aliceblue;
+        }
+    }
+}
+
+/* Styling the popup for avatar changing */
+.modal {
+    max-width: 50ch;
+    padding: 2.5em 2em;
+    text-align: center;
+    align-items: center;
+    margin-inline: auto;
+    margin-top: 40vh;
+    z-index: 4;
+
+    .input-avatar {
+        display: flex;
+        justify-content: center;
+
+        > * {
+            width: 70%;
+        }
+    }
+}
+
+.modal h3 {
+    margin-bottom: 1em;
+}
+
+.modal img{
+    border-radius: 50%;
+}
+
+.modal button {
+    display: block;
+    margin-inline: auto;
+    margin-top: 1em;
+    width: max-content;
+    padding: 0.35em 0.75em;
+    border-radius: 5px;
+    background-color: rgb(255, 170, 170);
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.modal .submit-avatar {
+    background-color: #a6d283;
+}
+
+#modal2 {
+    z-index: 5;
+    margin-inline: auto;
+    padding: 1em;
+    text-align: center;
+    margin-top: 10vh;
+
+    img {
+        margin: 10px 0;
+    }
+
+    button {
+        margin-top: 0.5em;
+        padding: 0.5em 1.5em;
+        background-color: #31c6f7;
+        border: none;
+        border-radius: 6px;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+}
+
+/* Utitlities classes */
+
+.fade-out{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.hide {
+    display: none;
+}
+
+.saveQ-annotation {
+    font-weight: 200;
+    font-size: 0.75em;
+    color: red;
+}
+
+.saveQ-successful, .updateQ-successful {
+    font-weight: 200;
+    font-size: 0.75em;
+    color: rgb(28, 181, 28);
+}
+
+.toggle {
+    padding: 0.5em 0;
+    width: 100px;
+
+    input[type="checkbox"] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        /* Right: 100vh to make the checkbox still interactable, but not visible on screen. */
+        right: 100vh;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] + label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: fit-content;
+    }
+
+    input[type="checkbox"] + label::before {
+        display: inline-block;
+        margin-right: 0.5em;
+        content: "";
+        width: 4em;
+        height: 2em;
+        border-radius: 2em;
+        background-color: #DDD;
+        transition: background-color 200ms ease-in-out;
+    }
+
+    input[type="checkbox"]:focus + label::before {
+        outline: 1px solid rgb(149, 149, 149);
+    }
+
+    input[type="checkbox"]:checked + label::before {
+        background-color: rgb(155, 255, 92);
+    }
+
+    input[type="checkbox"] + label::after {
+        position: absolute;
+        content: "";
+        height: 1.7em;
+        width: 1.7em;
+        background-color: white;
+        left: 0.2em;
+        border-radius: 50%;
+        transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+    }
+
+    input[type="checkbox"]:checked + label::after {
+        transform: translateX(110%);
+        background-color: hsl(133, 100%, 93%);
+    }
+}
+
+@media only screen and (1000px <=width <=1589px) {
+    :root {
+        --fs-600: 1.25rem;
+        --fs-xl: 2rem;
+        --fs-400: 1.1rem;
+    }
+
+    .student-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .student-profile .student-maininfo .student-info {
+        .student-bio {
+            margin-left: 0;
+        }
+    }
+
+    .student-profile .student-maininfo {
+        .student-buttonside {
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .student-buttons li {
+            margin-top: 0.75em;
+        }
+    }
+}
+
+@media only screen and (width < 1000px) {
+    .student-profile section.wall-profile-statcard> div {
+        margin-top: 2em;
+        width: max(60%, 350px);
+    }
+
+    .student-profile .student-maininfo .student-info,
+    .student-profile .student-maininfo .student-buttonside {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .student-profile .student-maininfo .student-buttons {
+        margin-top: 1em;
+        margin-inline: auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}

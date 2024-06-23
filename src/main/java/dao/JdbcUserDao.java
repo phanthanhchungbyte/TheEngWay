@@ -31,12 +31,6 @@ public class JdbcUserDao implements UserDao {
 
     private static final Logger logger = Logger.getLogger(JdbcUserDao.class.getName());
 
-    public JdbcUserDao() {
-        // Use logger to log errors and exceptions instead of system.
-        logger.setLevel(Level.FINE);
-        logger.info("Logger Initialized");
-    }
-
     public User userLogin(String username, String password_hash) {
         User user = null;
         PreparedStatement ptm = null;
@@ -114,6 +108,26 @@ public class JdbcUserDao implements UserDao {
         return false;
     }
 
+    public String getAvatar(String username) {
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+        try {
+            conn = Connect.getConnection();
+            ptm = conn.prepareStatement("SELECT USER.AVATAR FROM USER WHERE USERNAME=?");
+            ptm.setString(1, username);
+            rs = ptm.executeQuery();
+            if(rs.next()) {
+                return rs.getString("AVATAR");
+            }
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+            SqlUtils.close(ptm, conn);
+        }
+        return "not found";
+    }
+
     public boolean updatePassword( String Password_Hash, String Password_Salt, String Email) {
         PreparedStatement ptm = null;
         Connection connection = null;
@@ -172,7 +186,7 @@ public class JdbcUserDao implements UserDao {
     }
 
     // Phương thức chèn tài khoản mới
-    public boolean insertAccount(String username, String password_hash, String password_salt, String email, String usertype) {
+    public boolean insertAccount(String username, String password_hash, String password_salt, String email, String usertype, String avatar) {
         Connection conn = null;
         PreparedStatement ptm = null;
         try {
@@ -183,6 +197,7 @@ public class JdbcUserDao implements UserDao {
             ptm.setString(3, password_salt);
             ptm.setString(4, email);
             ptm.setString(5, usertype);
+            ptm.setString(6, avatar);
             ptm.executeUpdate();
             return true;
         } catch (Exception e) {
@@ -239,7 +254,7 @@ public class JdbcUserDao implements UserDao {
             rs = ptm.executeQuery();
             if(rs.next()) {
                 user = new User(
-                    rs.getInt("IDUSER"),
+                    rs.getInt("USERID"),
                     rs.getString("USERNAME"),
                     rs.getString("PASSWORD_HASH"),
                     rs.getString("PASSWORD_SALT"),

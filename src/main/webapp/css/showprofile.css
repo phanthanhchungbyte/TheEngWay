@@ -187,13 +187,14 @@
         margin-top: 2vh;
         border-radius: 10px;
         display: flex;
+        justify-content: space-around;
         font-size: var(--fs-600);
-        padding: 0.5em 0px;
+        padding: 0.5em 0;
         text-decoration: underline;
         background-color: #a6d283;
 
         .section-link {
-            width: 25%;
+            width: 33%;
             text-align: center;
         }
 
@@ -440,7 +441,7 @@
             margin: 0 auto;
         }
 
-        .student-buttons li:hover {
+        .student-buttons button:hover {
             cursor: pointer;
         }
 

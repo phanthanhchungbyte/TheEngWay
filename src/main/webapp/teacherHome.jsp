@@ -1,20 +1,12 @@
 <%@page contentType="text/html" pageEncoding="utf-8" %>
 <!DOCTYPE html>
 <html lang="en">
-<%@page import="model.User" %>
-<%@page import="jakarta.servlet.http.HttpSession" %>
-<%@page import="jakarta.servlet.http.HttpServletRequest" %>
-<%@page import="jakarta.servlet.http.HttpServletResponse" %>
-<%
-    HttpSession session1 = request.getSession(false);
-    User loggedInUser = (User) session1.getAttribute("loggedInUser");
-%>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/homebar.css">
     <link rel="stylesheet" href="css/coursenav.css">
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -25,26 +17,52 @@
 <div class="container">
     <div>
         <nav class="top-nav">
-            <a class="logo" href="teacherHome.jsp">
-                <img src="imgs/TheEngWayLogo.png" alt="The Logo">
-            </a>
-            <div class="search">
-                <i class="fad fa-search"></i>
-                <input class="search-bar" placeholder="Search lessons here">
+            <div class="logo-div">
+                <a class="logo" href="home.jsp">
+                    <img src="imgs/TheEngWayLogo.png" alt="The Logo">
+                </a>
             </div>
-            </input>
-            <div class="profile-home-card">
-                <img src="imgs/user/userdefaultavatar.png" alt="">
-                <div class="shown-info">
-                    <p class="username-profile">${sessionScope.loggedInUser.getUserName()}</p>
-                    <img src="imgs/user/vipstatus.png" id="vip_status" alt="">
-                    <p class="level-profile">LV1</p>
-                    <p><span>0</span> thông báo mới</p>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <div class="home-page">
+                <div class="menu-items-div">
+                    <ul class="menu-items">
+                        <li class="search">
+                            <i class="fad fa-search"></i>
+                            <input class="search-bar" placeholder="Search lessons here">
+                        </li>
+                    </ul>
                 </div>
-                <a href="student_profile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
-                <li><a href="index.jsp">Đăng Xuất</a></li>
+                <div class="profile-home-card">
+                    <img src="${sessionScope.loggedInUser.getAvatar()}" alt="">
+                    <div class="shown-info">
+                        <p class="username-profile">"${sessionScope.loggedInUser.getUserName()}"</p>
+                        <p class="level-profile">LV1</p>
+                        <p><span>0</span> thông báo mới</p>
+                    </div>
+                    <div>
+                        <a href="userProfile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                        <li class="setting-cog"><a href="index.jsp">Exit</a></li>
+                    </div>
+                </div>
+                <div class="profile-home-card-mini">
+                    <img src="${sessionScope.loggedInUser.getAvatar()}" alt="Avatar"/>
+                    <i class="fas fa-caret-down fa-2x"></i>
+                    <ul class="mini-profile-dropdown">
+                        <li class="settings">
+                            <a href="userProfile.jsp">Settings</a>
+                        </li>
+                        <li class="exit">
+                            <a href="index.jsp">Exit</a>
+                        </li>
+                    </ul>
+                </div>
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
             </div>
         </nav>
+
     </div>
 
     <div class="course-div">
@@ -306,5 +324,18 @@
         </div>
     </div>
 </div>
+<script>
+    const profileHomeCardMini = document.querySelector('.profile-home-card-mini');
+    const profileHomeDropdown = document.querySelector('.mini-profile-dropdown');
+
+    // Default that the profile home dropdown to not show
+    profileHomeCardMini.addEventListener("click", () => {
+        if(profileHomeDropdown.style.display === "") {
+            profileHomeDropdown.style.display = "block";
+        } else if(profileHomeDropdown.style.display === "block") {
+            profileHomeDropdown.style.display = "";
+        }
+    })
+</script>
 </body>
 </html>

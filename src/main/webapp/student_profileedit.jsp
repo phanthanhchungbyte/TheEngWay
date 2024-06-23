@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+          type="text/css"/>
     <link rel="stylesheet" href="css/homebar.css">
     <link rel="stylesheet" href="css/coursenav.css">
     <link rel="stylesheet" href="css/editprofile.css">
@@ -15,6 +16,11 @@
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <!-- Include the cropper script -->
     <script src="cropperjs/cropper.js"></script>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -44,7 +50,7 @@
                     <p><span>0</span> thông báo mới</p>
                 </div>
                 <div>
-                    <a href="student_profile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                    <a href="userProfile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
                     <li class="setting-cog"><a href="index.jsp">Exit</a></li>
                 </div>
             </div>
@@ -53,7 +59,7 @@
                 <i class="fas fa-caret-down fa-2x"></i>
                 <ul class="mini-profile-dropdown">
                     <li class="settings">
-                        <a href="student_profile.jsp">Settings</a>
+                        <a href="userProfile.jsp">Settings</a>
                     </li>
                     <li class="exit">
                         <a href="index.jsp">Exit</a>
@@ -250,9 +256,9 @@
                     <a href="#">Bài tập</a>
                 </div>
 
-                <div class="section-link">
-                    <a href="#">Báo cáo</a>
-                </div>
+                <%--                <div class="section-link">--%>
+                <%--                    <a href="#">Báo cáo</a>--%>
+                <%--                </div>--%>
 
             </section>
 
@@ -267,7 +273,7 @@
                         <!--Level progress bar should fetch data from server or database-->
                         <label for="levelbar">Level <span>0</span></label>
                         <div class="progress">
-                            <progress id="levelbar"  value="30" max="100"> 1 </progress>
+                            <progress id="levelbar" value="30" max="100"> 1</progress>
                         </div>
                         <div class="start-end">
                             <span>0</span>
@@ -342,14 +348,16 @@
                             <label for="full_name">Tên đầy đủ:</label>
                             <input type="text" name="full_name" id="full_name">
                             <div class="toggle">
-                                <input type="checkbox" id="full_name_checkbox" value="${sessionScope.loggedInUser.getDateOfBirth()}">
+                                <input type="checkbox" id="full_name_checkbox"
+                                       value="${sessionScope.loggedInUser.getDateOfBirth()}">
                                 <label for="full_name_checkbox">Ẩn</label>
                             </div>
                         </div>
 
                         <div class="input-row">
                             <label for="date_of_birth">Ngày sinh:</label>
-                            <input type="date" name="date_of_birth" id="date_of_birth" value="${sessionScope.loggedInUser.getDateOfBirth()}">
+                            <input type="date" name="date_of_birth" id="date_of_birth"
+                                   value="${sessionScope.loggedInUser.getDateOfBirth()}">
                             <div class="toggle">
                                 <input type="checkbox" id="dob_checkbox">
                                 <label for="dob_checkbox">Ẩn</label>
@@ -378,7 +386,8 @@
                             <label for="address">Địa chỉ:</label>
                             <input type="text" name="address" id="address">
                             <div class="toggle">
-                                <input type="checkbox" id="address_checkbox" value="${sessionScope.loggedInUser.getAddress()}">
+                                <input type="checkbox" id="address_checkbox"
+                                       value="${sessionScope.loggedInUser.getAddress()}">
                                 <label for="address_checkbox">Ẩn</label>
                             </div>
                         </div>
@@ -387,7 +396,8 @@
                             <label for="phone">Số ĐT:</label>
                             <input type="tel" name="phone" id="phone">
                             <div class="toggle">
-                                <input type="checkbox" id="phone_checkbox" value="${sessionScope.loggedInUser.getPhoneNumber()}">
+                                <input type="checkbox" id="phone_checkbox"
+                                       value="${sessionScope.loggedInUser.getPhoneNumber()}">
                                 <label for="phone_checkbox">Ẩn</label>
                             </div>
                         </div>
@@ -396,7 +406,8 @@
                             <label for="email">Email:</label>
                             <input type="email" name="email" id="email">
                             <div class="toggle">
-                                <input type="checkbox" id="email_checkbox" value="${sessionScope.loggedInUser.getEmail()}" disabled>
+                                <input type="checkbox" id="email_checkbox"
+                                       value="${sessionScope.loggedInUser.getEmail()}" disabled>
                                 <label for="email_checkbox">Ẩn</label>
                             </div>
                         </div>
@@ -438,9 +449,24 @@
     </div>
 </div>
 
+<%--Get user state without using JSTL--%>
 <script type="text/javascript">
     let contextPath = `${pageContext.request.contextPath}`;
+    let curUserType = `${sessionScope.loggedInUser.getUserType()}`;
 </script>
 <script type="text/javascript" src="js/changeAvatar.js"></script>
+<script>
+    const profileHomeCardMini = document.querySelector('.profile-home-card-mini');
+    const profileHomeDropdown = document.querySelector('.mini-profile-dropdown');
+
+    // Default that the profile home dropdown to not show
+    profileHomeCardMini.addEventListener("click", () => {
+        if(profileHomeDropdown.style.display === "") {
+            profileHomeDropdown.style.display = "block";
+        } else if(profileHomeDropdown.style.display === "block") {
+            profileHomeDropdown.style.display = "";
+        }
+    })
+</script>
 </body>
 </html>

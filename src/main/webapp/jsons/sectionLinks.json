@@ -1,0 +1,11 @@
+[
+  {
+    "userType": "Teacher",
+    "sectionContent": "<div class='section-link'><a href='userProfile.jsp'>Dashboard</a></div><div class='section-link'><a href='#'>Chấm điểm</a></div><div class='section-link'><a href='teacher_lessonview.jsp'>Bài học</a></div>"
+  },
+
+  {
+    "userType": "Student",
+    "sectionContent": "<div class='section-link'><a href='userProfile.jsp'>Dashboard</a></div><div class='section-link'><a href='#'>Bạn bè</a></div><div class='section-link'><a href='#'>Bài tập</a></div><div class='section-link'><a href='#'>Báo cáo</a></div>"
+  }
+]

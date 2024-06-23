@@ -37,7 +37,7 @@ public class ChangeAvatarServlet extends HttpServlet {
 
         request.setAttribute("message", "Avatar changed successfully!");
         try {
-            request.getRequestDispatcher("student_profile.jsp").forward(request, response);
+            request.getRequestDispatcher("userProfile.jsp").forward(request, response);
         } catch (ServletException | IOException e) {
             logger.log(Level.SEVERE, e.getMessage(), e);
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "An error occurred while changing the avatar.");

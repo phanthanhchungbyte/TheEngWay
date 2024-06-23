@@ -113,13 +113,14 @@ document.getElementById('crop-button').addEventListener('click', function() {
 })
 
 const saveImage = (imageDataURL) => {
-   let url = "https://script.google.com/macros/s/AKfycbymNaO403Khzjh_I36ni167CFhidMLZXk-uf4Lwhs8RG9dxmWRml67ty_7LJ6RLdhrZNA/exec";
+   let url = "https://script.google.com/macros/s/AKfycbwxgaccLzA-VUlhH6sU3qFs5xNrIFshMc5FU1g2hO3lj4syh1uEH_E3yj0LRpBlvI9v8A/exec";
 
    // Extract the base64 part of the data URL
    let base64code = imageDataURL.split("base64,")[1];
    let curFileId = currentAvatarSrc.substring(currentAvatarSrc.indexOf('=') + 1);
 
-   if(currentAvatarSrc.startsWith('https://drive.google.com/thumbnail?id=1CMew23JedgSH1qOuT0K6jIscj-VRcwEC')) {
+   if(currentAvatarSrc.startsWith('https://drive.google.com/thumbnail?id=1CMew23JedgSH1qOuT0K6jIscj-VRcwEC')
+   || currentAvatarSrc.startsWith('https://drive.google.com/thumbnail?id=1oe7Ttyj4PrmI9T-Z2p8-D76Fz3KcSU9A')) {
       curFileId = 'none';
    }
 

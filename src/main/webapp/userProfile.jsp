@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="cropperjs/cropper.css">
     <%--  Include the cropper script  --%>
     <script src="cropperjs/cropper.js"></script>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -43,7 +48,7 @@
                     <p><span>0</span> thông báo mới</p>
                 </div>
                 <div>
-                    <a href="student_profile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                    <a href="userProfile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
                     <ul>
                         <li class="setting-cog"><a href="index.jsp">Exit</a></li>
                     </ul>
@@ -54,7 +59,7 @@
                 <i class="fas fa-caret-down fa-2x"></i>
                 <ul class="mini-profile-dropdown">
                     <li class="settings">
-                        <a href="student_profile.jsp">Settings</a>
+                        <a href="userProfile.jsp">Settings</a>
                     </li>
                     <li class="exit">
                         <a href="index.jsp">Exit</a>
@@ -164,7 +169,7 @@
                     <div class="student-buttonside">
                         <ul class="student-buttons">
                             <li>
-                                <button class="personal-info" onclick="location.href='student_profileShow2.jsp';"><i class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân</button>
+                                <button class="personal-info" onclick="location.href='profileShow.jsp';"><i class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân</button>
                             </li>
 
                             <li>
@@ -172,7 +177,7 @@
                             </li>
 
                             <li>
-                                <button><i class="fas fa-lock-alt fa-lg"></i>Thay đổi mật khẩu</button>
+                                <button onclick="location.href='forgotpassword.jsp';"><i class="fas fa-lock-alt fa-lg"></i>Thay đổi mật khẩu</button>
                             </li>
 
                             <li>
@@ -180,7 +185,7 @@
                             </li>
 
                             <li>
-                                <button><i class="fas fa-power-off fa-lg"></i>Thoát</button>
+                                <button onclick="location.href='index.jsp';"><i class="fas fa-power-off fa-lg"></i>Thoát</button>
                             </li>
                         </ul>
                     </div>
@@ -240,23 +245,7 @@
             </section>
 
             <section class="profile-sections">
-
-                <div class="section-link">
-                    <a href="#">Dashboard</a>
-                </div>
-
-                <div class="section-link">
-                    <a href="#">Bạn bè</a>
-                </div>
-
-                <div class="section-link">
-                    <a href="#">Bài tập</a>
-                </div>
-
-                <div class="section-link">
-                    <a href="#">Báo cáo</a>
-                </div>
-
+                <%--Section links to be filled--%>
             </section>
 
             <div class="VIP-status-ribbon">
@@ -395,44 +384,44 @@
 
                     <div class="comment-bar">
                         <div class="comment-avatar">
-                            <img src="imgs/stock-avatar.jpg" alt="Avatar">
+                            <img src="${sessionScope.loggedInUser.getAvatar()}" alt="Avatar">
                         </div>
 
                         <div class="comment-content">
-                            <p>JohnDoe17 - <span>17:24:46 ngày 29-11-2018</span></p>
+                            <p>${sessionScope.loggedInUser.getUserName()} - <span>17:24:46 ngày 29-11-2018</span></p>
                             <p>No comment.</p>
                         </div>
                     </div>
 
                     <div class="comment-bar">
                         <div class="comment-avatar">
-                            <img src="imgs/stock-avatar.jpg" alt="Avatar">
+                            <img src="${sessionScope.loggedInUser.getAvatar()}" alt="Avatar">
                         </div>
 
                         <div class="comment-content">
-                            <p>JohnDoe17 - <span>17:24:46 ngày 29-11-2018</span></p>
+                            <p>${sessionScope.loggedInUser.getUserName()} - <span>17:24:46 ngày 29-11-2018</span></p>
                             <p>No comment.</p>
                         </div>
                     </div>
 
                     <div class="comment-bar">
                         <div class="comment-avatar">
-                            <img src="imgs/stock-avatar.jpg" alt="Avatar">
+                            <img src="${sessionScope.loggedInUser.getAvatar()}" alt="Avatar">
                         </div>
 
                         <div class="comment-content">
-                            <p>JohnDoe17 - <span>17:24:46 ngày 29-11-2018</span></p>
+                            <p>${sessionScope.loggedInUser.getUserName()} - <span>17:24:46 ngày 29-11-2018</span></p>
                             <p>No comment.</p>
                         </div>
                     </div>
 
                     <div class="comment-bar">
                         <div class="comment-avatar">
-                            <img src="imgs/stock-avatar.jpg" alt="Avatar">
+                            <img src="${sessionScope.loggedInUser.getAvatar()}" alt="Avatar">
                         </div>
 
                         <div class="comment-content">
-                            <p>JohnDoe17 - <span>17:24:46 ngày 29-11-2018</span></p>
+                            <p>${sessionScope.loggedInUser.getUserName()} - <span>17:24:46 ngày 29-11-2018</span></p>
                             <p>No comment.</p>
                         </div>
                     </div>
@@ -472,7 +461,51 @@
 </div>
 <script type="text/javascript">
     let contextPath = `${pageContext.request.contextPath}`;
+    let curUserType = `${sessionScope.loggedInUser.getUserType()}`;
 </script>
 <script type="text/javascript" src="js/changeAvatar.js"></script>
+<script>
+    const profileHomeCardMini = document.querySelector('.profile-home-card-mini');
+    const profileHomeDropdown = document.querySelector('.mini-profile-dropdown');
+
+    // Default that the profile home dropdown to not show.
+    profileHomeCardMini.addEventListener("click", () => {
+        if(profileHomeDropdown.style.display === "") {
+            profileHomeDropdown.style.display = "block";
+        } else if(profileHomeDropdown.style.display === "block") {
+            profileHomeDropdown.style.display = "";
+        }
+    });
+
+    // initialize an empty array
+    // Hide the ribbon, profile-level and profile-streak if the user is a Teacher
+    let displayProfileStat = [];
+    displayProfileStat.push(document.querySelector('.VIP-status-ribbon'));
+    displayProfileStat.push(document.querySelector('.profile-level'));
+    displayProfileStat.push(document.querySelector('.profile-streak'));
+
+    if (curUserType === "Teacher") {
+        displayProfileStat.forEach((element) => {
+            element.classList.add('hide');
+        })
+    } else if (curUserType === "Student") {
+        displayProfileStat.forEach((element) => {
+            if (element.classList.contains('hide'))
+                element.classList.remove('hide')
+        })
+    }
+
+    async function loadData(userType) {
+        try {
+            const response = await fetch("jsons/sectionLinks.json")
+            let sectionLinkChoices = await response.json(); // We get the array of objects here
+            document.querySelector(".profile-sections").innerHTML = sectionLinkChoices.find(section => section.userType === userType).sectionContent;
+            console.log(sectionLinkChoices);
+        } catch (error) {
+            console.error("Error fetching JSON:", error);
+        }
+    }
+    loadData(curUserType);
+</script>
 </body>
 </html>

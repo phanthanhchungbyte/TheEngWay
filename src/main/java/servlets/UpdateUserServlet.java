@@ -59,7 +59,7 @@ public class UpdateUserServlet extends HttpServlet {
 
         // Forward to a confirmation page or back to the form with error message
         if (success) {
-            response.sendRedirect("student_profile.jsp"); // Redirect to the user's profile page
+            response.sendRedirect("userProfile.jsp"); // Redirect to the user's profile page
         } else {
             request.setAttribute("errorMessage", "Failed to update user information.");
             request.getRequestDispatcher("student_profileedit.jsp").forward(request, response); // Forward back to the form

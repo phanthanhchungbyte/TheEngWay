@@ -16,6 +16,7 @@ public class OtpServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
+        JdbcUserDao dao = new JdbcUserDao();
         int otpEmail = (int) session.getAttribute("otp");
         int otp = Integer.parseInt(request.getParameter("verificationCode"));
         if (otpEmail == otp) {
@@ -25,9 +26,15 @@ public class OtpServlet extends HttpServlet {
             String saltString = u.getPasswordSalt();
             String email = u.getEmail();
             String usertype = u.getUserType();
+            // Check the usertype to set the appropriate default avatar.
+            String avatar = "";
+            if(usertype.equals("Student")) {
+                avatar = "https://drive.google.com/thumbnail?id=1lwtEx3HBcTtV0q_bJGqsZLcXGC6Or2Jk";
+            } else if(usertype.equals("Teacher")) {
+                avatar = "https://drive.google.com/thumbnail?id=1oe7Ttyj4PrmI9T-Z2p8-D76Fz3KcSU9A";
+            }
 
-            JdbcUserDao dao = new JdbcUserDao();
-            if (dao.insertAccount(username, hashed_password, saltString, email, usertype)) {
+            if (dao.insertAccount(username, hashed_password, saltString, email, usertype, avatar)) {
                 request.setAttribute("message", "Đăng ký thành công");
             } else {
                 request.setAttribute("message", "Đăng ký thất bại");

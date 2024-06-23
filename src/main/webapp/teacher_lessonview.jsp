@@ -1,8 +1,7 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<%@page contentType="text/html" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +10,8 @@
           type="text/css" />
     <link rel="stylesheet" href="css/homebar.css">
     <link rel="stylesheet" href="css/coursenav.css">
-    <link rel="stylesheet" href="css/showprofile.css">
+    <link rel="stylesheet" href="css/teacher-only/lessonview.css">
     <link rel="stylesheet" href="css/footer.css">
-    <!-- Include the cropper css -->
     <link rel="stylesheet" href="cropperjs/cropper.css">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <!-- Include the cropper script -->
@@ -47,7 +45,7 @@
                     <p><span>0</span> thông báo mới</p>
                 </div>
                 <div>
-                    <a href="student_profile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                    <a href="userProfile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
                     <ul>
                         <li class="setting-cog"><a href="index.jsp">Exit</a></li>
                     </ul>
@@ -58,7 +56,7 @@
                 <i class="fas fa-caret-down fa-2x"></i>
                 <ul class="mini-profile-dropdown">
                     <li class="settings">
-                        <a href="student_profile.jsp">Settings</a>
+                        <a href="userProfile.jsp">Settings</a>
                     </li>
                     <li class="exit">
                         <a href="index.jsp">Exit</a>
@@ -73,7 +71,7 @@
     <div class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
-                <a href="index.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                <a href="home.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
                 <a href="#">Nghe</a>
@@ -133,10 +131,6 @@
         </ul>
     </div>
 
-    <div class="banner">
-        <a href="#"><img src="imgs/VIP-image.png" alt="VIP banner"></a>
-    </div>
-
     <div class="main-content">
 
         <div class="student-profile">
@@ -154,11 +148,11 @@
                         </div>
 
                         <div class="student-bio">
-                            <h4>Tiếng Anh cơ bản hoàn thành</h4>
-                            <p>Giới tính: <span>Nam</span></p>
-                            <p>Bài viết: <span>690</span></p>
+                            <h4>Giáo viên</h4>
+                            <p>Giới tính: <span>${sessionScope.loggedInUser.getGender()}</span></p>
+                            <p>Bài viết: <span>10</span></p>
                             <p>Tham gia ngày: <span>06/09/2012</span></p>
-                            <p>Online cách đây: <span>20s</span></p>
+                            <p>Online cách đây: <span>Đang online</span></p>
                             <p><span>"Never gonna give you up"</span> <a href="#">[Sửa..]</a></p>
                         </div>
 
@@ -167,16 +161,15 @@
                     <div class="student-buttonside">
                         <ul class="student-buttons">
                             <li>
-                                <button><i class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân</button>
+                                <button class="personal-info" onclick="location.href='profileShow.jsp';"><i class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân</button>
                             </li>
 
                             <li>
-                                <button class="changeavatar-button"><i class="far fa-image-polaroid fa-lg"></i>Thay đổi
-                                    avatar</button>
+                                <button class="changeavatar-button"><i class="far fa-image-polaroid fa-lg"></i>Thay đổi avatar</button>
                             </li>
 
                             <li>
-                                <button><i class="fas fa-lock-alt fa-lg"></i>Thay đổi mật khẩu</button>
+                                <button onclick="location.href='forgotpassword.jsp';"><i class="fas fa-lock-alt fa-lg"></i>Thay đổi mật khẩu</button>
                             </li>
 
                             <li>
@@ -184,13 +177,12 @@
                             </li>
 
                             <li>
-                                <button><i class="fas fa-power-off fa-lg"></i>Thoát</button>
+                                <button onclick="location.href='index.jsp';"><i class="fas fa-power-off fa-lg"></i>Thoát</button>
                             </li>
                         </ul>
                     </div>
-
-
                 </div>
+
                 <dialog class="modal" id="modal">
                     <h3>Đổi avatar</h3>
                     <img src="${sessionScope.loggedInUser.getAvatar()}" alt="" class="cur-avatar">
@@ -211,215 +203,201 @@
                     </div>
                     <button id="crop-button">Crop</button>
                     <div class="cropped-container">
-                        <img src="#" alt="Testing2" id="output">
+                        <img src="#" alt="" id="output">
                     </div>
                     <button class="go-back">Close</button>
                     <button class="return-to-main">Close</button>
                 </dialog>
-                <div class="separator">
-
-                </div>
-                <div class="student-statistics">
-                    <div class="student-individual-statistic">
-                        <h1>Friends</h1>
-                        <p><span>12</span></p>
-                    </div>
-
-                    <div class="student-individual-statistic">
-                        <h1>Average score</h1>
-                        <p><span>6.9</span></p>
-                    </div>
-
-                    <div class="student-individual-statistic">
-                        <h1>Title</h1>
-                        <p><span>42</span></p>
-                    </div>
-
-                    <div class="student-individual-statistic">
-                        <h1>Experience Points</h1>
-                        <p><span>169420</span></p>
-                    </div>
-                </div>
+                <div class="separator"></div>
             </section>
 
             <section class="profile-sections">
 
-                <div class="section-link">
-                    <a href="#">Dashboard</a>
-                </div>
-
-                <div class="section-link">
-                    <a href="#">Bạn bè</a>
-                </div>
-
-                <div class="section-link">
-                    <a href="#">Bài tập</a>
-                </div>
-
-                <div class="section-link">
-                    <a href="#">Báo cáo</a>
-                </div>
-
             </section>
 
-            <div class="VIP-status-ribbon">
-                <p>Tài khoản của bạn còn <span>69</span> ngày VIP</p>
-            </div>
-
-            <section class="wall-profile-statcard">
-
-                <div class="profile-level">
-                    <div class="profile-level-inner">
-                        <!--Level progress bar should fetch data from server or database-->
-                        <label for="file">Level <span>0</span></label>
-                        <div class="progress">
-                            <progress id="file" value="30" max="100"> 1 </progress>
-                        </div>
-                        <div class="start-end">
-                            <span>0</span>
-                            <span>1</span>
-                        </div>
-                        <p>Bạn cần 7XP để lên cấp!</p>
+            <section class="viewlesson-section">
+                <div class="viewlesson-title">
+                    <h2>Bài học đã tạo</h2>
+                    <div class="createlesson-button">
+                        <i class="fas fa-feather-alt"></i>
+                        <button onclick="location.href='teacher_createlesson.jsp'">Tạo mới</button>
                     </div>
                 </div>
 
-                <div class="profile-streak">
-                    <div class="profile-streak-inner">
-                        <div class="profile-streak-info">
-                            <div>
-                                <h2>Streak <span>283</span></h2>
-                                <br>
-                                <p>Giữ streak của bạn hôm nay.</p>
-                            </div>
-                            <img src="imgs/profile_assets/flame.png" alt="Flame">
+                <div class="createdlessons-section">
+                    <div class="created-lesson-card">
+                        <img src="imgs/lesson_types/listeningskill.png" alt="None">
+
+                        <div class="created-lesson-info">
+                            <h2>Unit 1: First Greetings</h2>
+                            <p>Ngày tạo: <span>6/9/2024</span></p>
+                            <p>Lượt xem: <span>69429</span></p>
                         </div>
 
-                        <div class="profile-streak-weekbar">
-                            <div class="streak-weekday">
-                                <i class="fas fa-circle fa-2x on"></i>
-                                <p>M</p>
+                        <div class="lesson-creator-buttons">
+
+                            <div class="lesson-view-button">
+                                <i class="far fa-binoculars"></i>
+                                <button>Xem</button>
                             </div>
 
-                            <div class="streak-weekday">
-                                <i class="fas fa-circle fa-2x on"></i>
-                                <p>Tu</p>
+                            <div class="lesson-edit-button">
+                                <i class="fas fa-pen-alt"></i>
+                                <button>Sửa</button>
                             </div>
 
-                            <div class="streak-weekday">
-                                <i class="fas fa-circle fa-2x"></i>
-                                <p>W</p>
-                            </div>
-
-                            <div class="streak-weekday">
-                                <i class="fas fa-circle fa-2x"></i>
-                                <p>Th</p>
-                            </div>
-
-                            <div class="streak-weekday">
-                                <i class="fas fa-circle fa-2x"></i>
-                                <p>F</p>
-                            </div>
-
-                            <div class="streak-weekday">
-                                <i class="fas fa-circle fa-2x"></i>
-                                <p>Sa</p>
-                            </div>
-
-                            <div class="streak-weekday">
-                                <i class="fas fa-circle fa-2x"></i>
-                                <p>Su</p>
+                            <div class="lesson-delete-button">
+                                <i class="fas fa-trash-alt"></i>
+                                <button>Xóa</button>
                             </div>
 
                         </div>
+
+                    </div>
+
+                    <div class="created-lesson-card">
+                        <img src="imgs/lesson_types/listeningskill.png" alt="None">
+
+                        <div class="created-lesson-info">
+                            <h2>Unit 2: Greetings</h2>
+                            <p>Ngày tạo: <span>7/9/2024</span></p>
+                            <p>Lượt xem: <span>69420</span></p>
+                        </div>
+
+                        <div class="lesson-creator-buttons">
+
+                            <div class="lesson-view-button">
+                                <i class="far fa-binoculars"></i>
+                                <button>Xem</button>
+                            </div>
+
+                            <div class="lesson-edit-button">
+                                <i class="fas fa-pen-alt"></i>
+                                <button>Sửa</button>
+                            </div>
+
+                            <div class="lesson-delete-button">
+                                <i class="fas fa-trash-alt"></i>
+                                <button>Xóa</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="created-lesson-card">
+                        <img src="imgs/lesson_types/listeningskill.png" alt="None">
+
+                        <div class="created-lesson-info">
+                            <h2>Unit 3: Farewell</h2>
+                            <p>Ngày tạo: <span>8/9/2024</span></p>
+                            <p>Lượt xem: <span>69411</span></p>
+                        </div>
+
+                        <div class="lesson-creator-buttons">
+
+                            <div class="lesson-view-button">
+                                <i class="far fa-binoculars"></i>
+                                <button>Xem</button>
+                            </div>
+
+                            <div class="lesson-edit-button">
+                                <i class="fas fa-pen-alt"></i>
+                                <button>Sửa</button>
+                            </div>
+
+                            <div class="lesson-delete-button">
+                                <i class="fas fa-trash-alt"></i>
+                                <button>Xóa</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="created-lesson-card">
+                        <img src="imgs/lesson_types/listeningskill.png" alt="None">
+
+                        <div class="created-lesson-info">
+                            <h2>Unit 4: Name</h2>
+                            <p>Ngày tạo: <span>8/9/2024</span></p>
+                            <p>Lượt xem: <span>69411</span></p>
+                        </div>
+
+                        <div class="lesson-creator-buttons">
+
+                            <div class="lesson-view-button">
+                                <i class="far fa-binoculars"></i>
+                                <button>Xem</button>
+                            </div>
+
+                            <div class="lesson-edit-button">
+                                <i class="fas fa-pen-alt"></i>
+                                <button>Sửa</button>
+                            </div>
+
+                            <div class="lesson-delete-button">
+                                <i class="fas fa-trash-alt"></i>
+                                <button>Xóa</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="created-lesson-card">
+                        <img src="imgs/lesson_types/listeningskill.png" alt="None">
+
+                        <div class="created-lesson-info">
+                            <h2>Unit 5: Hometown and living place</h2>
+                            <p>Ngày tạo: <span>8/9/2024</span></p>
+                            <p>Lượt xem: <span>69411</span></p>
+                        </div>
+
+                        <div class="lesson-creator-buttons">
+
+                            <div class="lesson-view-button">
+                                <i class="far fa-binoculars"></i>
+                                <button>Xem</button>
+                            </div>
+
+                            <div class="lesson-edit-button">
+                                <i class="fas fa-pen-alt"></i>
+                                <button>Sửa</button>
+                            </div>
+
+                            <div class="lesson-delete-button">
+                                <i class="fas fa-trash-alt"></i>
+                                <button>Xóa</button>
+                            </div>
+
+                        </div>
+
                     </div>
 
                 </div>
 
+                <div class="createdlessons-navigation">
+
+                    <div class="navigation-buttons fa-lg">
+                        <i class="fas fa-caret-left fa-lg"></i>
+                        <button>Trang trước</button>
+                    </div>
+
+                    <div class="navigation-page-indicator">
+                        <h2>1</h2>
+                    </div>
+
+                    <div class="navigation-buttons fa-lg">
+                        <button>Trang sau</button>
+                        <i class="fas fa-caret-right fa-lg"></i>
+                    </div>
+
+                </div>
             </section>
 
-            <section class="personalinfo-section">
-                <div class="personalinfo-title">
-                    <h2>Thông tin cá nhân</h2>
-                    <div class="changeinfo-button">
-                        <i class="fas fa-pencil-alt"></i>
-                        <button onclick="location.href='student_profileedit.jsp';">Thay đổi profile</button>
-                    </div>
-                </div>
-
-                <div class="profile-section">
-                <%--Do a c-set here --%>
-                    <div class="profile-row">
-                        <p>Tên đầy đủ:</p>
-                        <c:choose>
-                            <c:when test="${not empty sessionScope.loggedInUser and sessionScope.loggedInUser.getFullName() ne null}">
-                                <p>${sessionScope.loggedInUser.getFullName()}</p>
-                            </c:when>
-
-                            <c:otherwise>
-                                <p><i style="color: gray;">Not set yet</i></p>
-                            </c:otherwise>
-                        </c:choose>
-                    </div>
-
-                    <div class="profile-row">
-                        <p>Ngày sinh:</p>
-                        <c:choose>
-                            <c:when test="${not empty sessionScope.loggedInUser and sessionScope.loggedInUser.getDateOfBirth() ne null}">
-                                <p>${sessionScope.loggedInUser.getDateOfBirthString()}</p>
-                            </c:when>
-
-                            <c:otherwise>
-                                <p><i style="color: gray;">Not set yet</i></p>
-                            </c:otherwise>
-                        </c:choose>
-                    </div>
-
-                    <div class="profile-row">
-                        <p>Giới tính:</p>
-                        <c:choose>
-                            <c:when test="${not empty sessionScope.loggedInUser and sessionScope.loggedInUser.getGender() ne null}">
-                                <p>${sessionScope.loggedInUser.getGender()}</p>
-                            </c:when>
-
-                            <c:otherwise>
-                                <p><i style="color: gray;">Not set yet</i></p>
-                            </c:otherwise>
-                        </c:choose>
-                    </div>
-
-                    <div class="profile-row">
-                        <p>Địa chỉ:</p>
-                        <c:choose>
-                            <c:when test="${not empty sessionScope.loggedInUser and sessionScope.loggedInUser.getAddress() ne null}">
-                                <p>${sessionScope.loggedInUser.getAddress()}</p>
-                            </c:when>
-
-                            <c:otherwise>
-                                <p><i style="color: gray;">Not set yet</i></p>
-                            </c:otherwise>
-                        </c:choose>
-                    </div>
-
-                    <div class="profile-row">
-                        <p>Số điện thoại:</p>
-                        <c:choose>
-                            <c:when test="${not empty sessionScope.loggedInUser and sessionScope.loggedInUser.getPhoneNumber() ne null}">
-                                <p>${sessionScope.loggedInUser.getPhoneNumber()}</p>
-                            </c:when>
-
-                            <c:otherwise>
-                                <p><i style="color: gray;">Not set yet</i></p>
-                            </c:otherwise>
-                        </c:choose>
-                    </div>
-
-                    <div class="profile-row">
-                        <p>Email:</p>
-                        <p>${sessionScope.loggedInUser.getEmail()}</p>
-                    </div>
-                </div>
-            </section>
         </div>
+
     </div>
 
     <div class="clear"></div>
@@ -451,8 +429,23 @@
 </div>
 <script type="text/javascript">
     let contextPath = `${pageContext.request.contextPath}`;
+    let curUserType = `${sessionScope.loggedInUser.getUserType()}`;
 </script>
-<script type="text/javascript" src="js/changeAvatar.js"></script>
+<script>
+
+    async function loadData(userType) {
+        try {
+            const response = await fetch("jsons/sectionLinks.json")
+            let sectionLinkChoices = await response.json(); // We get the array of objects here
+            document.querySelector(".profile-sections").innerHTML = sectionLinkChoices.find(section => section.userType === userType).sectionContent;
+            console.log(sectionLinkChoices);
+        } catch (error) {
+            console.error("Error fetching JSON:", error);
+        }
+    }
+    loadData(curUserType);
+
+</script>
 </body>
 
 </html>
