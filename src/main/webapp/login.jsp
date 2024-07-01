@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/coursenav.css">
@@ -41,58 +42,50 @@
                 <a href="index.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
-                <a href="#">Nghe</a>
+                <a href="#">Kĩ năng</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="skillJSPs/skillListening.jsp">Listening</a></li>
+                    <li><a href="skillJSPs/skillReading.jsp">Reading</a></li>
+                    <li><a href="skillJSPs/skillWriting.jsp">Writing</a></li>
+                    <li><a href="#">Grammar</a></li>
+                    <li><a href="#">Từ vựng</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Nói</a>
+                <a href="#">TA Tiểu học</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 1</a></li>
+                    <li><a href="#">Tiếng Anh lớp 2</a></li>
+                    <li><a href="#">Tiếng Anh lớp 3</a></li>
+                    <li><a href="#">Tiếng Anh lớp 4</a></li>
+                    <li><a href="#">Tiếng Anh lớp 5</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Đọc</a>
+                <a href="#">TA Trung học CS</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 7</a></li>
+                    <li><a href="#">Tiếng Anh lớp 8</a></li>
+                    <li><a href="#">Tiếng Anh lớp 9</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Viết</a>
+                <a href="#">TA Trung học PT</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 10</a></li>
+                    <li><a href="#">Tiếng Anh lớp 11</a></li>
+                    <li><a href="#">Tiếng Anh lớp 12</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#">Tổng hợp</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Cuộc thi</a></li>
+                    <li><a href="#">Test Kiểm tra trình độ</a></li>
+                    <li><a href="#">Kiểm tra các khối</a></li>
+                    <li><a href="#">Bài tập chấm điểm</a></li>
                 </ul>
             </li>
         </ul>

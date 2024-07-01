@@ -1,7 +1,9 @@
 <%@page contentType="text/html" pageEncoding="utf-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -156,7 +158,16 @@
                         </div>
 
                         <div class="student-bio">
-                            <h4>Tiếng Anh cơ bản hoàn thành</h4>
+                            <%-- Dựa vào userType để xác định title phù hợp --%>
+                            <c:set value="${sessionScope.loggedInUser.getUserType()}" var="userType"/>
+                            <c:choose>
+                                <c:when test="${userType eq 'Student'}">
+                                    <h4>Học sinh tập sự</h4>
+                                </c:when>
+                                <c:when test="${userType eq 'Teacher'}">
+                                    <h4>Giáo viên</h4>
+                                </c:when>
+                            </c:choose>
                             <p>Giới tính: <span>Nam</span></p>
                             <p>Bài viết: <span>690</span></p>
                             <p>Tham gia ngày: <span>06/09/2012</span></p>

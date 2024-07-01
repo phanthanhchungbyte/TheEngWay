@@ -1,19 +1,20 @@
 <%@page contentType="text/html" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Danh sách bài học </title>
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
-          type="text/css" />
+          type="text/css"/>
     <link rel="stylesheet" href="css/homebar.css">
     <link rel="stylesheet" href="css/coursenav.css">
     <link rel="stylesheet" href="css/teacher-only/lessonview.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="cropperjs/cropper.css">
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <!-- Include the cropper script -->
     <script src="cropperjs/cropper.js"></script>
 </head>
@@ -22,7 +23,7 @@
 <div class="container">
     <nav class="top-nav">
         <div class="logo-div">
-            <a class="logo" href="home.jsp">
+            <a class="logo" href="teacherHome.jsp">
                 <img src="imgs/TheEngWayLogo.png" alt="The Logo">
             </a>
         </div>
@@ -74,58 +75,50 @@
                 <a href="home.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
-                <a href="#">Nghe</a>
+                <a href="#">Kĩ năng</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="skillJSPs/skillListening.jsp">Listening</a></li>
+                    <li><a href="skillJSPs/skillReading.jsp">Reading</a></li>
+                    <li><a href="skillJSPs/skillWriting.jsp">Writing</a></li>
+                    <li><a href="#">Grammar</a></li>
+                    <li><a href="#">Từ vựng</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Nói</a>
+                <a href="#">TA Tiểu học</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 1</a></li>
+                    <li><a href="#">Tiếng Anh lớp 2</a></li>
+                    <li><a href="#">Tiếng Anh lớp 3</a></li>
+                    <li><a href="#">Tiếng Anh lớp 4</a></li>
+                    <li><a href="#">Tiếng Anh lớp 5</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Đọc</a>
+                <a href="#">TA Trung học CS</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 7</a></li>
+                    <li><a href="#">Tiếng Anh lớp 8</a></li>
+                    <li><a href="#">Tiếng Anh lớp 9</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Viết</a>
+                <a href="#">TA Trung học PT</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 10</a></li>
+                    <li><a href="#">Tiếng Anh lớp 11</a></li>
+                    <li><a href="#">Tiếng Anh lớp 12</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#">Tổng hợp</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Cuộc thi</a></li>
+                    <li><a href="#">Test Kiểm tra trình độ</a></li>
+                    <li><a href="#">Kiểm tra các khối</a></li>
+                    <li><a href="#">Bài tập chấm điểm</a></li>
                 </ul>
             </li>
         </ul>
@@ -161,15 +154,21 @@
                     <div class="student-buttonside">
                         <ul class="student-buttons">
                             <li>
-                                <button class="personal-info" onclick="location.href='profileShow.jsp';"><i class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân</button>
+                                <button class="personal-info" onclick="location.href='profileShow.jsp';"><i
+                                        class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân
+                                </button>
                             </li>
 
                             <li>
-                                <button class="changeavatar-button"><i class="far fa-image-polaroid fa-lg"></i>Thay đổi avatar</button>
+                                <button class="changeavatar-button"><i class="far fa-image-polaroid fa-lg"></i>Thay đổi
+                                    avatar
+                                </button>
                             </li>
 
                             <li>
-                                <button onclick="location.href='forgotpassword.jsp';"><i class="fas fa-lock-alt fa-lg"></i>Thay đổi mật khẩu</button>
+                                <button onclick="location.href='forgotpassword.jsp';"><i
+                                        class="fas fa-lock-alt fa-lg"></i>Thay đổi mật khẩu
+                                </button>
                             </li>
 
                             <li>
@@ -177,7 +176,8 @@
                             </li>
 
                             <li>
-                                <button onclick="location.href='index.jsp';"><i class="fas fa-power-off fa-lg"></i>Thoát</button>
+                                <button onclick="location.href='index.jsp';"><i class="fas fa-power-off fa-lg"></i>Thoát
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -215,9 +215,11 @@
 
             </section>
 
+            <%-- Author: HoLePhuongNam --%>
             <section class="viewlesson-section">
                 <div class="viewlesson-title">
                     <h2>Bài học đã tạo</h2>
+
                     <div class="createlesson-button">
                         <i class="fas fa-feather-alt"></i>
                         <button onclick="location.href='teacher_createlesson.jsp'">Tạo mới</button>
@@ -225,17 +227,16 @@
                 </div>
 
                 <div class="createdlessons-section">
-                    <div class="created-lesson-card">
-                        <img src="imgs/lesson_types/listeningskill.png" alt="None">
-
+                    <div class="created-lesson-card" style="display: none">
+                        <img src="" alt="" class="skill-icon">
                         <div class="created-lesson-info">
-                            <h2>Unit 1: First Greetings</h2>
-                            <p>Ngày tạo: <span>6/9/2024</span></p>
-                            <p>Lượt xem: <span>69429</span></p>
+                            <h2 class="lesson-title"></h2>
+                            <p>Ngày tạo: <span class="created-at"></span></p>
+                            <p>Chỉnh sửa gần nhất : <span class="updated-at"></span></p>
+                            <p>Người tạo: <span class="creator-name"></span></p>
                         </div>
 
                         <div class="lesson-creator-buttons">
-
                             <div class="lesson-view-button">
                                 <i class="far fa-binoculars"></i>
                                 <button>Xem</button>
@@ -250,149 +251,24 @@
                                 <i class="fas fa-trash-alt"></i>
                                 <button>Xóa</button>
                             </div>
-
                         </div>
-
                     </div>
-
-                    <div class="created-lesson-card">
-                        <img src="imgs/lesson_types/listeningskill.png" alt="None">
-
-                        <div class="created-lesson-info">
-                            <h2>Unit 2: Greetings</h2>
-                            <p>Ngày tạo: <span>7/9/2024</span></p>
-                            <p>Lượt xem: <span>69420</span></p>
-                        </div>
-
-                        <div class="lesson-creator-buttons">
-
-                            <div class="lesson-view-button">
-                                <i class="far fa-binoculars"></i>
-                                <button>Xem</button>
-                            </div>
-
-                            <div class="lesson-edit-button">
-                                <i class="fas fa-pen-alt"></i>
-                                <button>Sửa</button>
-                            </div>
-
-                            <div class="lesson-delete-button">
-                                <i class="fas fa-trash-alt"></i>
-                                <button>Xóa</button>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="created-lesson-card">
-                        <img src="imgs/lesson_types/listeningskill.png" alt="None">
-
-                        <div class="created-lesson-info">
-                            <h2>Unit 3: Farewell</h2>
-                            <p>Ngày tạo: <span>8/9/2024</span></p>
-                            <p>Lượt xem: <span>69411</span></p>
-                        </div>
-
-                        <div class="lesson-creator-buttons">
-
-                            <div class="lesson-view-button">
-                                <i class="far fa-binoculars"></i>
-                                <button>Xem</button>
-                            </div>
-
-                            <div class="lesson-edit-button">
-                                <i class="fas fa-pen-alt"></i>
-                                <button>Sửa</button>
-                            </div>
-
-                            <div class="lesson-delete-button">
-                                <i class="fas fa-trash-alt"></i>
-                                <button>Xóa</button>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="created-lesson-card">
-                        <img src="imgs/lesson_types/listeningskill.png" alt="None">
-
-                        <div class="created-lesson-info">
-                            <h2>Unit 4: Name</h2>
-                            <p>Ngày tạo: <span>8/9/2024</span></p>
-                            <p>Lượt xem: <span>69411</span></p>
-                        </div>
-
-                        <div class="lesson-creator-buttons">
-
-                            <div class="lesson-view-button">
-                                <i class="far fa-binoculars"></i>
-                                <button>Xem</button>
-                            </div>
-
-                            <div class="lesson-edit-button">
-                                <i class="fas fa-pen-alt"></i>
-                                <button>Sửa</button>
-                            </div>
-
-                            <div class="lesson-delete-button">
-                                <i class="fas fa-trash-alt"></i>
-                                <button>Xóa</button>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="created-lesson-card">
-                        <img src="imgs/lesson_types/listeningskill.png" alt="None">
-
-                        <div class="created-lesson-info">
-                            <h2>Unit 5: Hometown and living place</h2>
-                            <p>Ngày tạo: <span>8/9/2024</span></p>
-                            <p>Lượt xem: <span>69411</span></p>
-                        </div>
-
-                        <div class="lesson-creator-buttons">
-
-                            <div class="lesson-view-button">
-                                <i class="far fa-binoculars"></i>
-                                <button>Xem</button>
-                            </div>
-
-                            <div class="lesson-edit-button">
-                                <i class="fas fa-pen-alt"></i>
-                                <button>Sửa</button>
-                            </div>
-
-                            <div class="lesson-delete-button">
-                                <i class="fas fa-trash-alt"></i>
-                                <button>Xóa</button>
-                            </div>
-
-                        </div>
-
-                    </div>
-
                 </div>
 
                 <div class="createdlessons-navigation">
-
                     <div class="navigation-buttons fa-lg">
                         <i class="fas fa-caret-left fa-lg"></i>
-                        <button>Trang trước</button>
+                        <button class="navigate-prev">Trang trước</button>
                     </div>
 
                     <div class="navigation-page-indicator">
-                        <h2>1</h2>
+                        <h2 class="indicator-num">1</h2>
                     </div>
 
                     <div class="navigation-buttons fa-lg">
-                        <button>Trang sau</button>
-                        <i class="fas fa-caret-right fa-lg"></i>
+                        <button class="navigate-next">Trang sau</button>
+                        <i class="fas fa-caret-right fa-lg"></i></a>
                     </div>
-
                 </div>
             </section>
 
@@ -443,9 +319,11 @@
             console.error("Error fetching JSON:", error);
         }
     }
+
     loadData(curUserType);
 
 </script>
+<script src="js/sortLessonsByDate.js"></script>
 </body>
 
 </html>

@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
     <title>OTP Verification</title>
 </head>
 <body>

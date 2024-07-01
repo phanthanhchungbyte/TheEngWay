@@ -1,18 +1,14 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ACER
-  Date: 6/19/2024
-  Time: 1:06 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%-- Add a favicon to the web --%>
+    <link rel="icon" href="imgs/favicon/favicon.ico">
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
           type="text/css" />
     <link rel="stylesheet" href="css/homebar.css">
@@ -23,13 +19,18 @@
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <!-- Include the cropper script -->
     <script src="cropperjs/cropper.js"></script>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
 <div class="container">
     <nav class="top-nav">
         <div class="logo-div">
-            <a class="logo" href="home.jsp">
+            <a class="logo" href="teacherHome.jsp">
                 <img src="imgs/TheEngWayLogo.png" alt="The Logo">
             </a>
         </div>
@@ -78,61 +79,53 @@
     <div class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
-                <a href="index.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                <a href="teacherHome.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
-                <a href="#">Nghe</a>
+                <a href="#">Kĩ năng</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="">Listening</a></li>
+                    <li><a href="#">Reading</a></li>
+                    <li><a href="#">Writing</a></li>
+                    <li><a href="#">Grammar</a></li>
+                    <li><a href="#">Từ vựng</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Nói</a>
+                <a href="#">TA Tiểu học</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 1</a></li>
+                    <li><a href="#">Tiếng Anh lớp 2</a></li>
+                    <li><a href="#">Tiếng Anh lớp 3</a></li>
+                    <li><a href="#">Tiếng Anh lớp 4</a></li>
+                    <li><a href="#">Tiếng Anh lớp 5</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Đọc</a>
+                <a href="#">TA Trung học CS</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 7</a></li>
+                    <li><a href="#">Tiếng Anh lớp 8</a></li>
+                    <li><a href="#">Tiếng Anh lớp 9</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Viết</a>
+                <a href="#">TA Trung học PT</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="html/highschool-courses/class-10th.html">Tiếng Anh lớp 10</a></li>
+                    <li><a href="#">Tiếng Anh lớp 11</a></li>
+                    <li><a href="#">Tiếng Anh lớp 12</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#">Tổng hợp</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Cuộc thi</a></li>
+                    <li><a href="#">Test Kiểm tra trình độ</a></li>
+                    <li><a href="#">Kiểm tra các khối</a></li>
+                    <li><a href="#">Bài tập chấm điểm</a></li>
                 </ul>
             </li>
         </ul>
@@ -155,7 +148,18 @@
                         </div>
 
                         <div class="student-bio">
-                            <h4>Giáo viên</h4>
+                            <c:set value="${sessionScope.loggedInUser.getUserType()}" var="usertype"/>
+                            <c:choose>
+                                <c:when test="${usertype eq 'Teacher'}">
+                                    <h4>Giáo viên</h4>
+                                </c:when>
+                                <c:when test="${usertype eq 'Student'}">
+                                    <h4>Học sinh</h4>
+                                </c:when>
+                                <c:otherwise>
+                                    <h4>Không xác định ☹</h4>
+                                </c:otherwise>
+                            </c:choose>
                             <p>Giới tính: <span>${sessionScope.loggedInUser.getGender()}</span></p>
                             <p>Bài viết: <span>10</span></p>
                             <p>Tham gia ngày: <span>06/09/2012</span></p>
@@ -227,25 +231,39 @@
                     <h1>Tạo bài học</h1>
                 </div>
 
+                <%--Set the data source here, sql jstl will be used--%>
+                <sql:setDataSource var="dataSource" driver="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/theengway" user="root" password="hansniemann@GOAT"/>
                 <div class="edit-form-section">
-                    <form action="">
+                    <form>
                         <section class="skills">
                             <p>Chọn địa chỉ bài học:</p>
                             <div class="skill-config">
                                 <div>
                                     <select name="skill" id="skill">
-                                        <option value="listening">Nghe</option>
-                                        <option value="speaking">Nói</option>
-                                        <option value="reading">Đọc</option>
-                                        <option value="writing">Viết</option>
+                                        <option value="Listening" selected>Nghe</option>
+                                        <option value="Speaking">Nói</option>
+                                        <option value="Reading">Đọc</option>
+                                        <option value="Writing">Viết</option>
+                                        <option value="Grammar">Ngữ pháp</option>
+                                        <option value="1st">Tiếng Anh lớp 1</option>
+                                        <option value="3rd">Tiếng Anh lớp 2</option>
+                                        <option value="4th">Tiếng Anh lớp 3</option>
+                                        <option value="2nd">Tiếng Anh lớp 4</option>
+                                        <option value="5th">Tiếng Anh lớp 5</option>
+                                        <option value="6th">Tiếng Anh lớp 6</option>
+                                        <option value="7th">Tiếng Anh lớp 7</option>
+                                        <option value="8th">Tiếng Anh lớp 8</option>
+                                        <option value="9th">Tiếng Anh lớp 9</option>
+                                        <option value="10th">Tiếng Anh lớp 10</option>
+                                        <option value="11th">Tiếng Anh lớp 11</option>
+                                        <option value="12th">Tiếng Anh lớp 12</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <select name="level" id="level">
-                                        <option value="beginner">Trình độ cơ bản</option>
-                                        <option value="intermediate">Trình độ trung cấp</option>
-                                        <option value="advanced">Trình độ khó</option>
-                                    </select>
+                                    <select name="lesson_folder" id="lesson_folder"></select>
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="Nhập tên bài học" id="lessonName">
                                 </div>
                             </div>
                         </section>
@@ -253,34 +271,18 @@
                             <div>
                                 <p>Nội dung:</p>
                                 <div class="textarea-centering">
-                              <textarea name="lessonbox" id="lessonbox" rows="35">
-                              </textarea>
+                                    <textarea name="lessonbox" id="lessonbox" rows="35"></textarea>
                                 </div>
                             </div>
                         </section>
                         <section class="createquiz-section">
                             <div>
                                 <p>Tạo quiz:</p>
-                                <div class="quiz-section">
-                                    <div class="quiz-specification">
-                                        <div class="config-inputdiv">
-                                            <label for="title">Tiêu đề:</label>
-                                            <input type="text" name="title" class="title-input" id="title">
-                                        </div>
-                                        <div class="config-inputdiv">
-                                            <p>Nội dung:</p>
-                                            <textarea id="description" name="description" rows="10"></textarea>
-                                        </div>
-                                        <div class="config-inputdiv">
-                                            <p>Cài đặt câu hỏi</p>
-                                            <div class="toggle">
-                                                <input type="checkbox" id="address_checkbox">
-                                                <label for="address_checkbox">Hiện đáp án sau quiz</label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="toggle">
+                                    <input type="checkbox" id="quizava_checkbox" onclick="quizToggle(this)">
+                                    <label for="quizava_checkbox">Thêm quiz</label>
                                 </div>
-                                <div class="quiz-creator">
+                                <div class="quiz-creator quiz">
                                     <div class="button-row">
                                         <div>
                                             <button class="add">
@@ -292,8 +294,8 @@
                                                 Xóa toàn bộ
                                             </button>
                                         </div>
+                                        <input type="number" class="navigator-input">
                                         <div class="question-navigator">
-                                            <input type="number" class="navigator-input">
                                             /<span class="current-max">10</span>
                                         </div>
                                     </div>
@@ -362,10 +364,6 @@
                             </div>
                         </section>
                         <section class="submitbutton-row">
-                            <button class="save-draft">
-                                <i class="fal fa-save fa-lg"></i>
-                                Lưu bản thảo
-                            </button>
                             <button class="save-and-submit" type="submit">
                                 <i class="fas fa-check fa-lg"></i>
                                 Đăng ngay
@@ -382,7 +380,7 @@
     <div class="footer">
         <div class="copyright">
             <p><b>Copyright TheEngWay.com © 2023 - 2024</b></p>
-            <img src="../../imgs/logogov.png" alt="Bộ Công thương">
+            <img src="imgs/logogov.png" alt="Bộ Công thương">
         </div>
         <div class="contact_phone">
             <p><b>Contact us via phone numbers:</b></p>
@@ -406,26 +404,61 @@
 </div>
 <script src="plugins/tinymce/tinymce.min.js"></script>
 <script src="plugins/tinymce/init-tinymce.js"></script>
-<script src="js/createQuiz.js"></script>
-<script type="text/javascript">
-    let contextPath = `${pageContext.request.contextPath}`;
-    let curUserType = `${sessionScope.loggedInUser.getUserType()}`;
-</script>
 <script>
-
+    let webPath = "${pageContext.request.contextPath}";
+    let curUserType = "${sessionScope.loggedInUser.getUserType()}";
     async function loadData(userType) {
         try {
-            const response = await fetch("jsons/sectionLinks.json")
+            const response = await fetch("jsons/sectionLinks.json");
             let sectionLinkChoices = await response.json(); // We get the array of objects here
             document.querySelector(".profile-sections").innerHTML = sectionLinkChoices.find(section => section.userType === userType).sectionContent;
-            console.log(sectionLinkChoices);
+            // console.log(sectionLinkChoices);
         } catch (error) {
             console.error("Error fetching JSON:", error);
         }
     }
     loadData(curUserType);
 
+    const skillSelector = document.querySelector("#skill");
+    skillSelector.addEventListener("change", (event) => {
+        let xhr = new XMLHttpRequest();
+        let skill = encodeURIComponent(event.target.value);
+        xhr.open('GET', "${pageContext.request.contextPath}/listfolder?skill=" + skill, true);
+        xhr.onload = handleLessonFolders;
+        xhr.send();
+    })
+
+    function handleLessonFolders(response) {
+        const data = JSON.parse(response.target.responseText);
+        // console.table(data.folderlist);
+
+        const lessonFolderElement = document.querySelector("#lesson_folder");
+        lessonFolderElement.innerHTML = ''; // Clear any existing folders before appending new one
+
+        if(data.folderlist.length === 0) {
+            let folderElement = document.createElement("option");
+            folderElement.setAttribute("value", "Not Available");
+            folderElement.textContent = "Not available";
+            folderElement.disabled = true;
+            lessonFolderElement.appendChild(folderElement);
+        } else {
+            for(let folder of data.folderlist) {
+                let folderElement = document.createElement("option");
+                folderElement.setAttribute("value", folder);
+                folderElement.textContent = folder;
+                lessonFolderElement.appendChild(folderElement);
+            }
+        }
+
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Manually trigger the change event
+        const event = new Event("change");
+        skillSelector.dispatchEvent(event);
+    })
 </script>
+<script src="js/createQuiz.js"></script>
 
 </body>
 

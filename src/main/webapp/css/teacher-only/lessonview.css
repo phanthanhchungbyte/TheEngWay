@@ -190,6 +190,9 @@
         font-size: var(--fs-400);
         align-items: center;
         margin: 1.5rem auto;
+        /*Set a fixed height for easy look*/
+        height: 1040px;
+        position: relative;
 
         .viewlesson-title {
             display: flex;
@@ -301,10 +304,13 @@
 
         .createdlessons-navigation {
             max-width: 250px;
-            margin: 0 auto;
-            margin-top: 2em;
+            margin: 2em auto 0;
+            position: absolute;
             display: flex;
             justify-content: space-between;
+            bottom: 1em;
+            left: 50%;
+            transform: translateX(-50%);
 
             .navigation-buttons i {
                 position: absolute;
@@ -330,6 +336,10 @@
                 background-color: orange;
                 border-color: orange;
                 /* border: 1px solid black; */
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
             .navigation-page-indicator {
                 h2 {
@@ -339,6 +349,7 @@
                 display: flex;
                 border: 1px solid white;
                 flex-grow: 1;
+                width: 4ch;
                 justify-content: center;
                 align-items: center;
                 background: rgb(216,255,203);
