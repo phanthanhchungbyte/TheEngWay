@@ -5,6 +5,7 @@ import com.mysql.cj.jdbc.AbandonedConnectionCleanupThread;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
+import jakarta.servlet.http.HttpSession;
 
 import java.sql.Driver;
 import java.sql.DriverManager;
@@ -15,11 +16,10 @@ import java.util.logging.Logger;
 
 @WebListener
 public class AppContextListener implements ServletContextListener {
-    private Logger logger = Logger.getLogger(this.getClass().getName());
+    private static final Logger logger = Logger.getLogger(AppContextListener.class.getName());
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-
-
+        // Perform startup actions, set the userLoggedIn value to null
     }
 
     @Override

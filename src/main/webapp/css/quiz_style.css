@@ -1,0 +1,328 @@
+.quiz-section {
+    width: min(92%, 1050px);
+    border-radius: 10px;
+    margin-inline: auto;
+    background-color: #fff5dc;
+    margin-bottom: 1.75em;
+    padding: 1em;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    .label-div {
+        display: flex;
+        flex-wrap: wrap;
+
+        p:nth-child(2) {
+            margin-left: auto;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            font-size: larger;
+            font-weight: bold;
+        }
+    }
+
+    p.quiz-label {
+        padding: 0.2em;
+        padding-left: 1em;
+        max-width: 600px;
+        width: 60%;
+        background-color: #008a9d;
+        color: white;
+        font-size: 1.75em;
+        text-transform: uppercase;
+        clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+    }
+
+    p.quiz-label+p {
+        width: 40%;
+    }
+
+    .number-row {
+        margin-top: 2em;
+        background-color: #006c7a;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        i:hover {
+            cursor: pointer;
+        }
+
+        i:first-child {
+            position: absolute;
+            left: 40px;
+        }
+
+        i:last-child {
+            position: absolute;
+            right: 40px;
+        }
+
+        ul {
+            margin-inline: auto;
+            width: max(70%, 500px);
+            display: flex;
+            justify-content: center;
+        }
+
+        ul li {
+            margin-inline: 0.5em;
+            display: grid;
+            place-items: center;
+            width: 2.6rem;
+            height: 2.6rem;
+            border-radius: 50%;
+            margin-top: 0.5em;
+            background-color: #d9d9d9;
+            margin-bottom: 0.5em;
+            position: relative;
+            /* animation: spin 1s linear infinite; */
+            /* transform: rotate(150deg); */
+            /* Neccessary for the pseudo-element positioning */
+        }
+
+        /* adding a ouroboros spinner to the li when hover over */
+        ul li:before {
+            content: '';
+            position: absolute;
+            top: -13%;
+            left: -5px;
+
+            width: calc(100% + 0.3em);
+            height: calc(100% + 0.3em);
+            border-radius: 50%;
+            border: 3px transparent;
+            border-style: dashed;
+            transition: border-color 0.5s ease;
+        }
+
+        ul li:hover {
+            cursor: pointer;
+        }
+
+        ul li:not(.cur-question):hover::before {
+            border-color: aliceblue;
+            /* Change to desired border color */
+            animation: spin 1s linear infinite;
+        }
+
+
+        ul li.cur-question {
+            outline: 3px solid rgb(206, 248, 206);
+            outline-offset: 0.4em;
+        }
+
+        ul li span {
+            color: darkblue;
+            font-weight: bold;
+            font-size: 1.25em;
+        }
+    }
+
+    .number-row::before,
+    .number-row::after {
+        position: absolute;
+        content: "";
+        background-color: #d9d9d9;
+        width: 2em;
+        height: 100%;
+    }
+
+    .number-row::before {
+        clip-path: polygon(0% 0%, 100% 0%, 0% 50%, 100% 100%, 0% 100%);
+    }
+
+    .number-row::after {
+        right: 0;
+        top: 0;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 100% 50%, 0% 0%);
+    }
+
+    .question-card {
+        background-color: #f8f8f8;
+        margin-top: 1.5em;
+        padding: 1em;
+        font-size: 1.5em;
+        box-shadow: 1px 3px 10px -3px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 1px 3px 10px -3px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 1px 3px 10px -3px rgba(0, 0, 0, 0.75);
+    }
+
+    .navigation-row {
+        margin-top: 3em;
+        display: flex;
+        width: 80%;
+        margin-inline: auto;
+        justify-content: space-evenly;
+        align-items: center;
+
+        button {
+            padding: 0.5em 0.75em;
+            height: 2.25em;
+            font-weight: bold;
+            font-size: 1.25em;
+            width: max-content;
+            min-width: 100px;
+            background-color: #7c7a7a;
+            color: white;
+            border: none;
+            transition: transform 200ms ease-in-out;
+            border-radius: 5px;
+            box-shadow: 1px 3px 10px -3px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 1px 3px 10px -3px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 1px 3px 10px -3px rgba(0, 0, 0, 0.75);
+
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-4px);
+            }
+        }
+
+        button.prev-btn {
+            clip-path: polygon(0% 50%, 20% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 50%);
+            text-align: end;
+        }
+
+        button.next-btn {
+            clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
+            text-align: start;
+        }
+
+        button.submit-quiz {
+            background-color: #e6842a;
+            height: 2.5em;
+            width: 125px;
+        }
+    }
+
+    .result-section, .startquiz-section {
+        .result-board, .welcome-screen {
+            background-color: white;
+            margin-top: 1em;
+            padding: 1em;
+            box-shadow: 1px 3px 10px -3px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 1px 3px 10px -3px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 1px 3px 10px -3px rgba(0, 0, 0, 0.75);
+            background-image: url(../imgs/papertexture.png);
+
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.5rem;
+                line-height: 2.75em;
+            }
+
+            p:not(.message) {
+                text-indent: 7ch;
+            }
+
+            p.message {
+                text-align: center;
+                font-size: 1.75rem;
+                color: rgb(91, 77, 104);
+            }
+        }
+    }
+}
+
+/* Styling the checkbox */
+[type="checkbox"] {
+    opacity: 0;
+}
+
+[type="checkbox"]+label {
+    position: relative;
+    padding-left: 2em;
+    cursor: pointer;
+    color: #666;
+    display: inline-block;
+    line-height: 1.8em;
+}
+
+/* Use code combining for better readability. */
+[type="checkbox"] + label::before,
+[type="checkbox"]:checked + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 1.1em;
+    height: 1.1em;
+    background: white;
+}
+
+[type="checkbox"] + label::before {
+    outline: 3px solid #aaa;
+}
+
+[type="checkbox"]:focus + label::before {
+    outline: 3px solid black;
+}
+
+[type="checkbox"]:checked+label::before {
+    outline: 3px solid #5fd25f;
+}
+
+/* Styling for the wrong checkbox */
+input[type="checkbox"]:checked.wrong:checked + label::before {
+    outline: 3px solid #e78284;
+}
+
+[type="checkbox"]+label::after,
+input[type="checkbox"].wrong + label::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 5px;
+    width: 1.5em;
+    height: 1.5em;
+    background-size: contain;
+    transition: all .3s ease;
+}
+
+/* Styling for the wrong checkbox */
+input[type="checkbox"]+ label::after {
+    background-image: url(../imgs/green-check-mark.png);
+}
+
+input[type="checkbox"].wrong + label::after {
+    background-image: url(../imgs/cross-symbol-2.png);
+}
+
+[type="checkbox"]:checked+label::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+[type="checkbox"]:not(:checked)+label::after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.answered {
+    border: 5px solid mediumaquamarine;
+    box-shadow: 0 0 16px -2px rgba(108,240,77,1) inset;
+    -webkit-box-shadow: 0 0 16px -2px rgba(108,240,77,1) inset;
+    -moz-box-shadow: 0 0 16px -2px rgba(108,240,77,1) inset;
+}
+

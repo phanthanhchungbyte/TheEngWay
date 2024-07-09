@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.Properties;
 
-@WebServlet(name = "ForgotPasswordServlet", value = "/forgot")
+@WebServlet(name = "ForgotPasswordServlet", value = "/actForgot")
 public class ForgotPasswordServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

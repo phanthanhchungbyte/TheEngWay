@@ -45,7 +45,7 @@
                         </h1>
                     </div>
                     <div class="pt-3 pb-3">
-                        <form class="form-horizontal" action="${pageContext.request.contextPath}/newpassword" method="POST">
+                        <form class="form-horizontal" action="${pageContext.request.contextPath}/actNewPassword" method="POST">
                             <!-- User Name Input -->
                             <% if (request.getAttribute("errorMessage") != null) { %>
                             <div class="alert alert-danger" role="alert">

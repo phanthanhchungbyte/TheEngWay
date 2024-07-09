@@ -19,7 +19,7 @@
 <div class="container">
     <nav class="top-nav">
         <div class="logo-div">
-            <a class="logo" href="studentHome.jsp">
+            <a class="logo" href="${pageContext.request.contextPath}/studentHome">
                 <img src="imgs/TheEngWayLogo.png" alt="The Logo">
             </a>
         </div>
@@ -42,8 +42,8 @@
                     <p><span>0</span> thông báo mới</p>
                 </div>
                 <div>
-                    <a href="userProfile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
-                    <li class="setting-cog"><a href="index.jsp">Exit</a></li>
+                    <a href="userProfile"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                    <li class="setting-cog"><a href="${pageContext.request.contextPath}/index">Exit</a></li>
                 </div>
             </div>
             <div class="profile-home-card-mini">
@@ -51,10 +51,10 @@
                 <i class="fas fa-caret-down fa-2x"></i>
                 <ul class="mini-profile-dropdown">
                     <li class="settings">
-                        <a href="userProfile.jsp">Settings</a>
+                        <a href="userProfile">Settings</a>
                     </li>
                     <li class="exit">
-                        <a href="index.jsp">Exit</a>
+                        <a href="${pageContext.request.contextPath}/index">Exit</a>
                     </li>
                 </ul>
             </div>
@@ -67,14 +67,14 @@
     <div class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
-                <a href="studentHome.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                <a href="${pageContext.request.contextPath}/studentHome"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
                 <a href="#">Kĩ năng</a>
                 <ul class="dropdown">
-                    <li><a href="">Listening</a></li>
-                    <li><a href="#">Reading</a></li>
-                    <li><a href="#">Writing</a></li>
+                    <li><a href="${pageContext.request.contextPath}/skillListening">Nghe</a></li>
+                    <li><a href="${pageContext.request.contextPath}/skillReading">Đọc</a></li>
+                    <li><a href="${pageContext.request.contextPath}/skillWriting">Viết</a></li>
                     <li><a href="#">Grammar</a></li>
                     <li><a href="#">Từ vựng</a></li>
                 </ul>
@@ -101,7 +101,7 @@
             <li>
                 <a href="#">TA Trung học PT</a>
                 <ul class="dropdown">
-                    <li><a href="html/highschool-courses/class-10th.html">Tiếng Anh lớp 10</a></li>
+                    <li><a href="">Tiếng Anh lớp 10</a></li>
                     <li><a href="#">Tiếng Anh lớp 11</a></li>
                     <li><a href="#">Tiếng Anh lớp 12</a></li>
                 </ul>
@@ -138,19 +138,6 @@
                     </ul>
                 </div>
                 <img src="imgs/listening.png" alt="Listening">
-            </div>
-
-            <div class="card">
-                <div class="text-content">
-                    <p class="skill-title">Nói</p>
-                    <p class="skill-description">Luyện tập kĩ năng nói trong các ngữ cảnh khác nhau trong giao tiếp hằng ngày</p>
-                    <ul>
-                        <li><a href="#">Kĩ năng giao tiếp trong kinh doanh: How was your day off?</a></li>
-                        <li><a href="#">Nghe và đọc lại bài 3</a></li>
-                        <li><a href="#">Cuộc thi: Thi hát tiếng Anh (số 3)</a></li>
-                    </ul>
-                </div>
-                <img src="imgs/speaking.png" alt="Speaking">
             </div>
 
             <div class="card">

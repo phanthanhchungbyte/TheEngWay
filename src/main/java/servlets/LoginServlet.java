@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@WebServlet(name = "LoginServlet",urlPatterns = "/login")
+@WebServlet(name = "LoginServlet",urlPatterns = "/actLogin")
 public class LoginServlet extends HttpServlet {
     private static final Logger logger = Logger.getLogger(LoginServlet.class.getName());
     @Override
@@ -45,10 +45,10 @@ public class LoginServlet extends HttpServlet {
                     response.sendRedirect("AdminServlet");
                     break;
                 case "Student":
-                    response.sendRedirect("studentHome.jsp");
+                    response.sendRedirect("studentHome");
                     break;
                 case "Teacher":
-                    response.sendRedirect("teacherHome.jsp");
+                    response.sendRedirect("teacherHome");
                     break;
                 default:
                     response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid user type");
@@ -56,7 +56,7 @@ public class LoginServlet extends HttpServlet {
             }
         } else {
             request.setAttribute("loginMessage", "Sai Tài Khoản");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            request.getRequestDispatcher("login").forward(request, response);
         }
     }
 }

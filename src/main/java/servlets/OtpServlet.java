@@ -11,7 +11,7 @@ import model.User;
 
 import java.io.IOException;
 
-@WebServlet(name = "OtpServlet", urlPatterns = "/verify-otp")
+@WebServlet(name = "OtpServlet", urlPatterns = "/actVerifyOTP")
 public class OtpServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -39,10 +39,10 @@ public class OtpServlet extends HttpServlet {
             } else {
                 request.setAttribute("message", "Đăng ký thất bại");
             }
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            request.getRequestDispatcher("login").forward(request, response);
         } else {
             request.setAttribute("message", "Mã OTP không chính xác");
-            request.getRequestDispatcher("otp.jsp").forward(request, response);
+            request.getRequestDispatcher("otp").forward(request, response);
         }
     }
 }

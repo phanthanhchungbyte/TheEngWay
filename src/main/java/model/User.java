@@ -25,7 +25,6 @@ public class User implements Serializable{
     private String gender;
     private String fullName;
     private String avatar;
-    private Calendar calendar;
 
     public User(int userID, String userName, String passwordHash, String passwordSalt, String email, String userType, Date dateOfBirth, String address, String phoneNumber, String gender, String fullName, String avatar) {
         this.userID = userID;

@@ -17,7 +17,7 @@
     <div class="container">
         <nav class="top-nav">
             <div>
-                <a class="logo" href="index.jsp">
+                <a class="logo" href="${pageContext.request.contextPath}/index">
                     <img src="imgs/TheEngWayLogo.png" alt="The Logo">
                 </a>
             </div>
@@ -27,8 +27,8 @@
                     <i class="fad fa-search"></i>
                     <input class="search-bar" placeholder="Search lessons here">
                 </li>
-                <li> <a href="login.jsp" class="navlogin">Đăng nhập</a> </li>
-                <li> <a href="register.jsp" class="registerlogin">Đăng ký</a> </li>
+                <li> <a href="${pageContext.request.contextPath}/login" class="navlogin">Đăng nhập</a> </li>
+                <li> <a href="${pageContext.request.contextPath}/register" class="registerlogin">Đăng ký</a> </li>
             </ul>
             <label for="nav-toggle" class="nav-toggle-label">
                 <span></span>
@@ -38,14 +38,14 @@
         <div class="course-div">
             <ul class="course-nav" aria-label="nav">
                 <li>
-                    <a href="index.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                    <a href="${pageContext.request.contextPath}/index"><i class="far fa-home-lg-alt fa-2x"></i></a>
                 </li>
                 <li>
                     <a href="#">Kĩ năng</a>
                     <ul class="dropdown">
-                        <li><a href="skillJSPs/skillListening.jsp">Listening</a></li>
-                        <li><a href="skillJSPs/skillReading.jsp">Reading</a></li>
-                        <li><a href="skillJSPs/skillWriting.jsp">Writing</a></li>
+                        <li><a href="${pageContext.request.contextPath}/skillListening">Listening</a></li>
+                        <li><a href="${pageContext.request.contextPath}/skillReading">Reading</a></li>
+                        <li><a href="${pageContext.request.contextPath}/skillWriting">Writing</a></li>
                         <li><a href="#">Grammar</a></li>
                         <li><a href="#">Từ vựng</a></li>
                     </ul>
@@ -300,5 +300,9 @@
             </div>
         </div>
     </div>
+<script>
+    let contextPath = `${pageContext.request.contextPath}`;
+</script>
+<script src="js/checkUserLoggedIn.js"></script>
 </body>
 </html>

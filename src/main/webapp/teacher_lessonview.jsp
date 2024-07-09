@@ -14,16 +14,22 @@
     <link rel="stylesheet" href="css/coursenav.css">
     <link rel="stylesheet" href="css/teacher-only/lessonview.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="cropperjs/cropper.css">
     <!-- Include the cropper script -->
     <script src="cropperjs/cropper.js"></script>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
 <div class="container">
     <nav class="top-nav">
         <div class="logo-div">
-            <a class="logo" href="teacherHome.jsp">
+            <a class="logo" href="${pageContext.request.contextPath}/teacherHome">
                 <img src="imgs/TheEngWayLogo.png" alt="The Logo">
             </a>
         </div>
@@ -46,9 +52,9 @@
                     <p><span>0</span> thông báo mới</p>
                 </div>
                 <div>
-                    <a href="userProfile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                    <a href="userProfile"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
                     <ul>
-                        <li class="setting-cog"><a href="index.jsp">Exit</a></li>
+                        <li class="setting-cog"><a href="${pageContext.request.contextPath}/index">Exit</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,10 +63,10 @@
                 <i class="fas fa-caret-down fa-2x"></i>
                 <ul class="mini-profile-dropdown">
                     <li class="settings">
-                        <a href="userProfile.jsp">Settings</a>
+                        <a href="userProfile">Settings</a>
                     </li>
                     <li class="exit">
-                        <a href="index.jsp">Exit</a>
+                        <a href="${pageContext.request.contextPath}/index">Exit</a>
                     </li>
                 </ul>
             </div>
@@ -72,14 +78,14 @@
     <div class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
-                <a href="home.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                <a href="${pageContext.request.contextPath}/home"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
                 <a href="#">Kĩ năng</a>
                 <ul class="dropdown">
-                    <li><a href="skillJSPs/skillListening.jsp">Listening</a></li>
-                    <li><a href="skillJSPs/skillReading.jsp">Reading</a></li>
-                    <li><a href="skillJSPs/skillWriting.jsp">Writing</a></li>
+                    <li><a href="${pageContext.request.contextPath}/skillListening">Listening</a></li>
+                    <li><a href="${pageContext.request.contextPath}/skillReading">Reading</a></li>
+                    <li><a href="${pageContext.request.contextPath}/skillWriting">Writing</a></li>
                     <li><a href="#">Grammar</a></li>
                     <li><a href="#">Từ vựng</a></li>
                 </ul>
@@ -154,7 +160,7 @@
                     <div class="student-buttonside">
                         <ul class="student-buttons">
                             <li>
-                                <button class="personal-info" onclick="location.href='profileShow.jsp';"><i
+                                <button class="personal-info" onclick="location.href='${pageContext.request.contextPath}/profileShow';"><i
                                         class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân
                                 </button>
                             </li>
@@ -166,7 +172,7 @@
                             </li>
 
                             <li>
-                                <button onclick="location.href='forgotpassword.jsp';"><i
+                                <button onclick="location.href='${pageContext.request.contextPath}/forgotpassword';"><i
                                         class="fas fa-lock-alt fa-lg"></i>Thay đổi mật khẩu
                                 </button>
                             </li>
@@ -176,7 +182,7 @@
                             </li>
 
                             <li>
-                                <button onclick="location.href='index.jsp';"><i class="fas fa-power-off fa-lg"></i>Thoát
+                                <button onclick="location.href='${pageContext.request.contextPath}/index';"><i class="fas fa-power-off fa-lg"></i>Thoát
                                 </button>
                             </li>
                         </ul>
@@ -222,10 +228,13 @@
 
                     <div class="createlesson-button">
                         <i class="fas fa-feather-alt"></i>
-                        <button onclick="location.href='teacher_createlesson.jsp'">Tạo mới</button>
+                        <button onclick="location.href='${pageContext.request.contextPath}/teacher_createlesson'">Tạo mới</button>
                     </div>
                 </div>
-
+                <%--If teacher hasn't created any lessons, show this--%>
+                <div class="notification hide">
+                    <p>You haven't created any lesson yet!</p>
+                </div>
                 <div class="createdlessons-section">
                     <div class="created-lesson-card" style="display: none">
                         <img src="" alt="" class="skill-icon">
@@ -308,6 +317,7 @@
     let curUserType = `${sessionScope.loggedInUser.getUserType()}`;
 </script>
 <script>
+    // If teacher haven't created any lessons, show him/her a message
 
     async function loadData(userType) {
         try {
@@ -324,6 +334,7 @@
 
 </script>
 <script src="js/sortLessonsByDate.js"></script>
+<script src="js/changeAvatar.js"></script>
 </body>
 
 </html>

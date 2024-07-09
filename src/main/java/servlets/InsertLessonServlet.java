@@ -13,8 +13,10 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 
-@WebServlet(name = "InsertLessonServlet", value = "/createlesson")
+@WebServlet(name = "InsertLessonServlet", value = "/actCreateLesson")
 @MultipartConfig // For the servlet to handle multipart/form-data
 public class InsertLessonServlet extends HttpServlet {
     private static final Logger logger = Logger.getLogger(InsertLessonServlet.class.getName());
@@ -38,6 +40,9 @@ public class InsertLessonServlet extends HttpServlet {
             logger.log(Level.INFO, "quizId: " + quizId);
             String skill = request.getParameter("skill");
             logger.log(Level.INFO, "skill: " + skill);
+            String lessonAvatar = request.getParameter("lessonAvatarURL");
+            // Decode the URL because the URL was encoded in the before sending here
+            lessonAvatar = URLDecoder.decode(lessonAvatar, StandardCharsets.UTF_8);
             String lessonFolder = request.getParameter("lessonFolder");
             logger.log(Level.INFO, "Lesson folder: " + lessonFolder);
             String lessonTitle = request.getParameter("lessonTitle");
@@ -49,7 +54,9 @@ public class InsertLessonServlet extends HttpServlet {
             lesson.setCreatorName(loggedInUser.getUserName());
             lesson.setLessonTitle(lessonTitle);
             lesson.setLessonFolderId(folderId);
+            lesson.setLessonAvatarURL(lessonAvatar);
             lesson.setLessonContentId(lessonId);
+
             lesson.setLessonQuizId(quizId);
             lesson.setSkill(skill);
             lesson.setVersion(1);
@@ -58,7 +65,7 @@ public class InsertLessonServlet extends HttpServlet {
             lesson.setStatus("Approved");
             dao.createLesson(lesson);
 
-            response.sendRedirect("teacher_lessonview.jsp");
+            response.sendRedirect("teacher_lessonview");
         } catch (Exception e) {
             logger.log(Level.SEVERE, e.getMessage(), e);
         }

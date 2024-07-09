@@ -14,7 +14,7 @@
 
 
 :root {
-    --maincolor: #fff5dc; 
+    --maincolor: #fff5dc;
     --navbuttons: #e6842a;
     --background: #a6da95;
     --oxford-blue: #011638;
@@ -33,24 +33,23 @@
     max-width: 1284px;
     margin: 0 auto;
     background-color: var(--background);
-    font-family: Libre_Franklin sans-serif;
 }
 
 @media only screen and (width >= 1000px) {
     .top-nav {
         padding: 1em 1em;
-        background-color: var(--maincolor);    
+        background-color: var(--maincolor);
         display: flex;
         align-items: center;
-        
-        
+
+
         > div:first-child {
             width: 20%;
         }
 
         > div:first-child a {
             margin: 0 auto;
-        }        
+        }
 
         > div:first-child img{
             width: 50%;
@@ -76,14 +75,14 @@
         .search {
             position: relative;
             width: 100%;
-    
+
             input {
                 width: 100%;
                 padding: 0.45em 0px;
                 padding-left: 2rem;
                 border-radius: 15px;
             }
-    
+
             i {
                 position: absolute;
                 top:20%;
@@ -130,7 +129,7 @@
                 margin: 0.25em 0px;
                 border-radius: 6px;
                 border: 1px solid rgb(243, 241, 237);
-                
+
                 a {
                     color: whitesmoke;
 
@@ -162,7 +161,7 @@
         .nav-toggle {
             display: block;
         }
-        
+
         .logo-div {
             width: 100%;
             padding: 10px 0;
@@ -180,16 +179,17 @@
         .profile-home-card-mini {
             top: 50%;
             transform: translate(-50%, -50%);
+            display: block;
             position: absolute;
             right: 0;
             width: 6em;
+            background-color: #e6842a;
             height: 50px;
             display: flex;
             align-items: center;
             border-radius: 10px;
             border: 1px solid black;
-            background: #e6842a linear-gradient(0deg, #B7B7B7 0%, #E1E1E1 100%);
-
+            background: linear-gradient(0deg, #B7B7B7 0%, #E1E1E1 100%);
             img {
                 margin-left: 0.5rem;
                 width: 2.3em;
@@ -201,7 +201,7 @@
             }
         }
 
-        
+
 
         ul.menu-items {
             width: 100%;
@@ -215,11 +215,11 @@
             left: 0;
             z-index: 1;
             align-items: center;
-            
+
             .search {
                 width: 30%;
                 position: relative;
-                
+
                 i {
                     position: absolute;
                     top: 20%;
@@ -238,7 +238,7 @@
             font-family: Libre_Franklin;
             position: absolute;
             padding: 1em 0;
-            display: none;
+            display: block;
             background-color: var(--mini-profile-dropdown);
             z-index: 2;
             align-items: center;

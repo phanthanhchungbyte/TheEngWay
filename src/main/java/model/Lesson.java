@@ -12,6 +12,7 @@ public class Lesson {
     private String skill;
     private Timestamp createdAt;
     private Timestamp updatedAt;
+    private String lessonAvatarURL;
     private int version;
     private String status; // Thêm thuộc tính status
 
@@ -19,10 +20,11 @@ public class Lesson {
 
     }
 
-    public Lesson(String creatorName, String lessonTitle, String lessonContentId, int lessonFolderId, String lessonQuizId, String skill, Timestamp createdAt, Timestamp updatedAt, int version, String status) {
+    public Lesson(String creatorName, String lessonTitle, String lessonContentId, String lessonAvatarURL, int lessonFolderId, String lessonQuizId, String skill, Timestamp createdAt, Timestamp updatedAt, int version, String status) {
         this.creatorName = creatorName;
         this.lessonTitle = lessonTitle;
         this.lessonContentId = lessonContentId;
+        this.lessonAvatarURL = lessonAvatarURL;
         this.lessonFolderId = lessonFolderId;
         this.lessonQuizId = lessonQuizId;
         this.skill = skill;
@@ -123,5 +125,13 @@ public class Lesson {
 
     public void setLessonFolderId(int lessonFolderId) {
         this.lessonFolderId = lessonFolderId;
+    }
+
+    public String getLessonAvatarURL() {
+        return lessonAvatarURL;
+    }
+
+    public void setLessonAvatarURL(String lessonAvatarURL) {
+        this.lessonAvatarURL = lessonAvatarURL;
     }
 }

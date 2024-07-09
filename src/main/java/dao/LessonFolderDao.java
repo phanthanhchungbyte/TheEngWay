@@ -6,4 +6,6 @@ public interface LessonFolderDao {
     ArrayList<String> getLessonFoldersWSkill(String skill);
 
     int getLessonFolderId(String skill, String lessonFolderName);
+
+    ArrayList<Integer> getLessonFolderIdWSkill(String lessonFolderName);
 }

@@ -6,7 +6,7 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "ValidateOtp", value = "/validate")
+@WebServlet(name = "ValidateOtp", value = "/actValidate")
 public class ValidateOtpServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -26,7 +26,7 @@ public class ValidateOtpServlet extends HttpServlet {
         {
             request.setAttribute("email", emails);
             request.setAttribute("status", "success");
-            dispatcher=request.getRequestDispatcher("newpassword.jsp");
+            dispatcher=request.getRequestDispatcher("newpassword");
             dispatcher.forward(request, response);
         }
         else

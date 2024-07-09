@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@WebServlet(name = "LessonFolderList", urlPatterns = "/listfolder")
+@WebServlet(name = "LessonFolderList", urlPatterns = "/actListFolder")
 public class LessonFolderList extends HttpServlet {
     private static final Logger logger = Logger.getLogger(LessonFolderList.class.getName());
     @Override

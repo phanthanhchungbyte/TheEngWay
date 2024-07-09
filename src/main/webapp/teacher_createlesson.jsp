@@ -9,14 +9,13 @@
     <title>Document</title>
     <%-- Add a favicon to the web --%>
     <link rel="icon" href="imgs/favicon/favicon.ico">
-    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
-          type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/homebar.css">
     <link rel="stylesheet" href="css/coursenav.css">
     <link rel="stylesheet" href="css/teacher-only/createlessonview.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="cropperjs/cropper.css">
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <!-- Include the cropper script -->
     <script src="cropperjs/cropper.js"></script>
     <style>
@@ -30,7 +29,7 @@
 <div class="container">
     <nav class="top-nav">
         <div class="logo-div">
-            <a class="logo" href="teacherHome.jsp">
+            <a class="logo" href="${pageContext.request.contextPath}/teacherHome">
                 <img src="imgs/TheEngWayLogo.png" alt="The Logo">
             </a>
         </div>
@@ -53,9 +52,9 @@
                     <p><span>0</span> thông báo mới</p>
                 </div>
                 <div>
-                    <a href="userProfile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                    <a href="userProfile"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
                     <ul>
-                        <li class="setting-cog"><a href="index.jsp">Exit</a></li>
+                        <li class="setting-cog"><a href="${pageContext.request.contextPath}/index">Exit</a></li>
                     </ul>
                 </div>
             </div>
@@ -64,10 +63,10 @@
                 <i class="fas fa-caret-down fa-2x"></i>
                 <ul class="mini-profile-dropdown">
                     <li class="settings">
-                        <a href="userProfile.jsp">Settings</a>
+                        <a href="userProfile">Settings</a>
                     </li>
                     <li class="exit">
-                        <a href="index.jsp">Exit</a>
+                        <a href="${pageContext.request.contextPath}/index">Exit</a>
                     </li>
                 </ul>
             </div>
@@ -79,14 +78,14 @@
     <div class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
-                <a href="teacherHome.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                <a href="${pageContext.request.contextPath}/teacherHome"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
                 <a href="#">Kĩ năng</a>
                 <ul class="dropdown">
-                    <li><a href="">Listening</a></li>
-                    <li><a href="#">Reading</a></li>
-                    <li><a href="#">Writing</a></li>
+                    <li><a href="${pageContext.request.contextPath}/skillListening">Listening</a></li>
+                    <li><a href="${pageContext.request.contextPath}/skillReading">Reading</a></li>
+                    <li><a href="${pageContext.request.contextPath}/skillWriting">Writing</a></li>
                     <li><a href="#">Grammar</a></li>
                     <li><a href="#">Từ vựng</a></li>
                 </ul>
@@ -113,7 +112,7 @@
             <li>
                 <a href="#">TA Trung học PT</a>
                 <ul class="dropdown">
-                    <li><a href="html/highschool-courses/class-10th.html">Tiếng Anh lớp 10</a></li>
+                    <li><a href="#">Tiếng Anh lớp 10</a></li>
                     <li><a href="#">Tiếng Anh lớp 11</a></li>
                     <li><a href="#">Tiếng Anh lớp 12</a></li>
                 </ul>
@@ -172,7 +171,7 @@
                     <div class="student-buttonside">
                         <ul class="student-buttons">
                             <li>
-                                <button class="personal-info" onclick="location.href='profileShow.jsp';"><i class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân</button>
+                                <button class="personal-info" onclick="location.href='${pageContext.request.contextPath}/profileShow';"><i class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân</button>
                             </li>
 
                             <li>
@@ -180,7 +179,7 @@
                             </li>
 
                             <li>
-                                <button onclick="location.href='forgotpassword.jsp';"><i class="fas fa-lock-alt fa-lg"></i>Thay đổi mật khẩu</button>
+                                <button onclick="location.href='${pageContext.request.contextPath}/forgotpassword';"><i class="fas fa-lock-alt fa-lg"></i>Thay đổi mật khẩu</button>
                             </li>
 
                             <li>
@@ -188,7 +187,7 @@
                             </li>
 
                             <li>
-                                <button onclick="location.href='index.jsp';"><i class="fas fa-power-off fa-lg"></i>Thoát</button>
+                                <button onclick="location.href='${pageContext.request.contextPath}/index';"><i class="fas fa-power-off fa-lg"></i>Thoát</button>
                             </li>
                         </ul>
                     </div>
@@ -264,6 +263,32 @@
                                 </div>
                                 <div>
                                     <input type="text" placeholder="Nhập tên bài học" id="lessonName">
+                                    <button class="lesson-avatar-btn">
+                                        Chọn ảnh bài học
+                                    </button>
+                                    <dialog>
+                                        Choose an avatar for the lesson
+                                        <div>
+                                            <img class="avatar-display" src="" alt="First avatar">
+                                        </div>
+                                        <ul class="avatars-container">
+                                            <li><img src="https://drive.google.com/thumbnail?id=1AKwsKfHmSX0nqAVWx7KiyTY1___CDtgy" alt="First avatar"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=1TpniPrro38J01XKvZQl9wyoBy17uoXpV" alt="Second avatar"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=1uVQuOSanehVL76Lh2mIzII8pU9j5ZQjo" alt="Third avatar"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=1RJyGUX1ja29-BxGoJI7B0jQElsCgamQS" alt="Fourth avatar"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=1cFjsFp-LZkMeqlz7aVvwjXj1b8d7JCtQ" alt="Fifth avatar"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=1IvXOeS8BSLB4LTRqual0IY2lO1ZRCJNi" alt="Sixth avatar"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=1UYcbqK0awS4sz2HSfMEIsSJ_QAySB-KK" alt="Seventh avatar"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=1Uu9Q9_prukFXshBB2kEEzv_OAumpbuI1" alt="Eight avatar"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=1SXwuIZfQgeJwz9_-ZXZkZuiBze8ujip3" alt="Ninth avatar"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=18fyG_HgdtAsv-K18sQEz5qzQVvL9LKTa" alt="Tenth avatar"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=1BbZRfEehEXJhYrUNh0pUdwoxObQrMYKU" alt="Coffee Pic"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=1v_FtYKXmdqarB0PLe9Eo6SfHSPIXqheO" alt="Nice Flowers"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=1pbMCYWSUvKyVliQoO-aPs2rzNgBDfy_I" alt="Nice Interior CoffeePicResized"></li>
+                                            <li><img src="https://drive.google.com/thumbnail?id=1Go2r4fiYjV-NoGIGiIAbf8HPyWAM_MwP" alt="Simple Home viewport"></li>
+                                        </ul>
+                                        <button class="save-lessonavatar">Close</button>
+                                    </dialog>
                                 </div>
                             </div>
                         </section>
@@ -405,14 +430,14 @@
 <script src="plugins/tinymce/tinymce.min.js"></script>
 <script src="plugins/tinymce/init-tinymce.js"></script>
 <script>
+    // Change sectionLinks based on userType
     let webPath = "${pageContext.request.contextPath}";
     let curUserType = "${sessionScope.loggedInUser.getUserType()}";
     async function loadData(userType) {
         try {
             const response = await fetch("jsons/sectionLinks.json");
             let sectionLinkChoices = await response.json(); // We get the array of objects here
-            document.querySelector(".profile-sections").innerHTML = sectionLinkChoices.find(section => section.userType === userType).sectionContent;
-            // console.log(sectionLinkChoices);
+            document.querySelector(".profile-sections").innerHTML = sectionLinkChoices.find(section => section["userType"] === userType)["sectionContent"];
         } catch (error) {
             console.error("Error fetching JSON:", error);
         }
@@ -423,7 +448,7 @@
     skillSelector.addEventListener("change", (event) => {
         let xhr = new XMLHttpRequest();
         let skill = encodeURIComponent(event.target.value);
-        xhr.open('GET', "${pageContext.request.contextPath}/listfolder?skill=" + skill, true);
+        xhr.open('GET', "${pageContext.request.contextPath}/actListFolder?skill=" + skill, true);
         xhr.onload = handleLessonFolders;
         xhr.send();
     })
@@ -458,8 +483,9 @@
         skillSelector.dispatchEvent(event);
     })
 </script>
+<script src="js/changeAvatar.js"></script>
 <script src="js/createQuiz.js"></script>
-
+<script src="js/toggleProfileHomeDropdown.js"></script>
 </body>
 
 </html>

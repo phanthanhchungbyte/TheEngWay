@@ -1,0 +1,53 @@
+<!--
+
+    Configuration file for UrlRewriteFilter
+    http://www.tuckey.org/urlrewrite/
+
+ -->
+<urlrewrite>
+    <rule>
+        <note>The rule means that requests to /test/status/ will be redirected to /rewrite-status the url will be
+            rewritten.
+        </note>
+        <from>/test/status/</from>
+        <to type="redirect">%{context-path}/rewrite-status</to>
+    </rule>
+    <outbound-rule>
+        <note>The outbound-rule specifies that when response.encodeURL is called (if you are using JSTL c:url) the url
+            /rewrite-status will be rewritten to /test/status/. The above rule and this outbound-rule means that end
+            users should never see the url /rewrite-status only /test/status/ both in their location bar and in
+            hyperlinks in your pages.
+        </note>
+        <from>/rewrite-status</from>
+        <to>/test/status/</to>
+    </outbound-rule>
+
+    <!--  Redirect specific jsps  -->
+    <rule>
+        <from>^/(EnterOTP|forgotpassword|home|index|login|newpassword|otp|profileShow|register|student_profileedit|skillReading|skillWriting|studentHome|teacher_createlesson|teacher_lessonview|teacherHome|userProfile)$</from>
+        <to type="forward">/redirect?page=$1</to>
+    </rule>
+
+    <rule>
+        <from>^/skill([a-zA-Z]+)$</from>
+        <to type="forward">/actLoadSkillLessons?skill=$1</to>
+    </rule>
+
+    <rule>
+        <note>To get all the lessons with type /skillXXX/{lessonFolderId}</note>
+        <from>^/skill([a-zA-Z]+)/([0-9]+)$</from>
+        <to type="forward">/actLoadAllLessons?skill=$1&amp;folderId=$2</to>
+    </rule>
+
+    <rule>
+        <note>To get the content of a single lesson /skillXXX/{lessonFolderId}/{lessonFileName}</note>
+        <from>^/skill([a-zA-Z]+)/([0-9]+)/([a-zA-Z0-9_]+)$</from>
+        <to type="forward">/actLoadAllLessons?skill=$1&amp;folderId=$2&amp;lessonName=$3</to>
+    </rule>
+
+    <rule>
+        <note>To get the content of a single lesson /skillXXX/{lessonFolderId}/{lessonFileName}</note>
+        <from>^/test$</from>
+        <to type="forward">/actLoadAllLessons</to>
+    </rule>
+</urlrewrite>

@@ -27,7 +27,8 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-@WebServlet(name = "RegisterServlet", urlPatterns = "/register")
+
+@WebServlet(name = "RegisterServlet", urlPatterns = "/actRegister")
 public class RegisterServlet extends HttpServlet {
     private static final Logger logger = Logger.getLogger(RegisterServlet.class.getName());
     private static final String passwordRegexString = "^(?=.*[0-9])"

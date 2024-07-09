@@ -1,0 +1,10 @@
+[
+  {
+    "loggedIn": false,
+    "homeBarContent": "<ul class='menu-items'><li class='search'><i class='fad fa-search'></i><input class='search-bar' placeholder='Search lessons here'></li><li><a href='login' class='navlogin'>Đăng nhập</a></li><li><a href='register' class='registerlogin'>Đăng ký</a></li></ul><label for='nav-toggle' class='nav-toggle-label'><span></span></label>"
+  },
+  {
+    "loggedIn": true,
+    "homeBarContent": "<div class='home-page'><div class='menu-items-div'><ul class='menu-items'><li class='search'><i class='fad fa-search'></i><input class='search-bar' placeholder='Search lessons here'></li></ul></div><div class='profile-home-card'><img src='AVATAR' alt='Avatar' class='cur-avatar'><div class='shown-info'><p class='username-profile'>USERNAME</p><p class='level-profile'>LV1</p><p><span>0</span> thông báo mới</p></div><div><a href='userProfile'><img src='imgs/user/UserSettings.png' id='setting_icon' alt='settingsIcon'></a><ul><li class='setting-cog'><a href='${pageContext.request.contextPath}/index'>Exit</a></li></ul></div></div><div class='profile-home-card-mini'><img src='AVATAR' alt='Avatar'/><i class='fas fa-caret-down fa-2x'></i><ul class='mini-profile-dropdown'><li class='settings'><a href='userProfile'>Settings</a></li><li class='exit'><a href='${pageContext.request.contextPath}/index'>Exit</a></li></ul></div><label for='nav-toggle' class='nav-toggle-label'><span></span></label></div>"
+  }
+]

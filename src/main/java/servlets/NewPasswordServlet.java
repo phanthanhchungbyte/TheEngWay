@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-@WebServlet(name = "NewPassword", value = "/newpassword")
+@WebServlet(name = "NewPassword", value = "/actNewPassword")
 public class NewPasswordServlet extends HttpServlet {
     private static final Logger logger = Logger.getLogger(RegisterServlet.class.getName());
     private static final String passwordRegexString = "^(?=.*[0-9])"
@@ -69,7 +69,7 @@ public class NewPasswordServlet extends HttpServlet {
             if(dao.updatePassword(hashed_password, saltString, email)){
                 try {
                     request.setAttribute("message","Thay doi mat khau thanh cong");
-                    dispatcher = request.getRequestDispatcher("login.jsp");
+                    dispatcher = request.getRequestDispatcher("login");
                     dispatcher.forward(request,response);
                 } catch (IOException | ServletException e) {
                     logger.log(Level.SEVERE, e.getMessage(), e);
@@ -78,7 +78,7 @@ public class NewPasswordServlet extends HttpServlet {
         } else {
             try {
                 request.setAttribute("message", "Your password is incorrect");
-                dispatcher = request.getRequestDispatcher("newpassword.jsp");
+                dispatcher = request.getRequestDispatcher("newpassword");
                 dispatcher.forward(request, response);
             } catch (IOException | ServletException e) {
                 logger.log(Level.SEVERE, e.getMessage(), e);

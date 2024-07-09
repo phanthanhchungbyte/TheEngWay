@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+          type="text/css"/>
     <link rel="stylesheet" href="css/homebar.css">
     <link rel="stylesheet" href="css/coursenav.css">
     <link rel="stylesheet" href="css/profile.css">
@@ -27,7 +28,7 @@
 <div class="container">
     <nav class="top-nav">
         <div class="logo-div">
-            <a class="logo" href="home.jsp">
+            <a class="logo" href="${pageContext.request.contextPath}/home">
                 <img src="imgs/TheEngWayLogo.png" alt="The Logo">
             </a>
         </div>
@@ -50,9 +51,9 @@
                     <p><span>0</span> thông báo mới</p>
                 </div>
                 <div>
-                    <a href="userProfile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                    <a href="userProfile"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
                     <ul>
-                        <li class="setting-cog"><a href="index.jsp">Exit</a></li>
+                        <li class="setting-cog"><a href="${pageContext.request.contextPath}/index">Exit</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,10 +62,10 @@
                 <i class="fas fa-caret-down fa-2x"></i>
                 <ul class="mini-profile-dropdown">
                     <li class="settings">
-                        <a href="userProfile.jsp">Settings</a>
+                        <a href="userProfile">Settings</a>
                     </li>
                     <li class="exit">
-                        <a href="index.jsp">Exit</a>
+                        <a href="${pageContext.request.contextPath}/index">Exit</a>
                     </li>
                 </ul>
             </div>
@@ -77,61 +78,53 @@
     <div class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
-                <a href="index.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                <a href="${pageContext.request.contextPath}/index"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
-                <a href="#">Nghe</a>
+                <a href="#">Kĩ năng</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="${pageContext.request.contextPath}/skillListening">Nghe</a></li>
+                    <li><a href="${pageContext.request.contextPath}/skillReading">Đọc</a></li>
+                    <li><a href="${pageContext.request.contextPath}/skillWriting">Viết</a></li>
+                    <li><a href="#">Ngữ pháp</a></li>
+                    <li><a href="#">Từ vựng</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Nói</a>
+                <a href="#">TA Tiểu học</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 1</a></li>
+                    <li><a href="#">Tiếng Anh lớp 2</a></li>
+                    <li><a href="#">Tiếng Anh lớp 3</a></li>
+                    <li><a href="#">Tiếng Anh lớp 4</a></li>
+                    <li><a href="#">Tiếng Anh lớp 5</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Đọc</a>
+                <a href="#">TA Trung học CS</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 7</a></li>
+                    <li><a href="#">Tiếng Anh lớp 8</a></li>
+                    <li><a href="#">Tiếng Anh lớp 9</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">Viết</a>
+                <a href="#">TA Trung học PT</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Tiếng Anh lớp 10</a></li>
+                    <li><a href="#">Tiếng Anh lớp 11</a></li>
+                    <li><a href="#">Tiếng Anh lớp 12</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#">Tổng hợp</a>
                 <ul class="dropdown">
-                    <li><a href="#">Course 1</a></li>
-                    <li><a href="#">Course 2</a></li>
-                    <li><a href="#">Course 3</a></li>
-                    <li><a href="#">Course 4</a></li>
-                    <li><a href="#">Course 5</a></li>
-                    <li><a href="#">Course 6</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Cuộc thi</a></li>
+                    <li><a href="#">Test Kiểm tra trình độ</a></li>
+                    <li><a href="#">Kiểm tra các khối</a></li>
+                    <li><a href="#">Bài tập chấm điểm</a></li>
                 </ul>
             </li>
         </ul>
@@ -180,15 +173,22 @@
                     <div class="student-buttonside">
                         <ul class="student-buttons">
                             <li>
-                                <button class="personal-info" onclick="location.href='profileShow.jsp';"><i class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân</button>
+                                <button class="personal-info"
+                                        onclick="location.href='${pageContext.request.contextPath}/profileShow';"><i
+                                        class="fas fa-user-alt fa-lg"></i>Thông tin cá nhân
+                                </button>
                             </li>
 
                             <li>
-                                <button class="changeavatar-button"><i class="far fa-image-polaroid fa-lg"></i>Thay đổi avatar</button>
+                                <button class="changeavatar-button"><i class="far fa-image-polaroid fa-lg"></i>Thay đổi
+                                    avatar
+                                </button>
                             </li>
 
                             <li>
-                                <button onclick="location.href='forgotpassword.jsp';"><i class="fas fa-lock-alt fa-lg"></i>Thay đổi mật khẩu</button>
+                                <button onclick="location.href='${pageContext.request.contextPath}/forgotpassword';"><i
+                                        class="fas fa-lock-alt fa-lg"></i>Thay đổi mật khẩu
+                                </button>
                             </li>
 
                             <li>
@@ -196,7 +196,9 @@
                             </li>
 
                             <li>
-                                <button onclick="location.href='index.jsp';"><i class="fas fa-power-off fa-lg"></i>Thoát</button>
+                                <button onclick="location.href='${pageContext.request.contextPath}/index';"><i
+                                        class="fas fa-power-off fa-lg"></i>Thoát
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -270,7 +272,7 @@
                         <!--Level progress bar should fetch data from server or database-->
                         <label for="levelbar">Level <span>0</span></label>
                         <div class="progress">
-                            <progress id="levelbar" value="30" max="100"> 1 </progress>
+                            <progress id="levelbar" value="30" max="100"> 1</progress>
                         </div>
                         <div class="start-end">
                             <span>0</span>
@@ -481,9 +483,9 @@
 
     // Default that the profile home dropdown to not show.
     profileHomeCardMini.addEventListener("click", () => {
-        if(profileHomeDropdown.style.display === "") {
+        if (profileHomeDropdown.style.display === "") {
             profileHomeDropdown.style.display = "block";
-        } else if(profileHomeDropdown.style.display === "block") {
+        } else if (profileHomeDropdown.style.display === "block") {
             profileHomeDropdown.style.display = "";
         }
     });
@@ -494,6 +496,7 @@
     displayProfileStat.push(document.querySelector('.VIP-status-ribbon'));
     displayProfileStat.push(document.querySelector('.profile-level'));
     displayProfileStat.push(document.querySelector('.profile-streak'));
+    displayProfileStat.push(document.querySelector('.wall-profile-achievements'));
 
     if (curUserType === "Teacher") {
         displayProfileStat.forEach((element) => {
@@ -516,6 +519,7 @@
             console.error("Error fetching JSON:", error);
         }
     }
+
     loadData(curUserType);
 </script>
 </body>

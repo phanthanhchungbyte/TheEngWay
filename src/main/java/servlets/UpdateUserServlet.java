@@ -11,7 +11,7 @@ import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-@WebServlet(name = "UpdateUserServlet", value = "/update")
+@WebServlet(name = "UpdateUserServlet", value = "/actUpdate")
 public class UpdateUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -24,7 +24,7 @@ public class UpdateUserServlet extends HttpServlet {
         HttpSession session = request.getSession();
         User loggedInUser = (User) session.getAttribute("loggedInUser");
         if (loggedInUser == null) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("login");
             return;
         }
 
@@ -59,10 +59,10 @@ public class UpdateUserServlet extends HttpServlet {
 
         // Forward to a confirmation page or back to the form with error message
         if (success) {
-            response.sendRedirect("userProfile.jsp"); // Redirect to the user's profile page
+            response.sendRedirect("userProfile"); // Redirect to the user's profile page
         } else {
             request.setAttribute("errorMessage", "Failed to update user information.");
-            request.getRequestDispatcher("student_profileedit.jsp").forward(request, response); // Forward back to the form
+            request.getRequestDispatcher("student_profileedit").forward(request, response); // Forward back to the form
         }
     }
 }

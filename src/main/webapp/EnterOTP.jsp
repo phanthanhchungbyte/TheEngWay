@@ -47,7 +47,7 @@
 
                         <div class="panel-body">
 
-                            <form id="register-form" action="${pageContext.request.contextPath}/validate" role="form" autocomplete="off"
+                            <form id="register-form" action="${pageContext.request.contextPath}/actValidate" role="form" autocomplete="off"
                                   class="form" method="post">
 
                                 <div class="form-group">

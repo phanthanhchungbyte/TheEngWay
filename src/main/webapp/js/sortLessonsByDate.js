@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let curIndicator = Number(document.querySelector(".indicator-num").textContent);
 
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", `${contextPath}/sortlessonbydate`, false);
+    xhr.open("GET", `${contextPath}/actSortLessonByDate`, false);
     let lessonData = null;
     xhr.onload = function () {
         lessonData = JSON.parse(xhr.responseText).createdLessons;
@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navigateNextButton.onclick = () => {
         console.log(`%c The current number is: ${curIndicator}`, "color: green");
-        if(curIndicator === Math.floor(lessonData.length / LESSONS_LIMIT_PER_PAGE) + 1) return;
+        if(lessonData.length < LESSONS_LIMIT_PER_PAGE && curIndicator === 1) return;
+        if(curIndicator === Math.ceil(lessonData.length / LESSONS_LIMIT_PER_PAGE)) return;
         curIndicator++;
         document.querySelector(".indicator-num").textContent = curIndicator.toString();
         console.log(`Current page is now: ${curIndicator}`);

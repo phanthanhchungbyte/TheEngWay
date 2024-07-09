@@ -28,7 +28,7 @@
 <div class="container">
     <nav class="top-nav">
         <div class="logo-div">
-            <a class="logo" href="home.jsp">
+            <a class="logo" href="${pageContext.request.contextPath}/home">
                 <img src="imgs/TheEngWayLogo.png" alt="The Logo">
             </a>
         </div>
@@ -51,8 +51,8 @@
                     <p><span>0</span> thông báo mới</p>
                 </div>
                 <div>
-                    <a href="userProfile.jsp"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
-                    <li class="setting-cog"><a href="index.jsp">Exit</a></li>
+                    <a href="userProfile"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                    <li class="setting-cog"><a href="${pageContext.request.contextPath}/index">Exit</a></li>
                 </div>
             </div>
             <div class="profile-home-card-mini">
@@ -60,10 +60,10 @@
                 <i class="fas fa-caret-down fa-2x"></i>
                 <ul class="mini-profile-dropdown">
                     <li class="settings">
-                        <a href="userProfile.jsp">Settings</a>
+                        <a href="userProfile">Settings</a>
                     </li>
                     <li class="exit">
-                        <a href="index.jsp">Exit</a>
+                        <a href="${pageContext.request.contextPath}/index">Exit</a>
                     </li>
                 </ul>
             </div>
@@ -75,7 +75,7 @@
     <div class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
-                <a href="index.jsp"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                <a href="${pageContext.request.contextPath}/index"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
                 <a href="#">Nghe</a>
@@ -173,7 +173,7 @@
                             </li>
 
                             <li>
-                                <button><i class="far fa-image-polaroid fa-lg"></i>Thay đổi avatar</button>
+                                <button class="changeavatar-button"><i class="far fa-image-polaroid fa-lg"></i>Thay đổi avatar</button>
                             </li>
 
                             <li>
@@ -214,6 +214,7 @@
                     <div class="cropped-container">
                         <img src="#" alt="Testing2" id="output">
                     </div>
+                    <button class="go-back"></button>
                     <button class="return-to-main">Close</button>
                 </dialog>
 
@@ -344,7 +345,7 @@
                 </div>
 
                 <div class="edit-form-section">
-                    <form action="${pageContext.request.contextPath}/update" method="post">
+                    <form action="${pageContext.request.contextPath}/actUpdate" method="post">
                         <div class="input-row">
                             <label for="full_name">Tên đầy đủ:</label>
                             <input type="text" name="full_name" id="full_name">
@@ -468,6 +469,13 @@
             profileHomeDropdown.style.display = "";
         }
     })
+
+    console.log(curUserType);
+    if(curUserType === "Teacher") {
+        let studentPart = document.querySelector(".student-profile");
+        studentPart.removeChild(document.querySelector(".VIP-status-ribbon"));
+        studentPart.removeChild(document.querySelector(".wall-profile-statcard"));
+    }
 </script>
 </body>
 </html>

@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 import static com.mysql.cj.conf.PropertyKey.logger;
 
 
-@WebServlet(name = "SortLessonByDateServlet", value = "/sortlessonbydate")
+@WebServlet(name = "SortLessonByDateServlet", value = "/actSortLessonByDate")
 public class SortLessonByDateServlet extends HttpServlet {
     private static final Logger logger = Logger.getLogger(SortLessonByDateServlet.class.getName());
     @Override
