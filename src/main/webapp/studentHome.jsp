@@ -6,21 +6,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="icon" href="imgs/favicon/favicon.ico">
-    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+          type="text/css" />
     <link rel="stylesheet" href="css/homebar.css">
     <link rel="stylesheet" href="css/coursenav.css">
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/aside.css">
-    <link rel="stylesheet" href="css/home.css">
+    <scrip href="js/searchLesson.js"></script>
 </head>
 <body>
 <div class="container">
     <nav class="top-nav">
         <div class="logo-div">
             <a class="logo" href="${pageContext.request.contextPath}/studentHome">
-                <img src="imgs/TheEngWayLogo.png" alt="The Logo">
+                <h1>TheEngWay</h1>
             </a>
         </div>
 
@@ -29,8 +28,13 @@
             <div class="menu-items-div">
                 <ul class="menu-items">
                     <li class="search">
-                        <i class="fad fa-search"></i>
-                        <input class="search-bar" placeholder="Search lessons here">
+                        <form action="${pageContext.request.contextPath}/actSearchLessonServlet" method="get">
+                            <i class="fad fa-search"></i>
+                            <input class="search-bar" id="search-bar" name="searchString" placeholder="Search lessons here" onkeyup="searchSuggestions()">
+                            <button type="submit" class="search-button">Search</button>
+                            <div id="suggestions" class="suggestions"></div>
+                        </form>
+
                     </li>
                 </ul>
             </div>
@@ -38,11 +42,10 @@
                 <img src="${sessionScope.loggedInUser.getAvatar()}" alt="">
                 <div class="shown-info">
                     <p class="username-profile">${sessionScope.loggedInUser.getUserName()}</p>
-                    <p class="level-profile">LV1</p>
                     <p><span>0</span> thông báo mới</p>
                 </div>
                 <div>
-                    <a href="userProfile"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                    <a href="${pageContext.request.contextPath}/userProfile"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
                     <li class="setting-cog"><a href="${pageContext.request.contextPath}/index">Exit</a></li>
                 </div>
             </div>
@@ -51,7 +54,7 @@
                 <i class="fas fa-caret-down fa-2x"></i>
                 <ul class="mini-profile-dropdown">
                     <li class="settings">
-                        <a href="userProfile">Settings</a>
+                        <a href="${pageContext.request.contextPath}/userProfile">Settings</a>
                     </li>
                     <li class="exit">
                         <a href="${pageContext.request.contextPath}/index">Exit</a>
@@ -64,252 +67,175 @@
         </div>
     </nav>
 
-    <div class="course-div">
+    <section class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
-                <a href="${pageContext.request.contextPath}/studentHome"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                <a href="${pageContext.request.contextPath}/index"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
-                <a href="#">Kĩ năng</a>
-                <ul class="dropdown">
-                    <li><a href="${pageContext.request.contextPath}/skillListening">Nghe</a></li>
-                    <li><a href="${pageContext.request.contextPath}/skillReading">Đọc</a></li>
-                    <li><a href="${pageContext.request.contextPath}/skillWriting">Viết</a></li>
-                    <li><a href="#">Grammar</a></li>
-                    <li><a href="#">Từ vựng</a></li>
-                </ul>
+                <a href="${pageContext.request.contextPath}/skills/vocabulary">Từ vựng</a>
             </li>
             <li>
-                <a href="#">TA Tiểu học</a>
-                <ul class="dropdown">
-                    <li><a href="#">Tiếng Anh lớp 1</a></li>
-                    <li><a href="#">Tiếng Anh lớp 2</a></li>
-                    <li><a href="#">Tiếng Anh lớp 3</a></li>
-                    <li><a href="#">Tiếng Anh lớp 4</a></li>
-                    <li><a href="#">Tiếng Anh lớp 5</a></li>
-                </ul>
+                <a href="${pageContext.request.contextPath}/skills/grammar">Ngữ pháp</a>
             </li>
             <li>
-                <a href="#">TA Trung học CS</a>
-                <ul class="dropdown">
-                    <li><a href="#">Tiếng Anh lớp 6</a></li>
-                    <li><a href="#">Tiếng Anh lớp 7</a></li>
-                    <li><a href="#">Tiếng Anh lớp 8</a></li>
-                    <li><a href="#">Tiếng Anh lớp 9</a></li>
-                </ul>
+                <a href="${pageContext.request.contextPath}/skills/pronunciation">Phát âm</a>
             </li>
             <li>
-                <a href="#">TA Trung học PT</a>
-                <ul class="dropdown">
-                    <li><a href="">Tiếng Anh lớp 10</a></li>
-                    <li><a href="#">Tiếng Anh lớp 11</a></li>
-                    <li><a href="#">Tiếng Anh lớp 12</a></li>
-                </ul>
+                <a href="${pageContext.request.contextPath}/others/exams">Kiểm tra</a>
             </li>
             <li>
-                <a href="#">Tổng hợp</a>
-                <ul class="dropdown">
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="#">Cuộc thi</a></li>
-                    <li><a href="#">Test Kiểm tra trình độ</a></li>
-                    <li><a href="#">Kiểm tra các khối</a></li>
-                    <li><a href="#">Bài tập chấm điểm</a></li>
-                </ul>
+                <a href="${pageContext.request.contextPath}/others/quiz">Quiz</a>
+            </li>
+            <li>
+                <a href="faqs.jsp">FAQs</a>
             </li>
         </ul>
-    </div>
+    </section>
 
-    <div class="banner">
-        <a href="#"><img src="imgs/VIP-image.png" alt="VIP banner"></a>
-    </div>
+    <section class="main-banner">
+        <a><img src="imgs/banner.png" alt="VIP banner"></a>
+    </section>
 
-    <div class="main-content">
-        <div class="content">
-            <div class="card">
-                <div class="text-content">
-                    <p class="skill-title">Nghe</p>
-                    <p class="skill-description">
-                        Luyện kĩ năng nghe với những bài học bổ ích với những video về nhiều lĩnh vực khác nhau.
-                    </p>
-                    <ul>
-                        <li><a href="#">Art exhibition honors Mr.Trinh Cong Son</a></li>
-                        <li><a href="#">Cuộc thi: Listening and Writing (số 2)</a></li>
-                        <li><a href="#">Lesson 1: Welcome!</a></li>
-                    </ul>
-                </div>
-                <img src="imgs/listening.png" alt="Listening">
-            </div>
-
-            <div class="card">
-                <div class="text-content">
-                    <p class="skill-title">Viết</p>
-                    <p class="skill-description">Cải thiện và nâng cao khả năng viết tiêng Anh: từ cách tạo câu đúng ngữ pháp đến viết đoạn văn và bài luận ngắn</p>
-                    <ul>
-                        <li><a href="#">Cuộc thi: Viết luận ngắn (số 2)</a></li>
-                        <li><a href="#">Học cách viết thư [Bài viết]</a></li>
-                        <li><a href="#">Cuộc thi: Viết qua tranh (số 4)</a></li>
-                    </ul>
-                </div>
-
-                <img src="imgs/writing.png" alt="Writing">
-            </div>
-
-            <div class="card">
-                <div class="text-content">
-                    <p class="skill-title">Đọc</p>
-                    <p class="skill-description">Rèn luyện kĩ năng đọc tiếng Anh của học sinh với nhiều bài đọc được trích từ các nguồn tiếng Anh uy tín.</p>
-                    <ul>
-                        <li><a href="">Meaning of life: Butterfly</a></li>
-                        <li><a href="">Don Quixote and the Windmill</a></li>
-                        <li><a href="">Article: Vietnam's GDP is set to increase by 1.5% by the end of this year.</a></li>
-                    </ul>
-                </div>
-
-                <img src="imgs/reading.png" alt="Reading">
-            </div>
-
-            <div class="card">
-                <div class="text-content">
-                    <p class="contest">Cuộc thi</p>
-                    <p class="contest-description">Những cuộc thi tiếng Anh với những phần thưởng hấp dẫn cho người trả lời đúng và nhanh nhất!</p>
-                    <ul>
-                        <li><a href="#">Cuộc thi: Viết luận ngắn (số 3)</a></li>
-                        <li><a href="#">Cuộc thi: Đề thi HSG lớp 10 (lần 7)</a></li>
-                        <li><a href="#">Cuộc thi: Đề thi HSG lớp 12 (lần 1)</a></li>
-                        <li><a href="#">Cuộc thi: Dịch Việt - Anh (số 53)</a></li>
-                        <li><a href="#">Cuộc thi: Dịch Anh - Việt (số 32)</a></li>
-                    </ul>
-                </div>
-            </div>
+    <section class="second-banner">
+        <div class="banner-support"></div>
+        <div class="welcome-banner">
+            <h2>Welcome to TheEngWay!</h2>
+            <p>Pick any category to start learning English today</p>
         </div>
+        <div class="banner-support"></div>
+    </section>
 
-        <aside>
-            <div class="competition-banner">
-                <a href="#">
-                    <img src="imgs/banner-thidau.png" alt="Thi đấu">
-                </a>
-            </div>
 
-            <div class="top-5">
-
-                <div class="top5-title">
-                    <h1>Top 5 of the Week</h1>
-                </div>
-
-                <table>
-                    <tr>
-                        <td>1</td>
-                        <td>David Lua</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Anthony Wong</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Chung Ha</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Benjamin Wong</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>John Doe</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="questions_and_answers">
-                <div class="questions_and_answers-title">
-                    <h1>HỎI ĐÁP NHANH</h1>
-                </div>
-
-                <div class="questions_and_answers-commentbox">
-                    <textarea type="text" id="comment" name="comment" rows="4" cols="25" placeholder="Comment here..."></textarea>
-                    <div class="button-div">
-                        <input type="button" value="Gửi"/>
+    <section class="main-content">
+        <section class="courses">
+            <!--Build lesson creator for this part-->
+            <a href="skills/vocabulary" data-tilt data-tilt-glare>
+                <div class="section-card">
+                    <img src="imgs/index-assets/VocabIndexCard.svg" alt="Vocab Card">
+                    <div class="card-intro">
+                        <h2>Từ vựng tiếng Anh</h2>
+                        <span>Học từ vựng theo chủ đề (và theo hình ảnh)</span>
                     </div>
                 </div>
+            </a>
 
-                <div class="comment-div">
-                    <div class="comment">
-                        <h4>languageLearner88 (VIP)</h4>
-                        <p>What are some effective methods for expanding your English vocabulary quickly?</p>
-                        <button><i class="fas fa-comments"></i> Ans (15)</button>
+            <!--Build lesson creator for this part-->
+            <a href="skills/grammar" data-tilt data-tilt-glare>
+                <div class="section-card">
+                    <img src="imgs/index-assets/GrammarIndexCard.svg" alt="Grammar Card">
+                    <div class="card-intro">
+                        <h2>Ngữ pháp tiếng Anh</h2>
+                        <span>Hướng dẫn ngữ pháp tiếng Anh từ cơ bản đến nâng cao</span>
                     </div>
                 </div>
-                <div class="comment-div">
-                    <div class="comment">
-                        <h4>grammarGuru (VIP)</h4>
-                        <p>Can anyone explain the difference between "affect" and "effect" with examples?</p>
-                        <button><i class="fas fa-comments"></i> Ans (20)</button>
+            </a>
+
+            <!--No lesson creator for this part-->
+            <a href="skills/pronunciation" data-tilt data-tilt-glare>
+                <div class="section-card">
+                    <img src="imgs/index-assets/PronunciationIndexCard.svg" alt="Pronounciation Card">
+                    <div class="card-intro">
+                        <h2>Phát âm tiếng Anh</h2>
+                        <span>Học cách phát âm tiếng Anh chuẩn như người bản địa</span>
                     </div>
                 </div>
-                <div class="comment-div">
-                    <div class="comment">
-                        <h4>readingRocks (VIP)</h4>
-                        <p>What are some engaging books for intermediate English learners?</p>
-                        <button><i class="fas fa-comments"></i> Ans (12)</button>
+            </a>
+
+            <!--Build lesson creator for this part-->
+            <a href="skills/listening" data-tilt data-tilt-glare>
+                <div class="section-card">
+                    <img src="imgs/index-assets/ListeningIndexCard.svg" alt="Listening Card">
+                    <div class="card-intro">
+                        <h2>Kĩ năng nghe</h2>
+                        <span>Luyện nghe tiếng Anh qua các video thực tế, phóng sự , v.v</span>
                     </div>
                 </div>
-                <div class="comment-div">
-                    <div class="comment">
-                        <h4>pronunciationPro (VIP)</h4>
-                        <p>What's the best way to practice English pronunciation at home?</p>
-                        <button><i class="fas fa-comments"></i> Ans (18)</button>
+            </a>
+
+            <!--Build lesson creator for this part-->
+            <a href="skills/reading" data-tilt data-tilt-glare>
+                <div class="section-card">
+                    <img src="imgs/index-assets/ReadingIndexCard.svg" alt="Reading Card">
+                    <div class="card-intro">
+                        <h2>Kĩ năng đọc</h2>
+                        <span>Đọc hiểu các bài văn mấu bằng tiếng Anh</span>
                     </div>
                 </div>
-                <div class="comment-div">
-                    <div class="comment">
-                        <h4>idiomExpert (VIP)</h4>
-                        <p>What are some common English idioms and their meanings?</p>
-                        <button><i class="fas fa-comments"></i> Ans (25)</button>
+            </a>
+
+            <!--Build lesson creator for this part-->
+            <a href="skills/writing" data-tilt data-tilt-glare>
+                <div class="section-card">
+                    <img src="imgs/index-assets/WritingIndexCard.svg" alt="Writing Card">
+                    <div class="card-intro">
+                        <h2>Kĩ năng viết</h2>
+                        <span>Học cách viết tiếng Anh tại đây</span>
                     </div>
                 </div>
-                <div class="questions_and_answers-page">
-                    <a href="#"><button>1</button></a>
-                    <a href="#"><button>2</button></a>
-                    <a href="#"><button>3</button></a>
-                    <a href="#"><button>...</button></a>
+            </a>
+
+            <!--Build lesson creator for this part-->
+            <a href="others/blog" data-tilt data-tilt-glare>
+                <div class="section-card">
+                    <img src="imgs/index-assets/EnglishBlogIndexCard.svg" alt="English Blog">
+                    <div class="card-intro">
+                        <h2>Blog tiếng Anh</h2>
+                        <span>Các bài blog xuất bản hằng tuần theo nhiều chủ đề khác nhau</span>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="VIP-banner">
-                <a href="#"><img src="imgs/VIPadv2.png" alt="Đăng ký VIP hôm nay!"></a>
-            </div>
+            <!--Quiz creator for this part-->
+            <a href="others/exams" data-tilt data-tilt-glare>
+                <div class="section-card">
+                    <img src="imgs/index-assets/ExamIndexCard.svg" alt="English Exam">
+                    <div class="card-intro">
+                        <h2>Bài thi tiếng Anh</h2>
+                        <span>Trình độ tiếng Anh của bạn đến đâu? Kiểm tra ngay!</span>
+                    </div>
+                </div>
+            </a>
 
-            <div class="online-test">
-                <a href="#"><img src="imgs/online_test.png" alt="Thi thử online"></a>
-            </div>
-
-            <div class="kinh-nghiem">
-                <a href="#"><img src="imgs/bannerkinhnghiem.png" alt="Kinh nghiệm học tiếng Anh"></a>
-            </div>
-        </aside>
-    </div>
-
-    <div class="clear"></div>
+            <!--No lesson creator for this part-->
+            <a href="supportline.html" data-tilt data-tilt-glare>
+                <div class="section-card">
+                    <img src="imgs/index-assets/SupportIndexCard.svg" alt="Support">
+                    <div class="card-intro">
+                        <h2>Hỗ trợ</h2>
+                        <span>Nơi giải đáp thắc mắc của bạn</span>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </section>
 
     <div class="footer">
         <div class="copyright">
-            <p><b>Copyright TheEngWay.com © 2023 - 2024</b></p>
-            <img src="imgs/logogov.png" alt="Bộ Công thương">
+            <p class="heading-para">Copyright TheEngWay.com © 2023 - 2024</p>
         </div>
         <div class="contact_phone">
-            <p><b>Contact us via phone numbers:</b></p>
-            <br>
-            <p><i class="fad fa-phone fa-2x"></i> +84 696969696</p>
-        </div>
-        <div class="contact_social">
-            <p class="contact_paragraph"><b>Contact us via social medias:</b></p>
+            <p class="heading-para">Contact us via email:</p>
             <div class="contact-information">
                 <div class="contact-line">
-                    <i class="fab fa-facebook fa-2x"></i>
+                    <p><i class="far fa-at fa-lg"></i> theengwaymaster@8zulieu.com</p>
+                </div>
+
+                <div class="contact-line">
+                    <p><i class="fas fa-phone-alt fa-lg"></i> +84 0359 271 620</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="contact_social">
+            <p class="heading-para">Contact us via social medias:</p>
+            <div class="contact-information">
+                <div class="contact-line">
+                    <i class="fab fa-facebook fa-lg"></i>
                     <a href="#">facebook.com/TheEngWay</a>
                 </div>
                 <div class="contact-line">
-                    <i class="fab fa-linkedin-in fa-2x"></i>
+                    <i class="fab fa-linkedin-in fa-lg"></i>
                     <a href="#">linkedin.com/TheEngWay</a>
                 </div>
             </div>
@@ -317,17 +243,14 @@
     </div>
 </div>
 <script type="text/javascript">
-    const mini_profile = document.getElementsByClassName("profile-home-card-mini")[0];
-    document.addEventListener("DOMContentLoaded", () => {
-        const mini_profile_dropdown = document.getElementsByClassName("mini-profile-dropdown")[0];
-        mini_profile.addEventListener("click", () => {
-            if(mini_profile_dropdown.style.display === 'block') {
-                mini_profile_dropdown.style.display = 'none';
-            } else {
-                mini_profile_dropdown.style.display = 'block';
-            }
+    let linkList = document.getElementsByTagName("a");
+    Array.of(linkList).forEach(element => {
+        element.addEventListener("click", (e) => {
+            e.preventDefault();
         })
-    });
+    })
 </script>
+<script src="js/tilt.js"></script>
 </body>
+
 </html>

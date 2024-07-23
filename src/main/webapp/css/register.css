@@ -1,199 +1,70 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    text-decoration: none;
-    color: black;
-}
-
-
-:root {
-    --maincolor: #fff5dc;
-    --navbuttons: #e6842a;
-    --background: #a6da95;
-    --home-button: #ffa450;
-    --validation-success: #d3ffc5;
-    --validation-fail: #f7b0b0;
-    --validation-warning: #ffe998;
-    --validation-success-icon: #37ca37;
-    --validation-fail-icon: #f36767;
-    --tooltip-message: #8d8d8d;
-}
-
-@font-face {
-    font-family: Libre_Franklin;
-    src: url(../fonts/LibreFranklin-Regular.ttf);
-}
-
-.register-form {
-    font-family: LibreFranklin, sans-serif;
-    .register-shape {
-        display: inline-block;
-        position: relative;
-        width: 350px;
-        height: 50px;
-        /* Linear Gradient for border */
-        padding: 10px;
-        clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
-        background: black;
-        h2 {
-            color: rgb(56, 56, 56);
-            padding-top: 10px;
-            padding-left: 10px;
-        }
+.main-banner {
+    img {
+        width: 100%;
     }
+}
 
-    .register-shape .register-title{
-        position: absolute;
-        top: 2px; /* Adjust based on your border width */
-        left: 2px; /* Adjust based on your border width */
-        width: calc(100% - 4px); /* Adjust based on your border width */
-        height: calc(100% - 4px); /* Adjust based on your border width */
-        clip-path: polygon(0% 0%, 80% 0%, 99% 100%, 0% 100%);
-        background: linear-gradient(to right, #ffa450 0%, #fdcfa4 100%);
+.main-content {
+    .register-title {
+        text-align: center;
     }
-
-    .register-input {
-        background: url('../imgs/papertexture.png');
-        position: relative;
-        box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
-        -webkit-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.75);
-        z-index: 0;
-        padding: 8% 7% 5%;
-
-        &::after {
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            background-color: rgb(185, 191, 238, 0.5);
-        }
-        form {
+    .register-form {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        padding: 2em;
+        padding-top: 2em;
+        font-family: Inter, sans-serif;
+        border-radius: 15px;
+        margin: 4rem auto;
+        width: min(700px, 80%);
+        height: 90%;
+        margin-bottom: 5em;
+        box-shadow: 0px 0px 19px 6px rgba(0,0,0,0.68);
+        -webkit-box-shadow: 0px 0px 19px 6px rgba(0,0,0,0.68);
+        -moz-box-shadow: 0px 0px 19px 6px rgba(0,0,0,0.68);;
+        .register-input {
             width: 90%;
-        }
-        .input-group {
-            height: 100%;
-            display: flex;
-            margin-bottom: 3%;
-            position: relative;
-            z-index: 2;
-            > i {
-                padding: 1% 1%;
-                width: 42px;
-                background-color: #033e9e;
-                color: var(--maincolor);
+            margin-inline: auto;
+            margin-top: 1em;
+
+            .input-group {
+                margin: 0.5em 0;
             }
-            .label {
-                font-size: 1.42em;
-                display: inline-block;
-                height: 100%;
-                padding: 8px;
-                width: 40%;
-                text-align: center;
-                background-color: var(--maincolor);
-                border: 1px solid black;
+
+            .input-group div {
+                margin: 1em 0;
             }
-            .input {
-                flex: 1;
-            }
-            input {
+
+            .input-group div.input input{
                 width: 100%;
-                height: 100%;
-                padding-left: 20px;
-                background-color: white;
-                font-size: 1.25em;
-                border-left: none;
-            }
-
-            .message {
-                visibility: hidden;
-                i.fa-times-circle {
-                    color: var(--validation-fail-icon);
-                    font-size: 2em;
-                }
-
-                i.fa-check-circle {
-                    color: var(--validation-success-icon);
-                    font-size: 2em;
-                }
-
-                p {
-                    opacity: 0;
-                    color: whitesmoke;
-                    margin-left: 4%;
-                    padding: 10px 50px 10px 10px;
-                    border-radius: 7px;
-                    background-color: var(--tooltip-message);
-                    position: relative;
-                    box-shadow: 0px 1px 31px -2px rgba(0,0,0,0.75);
-                    -webkit-box-shadow: 0px 1px 31px -2px rgba(0,0,0,0.75);
-                    -moz-box-shadow: 0px 1px 31px -2px rgba(0,0,0,0.75);
-                    transition: opacity 0.2s ease-out;
-
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        right: 100%;
-                        margin-top: 5px;
-                        border-right: 14px solid var(--tooltip-message);
-                        border-top: 7px solid transparent;
-                        border-bottom: 7px solid transparent;
-                    }
-                }
-                width: 500px;
-                display: flex;
-                position: absolute;
-                right: -77%;
-                top: 25%;
-            }
-
-            .success[type="text"],  .success[type="password"], .success[type="email"]{
-                background-color: var(--validation-success);
-            }
-
-            .fail[type="text"], .fail[type="password"], .fail[type="email"]{
-                background-color: var(--validation-fail);
-            }
-
-            .warning[type="text"], .warning[type="password"], .warning[type="email"]{
-                background-color: var(--validation-warning);
+                padding: 2ch;
+                border-radius: 5px;
+                border: 1px solid rgba(0, 0, 0, 0.219);
             }
         }
     }
     .register-confirmation {
-        margin-top:7%;
-        position: relative;
-        z-index: 2;
-        display: flex;
-        justify-content: space-between;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         button {
-            position: relative;
-            padding: 10px 25px;
-            border-radius: 25px;
-            background-image: linear-gradient(0deg, #3489ff 0%,#0360df 51%,  #3489ff 100%);
-            border: #2fbc22 1px solid;
+            margin-top: 1.5rem;
+            background-color: #00ba61;
             color: white;
-        }
-
-        button::after{
-            content: "";
-            position: absolute;
-            height: 55%;
-            width: 80%;
-            background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255, 0.5), rgb(255, 255, 255, 0));
+            width: 100%;
+            height: 3rem;
+            border: 1px solid white;
             border-radius: 10px;
-            left: 10%;
-            top: 0;
         }
 
-        button:hover{
-            cursor: pointer;
+        a {
+            line-height: 7ch;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.7rem;
         }
     }
 }

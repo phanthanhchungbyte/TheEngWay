@@ -19,6 +19,7 @@
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <!-- Include the cropper script -->
     <script src="cropperjs/cropper.js"></script>
+    <script href="js/searchLesson.js"></script>
     <style>
         .hide {
             display: none;
@@ -40,8 +41,13 @@
             <div class="menu-items-div">
                 <ul class="menu-items">
                     <li class="search">
-                        <i class="fad fa-search"></i>
-                        <input class="search-bar" placeholder="Search lessons here">
+                        <form action="${pageContext.request.contextPath}/actSearchLessonServlet" method="get">
+                            <i class="fad fa-search"></i>
+                            <input class="search-bar" id="search-bar" name="searchString" placeholder="Search lessons here" onkeyup="searchSuggestions()">
+                            <button type="submit" class="search-button">Search</button>
+                            <div id="suggestions" class="suggestions"></div>
+                        </form>
+
                     </li>
                 </ul>
             </div>

@@ -1,0 +1,127 @@
+<h1 style="text-align: center;"><span style="color: #3598db; background-color: #ffffff;">HOUSE</span></h1>
+<p style="text-align: center;"><span style="color: #000000; background-color: #ffffff;"><em>Học c&aacute;c từ vựng li&ecirc;n quan đến chủ đề nh&agrave; cửa!</em></span></p>
+<p style="text-align: center;">&nbsp;</p>
+<table style="border-collapse: collapse; width: 97.6024%; border-width: 1px; height: 1537.45px; margin-left: auto; margin-right: auto;" border="1"><colgroup><col style="width: 27.2541%;"><col style="width: 27.0492%;"><col style="width: 26.9467%;"><col style="width: 18.8525%;"></colgroup>
+<tbody>
+<tr style="height: 397.484px;">
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://theenglishalley.com/images/Secciones/typesofhouses/attic.png" alt="" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">attic</span> (n)</span></p>
+<div class="dpos-h di-head normal-entry"><span class="di-info" style="font-size: 14pt; background-color: #ffffff;"><span class="pron-info dpron-info"><span class="pron dpron">/<span class="ipa dipa">ˈӕtik</span>/</span></span></span></div>
+<p><span style="font-size: 14pt; background-color: #ffffff;">g&aacute;c m&aacute;i</span></p>
+<p><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/uka/ukatt/ukatten006.mp3" controls="controls"></audio></p>
+</td>
+<td style="text-align: center;">
+<p style="text-align: center;"><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://media.istockphoto.com/id/1193331298/vector/realistic-sketch-of-the-bedroom-hand-drawn-sketch-of-interior-vector-illustration.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=o-bJ7wZRFMe2syKTWXES7nLWIeX7c48R6gYU0TzfDy4=" alt="" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">bedroom</span> (n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">ˈbed.ruːm</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">ph&ograve;ng ngủ</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukb/ukbed/ukbeddi013.mp3" controls="controls"></audio></span></p>
+</td>
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://ezcloud.vn/wp-content/uploads/2023/10/balcony-la-gi.webp" alt="" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">balcony</span> (n)</span></p>
+<p><span class="pron dpron" style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">ˈb&aelig;l.kə.ni</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">ban c&ocirc;ng</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukb/ukbal/ukbalal004.mp3" controls="controls"></audio></span></p>
+</td>
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://images.livspace-cdn.com/plain/https://d3gq2merok8n5r.cloudfront.net/abhinav/ond-1634120396-Obfdc/amj-2024-1711965337-VsMIK/bathroom-1713420270-gtUqd/br20-1716794274-Uk42V.jpg" alt="" width="120" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">bathroom</span> (n)</span></p>
+<p><span class="pron dpron" style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">ˈbɑː&theta;.ruːm</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">ph&ograve;ng tắm</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukb/ukbat/ukbatch009.mp3" controls="controls"></audio></span></p>
+</td>
+</tr>
+<tr style="height: 379.484px;">
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://www.thespruce.com/thmb/S1aye-s9z6VRA58-V8oRLSQwKCc=/5100x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-luxury-kitchens-5211364-hero-688d716970544978bc12abdf17ce6f83.jpg" alt="" width="180" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">kitchen </span>(n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">ˈkɪtʃ.<span class="sp dsp">ə</span>n</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">ph&ograve;ng ăn</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukk/ukkit/ukkit__002.mp3" controls="controls"></audio></span></p>
+</td>
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://hips.hearstapps.com/hmg-prod/images/tab-styled-roof-shingles-royalty-free-image-1681761628.jpg" alt="" width="180" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">roof </span>(n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">ruːf</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">m&aacute;i nh&agrave;</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukr/ukrol/ukrolli025.mp3" controls="controls"></audio></span></p>
+</td>
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Window.jpg" alt="" width="89" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">window </span>(n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">ˈwɪn.doʊ</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">cửa sổ</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukw/ukwin/ukwinde007.mp3" controls="controls"></audio></span></p>
+</td>
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://www.aventinteriors.co.uk/wp-content/uploads/2017/01/suspended-ceilings-bristol.jpg" alt="" width="159" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">ceiling</span> (n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">ˈsiː.lɪŋ</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">trần nh&agrave;</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukc/ukcav/ukcaval029.mp3" controls="controls"></audio></span></p>
+</td>
+</tr>
+<tr style="height: 379.484px;">
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://ik.imagekit.io/2xkwa8s1i/img/wardrobes/r1/WWRB4DMH1GINGHAMCWR1/1.jpg" alt="" width="120" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">wardrobe</span> (n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">ˈwɔːr.droʊb</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">tủ đồ</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukw/ukwan/ukwant_013.mp3" controls="controls"></audio></span></p>
+</td>
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://images.thdstatic.com/productImages/0e0f388f-5026-43d9-9e32-7f3b7a59aaa3/svn/walnut-bookcases-bookshelves-sw-sj-wa-10-31_600.jpg" alt="" width="120" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">bookshelf </span>(n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">ˈbʊk.ʃelf</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">tủ s&aacute;ch</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukb/ukboo/ukbookb023.mp3" controls="controls"></audio></span></p>
+</td>
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://b2cfurniture.com.au/pub/media/wysiwyg/bella-grey-upholestered-king-bed.jpg" alt="" width="168" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">bed</span> (n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">bed</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">giường</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukb/ukbea/ukbeau_026.mp3" controls="controls"></audio></span></p>
+</td>
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOFMY76ocRH3wuYCdHhM_lZJDMUIUS1zK8Ng&amp;s" alt="" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">door</span> (n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">dɔː<span class="sp dsp">r</span></span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">cửa</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukd/ukdon/ukdonke014.mp3" controls="controls"></audio></span></p>
+</td>
+</tr>
+<tr style="height: 381px;">
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://www.marthastewart.com/thmb/lxfu2-95SWCS0jwciHs1mkbsGUM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/modern-living-rooms-wb-1-bc45b0dc70e541f0ba40364ae6bd8421.jpg" alt="" width="180" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">living room</span> (n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">ˈlɪv.ɪŋ ˌruːm</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">ph&ograve;ng kh&aacute;ch</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukc/ukcld/ukcld00823.mp3" controls="controls"></audio></span></p>
+</td>
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://jscoabode.com/wp-content/uploads/2021/02/NE-Street-View-scaled.jpg" alt="" width="183" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">apartment </span>(n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">əˈpɑːrt.mənt</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">căn hộ</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/uka/ukapa/ukapart002.mp3" controls="controls"></audio></span></p>
+</td>
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://www.bhg.com/thmb/riniwvt-u2Fo4tYIRJWiRhgTIWA=/1764x0/filters:no_upscale():strip_icc()/cottage-home-brick-gate-shrubbery-7e117ecd-f5e2829db0d5485a8f092c274e310fa0.jpg" alt="" width="170" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">cottage</span> (n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">ˈkɑː.t̬ɪdʒ</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">nh&agrave; tranh</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/ukc/ukcos/ukcossa018.mp3" controls="controls"></audio></span></p>
+</td>
+<td style="text-align: center;">
+<p><span style="font-size: 14pt; background-color: #ffffff;"><img src="https://specializedstairs.com/wp-content/uploads/2020/01/Contemporary-Flared-Staircase-Feature-2.jpg" alt="" width="88" height="120"></span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><span style="font-family: 'comic sans ms', sans-serif;">staircase </span>(n)</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">/<span class="ipa dipa lpr-2 lpl-1">ˈsteə.keɪs</span>/</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;">bậc thang</span></p>
+<p><span style="font-size: 14pt; background-color: #ffffff;"><audio style="width: 100px;" src="https://dictionary.cambridge.org/vi/media/english/uk_pron/u/uks/uksta/ukstabl030.mp3" controls="controls"></audio></span></p>
+</td>
+</tr>
+</tbody>
+</table>

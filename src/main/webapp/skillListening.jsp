@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/quiz_style.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/comment.css">
+    <scrip href="js/searchLesson.js"></scrip>
     <style>
         .hide {
             display: none;
@@ -88,7 +89,7 @@
 
     <nav class="top-nav">
         <div class="logo-div">
-            <a class="logo" href="${pageContext.request.contextPath}/index">
+            <a class="logo" id="home-navigation" href="${pageContext.request.contextPath}/index">
                 <img src="imgs/TheEngWayLogo.png" alt="The Logo">
             </a>
         </div>
@@ -366,6 +367,7 @@
 <script type="text/javascript">
     let contextPath = `${pageContext.request.contextPath}`;
     let loggedInUser = `${sessionScope.loggedInUser}`;
+    let userType = `${sessionScope.loggedInUser.getUserType()}`
     let username = `${sessionScope.loggedInUser.getUserName()}`;
     let avatar = `${sessionScope.loggedInUser.getAvatar()}`;
     let curLessons = null;
@@ -382,6 +384,19 @@
     // Lesson contents variables
     let commentClone = null;
     let commentBtn = null;
+
+    // Change the home logo navigation based on usertype
+    switch(userType) {
+        case "Teacher":
+            document.querySelector("#home-navigation").href = contextPath + "/teacherHome";
+            break;
+        case "Student":
+            document.querySelector("#home-navigation").href = contextPath + "/studentHome";
+            break;
+        default:
+            document.querySelector("#home-navigation").href = contextPath + "/index";
+    }
+    let btn = document.querySelector("#comment")
 </script>
 <script src="js/toggleHomeBar.js"></script>
 <script type="module" src="js/loadContentDynamic.js"></script>

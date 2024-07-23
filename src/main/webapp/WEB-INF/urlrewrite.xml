@@ -24,20 +24,40 @@
 
     <!--  Redirect specific jsps  -->
     <rule>
-        <from>^/(EnterOTP|forgotpassword|home|index|login|newpassword|otp|profileShow|register|student_profileedit|skillReading|skillWriting|studentHome|teacher_createlesson|teacher_lessonview|teacherHome|userProfile)$</from>
+        <from>^/(EnterOTP|forgotpassword|home|login|newpassword|otp|profileShow|register|student_profileedit|skillReading|
+            skillWriting|studentHome|teacher_createlesson|teacher_createquiz|teacher_lessonview|teacherHome|userProfile|profileFriends
+            |profileComments|vocabulary_master|url|lessonDetail)$</from>
         <to type="forward">/redirect?page=$1</to>
     </rule>
 
+<!--    <rule>-->
+<!--        <from>^/skill([a-zA-Z]+)$</from>-->
+<!--        <to type="forward">/actLoadSkillLessons?skill=$1</to>-->
+<!--    </rule>-->
+
     <rule>
-        <from>^/skill([a-zA-Z]+)$</from>
-        <to type="forward">/actLoadSkillLessons?skill=$1</to>
+        <note>To get all the lessons with type /skills/{lessonFolderId}</note>
+        <from>^/skills/([a-zA-Z_]+)$</from>
+        <to type="forward">/actLoadAllLessons?skill=$1</to>
     </rule>
 
     <rule>
-        <note>To get all the lessons with type /skillXXX/{lessonFolderId}</note>
-        <from>^/skill([a-zA-Z]+)/([0-9]+)$</from>
-        <to type="forward">/actLoadAllLessons?skill=$1&amp;folderId=$2</to>
+        <note>To get all the lessons with type /others/{serviceType}</note>
+        <from>^/others/([a-zA-Z_]+)$</from>
+        <to type="forward">/</to>
     </rule>
+
+    <rule>
+        <note>Used when exiting or logout</note>
+        <from>^/(index)$</from>
+        <to type="forward">/redirect?page=$1&amp;logout=true</to>
+    </rule>
+
+<!--    <rule>-->
+<!--        <note>To get all the lessons with type /skillXXX/{lessonFolderId}</note>-->
+<!--        <from>^/skill([a-zA-Z]+)/([0-9]+)$</from>-->
+<!--        <to type="forward">/actLoadAllLessons?skill=$1&amp;folderId=$2</to>-->
+<!--    </rule>-->
 
     <rule>
         <note>To get the content of a single lesson /skillXXX/{lessonFolderId}/{lessonFileName}</note>

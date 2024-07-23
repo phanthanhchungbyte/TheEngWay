@@ -2,11 +2,29 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 0 auto;
-    background-color: #fff5dc;
+    background-color: #1f1a58;
     font-family: "Varela Round", sans-serif;
     font-weight: 400;
     font-style: normal;
     padding: 20px 0px;
+    margin-top: 4ch;
+    p {
+        color: white;
+    }
+
+    a {
+        color: white;
+    }
+
+    i {
+        color: white;
+    }
+
+    .heading-para {
+        color: white;
+        font-weight: bold;
+        margin-bottom: 1.2rem;
+    }
 
     div:not(:first-child){
         text-align: center;
@@ -19,7 +37,7 @@
     > div:not(:last-of-type):after {
         position: absolute;
         content: "";
-        border-right: 1px solid black;
+        border-right: 2px solid white;
         height: 80%;
         right: 0;
         top: 0;
@@ -30,11 +48,6 @@
     .copyright p {
         padding-bottom: 20px;
         text-align: center;
-    }
-
-    .copyright img {
-        max-width: 50%;
-        margin-left: 15%;
     }
 
     .contact-information {

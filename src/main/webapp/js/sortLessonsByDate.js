@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let lessonClone = tempLesson.cloneNode(true); // Clone the template element
                 lessonClone.style.display = "flex"; // Change the visibility of the element
                 // set Image icon based on skill
-                lessonClone.querySelector(".skill-icon").src = getImageFromSkill(lessonData[i].skill);
+                // lessonClone.querySelector(".skill-icon").src = getImageFromSkill(lessonData[i].skill);
                 // set card title
                 let cardDetails = lessonClone.querySelector(".created-lesson-info");
                 if (cardDetails) {

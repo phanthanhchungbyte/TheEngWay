@@ -6,33 +6,46 @@ public class Lesson {
     private int lessonId;
     private String creatorName;
     private String lessonTitle;
-    private String lessonContentId;
-    private int lessonFolderId;
-    private String lessonQuizId;
+//    private String lessonContentId;
+//    private int lessonFolderId;
+//    private String lessonQuizId;
     private String skill;
     private Timestamp createdAt;
     private Timestamp updatedAt;
-    private String lessonAvatarURL;
-    private int version;
-    private String status; // Thêm thuộc tính status
+//    private int version;
+//    private String status; // Thêm thuộc tính status
 
     public Lesson() {
 
     }
 
-    public Lesson(String creatorName, String lessonTitle, String lessonContentId, String lessonAvatarURL, int lessonFolderId, String lessonQuizId, String skill, Timestamp createdAt, Timestamp updatedAt, int version, String status) {
+    public Lesson(int lessonId, String creatorName, String lessonTitle, String skill, Timestamp createdAt, Timestamp updatedAt) {
+        this.lessonId = lessonId;
         this.creatorName = creatorName;
         this.lessonTitle = lessonTitle;
-        this.lessonContentId = lessonContentId;
-        this.lessonAvatarURL = lessonAvatarURL;
-        this.lessonFolderId = lessonFolderId;
-        this.lessonQuizId = lessonQuizId;
         this.skill = skill;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
-        this.version = version;
-        this.status = status;
     }
+
+    public Lesson(String creatorName, String lessonTitle, String skill) {
+        this.creatorName = creatorName;
+        this.lessonTitle = lessonTitle;
+        this.skill = skill;
+    }
+
+//    public Lesson(String creatorName, String lessonTitle, String lessonContentId, int lessonFolderId, String lessonQuizId, String skill, Timestamp createdAt, Timestamp updatedAt, int version, String status) {
+//        this.creatorName = creatorName;
+//        this.lessonTitle = lessonTitle;
+//        this.lessonContentId = lessonContentId;
+//        this.lessonFolderId = lessonFolderId;
+//        this.lessonQuizId = lessonQuizId;
+//        this.skill = skill;
+//        this.createdAt = createdAt;
+//        this.updatedAt = updatedAt;
+//        this.version = version;
+//        this.status = status;
+//    }
 
     // Getters and setters
     public int getLessonId() {
@@ -43,13 +56,13 @@ public class Lesson {
         this.lessonId = lessonId;
     }
 
-    public String getLessonContentId() {
-        return lessonContentId;
-    }
-
-    public void setLessonContentId(String contentId) {
-        this.lessonContentId = contentId;
-    }
+//    public String getLessonContentId() {
+//        return lessonContentId;
+//    }
+//
+//    public void setLessonContentId(String contentId) {
+//        this.lessonContentId = contentId;
+//    }
 
     public String getSkill() {
         return skill;
@@ -75,13 +88,13 @@ public class Lesson {
         this.createdAt = createdAt;
     }
 
-    public void setVersion() {
-        this.version = version + 1;
-    }
-
-    public int getVersion() {
-        return version;
-    }
+//    public void setVersion() {
+//        this.version = version + 1;
+//    }
+//
+//    public int getVersion() {
+//        return version;
+//    }
 
     public Timestamp getUpdatedAt() {
         return updatedAt;
@@ -91,13 +104,13 @@ public class Lesson {
         this.updatedAt = updatedAt;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
+//    public String getStatus() {
+//        return status;
+//    }
+//
+//    public void setStatus(String status) {
+//        this.status = status;
+//    }
 
     public String getLessonTitle() {
         return lessonTitle;
@@ -107,31 +120,25 @@ public class Lesson {
         this.lessonTitle = lessonTitle;
     }
 
-    public String getLessonQuizId() {
-        return lessonQuizId;
-    }
 
-    public void setLessonQuizId(String lessonQuizId) {
-        this.lessonQuizId = lessonQuizId;
-    }
+//    public String getLessonQuizId() {
+//        return lessonQuizId;
+//    }
+//
+//    public void setLessonQuizId(String lessonQuizId) {
+//        this.lessonQuizId = lessonQuizId;
+//    }
 
-    public void setVersion(int version) {
-        this.version = version;
-    }
+//    public void setVersion(int version) {
+//        this.version = version;
+//    }
+//
+//    public int getLessonFolderId() {
+//        return lessonFolderId;
+//    }
+//
+//    public void setLessonFolderId(int lessonFolderId) {
+//        this.lessonFolderId = lessonFolderId;
+//    }
 
-    public int getLessonFolderId() {
-        return lessonFolderId;
-    }
-
-    public void setLessonFolderId(int lessonFolderId) {
-        this.lessonFolderId = lessonFolderId;
-    }
-
-    public String getLessonAvatarURL() {
-        return lessonAvatarURL;
-    }
-
-    public void setLessonAvatarURL(String lessonAvatarURL) {
-        this.lessonAvatarURL = lessonAvatarURL;
-    }
 }

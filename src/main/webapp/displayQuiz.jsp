@@ -1,0 +1,142 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz</title>
+        <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+              type="text/css" />
+        <link rel="stylesheet" href="css/homebar.css">
+        <link rel="stylesheet" href="css/coursenav.css">
+        <link rel="stylesheet" href="css/content.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <scrip href="js/searchLesson.js"></scrip>
+    </head>
+    <body>
+
+    <nav class="top-nav">
+        <div class="logo-div">
+            <a class="logo" href="${pageContext.request.contextPath}/teacherHome">
+                <h1>TheEngWay</h1>
+            </a>
+        </div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="home-page">
+            <div class="menu-items-div">
+                <ul class="menu-items">
+                    <li class="search">
+                        <form action="${pageContext.request.contextPath}/actSearchLessonServlet" method="get">
+                            <i class="fad fa-search"></i>
+                            <input class="search-bar" id="search-bar" name="searchString" placeholder="Search lessons here" onkeyup="searchSuggestions()">
+                            <button type="submit" class="search-button">Search</button>
+                            <div id="suggestions" class="suggestions"></div>
+                        </form>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="profile-home-card">
+                <img src="${sessionScope.loggedInUser.getAvatar()}" alt="">
+                <div class="shown-info">
+                    <p class="username-profile">${sessionScope.loggedInUser.getUserName()}</p>
+                    <p><span>0</span> thông báo mới</p>
+                </div>
+                <div>
+                    <a href="${pageContext.request.contextPath}/userProfile"><img src="imgs/user/UserSettings.png" id="setting_icon" alt=""></a>
+                    <li class="setting-cog"><a href="${pageContext.request.contextPath}/index">Exit</a></li>
+                </div>
+            </div>
+            <div class="profile-home-card-mini">
+                <img src="${sessionScope.loggedInUser.getAvatar()}" alt="Avatar"/>
+                <i class="fas fa-caret-down fa-2x"></i>
+                <ul class="mini-profile-dropdown">
+                    <li class="settings">
+                        <a href="${pageContext.request.contextPath}/userProfile">Settings</a>
+                    </li>
+                    <li class="exit">
+                        <a href="${pageContext.request.contextPath}/index">Exit</a>
+                    </li>
+                </ul>
+            </div>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </div>
+    </nav>
+
+    <section class="course-div">
+        <ul class="course-nav" aria-label="nav">
+            <li>
+                <a href="${pageContext.request.contextPath}/teacherHome"><i class="far fa-home-lg-alt fa-2x"></i></a>
+            </li>
+            <li>
+                <a href="${pageContext.request.contextPath}/skills/vocabulary">Từ vựng</a>
+            </li>
+            <li>
+                <a href="${pageContext.request.contextPath}/skills/grammar">Ngữ pháp</a>
+            </li>
+            <li>
+                <a href="${pageContext.request.contextPath}/skills/pronunciation">Phát âm</a>
+            </li>
+            <li>
+                <a href="skills.html">Kĩ năng</a>
+            </li>
+            <li>
+                <a href="exam.html">Kiểm tra</a>
+            </li>
+            <li>
+                <a href="quiz.html">Quiz</a>
+            </li>
+            <li>
+                <a href="faqs.html">FAQs</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="main-content">
+        <%
+            String quizId = request.getParameter("quizId");
+            String quizFilePath = application.getRealPath("/quiz/" + quizId + ".json");
+            String quizContent = new String(Files.readAllBytes(Paths.get(quizFilePath)), "UTF-8");
+            out.print(quizContent);
+        %>
+    </section>
+
+
+        <div class="footer">
+            <div class="copyright">
+                <p class="heading-para">Copyright TheEngWay.com © 2023 - 2024</p>
+            </div>
+            <div class="contact_phone">
+                <p class="heading-para">Contact us via email:</p>
+                <div class="contact-information">
+                    <div class="contact-line">
+                        <p><i class="far fa-at fa-lg"></i> theengwaymaster@8zulieu.com</p>
+                    </div>
+
+                    <div class="contact-line">
+                        <p><i class="fas fa-phone-alt fa-lg"></i> +84 0359 271 620</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="contact_social">
+                <p class="heading-para">Contact us via social medias:</p>
+                <div class="contact-information">
+                    <div class="contact-line">
+                        <i class="fab fa-facebook fa-lg"></i>
+                        <a href="#">facebook.com/TheEngWay</a>
+                    </div>
+                    <div class="contact-line">
+                        <i class="fab fa-linkedin-in fa-lg"></i>
+                        <a href="#">linkedin.com/TheEngWay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

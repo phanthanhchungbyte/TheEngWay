@@ -5,34 +5,22 @@ import model.Lesson;
 import utils.SqlUtils;
 
 import java.sql.*;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class JdbcLessonDao implements LessonDao {
     private static final Logger logger = Logger.getLogger(JdbcLessonDao.class.getName());
-    private static final String INSERT_LESSON_QUERY = "INSERT INTO LESSON (CREATOR_USERNAME, LESSON_TITLE, LESSON_AVATAR, LESSON_TYPE, LESSON_FOLDER_ID, LESSON_CONTENTID, LESSON_QUIZID, CREATED_AT, UPDATED_AT, VERSION, LESSON_STATUS) " +
-            "VALUE (?,?,?,?,?,?,?,?,?,?,?)";
-    private static final String SORT_LESSONS_WITH_CREATORNAME = "select * from LESSON \n" +
-            "WHERE CREATOR_USERNAME = ?\n" +
-            "ORDER BY (`UPDATED_AT`) DESC;";
+    private static final String INSERT_LESSON_QUERY = "INSERT INTO LESSON (CREATOR_USERNAME, LESSON_TITLE, LESSON_TYPE, CREATED_AT, UPDATED_AT) " +
+            "VALUE (?,?,?,?,?)";
 
-    private static final String SORT_LESSONS_WITH_FOLDER_NAME = "SELECT * FROM theengway.lesson \n" +
-            "WHERE LESSON_FOLDER_ID = ?\n" +
-            "ORDER BY (`UPDATED_AT`) DESC; ";
-
-    private static final String GET_FIRST_LESSONS_FOR_SKILL = "SELECT *\n" +
+    private static final String GET_ALL_LESSONS_FOR_SKILL = "SELECT *\n" +
             "FROM LESSON\n" +
-            "WHERE LESSON_FOLDER_ID = ?\n" +
-            "ORDER BY UPDATED_AT DESC\n" +
-            "LIMIT 3;\n";
-
-    private static final String GET_LESSON_DATA_FOR_FETCH = "SELECT LESSON_CONTENTID, LESSON_QUIZID\n" +
-            "FROM LESSON \n" +
-            "WHERE (LESSON_TITLE = ?) AND (LESSON_FOLDER_ID = ?);";
-
-    private static final String GET_LESSONID_WITH_NAME_AND_FOLDER = "SELECT LESSONID FROM LESSON WHERE LESSON_FOLDER_ID = ? AND LESSON_TITLE = ?";
-
+            "WHERE LOWER(LESSON_TYPE) = LOWER(?)\n" +
+            "ORDER BY UPDATED_AT DESC\n";
+    private static final String GET_LESSON_BY_ID = "SELECT * FROM LESSON WHERE lessonId = ?";
+private static final String SEARCH_LESSONS_BY_TITLE= "SELECT * FROM LESSON WHERE LESSON_TITLE LIKE ?";
     // Author: DoanHongQuan
     @Override
     public boolean createLesson(Lesson lesson) {
@@ -43,16 +31,10 @@ public class JdbcLessonDao implements LessonDao {
             ptm = conn.prepareStatement(INSERT_LESSON_QUERY);
             ptm.setString(1, lesson.getCreatorName());
             ptm.setString(2, lesson.getLessonTitle());
-            ptm.setString(3, lesson.getLessonAvatarURL());
-            ptm.setString(4, lesson.getSkill());
-            ptm.setInt(5, lesson.getLessonFolderId());
-            ptm.setString(6, lesson.getLessonContentId());
-            ptm.setString(7, lesson.getLessonQuizId());
-            ptm.setTimestamp(8, lesson.getCreatedAt());
-            ptm.setTimestamp(9, lesson.getUpdatedAt());
+            ptm.setString(3, lesson.getSkill());
+            ptm.setTimestamp(4, Timestamp.from(Instant.now()));
+            ptm.setTimestamp(5, Timestamp.from(Instant.now()));
             // Version is to check if the lesson has been updated or not.
-            ptm.setInt(10, lesson.getVersion());
-            ptm.setString(11, lesson.getStatus());
             // Insert the lesson in the database
             return (ptm.executeUpdate() > 0);
         } catch (SQLException e) {
@@ -63,63 +45,26 @@ public class JdbcLessonDao implements LessonDao {
         }
     }
 
-
     @Override
-    public ArrayList<Lesson> getAllLessonsByCreator(String creatorUsername) {
+    public ArrayList<Lesson> getAllLessonsWithFolder(String lessonSkill) {
         ArrayList<Lesson> createdLessons = new ArrayList<>();
         Connection conn = null;
         PreparedStatement ptm = null;
         ResultSet rs = null;
         try {
             conn = Connect.getConnection();
-            ptm = conn.prepareStatement(SORT_LESSONS_WITH_CREATORNAME);
-            ptm.setString(1, creatorUsername);
+            ptm = conn.prepareStatement(GET_ALL_LESSONS_FOR_SKILL);
+            ptm.setString(1, lessonSkill);
             rs = ptm.executeQuery();
-            createLessonFromResult(createdLessons, rs);
-        } catch (SQLException e) {
-            logger.log(Level.SEVERE, e.getMessage(), e);
-            return null;
-        } finally {
-            SqlUtils.close(conn, ptm, rs);
-        }
-        return createdLessons;
-    }
-
-    @Override
-    public ArrayList<Lesson> getAllLessonsWithFolder(int folderId) {
-        ArrayList<Lesson> createdLessons = new ArrayList<>();
-        Connection conn = null;
-        PreparedStatement ptm = null;
-        ResultSet rs = null;
-        try {
-            conn = Connect.getConnection();
-            ptm = conn.prepareStatement(SORT_LESSONS_WITH_FOLDER_NAME);
-            ptm.setInt(1, folderId);
-            rs = ptm.executeQuery();
-            createLessonFromResult(createdLessons, rs);
-        } catch (SQLException e) {
-            logger.log(Level.SEVERE, e.getMessage(), e);
-            return null;
-        } finally {
-            SqlUtils.close(conn, ptm, rs);
-        }
-        return createdLessons;
-    }
-
-
-    @Override
-    public ArrayList<Lesson> getDemoLessonsWithFolder(ArrayList<Integer> lessonFolderIds) {
-        ArrayList<Lesson> createdLessons = new ArrayList<>();
-        Connection conn = null;
-        PreparedStatement ptm = null;
-        ResultSet rs = null;
-        try {
-            conn = Connect.getConnection();
-            ptm = conn.prepareStatement(GET_FIRST_LESSONS_FOR_SKILL);
-            for (Integer lessonFolderId : lessonFolderIds) {
-                ptm.setInt(1, lessonFolderId);
-                rs = ptm.executeQuery();
-                createLessonFromResult(createdLessons, rs);
+            while(rs.next()) {
+                Lesson lesson = new Lesson();
+                lesson.setLessonId(rs.getInt("LESSONID"));
+                lesson.setCreatorName(rs.getString("CREATOR_USERNAME"));
+                lesson.setLessonTitle(rs.getString("LESSON_TITLE"));
+                lesson.setSkill(rs.getString("LESSON_TYPE"));
+                lesson.setCreatedAt(rs.getTimestamp("CREATED_AT"));
+                lesson.setUpdatedAt(rs.getTimestamp("UPDATED_AT"));
+                createdLessons.add(lesson);
             }
         } catch (SQLException e) {
             logger.log(Level.SEVERE, e.getMessage(), e);
@@ -128,74 +73,61 @@ public class JdbcLessonDao implements LessonDao {
         }
         return createdLessons;
     }
-
-    @Override
-    public ArrayList<String> getLessonDataForFetch(String lessonName, int lessonFolderId) {
-        ArrayList<String> lessonData = new ArrayList<>();
+    public Lesson getLessonById(int lessonId) {
+        Lesson lesson = null;
         Connection conn = null;
         PreparedStatement ptm = null;
         ResultSet rs = null;
         try {
             conn = Connect.getConnection();
-            ptm = conn.prepareStatement(GET_LESSON_DATA_FOR_FETCH);
-            ptm.setString(1, lessonName);
-            ptm.setInt(2, lessonFolderId);
-            rs = ptm.executeQuery();
-            while (rs.next()) {
-                lessonData.add(rs.getString(1));
-                // Quiz is optional here, it can be null.
-                if(rs.getString(2) != null) {
-                    lessonData.add(rs.getString(2));
-                }
-            }
-        } catch (SQLException e) {
-            logger.log(Level.SEVERE, e.getMessage(), e);
-        } finally {
-            SqlUtils.close(conn, ptm, rs);
-        }
-        return lessonData;
-    }
-
-    @Override
-    public int getLessonIdWithFolderAndName(int lessonFolderId, String lessonTitle) {
-        int lessonId = -1;
-        Connection conn = null;
-        PreparedStatement ptm = null;
-        ResultSet rs = null;
-        try {
-            conn = Connect.getConnection();
-            ptm = conn.prepareStatement(GET_LESSON_DATA_FOR_FETCH);
-            ptm.setInt(1, lessonFolderId);
-            ptm.setString(2, lessonTitle);
+            ptm = conn.prepareStatement("SELECT * FROM LESSON WHERE lessonId = ?");
+            ptm.setInt(1, lessonId);
             rs = ptm.executeQuery();
             if (rs.next()) {
-                lessonId = rs.getInt("LESSONID");
-                return lessonId;
+                lesson = new Lesson(
+                        rs.getInt("lessonId"),
+                        rs.getString("CREATOR_USERNAME"),
+                        rs.getString("LESSON_TITLE"),
+                        rs.getString("LESSON_TYPE"),
+                        rs.getTimestamp("CREATED_AT"),
+                        rs.getTimestamp("UPDATED_AT")
+                );
             }
         } catch (SQLException e) {
             logger.log(Level.SEVERE, e.getMessage(), e);
         } finally {
             SqlUtils.close(conn, ptm, rs);
         }
-        return lessonId;
+        return lesson;
     }
 
-    public void createLessonFromResult(ArrayList<Lesson> createdLessons, ResultSet rs) throws SQLException {
-        while (rs.next()) {
-            Lesson lesson = new Lesson(
-                    rs.getString("CREATOR_USERNAME"),
-                    rs.getString("LESSON_TITLE"),
-                    rs.getString("LESSON_CONTENTID"),
-                    rs.getString("LESSON_AVATAR"),
-                    rs.getInt("LESSON_FOLDER_ID"),
-                    rs.getString("LESSON_QUIZID"),
-                    rs.getString("LESSON_TYPE"),
-                    rs.getTimestamp("CREATED_AT"),
-                    rs.getTimestamp("UPDATED_AT"),
-                    rs.getInt("VERSION"),
-                    rs.getString("LESSON_STATUS")
-            );
-            createdLessons.add(lesson);
+
+    @Override
+    public ArrayList<Lesson> searchLessonsByTitle(String searchString) {
+        ArrayList<Lesson> lessons = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement ptm = null;
+        ResultSet rs = null;
+
+        try {
+            conn = Connect.getConnection();
+            ptm = conn.prepareStatement(SEARCH_LESSONS_BY_TITLE);
+            ptm.setString(1, "%" + searchString + "%");
+            rs = ptm.executeQuery();
+
+            while (rs.next()) {
+                Lesson lesson = new Lesson();
+                lesson.setLessonId(rs.getInt("LESSONID"));
+                lesson.setLessonTitle(rs.getString("LESSON_TITLE"));
+                // Populate other fields as needed
+                lessons.add(lesson);
+            }
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+            SqlUtils.close(conn, ptm, rs);
         }
+        return lessons;
     }
+
 }

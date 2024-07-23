@@ -45,7 +45,7 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         JdbcUserDao dao = new JdbcUserDao();
-        String usertype = request.getParameter("usertype");
+        String usertype = "Student";
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
@@ -126,14 +126,13 @@ public class RegisterServlet extends HttpServlet {
                 catch (MessagingException e) {
                     throw new RuntimeException(e);
                 }
-                request.setAttribute("message","OTP is sent to your email id");
+//                request.setAttribute("message","OTP is sent to your email id");
                 //request.setAttribute("connection", con);
                 mySession.setAttribute("otp",otpvalue);
                 mySession.setAttribute("tk",u);
                 //request.setAttribute("status", "success");
-                request.getRequestDispatcher("otp.jsp").forward(request, response);
+                response.sendRedirect("otp");
             }
-
         }
     }
 
@@ -142,7 +141,7 @@ public class RegisterServlet extends HttpServlet {
 
         // Use this if response was sent to XML HttpRequest.
         responseMap.put("field", "1");
-        if (!dao.checkUsernameAvailable(username)) {
+        if (dao.checkUsernameAvailable(username)) {
             responseMap.put("error_message1", "Username is already taken");
         } else {
             // Success case (optional)

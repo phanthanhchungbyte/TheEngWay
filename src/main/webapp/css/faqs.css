@@ -1,0 +1,15 @@
+.main-content {
+    background-color: white;
+    margin: 1.25rem 1.25rem;
+    border-radius: 20px;
+    font-family: Libre_Franklin, sans-serif;
+    .faqs-content {
+        display: block;
+        padding: 1.25rem 1.25rem;
+        h1 {
+            font-size: 42px;
+            margin: 2.5rem;
+        }
+    }
+
+}

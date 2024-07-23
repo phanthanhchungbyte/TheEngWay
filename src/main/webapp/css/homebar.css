@@ -12,11 +12,19 @@
     src: url(../fonts/LibreFranklin-Regular.ttf);
 }
 
+body {
+    background:
+            calc(.9*39px) calc(.9*39px)/calc(2*39px) calc(2*39px) conic-gradient(at 20% 20%, #0000 75%, #7254ED 0),
+            calc(-.1*39px) calc(-.1*39px)/calc(2*39px) calc(2*39px) conic-gradient(at 20% 20%, #0000 75%, #7254ED 0),
+            calc(.7*39px) calc(.7*39px)/calc(2*39px) calc(2*39px) conic-gradient(at 40% 40%, #0000 75%, #5D0CFF 0),
+            calc(-.3*39px) calc(-.3*39px)/calc(2*39px) calc(2*39px) conic-gradient(at 40% 40%, #0000 75%, #5D0CFF 0),
+            conic-gradient(from 90deg at 20% 20%, #7254ED 25%, #5D0CFF 0) 0 0/39px 39px;
+}
 
 :root {
-    --maincolor: #fff5dc;
+    --maincolor: #1f1a58;
     --navbuttons: #e6842a;
-    --background: #a6da95;
+    --background: #b4befe;
     --oxford-blue: #011638;
     --dropdown-nav: #693400;
     --mini-profile-dropdown: #25A5DE;
@@ -32,26 +40,30 @@
 .container {
     max-width: 1284px;
     margin: 0 auto;
-    background-color: var(--background);
+    background-color: #b4befe;
 }
 
-@media only screen and (width >= 1000px) {
+@media only screen and (width >=1000px) {
     .top-nav {
         padding: 1em 1em;
         background-color: var(--maincolor);
         display: flex;
         align-items: center;
 
+        .logo h1 {
+            color: white;
+            font-family: Libre_Franklin, sans-serif;
+        }
 
-        > div:first-child {
+        >div:first-child {
             width: 20%;
         }
 
-        > div:first-child a {
+        >div:first-child a {
             margin: 0 auto;
         }
 
-        > div:first-child img{
+        >div:first-child img {
             width: 50%;
         }
 
@@ -62,9 +74,10 @@
         .home-page {
             width: 80%;
             display: flex;
-            font-family: Libre_Franklin;
+            font-family: Libre_Franklin, sans-serif;
             justify-content: space-evenly;
             align-items: center;
+            list-style-type: none;
         }
 
         .menu-items-div {
@@ -80,12 +93,11 @@
                 width: 100%;
                 padding: 0.45em 0px;
                 padding-left: 2rem;
-                border-radius: 15px;
             }
 
             i {
                 position: absolute;
-                top:20%;
+                top: 20%;
                 left: 0.25rem;
             }
         }
@@ -104,6 +116,10 @@
             border: 1px solid blue;
             margin-left: auto;
             margin-right: 2em;
+
+            li {
+                list-style-type: none;
+            }
 
             img {
                 width: 4em;
@@ -164,11 +180,12 @@
 
         .logo-div {
             width: 100%;
-            padding: 10px 0;
+            padding: 1rem 0;
             text-align: center;
 
-            img {
-                width: 100px;
+            h1 {
+                color: white;
+
             }
         }
 
@@ -190,11 +207,13 @@
             border-radius: 10px;
             border: 1px solid black;
             background: linear-gradient(0deg, #B7B7B7 0%, #E1E1E1 100%);
+
             img {
                 margin-left: 0.5rem;
                 width: 2.3em;
                 height: 2.3em;
             }
+
             i {
                 margin-left: 1rem;
                 color: #B09C86;
@@ -225,12 +244,31 @@
                     top: 20%;
                     left: 5px;
                 }
+
                 .search-bar {
                     width: 100%;
                     padding: 0.3rem 0;
                     padding-left: 1.8rem;
                     border-radius: 20px;
                 }
+            }
+
+            li:not(:nth-child(1)) {
+                padding: 0.5em 1em;
+                background-color: #1f1a58;
+                border-radius: 8px;
+
+                a {
+                    border-radius: 10px;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 0.5rem 1rem;
+                }
+            }
+
+            li:nth-child(2) {
+
+                margin-left: 10%;
             }
         }
 
@@ -246,11 +284,13 @@
             top: 100%;
             width: 100%;
             text-align: center;
+
             .settings {
                 width: 100%;
                 border-radius: 20px;
                 margin-bottom: 1em;
             }
+
             .exit {
                 width: 100%;
                 border-radius: 20px;
@@ -307,8 +347,8 @@
             top: 5px;
         }
 
-        .nav-toggle:checked ~ .home-page .menu-items-div{
+        .nav-toggle:checked~.home-page .menu-items-div {
             display: block;
         }
     }
-} 
+}

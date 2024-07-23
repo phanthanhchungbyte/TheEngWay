@@ -3,16 +3,6 @@
     src: url(../../fonts/LibreFranklin-Regular.ttf);
 }
 
-@font-face {
-    font-family: Segoe_Script;
-    src: url(../../fonts/Segoe-Script.ttf);
-}
-
-@font-face {
-    font-family: Send_Flowers;
-    src: url(../../fonts/SendFlowers-Regular.ttf);
-}
-
 :root {
     --skin-color: #fff5dc;
     --fs-xl: 3rem;
@@ -40,7 +30,7 @@
 }
 
 .main-content {
-    width: 93%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 2em;
     font-family: Libre_Franklin;
@@ -183,13 +173,12 @@
     }
 
     .viewlesson-section {
-        background-color: #a6d283;
-        padding: 1.5em;
+        background-color: #cad3f5;
+        padding: 1.5em 3rem;
         border: 1px solid black;
-        border-radius: 10px;
+        border-radius: 10px 0 0 10px;
         font-size: var(--fs-400);
         align-items: center;
-        margin: 1.5rem auto;
         /*Set a fixed height for easy look*/
         height: 1040px;
         position: relative;

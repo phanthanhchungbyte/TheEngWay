@@ -1,10 +1,10 @@
 [
   {
-    "userType": "Teacher",
-    "sectionContent": "<div class='section-link'><a href='userProfile'>Dashboard</a></div><div class='section-link'><a href='#'>Chấm điểm</a></div><div class='section-link'><a href='teacher_lessonview'>Bài học</a></div>"
+    "userType": "Admin",
+    "sectionContent": "<div class='section-link onclick='location.href='userProfile''><a href='userProfile'>Dashboard</a></div><div class='section-link' onclick='location.href='teacher_lessonview''><a href='teacher_lessonview'>Bài học</a></div>"
   },
   {
     "userType": "Student",
-    "sectionContent": "<div class='section-link'><a href='userProfile'>Dashboard</a></div><div class='section-link'><a href='#'>Bạn bè</a></div><div class='section-link'><a href='teacher_lessonview'>Bài tập</a></div><div class='section-link'><a href='#'>Báo cáo</a></div>"
+    "sectionContent": "<div class=\"section-link\"onclick='location.href=\"userProfile\"'><a href=\"userProfile\">Profile</a></div><div class=\"section-link\"onclick='location.href=\"profileFriends\"'><a href=\"profileFriends\">Bạn bè</a></div><div class=\"section-link\"onclick='location.href=\"profileComments\"'><a href=\"profileComments\">Bình luận</a></div>"
   }
 ]

@@ -69,9 +69,8 @@ public class NewPasswordServlet extends HttpServlet {
             if(dao.updatePassword(hashed_password, saltString, email)){
                 try {
                     request.setAttribute("message","Thay doi mat khau thanh cong");
-                    dispatcher = request.getRequestDispatcher("login");
-                    dispatcher.forward(request,response);
-                } catch (IOException | ServletException e) {
+                    response.sendRedirect("login");
+                } catch (IOException e) {
                     logger.log(Level.SEVERE, e.getMessage(), e);
                 }
             }

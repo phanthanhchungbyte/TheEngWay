@@ -1,0 +1,87 @@
+<h1 style="text-align: center;"><span style="color: #3598db; font-family: helvetica, arial, sans-serif;">TH&Igrave; HIỆN TẠI ĐƠN (PRESENT SIMPLE)</span></h1>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<h2 style="padding-left: 40px;"><span style="color: #3598db; font-family: helvetica, arial, sans-serif;">1. C&aacute;ch d&ugrave;ng</span></h2>
+<p style="padding-left: 40px;">&nbsp;</p>
+<p style="padding-left: 40px;"><span style="color: #3598db; font-family: helvetica, arial, sans-serif;"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://i0.wp.com/vn.elsaspeak.com/wp-content/uploads/2024/02/cach-dung-thi-hien-tai-don.png?w=1000&amp;ssl=1" alt="" width="500" height="350"></span></p>
+<p style="padding-left: 40px;">&nbsp;</p>
+<div style="padding-left: 40px;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Diễn tả sự việc lặp đi lặp lại h&agrave;ng ng&agrave;y.</span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Diễn tả th&oacute;i quen lặp đi lặp lại h&agrave;ng ng&agrave;y.</span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Diễn tả một ch&acirc;n l&yacute;, sự thật hiển nhi&ecirc;n.</span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Suy nghĩ v&agrave; cảm x&uacute;c tức thời.</span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Diễn tả một kế hoạch sẽ xảy ra trong tương lai gần nhưng c&oacute; lịch tr&igrave;nh v&agrave; thời gian biểu cụ thể.</span></li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 40px;">&nbsp;</p>
+</div>
+<h2 style="padding-left: 40px;"><span style="color: #3598db; font-family: helvetica, arial, sans-serif;">2. Cấu tr&uacute;c</span></h2>
+<p style="padding-left: 40px;">&nbsp;</p>
+<p style="padding-left: 40px;"><span style="color: #3598db; font-family: helvetica, arial, sans-serif;"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://i0.wp.com/vn.elsaspeak.com/wp-content/uploads/2023/10/cong-thuc-thi-hien-tai-don.png?w=1000&amp;ssl=1" alt="" width="497" height="348"></span></p>
+<h4 style="padding-left: 40px;">&nbsp;</h4>
+<h4 id="Động_từ_thường" style="padding-left: 40px;"><span style="font-family: helvetica, arial, sans-serif;">a) Động từ thường</span></h4>
+<div style="padding-left: 40px;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Khẳng định (+):&nbsp;<span style="color: #e03e2d;"><strong>S + V (s/es) .</strong></span></span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Phủ định (-):&nbsp;<span style="color: #e03e2d;"><strong>S + do/does + not + V.</strong></span></span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Nghi vấn (?):</span>
+<ul>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">C&acirc;u hỏi Yes/No question:&nbsp;<span style="color: #e03e2d;"><strong>Do/Does (not) + S + V + O?</strong></span></span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">C&acirc;u hỏi WH- / H- question:&nbsp;<span style="color: #e03e2d;"><strong>WH- word / H- word + do/does (not) + S + V + O?</strong></span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h4 id="Động_từ_to_be" style="padding-left: 40px;"><span style="font-family: helvetica, arial, sans-serif;"><span id=".C4.90.E1.BB.99ng_t.E1.BB.AB_to_be"></span>b) Động từ to be</span></h4>
+<div style="padding-left: 40px;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Khẳng định (+):&nbsp;<span style="color: #e03e2d;"><strong>S + am/is/are + N/Adj + O.</strong></span></span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Phủ định (-):&nbsp;<span style="color: #e03e2d;"><strong>S + am/is/are + not + N/Adj + O.</strong></span></span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Nghi vấn (?):</span>
+<ul>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">C&acirc;u hỏi Yes/No question:&nbsp;<span style="color: #e03e2d;"><strong>Am/Is/Are + S + N/Adj + O?</strong></span></span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">C&acirc;u hỏi WH- / H- question:&nbsp;<span style="color: #e03e2d;"><strong>WH- word / H- word+ am/is/are + S + N/Adj + O?</strong></span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 40px;"><span style="font-family: helvetica, arial, sans-serif;">&nbsp;</span></p>
+<h2 style="padding-left: 40px;"><span style="color: #3598db; font-family: helvetica, arial, sans-serif;">3. Dấu hiệu nhận biết</span></h2>
+<p style="padding-left: 40px;"><span style="font-family: helvetica, arial, sans-serif;">&nbsp;</span></p>
+<p style="padding-left: 40px;"><span style="font-family: helvetica, arial, sans-serif;"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://i0.wp.com/vn.elsaspeak.com/wp-content/uploads/2024/02/dau-hieu-nhan-biet-thi-hien-tai-don.png?w=1000&amp;ssl=1" alt="" width="587" height="411"></span></p>
+<p style="padding-left: 40px;">&nbsp;</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">"<span style="color: #e03e2d;"><strong>EVERY</strong></span>": Every day, every month,, every year ,... ("<span style="color: #e03e2d;"><strong>MỖI</strong></span>": mỗi ng&agrave;y, mỗi th&aacute;ng , mỗi năm,...)</span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Once a day, twice a week,... (một lần trong một ng&agrave;y, hai lần trong một tuần...)</span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Always, usually, often, sometimes, rarely or seldom, never (Lu&ocirc;n lu&ocirc;n, th&ocirc;ng thường, thường xuy&ecirc;n, đ&ocirc;i khi, hiếm khi hoặc hiếm khi, kh&ocirc;ng bao giờ)</span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">In the morning, in the afternoon, in the evening (v&agrave;o buổi s&aacute;ng, buổi chiều, buổi tối)</span></li>
+<li style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #e03e2d;"><strong>TODAY</strong></span> (h&ocirc;m nay)</span></li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 40px;"><span style="font-family: helvetica, arial, sans-serif;">&nbsp;</span></p>
+<h2 style="padding-left: 40px;"><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #3598db;">4. V&iacute; dụ</span></span></h2>
+<p style="padding-left: 40px;">&nbsp;</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-style: italic; font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;"><em>Does Shle&nbsp;<span style="color: #e03e2d;"><strong>go</strong></span>&nbsp;to school? Shle c&oacute; đi học kh&ocirc;ng? (Đ&acirc;y l&agrave;&nbsp;<span style="color: #e03e2d;"><strong>c&acirc;u nghi vấn</strong></span>, v&igrave; vậy, động từ&nbsp;<span style="color: #e03e2d;"><strong>kh&ocirc;ng cần phải chia</strong></span>)</em></span></li>
+<li style="font-style: italic; font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;"><em>The Sun&nbsp;<span style="color: #e03e2d;"><strong>rises</strong></span>&nbsp;in the East. Mặt Trời mọc ở hướng Đ&ocirc;ng (một&nbsp;<span style="color: #e03e2d;"><strong>sự thật hiển nhi&ecirc;n</strong></span>&nbsp;cho n&ecirc;n phải d&ugrave;ng&nbsp;<span style="color: #e03e2d;"><strong>th&igrave; hiện tại đơn</strong></span>)</em></span></li>
+<li style="font-style: italic; font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;"><em>He&nbsp;<span style="color: #e03e2d;"><strong>doesn't/does not</strong></span>&nbsp;go to school. Anh ấy kh&ocirc;ng đi đến trường (Th&ecirc;m&nbsp;<span style="color: #e03e2d;"><strong>trợ động từ + not</strong></span>&nbsp;trong&nbsp;<span style="color: #e03e2d;"><strong>c&acirc;u phủ định</strong></span>)</em></span></li>
+</ul>
+</li>
+</ul>
+</div>

@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/home.css">
-
+    <scrip href="js/searchLesson.js"></scrip>
 </head>
 <body>
 <div class="container">
@@ -37,8 +37,13 @@
             <div class="menu-items-div">
                 <ul class="menu-items">
                     <li class="search">
-                        <i class="fad fa-search"></i>
-                        <input class="search-bar" placeholder="Search lessons here">
+                        <form action="${pageContext.request.contextPath}/actSearchLessonServlet" method="get">
+                            <i class="fad fa-search"></i>
+                            <input class="search-bar" id="search-bar" name="searchString" placeholder="Search lessons here" onkeyup="searchSuggestions()">
+                            <button type="submit" class="search-button">Search</button>
+                            <div id="suggestions" class="suggestions"></div>
+                        </form>
+
                     </li>
                 </ul>
             </div>

@@ -1,0 +1,133 @@
+<h2 style="text-align: center;"><span style="color: #3598db;">Lesson 4: Not Working Out</span></h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: center;"><span style="color: #e03e2d;"><em>C&aacute;c em h&atilde;y c&ugrave;ng xem video dưới đ&acirc;y nh&eacute;!</em></span></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;"><iframe src="https://www.youtube.com/embed/fO19iqbWzus" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: left; padding-left: 40px;"><span style="color: #e03e2d;"><em>Bảng từ mới:</em></span></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">
+<table style="border-collapse: collapse; width: 100.01%; height: 534.586px;" border="1"><colgroup><col style="width: 33.2931%;"><col style="width: 33.2931%;"><col style="width: 33.2931%;"></colgroup>
+<tbody>
+<tr style="height: 37.9398px;">
+<td><strong>English</strong></td>
+<td><strong>Tiếng Việt</strong></td>
+<td><strong>Audio</strong></td>
+</tr>
+<tr style="height: 37.9398px;">
+<td>
+<p>weight (n)</p>
+<p>/weɪt/</p>
+</td>
+<td>c&acirc;n nặng</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/w/wei/weigh/weight__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9398px;">
+<td>
+<p>flabby (adj)</p>
+<p>/ˈfl&aelig;bi/</p>
+</td>
+<td>thừa c&acirc;n</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/f/fla/flabb/flabby__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9398px;">
+<td>
+<p>gym (n)</p>
+<p>/dʒɪm/</p>
+</td>
+<td>ph&ograve;ng tập</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/g/gym/gym__/gym__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9398px;">
+<td>
+<p>tennis (n)</p>
+<p>/ˈtenɪs/</p>
+</td>
+<td>quần vợt</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/ten/tenni/tennis__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9398px;">
+<td>
+<p>club (n)</p>
+<p>/klʌb/</p>
+</td>
+<td>c&acirc;u lạc bộ</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/clu/club_/club__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9398px;">
+<td>work out (v)</td>
+<td>tập thể dục</td>
+<td>&nbsp;</td>
+</tr>
+<tr style="height: 37.9398px;">
+<td>
+<p>expensive (adj)</p>
+<p>/ɪkˈspensɪv/</p>
+</td>
+<td>đắt</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/e/exp/expen/expensive__gb_3.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9398px;">
+<td>
+<p>free (adj)</p>
+<p>/friː/</p>
+</td>
+<td>miễn ph&iacute;</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/f/fre/free_/free__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9398px;">
+<td>
+<p>machine (n)</p>
+<p>/məˈʃiːn/</p>
+</td>
+<td>m&aacute;y</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/m/mac/machi/machine__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9398px;">
+<td>
+<p>muscle (n)</p>
+<p>/ˈmʌsl/</p>
+</td>
+<td>cơ bắp</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/m/mus/muscl/muscle__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9398px;">
+<td>
+<p>strength (n)</p>
+<p>/streŋk&theta;/</p>
+</td>
+<td>sức mạnh</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/str/stren/strength__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9398px;">
+<td>
+<p>treadmill (n)</p>
+<p>/ˈtredmɪl/</p>
+</td>
+<td>m&aacute;y chạy bộ</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/tre/tread/treadmill__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr>
+<td>
+<p>membership (n)</p>
+<p>/ˈmembəʃɪp/</p>
+</td>
+<td>tư c&aacute;ch th&agrave;nh vi&ecirc;n</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/m/mem/membe/membership__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>

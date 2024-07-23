@@ -1,0 +1,184 @@
+<h2 style="text-align: center;"><span style="color: #3598db;">Lesson 2: A Perfect Day</span></h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: center;"><span style="color: #e03e2d;"><em>C&aacute;c em h&atilde;y c&ugrave;ng xem video dưới đ&acirc;y nh&eacute;!</em></span></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;"><iframe src="https://www.youtube.com/embed/1QRXVpmPdJA" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: left; padding-left: 40px;"><span style="color: #e03e2d;"><em>Bảng từ mới:</em></span></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">
+<table style="border-collapse: collapse; width: 100.01%; height: 646.25px;" border="1"><colgroup><col style="width: 33.2931%;"><col style="width: 33.2931%;"><col style="width: 33.2931%;"></colgroup>
+<tbody>
+<tr style="height: 35.9028px;">
+<td><strong>English</strong></td>
+<td><strong>Tiếng Việt</strong></td>
+<td><strong>Audio</strong></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>Saturday (n)</p>
+<p>/ˈs&aelig;tədeɪ/</p>
+</td>
+<td>thứ bảy</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/sat/satur/saturday_1_gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>weather (n)</p>
+<p>/ˈwe&eth;ə(r)/</p>
+</td>
+<td>thời tiết</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/w/wea/weath/weather__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>yesterday (n)</p>
+<p>/ˈjestədeɪ/</p>
+</td>
+<td>h&ocirc;m qua</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/y/yes/yeste/yesterday__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>Sunday (n)</p>
+<p>/ˈsʌndeɪ/</p>
+</td>
+<td>chủ nhật</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/sun/sunda/sunday_1_gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>river (n)</p>
+<p>/ˈrɪvə(r)/</p>
+</td>
+<td>s&ocirc;ng</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/r/riv/river/river__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>punting (n)</p>
+<p>/ˈpʌntɪŋ/</p>
+</td>
+<td>ch&egrave;o thuyền punt</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/pun/punti/punting__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>friend (n)</p>
+<p>/frend/</p>
+</td>
+<td>bạn b&egrave;</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/f/fri/frien/friend__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>town (n)</p>
+<p>/taʊn/</p>
+</td>
+<td>thị trấn</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/tow/town_/town__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>lunch (n)</p>
+<p>/lʌntʃ/</p>
+</td>
+<td>bữa trưa</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/l/lun/lunch/lunch__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>&nbsp;ready (adj)</p>
+<p>/ˈredi/</p>
+</td>
+<td>sẵn s&agrave;ng&nbsp;</td>
+<td>&nbsp;<audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/r/rea/ready/ready__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>hour (n)</p>
+<p>/ˈaʊə(r)/</p>
+</td>
+<td>giờ</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/hou/hour_/hour__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>lie (v)</p>
+<p>/laɪ/</p>
+</td>
+<td>nằm</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/l/lie/lie__/lie__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>something (adv)</p>
+<p>/ˈsʌm&theta;ɪŋ/</p>
+</td>
+<td>c&aacute;i g&igrave; đ&oacute;</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/som/somet/something__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>somewhere (adv)</p>
+<p>/ˈsʌmweə(r)/</p>
+</td>
+<td>đ&acirc;u đ&oacute;</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/som/somew/somewhere__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>picnic (n)</p>
+<p>/ˈpɪknɪk/</p>
+</td>
+<td>d&atilde; ngoại</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/pic/picni/picnic__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>drink (n)</p>
+<p>/drɪŋk/</p>
+</td>
+<td>đồ uống</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/dri/drink/drink__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>gate (n)</p>
+<p>/ɡeɪt/</p>
+</td>
+<td>cổng</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/g/gat/gate_/gate__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+<tr>
+<td>
+<p>path (n)</p>
+<p>/pɑː&theta;/</p>
+</td>
+<td>đường</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/pat/path_/path__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+<tr>
+<td>
+<p>beautiful (adj)</p>
+<p>/ˈbjuːtɪfl/</p>
+</td>
+<td>đẹp</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/b/bea/beaut/beautiful__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>

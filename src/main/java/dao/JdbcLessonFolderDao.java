@@ -3,7 +3,7 @@ package dao;
 import DBConnect.Connect;
 import model.LessonFolder;
 import utils.SqlUtils;
-
+import model.Lesson;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -87,6 +87,5 @@ public class JdbcLessonFolderDao implements LessonFolderDao {
             System.out.println(lesson);
         }
     }
-
 
 }

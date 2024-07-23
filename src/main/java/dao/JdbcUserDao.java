@@ -174,7 +174,7 @@ public class JdbcUserDao implements UserDao {
                 writeToFile(at);
 
                 if(count > 0) {
-                    return false;
+                    return true;
                 }
             }
         } catch (Exception e) {
@@ -182,7 +182,7 @@ public class JdbcUserDao implements UserDao {
         } finally {
             SqlUtils.close(ptm, rs, conn);
         }
-        return true;
+        return false;
     }
 
     // Phương thức chèn tài khoản mới

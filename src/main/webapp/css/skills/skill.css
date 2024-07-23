@@ -1,141 +1,40 @@
-:root {
-    --card: #fff5dc;
-}
-
-@font-face {
-    font-family: Libre_Franklin;
-    src: url(../../fonts/LibreFranklin-Regular.ttf);
-}
-
-@font-face {
-    font-family: Inter;
-    src: url(../../fonts/Inter-Medium.ttf);
-}
-
-.skill-container {
-    font-family: Inter, Helvetica, sans-serif;
-    width: 93%;
-    height: fit-content;
-    background-color: var(--card);
-    margin: 4em 0;
-    padding: 1.5em;
-    z-index: 0;
+.skill-content {
+    width: max(90%, 500px);
+    background-color: white;
+    margin-top: 3em;
     margin-inline: auto;
-    border-radius: 7px;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.75);
+    padding-bottom: 0.5rem;
+    min-height: 72vh;
 
-    .skill-title {
-        width: fit-content;
-        display: flex;
-        margin-bottom: 2em;
-        p {
-            padding: 0.5em 5ch 0.5em 1em;
-            border: 1px solid rgb(180, 180, 180);
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-        }
+    .content-title {
+        background-color: #020301;
+        text-align: center;
+        padding: 1em 0;
 
-        p:first-child {
-            background-color: #E7E7EE;
-            z-index: 1;
-        }
-
-        p:last-child {
-            background-color: #F5F6FC;
-            z-index: 0;
-            padding-left: 1.5em;
-            transform: translateX(-14%);
+        h1 {
+            color: white;
+            font-family: Inter, sans-serif;
         }
     }
 
-    .card {
-        background-color: white;
-        border: 1px solid rgb(180, 180, 180);
-        margin-bottom: 2em;
-        position: relative;
+    .second-title {
+        margin-top: 1em;
+        background-color: #e5e5e5;
+        padding: 2em 0;
+        text-align: center;
+        font-family: Inter, sans-serif;
+    }
 
-        .goal, h4 {
-            color: #037a07;
-        }
-
-        .skill-level-wrap {
-            filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.45));
-        }
-
-        .skill-level {
-            margin-top: 1.5em;
-            padding-left: 1em;
-            width: 50%;
-            max-width: 447px;
-            margin-bottom: 1em;
-            background-color: #008a9d;
-            clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
-            box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.45);
-            h3 {
-                color: white;
-                padding-top: 0.5em;
-                padding-bottom: 0.5em;
+    .content-contents {
+        margin-top: 5vh;
+        ul {
+            margin: 2.5rem 3.5rem;
+            li {
+                list-style-type: disc;
+                line-height: 5em;
+                font-weight: 600;
+                font-family: Inter_Light, sans-serif;
             }
         }
-
-        .inner-content {
-            width: 90%;
-            margin-inline: auto;
-
-            p {
-                margin-bottom: 1em;
-            }
-
-            .button-div {
-                display: flex;
-                justify-content: flex-end;
-            }
-
-            button {
-                padding: 0.55em 1em;
-                margin-bottom: 1em;
-                font-weight: 700;
-                font-size: 1.15em;
-                border-radius: 7px;
-                border: none;
-                background-color: #e6842a;
-                color: white;
-
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-        }
-
-        .mini-card {
-            padding: 1em;
-            background-image: radial-gradient(#cdceec 1px, transparent 1px);
-            background-size: 10px 10px;
-            background-color: #dde9ed;
-            display: flex;
-            margin-bottom: 2em;
-            border: 1px solid rgb(180, 180, 180);
-            box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
-
-            &:hover {
-                cursor: pointer;
-            }
-
-            img {
-                aspect-ratio: 1;
-                width: 120px;
-            }
-
-            div {
-                margin-left: 1em;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                font-weight: lighter;
-            }
-        }
-
     }
 }

@@ -1,104 +1,74 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    text-decoration: none;
-    color: black;
-}
-
-
 :root {
-    --maincolor: #fff5dc; 
-    --navbuttons: #e6842a;
-    --background: #97cecc;
-    --home-button: #ffa450;
-}
-
-body {
-    /* background-image: url('../imgs/nordwood-themes-R53t-Tg6J4c-unsplash.jpg'); */
-    background-color: #00aeff8e;
+    --navcolor: #1f1a38;
+    --navbuttons: white;
+    --background: #b4befe;
+    --oxford-blue: #011638;
+    --fs-xl: 3rem;
+    --fs-lg: 1.75rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+    --fs-300: 0.75rem;
+    --fs-200: 0.5rem;
 }
 
 .course-div {
-    width: 93%;
-    margin: 0 auto;
-    margin-top: 100px;
-    background-color: var(--maincolor);
+    background-color: aliceblue;
 
     .course-nav {
         display: flex;
-        width: 100%;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
     }
 
-    .course-nav li {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .course-nav > li:not(:first-child):not(:last-child){
-        ::after {
-            position: absolute;
-            content: "";
-            height: 60%;
-            border-right: 1px solid black;
-            right: 0;
-            margin: auto 0;
-            top: 0;
-            transform: translateY(30%);
-        }
-    }
-    
-    .course-nav li:not(:first-child) {
+    .course-nav li{
         position: relative;
-        flex: 1;
-        text-align: center;
         display: flex;
         align-items: center;
-        justify-content: center;
-
-        ul.dropdown {
-            z-index:5;
-            display: none;
-            width: 100%;
-            position: absolute;
-            background-color: rgb(248, 190, 65);
-            top: 52px;
-        }
-
-        ul.dropdown li::after, ul.dropdown::after, ul.dropdown li a::after {
-            content: none;
-        }        
-
-        ul.dropdown li {
-            padding: 10px 0px;
-        }
-
-
-        ul.dropdown li:hover {
-            background-color: rgb(224, 162, 28);
-            cursor: pointer;
-        }
 
         &:hover {
-            background-color: #faedd1;
-            ul.dropdown {
-                display: block;
-            }
+            background-color: rgb(171, 209, 241);
         }
-
-        a {
-            height: 20px;
-        }
-        
     }
 
-    .course-nav > li:first-child {
-        padding: 10px 10px;
-        background-color: var(--oxford-blue);
+    .course-nav li:not(:nth-child(1)) {
+        flex: 1;
+        text-align: center;
+    }
 
-        i {
-            color: var(--home-button);
-        }
+    .course-nav li:first-child {
+        display: flex;
+        padding: 0.25em 0.75em;
+        padding-top: 0.75em;
+    }
+
+    .course-nav li a{
+        display: inline-block;
+        width: 100%;
+        height: 2.5em;
+        line-height: 2.5em;
+        font-family: Libre_Franklin, sans-serif;
+    }
+
+    .course-nav li:not(:last-child)::after {
+        content: "";
+        background-color: black;
+        width: 1px;
+        height: 80%;
+        display: block;
+        position: absolute;
+        top: 15%;
+        right: 0;
+    }
+
+    .course-nav li:first-child::after {
+        content: "";
+        background-color: black;
+        width: 1px;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }

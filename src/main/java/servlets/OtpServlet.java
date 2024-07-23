@@ -25,24 +25,18 @@ public class OtpServlet extends HttpServlet {
             String hashed_password = u.getPasswordHash();
             String saltString = u.getPasswordSalt();
             String email = u.getEmail();
-            String usertype = u.getUserType();
             // Check the usertype to set the appropriate default avatar.
             String avatar = "";
-            if(usertype.equals("Student")) {
-                avatar = "https://drive.google.com/thumbnail?id=1lwtEx3HBcTtV0q_bJGqsZLcXGC6Or2Jk";
-            } else if(usertype.equals("Teacher")) {
-                avatar = "https://drive.google.com/thumbnail?id=1oe7Ttyj4PrmI9T-Z2p8-D76Fz3KcSU9A";
-            }
+            avatar = "https://drive.google.com/thumbnail?id=1alzYgzpsKv9ATg7mQE6SCtDDmeKZ779b";
+            String usertype = "Student";
 
             if (dao.insertAccount(username, hashed_password, saltString, email, usertype, avatar)) {
-                request.setAttribute("message", "Đăng ký thành công");
+                response.sendRedirect("login");
             } else {
-                request.setAttribute("message", "Đăng ký thất bại");
+                response.sendRedirect("otp");
             }
-            request.getRequestDispatcher("login").forward(request, response);
         } else {
-            request.setAttribute("message", "Mã OTP không chính xác");
-            request.getRequestDispatcher("otp").forward(request, response);
+            response.sendRedirect("otp");
         }
     }
 }

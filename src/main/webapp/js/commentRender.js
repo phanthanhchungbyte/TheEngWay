@@ -1,5 +1,5 @@
 // Check if user is available, allow them to do comment;
-if(loggedInUser !== "") {
+if(loggedInUser !== "" && lessonRegex.test(pathname)) {
     document.querySelector(".comment-section").classList.remove("hide");
     commentBtn = document.querySelector(".submit-comment");
     // Function for handling comment;

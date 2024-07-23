@@ -1,431 +1,297 @@
-const addQuestionButton = document.querySelector(".add");
-const deleteSingleButton = document.querySelector(".delete-single");
-const deleteAllButton = document.querySelector(".deleteall");
-const updateQuestionButton = document.querySelector(".update-question");
-const navigateRight = document.querySelector(".right-button");
-const navigateLeft = document.querySelector(".left-button");
-const questionNavigator = document.querySelector(".navigator-input");
-const quizAvaToggle = document.querySelector("#quizava_checkbox");
-const quizElements = document.getElementsByClassName("quiz");
+export class MCQuizCreator {
+    constructor(pageContext) {
+        this.addQuestionButton = document.querySelector(".add");
+        this.deleteSingleButton = document.querySelector(".delete-single");
+        this.deleteAllButton = document.querySelector(".deleteall");
+        this.updateQuestionButton = document.querySelector(".update-question");
+        this.navigateRight = document.querySelector(".right-button");
+        this.navigateLeft = document.querySelector(".left-button");
+        this.questionNavigator = document.querySelector(".navigator-input");
+        this.submitButton = document.querySelector(".save-and-submit");
+        this.postData = this.postData.bind(this);
+        this.pageContext = pageContext;
+        // this.quizAvaToggle = document.querySelector("#quizava_checkbox");
+        this.quizElements = document.getElementsByClassName("quiz");
 
-// All the questions is stored here
-let quizQuestions = [];
+        this.quizQuestions = [];
+        this.options = [];
+        this.questionInput = null;
+        this.currentQuestionId = null;
+        this.curMax = 1;
+        this.currentQuestionIdShow = Number(document.getElementById("curQuestionId").innerText);
+        this.updateCurMaxIndicator(this.curMax);
+        // this.quizAdded = this.quizAvaToggle.checked;
 
-let options = [];
-let questionInput;
-let currentQuestionId;
-let curMax = 1;
-let currentQuestionIdShow = Number(document.getElementById("curQuestionId").innerText);
-updateCurMaxIndicator(curMax);
-let questionNum = 1;
+        // this.quizToggleShow(this.quizAdded);
 
-let quizAdded = quizAvaToggle.checked;
-// Let the user choose to add quiz or not
+        this.initializeEventListeners();
 
-quizToggleShow(quizAdded);
-
-function quizToggle(checkbox) {
-    quizAdded = checkbox.checked;
-    quizToggleShow(quizAdded);
-}
-
-function quizToggleShow(quizAdded) {
-    if (quizAdded) {
-        for (let element of quizElements) {
-            element.style.display = 'block';
-        }
-    } else if (!quizAdded) {
-        for (let element of quizElements) {
-            element.style.display = 'none';
+        if (this.quizQuestions[this.currentQuestionIdShow]) {
+            this.showSavedQuestion(this.currentQuestionIdShow);
         }
     }
-}
 
-// Show the saved question if it is avaialable in the quiz created
-if (quizQuestions[currentQuestionIdShow]) {
-    showSavedQuestion(currentQuestionIdShow);
-}
-
-addQuestionButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    curMax++;
-    updateCurMaxIndicator(curMax);
-    // console.log("Add question clicked");
-})
-
-deleteAllButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    curMax = 1;
-    updateCurMaxIndicator(curMax);
-    // reset the quizQuestions array.
-    quizQuestions.length = 0;
-    document.getElementById("curQuestionId").innerHTML = (curMax);
-    clearAllInput();
-    // console.log("Delete all button clicked");
-})
-
-deleteSingleButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    currentQuestionId = Number(document.getElementById("curQuestionId").innerText);
-    deleteSingleQuestion(currentQuestionId);
-})
-
-updateQuestionButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    currentQuestionId = Number(document.getElementById("curQuestionId").innerText);
-    saveQuestion(currentQuestionId);
-})
-
-navigateLeft.addEventListener("click", () => {
-    currentQuestionId = Number(document.getElementById("curQuestionId").innerText);
-    goLeft(currentQuestionId);
-})
-
-navigateRight.addEventListener("click", () => {
-    currentQuestionId = Number(document.getElementById("curQuestionId").innerText);
-    goRight(currentQuestionId);
-})
-
-// To navigate to the desired question by changing real time
-questionNavigator.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        const questionNumber = parseInt(questionNavigator.value, 10);
-        if (!isNaN(questionNumber) && questionNumber >= 1 && questionNumber <= curMax) {
-            document.getElementById("curQuestionId").innerText = (questionNumber);
-            showSavedQuestion(questionNumber);
-        }
-    }
-})
-
-function deleteSingleQuestion(currentQuestionId) {
-    quizQuestions = quizQuestions.filter((element) => {
-        return element.questionId !== currentQuestionId;
-    });
-    quizQuestions.map((element) => {
-        if (element.questionId > currentQuestionId)
-            element.questionId--;
-    });
-
-    // dividing into cases to show the remaining questions after deletion
-    if (currentQuestionId === curMax && curMax > 1) {
-        // Show the question immediately before it
-        showSavedQuestion(curMax - 1);
-        document.getElementById("curQuestionId").innerHTML = (curMax - 1);
-        // Decrement the curMax
-        curMax--;
-        updateCurMaxIndicator(curMax);
-    } else if (currentQuestionId < curMax && curMax > 1) {
-        curMax--;
-        updateCurMaxIndicator(curMax);
-        // Show the same question with same Id before it
-        showSavedQuestion(currentQuestionId);
-    } else if (currentQuestionId === curMax && curMax === 1) {
-        clearAllInput();
-        // Clear the questions array.
-        quizQuestions.length = 0;
-    }
-}
-
-function showSavedQuestion(currentQuestionId) {
-    let currentQuestion = quizQuestions[currentQuestionId - 1];
-
-    // Check if currentQuestion is undefined.
-    if (!currentQuestion) {
-        clearAllInput();
-        return;
-    }
-
-    // Fade out the text
-    questionInput.classList.add('fade-out');
-    Array.from(document.getElementsByClassName("option")).forEach(option => {
-        option.classList.add("fade-out");
-    });
-
-    setTimeout(() => {
-        questionInput.value = currentQuestion.question;
-        options = document.getElementsByClassName("option");
-        for (let i = 0; i < currentQuestion.options.length; i++) {
-            options[i].value = currentQuestion.options[i].optionText;
-            if (currentQuestion.options[i].isCorrect) {
-                options[i].nextElementSibling.checked = true;
-            } else {
-                options[i].nextElementSibling.checked = false;
-            }
-        }
-
-        // Fade in the updated text
-        questionInput.classList.remove('fade-out');
-        questionInput.classList.add('fade-in');
-        Array.from(document.getElementsByClassName("option")).forEach(option => {
-            option.classList.remove('fade-out');
-            option.classList.add('fade-in');
+    initializeEventListeners() {
+        this.addQuestionButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            this.curMax++;
+            this.updateCurMaxIndicator(this.curMax);
         });
 
-        // Optional: Remove 'fade-in' class after animation completes to allow for future fades
+        this.deleteAllButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            this.curMax = 1;
+            this.updateCurMaxIndicator(this.curMax);
+            this.quizQuestions.length = 0;
+            document.getElementById("curQuestionId").innerHTML = this.curMax;
+            this.clearAllInput();
+        });
+
+        this.deleteSingleButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            this.currentQuestionId = Number(document.getElementById("curQuestionId").innerText);
+            this.deleteSingleQuestion(this.currentQuestionId);
+        });
+
+        this.updateQuestionButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            this.currentQuestionId = Number(document.getElementById("curQuestionId").innerText);
+            this.saveQuestion(this.currentQuestionId);
+        });
+
+        this.navigateLeft.addEventListener("click", () => {
+            this.currentQuestionId = Number(document.getElementById("curQuestionId").innerText);
+            this.goLeft(this.currentQuestionId);
+        });
+
+        this.navigateRight.addEventListener("click", () => {
+            this.currentQuestionId = Number(document.getElementById("curQuestionId").innerText);
+            this.goRight(this.currentQuestionId);
+        });
+
+        this.questionNavigator.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                const questionNumber = parseInt(this.questionNavigator.value, 10);
+                if (!isNaN(questionNumber) && questionNumber >= 1 && questionNumber <= this.curMax) {
+                    document.getElementById("curQuestionId").innerText = questionNumber;
+                    this.showSavedQuestion(questionNumber);
+                }
+            }
+        });
+
+        // TODO: ADD EVENT LISTENER FOR THE SUBMIT BUTTON
+        this.submitButton.addEventListener("click", this.postData);
+
+        // this.quizAvaToggle.addEventListener("change", () => {
+        //     this.quizToggle(this.quizAvaToggle);
+        // });
+    }
+
+    // quizToggle(checkbox) {
+    //     this.quizAdded = checkbox.checked;
+    //     this.quizToggleShow(this.quizAdded);
+    // }
+
+    // quizToggleShow(quizAdded) {
+    //     for (let element of this.quizElements) {
+    //         element.style.display = quizAdded ? 'block' : 'none';
+    //     }
+    // }
+
+    deleteSingleQuestion(currentQuestionId) {
+        this.quizQuestions = this.quizQuestions.filter((element) => element.questionId !== currentQuestionId);
+        this.quizQuestions.forEach((element) => {
+            if (element.questionId > currentQuestionId) element.questionId--;
+        });
+
+        if (currentQuestionId === this.curMax && this.curMax > 1) {
+            this.showSavedQuestion(this.curMax - 1);
+            document.getElementById("curQuestionId").innerHTML = this.curMax - 1;
+            this.curMax--;
+            this.updateCurMaxIndicator(this.curMax);
+        } else if (currentQuestionId < this.curMax && this.curMax > 1) {
+            this.curMax--;
+            this.updateCurMaxIndicator(this.curMax);
+            this.showSavedQuestion(currentQuestionId);
+        } else if (currentQuestionId === this.curMax && this.curMax === 1) {
+            this.clearAllInput();
+            this.quizQuestions.length = 0;
+        }
+    }
+
+    showSavedQuestion(currentQuestionId) {
+        let currentQuestion = this.quizQuestions[currentQuestionId - 1];
+
+        if (!currentQuestion) {
+            this.clearAllInput();
+            return;
+        }
+
+        this.questionInput.classList.add('fade-out');
+        Array.from(document.getElementsByClassName("option")).forEach(option => {
+            option.classList.add("fade-out");
+        });
+
         setTimeout(() => {
-            questionInput.classList.remove('fade-in');
-            Array.from(document.getElementsByClassName("option")).forEach(option => {
-                option.classList.remove('fade-in');
-            });
-        }, 300);
-    }, 300)
-}
-
-function saveQuestion(currentQuestionId) {
-    let questionObj = {};
-    questionInput = document.getElementById('question-input');
-    let question = questionInput.value;
-
-    // Add the question for the questionObj
-    questionObj["questionId"] = currentQuestionId; // Add id to question for uniqueness
-    questionObj["question"] = question;
-    questionObj["options"] = []; // Initialize an empty array for the options for easier navigation
-    // questionInput["question"];
-
-    // Add the options inputted to the questionObj
-    options = document.getElementsByClassName("option")
-    let count = 0;
-    let isCorrect = 0;
-    let optionTexts = [];
-    for (let option of options) {
-        // If the option value is filled in, continue the process
-        if (option.value.trim() !== '') {
-            count++;
-            // Push to the optionTexts for future comparison
-            optionTexts.push(option.value.trim());
-            let check = option.nextElementSibling.checked;
-            if (check) {
-                console.log(`option ${count} checked`);
-                isCorrect++;
+            this.questionInput.value = currentQuestion.question;
+            this.options = document.getElementsByClassName("option");
+            for (let i = 0; i < currentQuestion.options.length; i++) {
+                this.options[i].value = currentQuestion.options[i].optionText;
+                this.options[i].nextElementSibling.checked = currentQuestion.options[i].isCorrect;
             }
 
-            let optionObj = {
-                optionId: count,
-                optionText: option.value.trim(),
-                isCorrect: check
-            };
-            questionObj.options.push(optionObj);
+            this.questionInput.classList.remove('fade-out');
+            this.questionInput.classList.add('fade-in');
+            Array.from(document.getElementsByClassName("option")).forEach(option => {
+                option.classList.remove('fade-out');
+                option.classList.add('fade-in');
+            });
+
+            setTimeout(() => {
+                this.questionInput.classList.remove('fade-in');
+                Array.from(document.getElementsByClassName("option")).forEach(option => {
+                    option.classList.remove('fade-in');
+                });
+            }, 300);
+        }, 300);
+    }
+
+    saveQuestion(currentQuestionId) {
+        let questionObj = {};
+        this.questionInput = document.getElementById('question-input');
+        let question = this.questionInput.value;
+
+        questionObj["questionId"] = currentQuestionId;
+        questionObj["question"] = question;
+        questionObj["options"] = [];
+
+        this.options = document.getElementsByClassName("option");
+        let count = 0;
+        let isCorrect = 0;
+        let optionTexts = [];
+        for (let option of this.options) {
+            if (option.value.trim() !== '') {
+                count++;
+                optionTexts.push(option.value.trim());
+                let check = option.nextElementSibling.checked;
+                if (check) {
+                    isCorrect++;
+                }
+
+                let optionObj = {
+                    optionId: count,
+                    optionText: option.value.trim(),
+                    isCorrect: check
+                };
+                questionObj.options.push(optionObj);
+            }
         }
-    }
 
-    // Guard checks, reason can be seen on the error log
-
-    if (isCorrect === 0) {
-        console.error(`QuestionId ${currentQuestionId}: %cNo of correct answers must be at least 1`, 'color: blue;');
-        return;
-    }
-
-    if (count <= 1) {
-        console.error(`QuestionId ${currentQuestionId}: %cNo of available options must be at least 2`, 'color: blue;');
-        return;
-    }
-
-    if (count === isCorrect) {
-        console.error(`QuestionId ${currentQuestionId}: %cNo of correct answers must be ` +
-            `fewer than No of options.`, 'color: blue;');
-        return;
-    }
-
-    if (hasDuplicates(optionTexts)) {
-        console.error(`QuestionId ${currentQuestionId}: %cNo duplicate options are allowed.`, 'color: blue;');
-        return;
-    }
-
-    quizQuestions[currentQuestionId - 1] = questionObj;
-    showAnnotation('.saveQ-successful');
-    console.log(`%cQuestionId ${currentQuestionId} added successfully`, 'colors: green; background-color: limegreen');
-}
-
-const hasDuplicates = (array) => {
-    return new Set(array).size !== array.length;
-}
-
-function goLeft(currentQuestionId) {
-    if (currentQuestionId === 1)
-        return;
-    // No need to check when go Left because the left questions already exists in the quizQuestions array.
-    let questionId = currentQuestionId - 1;
-    document.getElementById("curQuestionId").innerHTML = (questionId);
-    showSavedQuestion(questionId);
-}
-
-function goRight(currentQuestionId) {
-    if (currentQuestionId === curMax)
-        return;
-    if (!saveQuestionAnnotator(currentQuestionId)) return;
-    let questionId = currentQuestionId + 1
-    document.getElementById("curQuestionId").innerHTML = (questionId);
-    showSavedQuestion(questionId);
-}
-
-function saveQuestionAnnotator(currentQuestionId) {
-    // Check if there is a question at the index currentQuestionId - 1
-    if (currentQuestionId - 1 >= 0 && currentQuestionId - 1 < quizQuestions.length) {
-        // showAnnotation('.saveQ-successful');
-        return true;
-    } else {
-        showAnnotation('.saveQ-annotation');
-        return false;
-    }
-}
-
-function updateCurMaxIndicator(curMax) {
-    document.querySelector('.current-max').innerHTML = curMax;
-}
-
-// Utility function to show annotation for 1 second
-function showAnnotation(annotationClass) {
-    document.querySelector(annotationClass).classList.remove('hide')
-    setTimeout(() => {
-        document.querySelector(annotationClass).classList.add('hide')
-    }, 1000)
-}
-
-function clearAllInput() {
-    // Clear the question
-    let questionInput = document.getElementById('question-input');
-    questionInput.value = "";
-
-    // Clear the option inputs
-    let options = document.getElementsByClassName('option');
-    Array.from(options).forEach(element => {
-        element.value = "";
-        element.nextElementSibling.checked = false;
-    });
-}
-
-// Use this to submit the stuff
-const saveAndSubmit = document.querySelector('.save-and-submit');
-let htmlContent = "";
-
-saveAndSubmit.addEventListener("click", e => {
-    e.preventDefault();
-    let contentArray = [];
-    // Check the corresponding
-    // Check if the teacher has specified the fileName first.
-    let fileName = document.getElementById("lessonName").value;
-    let lessonAvatarURL = document.querySelector(".avatar-display").src;
-    if (fileName === "") {
-        alert("Lesson name should not be empty");
-        return;
-    }
-
-    htmlContent = tinymce.get('lessonbox').getContent();
-    // console.log(htmlContent);
-
-    if (htmlContent === "") {
-        alert("Content should not be empty!");
-        return;
-    }
-
-    contentArray.push(htmlContent);
-
-    if (quizAdded) {
-        // If user chooses to add quiz, check all of these conditions
-        if (quizQuestions.length < 5) {
-            alert("The number of quiz questions must be at least 5!");
+        if (isCorrect === 0) {
+            console.error(`QuestionId ${currentQuestionId}: No of correct answers must be at least 1`);
             return;
+        }
+
+        if (count <= 1) {
+            console.error(`QuestionId ${currentQuestionId}: No of available options must be at least 2`);
+            return;
+        }
+
+        if (count === isCorrect) {
+            console.error(`QuestionId ${currentQuestionId}: No of correct answers must be fewer than No of options.`);
+            return;
+        }
+
+        if (this.hasDuplicates(optionTexts)) {
+            console.error(`QuestionId ${currentQuestionId}: No duplicate options are allowed.`);
+            return;
+        }
+
+        this.quizQuestions[currentQuestionId - 1] = questionObj;
+        this.showAnnotation('.saveQ-successful');
+        console.log(`QuestionId ${currentQuestionId} added successfully`);
+    }
+
+    hasDuplicates(array) {
+        return new Set(array).size !== array.length;
+    }
+
+    goLeft(currentQuestionId) {
+        if (currentQuestionId === 1) return;
+        let questionId = currentQuestionId - 1;
+        document.getElementById("curQuestionId").innerHTML = questionId;
+        this.showSavedQuestion(questionId);
+    }
+
+    goRight(currentQuestionId) {
+        if (currentQuestionId === this.curMax) return;
+        if (!this.saveQuestionAnnotator(currentQuestionId)) return;
+        let questionId = currentQuestionId + 1;
+        document.getElementById("curQuestionId").innerHTML = questionId;
+        this.showSavedQuestion(questionId);
+    }
+
+    saveQuestionAnnotator(currentQuestionId) {
+        if (currentQuestionId - 1 >= 0 && currentQuestionId - 1 < this.quizQuestions.length) {
+            return true;
         } else {
-            contentArray.push(quizQuestions);
+            this.showAnnotation('.saveQ-annotation');
+            return false;
         }
     }
 
-    let confirmation = confirm("Are you sure that this is what you want to upload?");
-    if (confirmation)
-        postData(contentArray, quizAdded, fileName, lessonAvatarURL)
-            .then(response => response.text())
-            .then(data => console.log(data));
-    else
-        console.log("Action canceled");
-})
-
-async function postData(contentArray, quizAdded, fileName, lessonAvatar) {
-    const uploadContentURL = "https://script.google.com/macros/s/AKfycbzpquUeLMoJ4et1aiX_YiyEnvKpBbl2UbqVGWFDxsH48OQRHiBsJudH6OhJvZC6eErW/exec";
-    const uploadQuizURL = "https://script.google.com/macros/s/AKfycbzRyklhBoO8hoQi3O8UAKvj6LwQv3PCLATChbEspccYzao20xeteTuAfZoV6I7MjDt8WQ/exec";
-    // const getContentURL = "https://script.google.com/macros/s/AKfycbxBAmDgXoX6B5hbnXCZiLadIes9bwnBbdZIqeiNTt1w53eeZ0Xv6QQwGjuc_v4Y9gRd/exec";
-    let idArrays = [];
-
-    let contentToPost = {
-        fileName: fileName,
-        lessonAvatarURL: lessonAvatar,
-        fileContent: contentArray[0]
-    }
-    // First call here
-    let responseContent = await fetch(uploadContentURL, {
-        method: 'POST',
-        body: JSON.stringify(contentToPost)
-    });
-    let data1 = await responseContent.json();
-    if (data1.status === "success") {
-        console.log("Upload content succeed!");
-        console.log(data1.fileId);
-        idArrays.push(data1.fileId);
-    } else {
-        console.error("Upload quiz failed");
+    updateCurMaxIndicator(curMax) {
+        document.querySelector('.current-max').innerHTML = curMax;
     }
 
-    // If quiz is included
-    if (quizAdded) {
-        let quizToPost = {
-            fileName: fileName + "Quiz",
-            quizContent: JSON.stringify(contentArray[1])
+    showAnnotation(annotationClass) {
+        document.querySelector(annotationClass).classList.remove('hide');
+        setTimeout(() => {
+            document.querySelector(annotationClass).classList.add('hide');
+        }, 1000);
+    }
+
+    clearAllInput() {
+        let questionInput = document.getElementById('question-input');
+        questionInput.value = "";
+
+        let options = document.getElementsByClassName('option');
+        Array.from(options).forEach(element => {
+            element.value = "";
+            element.nextElementSibling.checked = false;
+        });
+    }
+
+    async postData(e) {
+        e.preventDefault();
+        console.log(this.quizQuestions);
+        // Check if quiz name is available.
+        let fileName = document.querySelector("#mc-quiz-title").value;
+        if(fileName.trim() === "") {
+            alert("Quiz name must not be left empty");
+            return;
         }
 
-        let responseQuiz = await fetch(uploadQuizURL, {
-            method: 'POST',
-            body: JSON.stringify(quizToPost)
+        // Send quiz to the servlet.
+        const requestBody = JSON.stringify({
+            quizObj: JSON.stringify(this.quizQuestions),
+            quizType: "MultipleChoice",
+            fileName: fileName
         })
 
-        let data2 = await responseQuiz.json();
-        if (data2.status === "success") {
-            console.log("Upload quiz succeed!");
-            console.log(data2.fileId);
-            idArrays.push(data2.fileId);
-        } else {
-            console.error("Upload quiz failed")
+        // Try to send the data to the servlet
+        try {
+            let response = await fetch(this.pageContext + '/actAddNewQuiz', {
+                method: 'POST',
+                body: requestBody
+            })
+
+            this.submitButton.removeEventListener("click", this.postData);
+        } catch (error) {
+            console.error("Error: ", error);
+            throw new Error('Failed to post data');
         }
+
     }
-
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", `${webPath}/actCreateLesson`, false);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-    let sendContent = new URLSearchParams();
-    sendContent.append("lessonId", idArrays[0]);
-    if (idArrays[1]) {
-        sendContent.append("quizId", idArrays[1]);
-    }
-
-    sendContent.append("lessonTitle", document.querySelector("#lessonName").value);
-    sendContent.append("skill", document.querySelector("#skill").value);
-    sendContent.append("lessonFolder", document.querySelector("#lesson_folder").value);
-    sendContent.append("lessonAvatarURL", encodeURIComponent(lessonAvatar));
-
-    xhr.send(sendContent.toString());
-}
-
-// Function for selecting the desired lesson avatar before creating lessons
-const selectAvatarButton = document.querySelector(".lesson-avatar-btn");
-const closeAvatarButton = document.querySelector(".save-lessonavatar");
-const avatarDisplay = document.querySelector(".avatar-display");
-const avatarContainer = document.querySelector(".avatars-container");
-const avatarList = avatarContainer.getElementsByTagName("img");
-let chosenAvatarURL = "https://drive.google.com/thumbnail?id=1v_FtYKXmdqarB0PLe9Eo6SfHSPIXqheO";
-
-selectAvatarButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    selectAvatarButton.nextElementSibling.showModal();
-})
-
-closeAvatarButton.onclick = (e) => {
-    e.preventDefault();
-    selectAvatarButton.nextElementSibling.close();
-}
-
-for (let img of avatarList) {
-    img.addEventListener("click", (e) => {
-        avatarDisplay.src = e.target.src;
-        chosenAvatarURL = e.target.src;
-    })
 }

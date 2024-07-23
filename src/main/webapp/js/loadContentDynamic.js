@@ -83,9 +83,8 @@ function loadDemoLessons(demoLessonArray) {
                alert("You have to log in first");
                setTimeout(window.location.href = (`${contextPath}/login`), 1000);
             }
-         })
-         // tempMiniCard2.dataset.lessonContentId = lesson["lessonContentId"];
-         // if(!lesson["lessonQuizId"] === null) tempMiniCard2.dataset.lessonQuizId = lesson["lessonQuizId"];
+         });
+
          lessonFolder.querySelector(".button-div").insertAdjacentElement("beforebegin", tempMiniCard2);
       }
    })

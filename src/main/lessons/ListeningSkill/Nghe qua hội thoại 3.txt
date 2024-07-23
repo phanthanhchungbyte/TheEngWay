@@ -1,0 +1,157 @@
+<h2 style="text-align: center;"><span style="color: #3598db;">Lesson 3: A Picture of Health</span></h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: center;"><span style="color: #e03e2d;"><em>C&aacute;c em h&atilde;y c&ugrave;ng xem video dưới đ&acirc;y nh&eacute;!</em></span></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;"><iframe src="https://www.youtube.com/embed/J1kiJp03DUo" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: left; padding-left: 40px;"><span style="color: #e03e2d;"><em>Bảng từ mới:</em></span></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">
+<table style="border-collapse: collapse; width: 100.01%; height: 646.25px;" border="1"><colgroup><col style="width: 33.2931%;"><col style="width: 33.2931%;"><col style="width: 33.2931%;"></colgroup>
+<tbody>
+<tr style="height: 35.9028px;">
+<td><strong>English</strong></td>
+<td><strong>Tiếng Việt</strong></td>
+<td><strong>Audio</strong></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>morning (n)</p>
+<p>/ˈmɔːnɪŋ/</p>
+</td>
+<td>buổi s&aacute;ng</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/m/mor/morni/morning__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>aspirin (n)</p>
+<p>/ˈ&aelig;sprɪn/</p>
+</td>
+<td>thuốc giảm đau</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/a/asp/aspir/aspirin__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>bed (n)</p>
+<p>/bed/</p>
+</td>
+<td>giường</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/b/bed/bed__/bed__gb_3.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>warm (adj)</p>
+<p>/wɔːm/</p>
+</td>
+<td>ấm</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/w/war/warm_/warm__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>sore throat (n)</td>
+<td>đau họng</td>
+<td><audio src="https://dictionary.cambridge.org/media/english/uk_pron/c/cdo/cdo02/cdo0216soreuk1857.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>weak (adj)</p>
+<p>/wiːk/</p>
+</td>
+<td>yếu đuối</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/us_pron/w/wea/weak_/weak__us_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>flu (n)</p>
+<p>/fluː/</p>
+</td>
+<td>c&uacute;m</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/f/flu/flu__/flu__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>natural (adj)</p>
+<p>/ˈn&aelig;tʃrəl/</p>
+</td>
+<td>tự nhi&ecirc;n</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/n/nat/natur/natural__gb_6.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>ingredient (n)</p>
+<p>/ɪnˈɡriːdiənt/</p>
+</td>
+<td>nguy&ecirc;n liệu</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/i/ing/ingre/ingredient__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>disgusting (adj)</p>
+<p>/dɪsˈɡʌstɪŋ/</p>
+</td>
+<td>kinh khủng</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/dis/disgu/disgusting__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>chemical (n)</p>
+<p>/ˈkemɪkl/</p>
+</td>
+<td>h&oacute;a chất</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/che/chemi/chemical__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>arsenic (n)</p>
+<p>/ˈɑːsnɪk/</p>
+</td>
+<td>asen (h&oacute;a học)</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/a/ars/arsen/arsenic__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>vitamin (n)</p>
+<p>/ˈvɪtəmɪn/</p>
+</td>
+<td>vitamin</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/v/vit/vitam/vitamin__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>cold (n)</p>
+<p>/kəʊld/</p>
+</td>
+<td>cảm lạnh</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/col/cold_/cold__gb_3.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>patient (n)</p>
+<p>/ˈpeɪʃnt/</p>
+</td>
+<td>bệnh nh&acirc;n</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/pat/patie/patient__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>better (adj)</p>
+<p>/ˈbetə(r)/</p>
+</td>
+<td>tốt hơn</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/b/bet/bette/better__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>

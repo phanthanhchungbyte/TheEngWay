@@ -1,0 +1,44 @@
+<div class="comment_bai_hoc clear">
+<div class="vd_box">
+<div class="stt_detail_video">
+<h2 class="vcab_vocab" style="text-align: center;">YOUNG CHILDREN PLAY SPORTS - ADVANTAGES AND DISADVANTAGES</h2>
+<div class="space20">&nbsp;</div>
+<div class="space20">&nbsp;</div>
+<div class="space20">&nbsp;</div>
+<div class="space20">&nbsp;</div>
+<center><img style="width: 100%; max-width: 480px;" src="https://noidung.tienganh123.com/file/baihoc/reading/intermediate/bai18/children_sport.jpg"></center>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div id="show_mes"></div>
+<div class="space20">&nbsp;</div>
+<div class="m_vcab_content">
+<p class="m_vd_text"><span class="ta123_dich">Most kids love to play sports. It&rsquo;s important to them, but for the majority, it&rsquo;s just one type of activity out of many that they do. </span></p>
+<p class="m_vd_text"><span class="ta123_dich">For a small number of kids, though, a sport becomes their whole life. They spend almost all their time and energy practicing. This has both advantages and disadvantages. <br><br></span></p>
+<p class="m_vd_text"><span class="ta123_dich">Sports are good for young children in many ways. Kids who enjoy sports are likely to have better health. They develop good habits of daily exercise that will keep them healthy as adults, too. </span></p>
+<p class="m_vd_text"><span class="ta123_dich" style="background-color: white; cursor: default;">Today, many children and adults are overweight, but those who love sports stay in shape. Plus, by developing their physical abilities, they will learn how to work hard towards a goal. </span></p>
+<p class="m_vd_text"><span class="ta123_dich">Their achievements in sports will make them feel good about themselves. They&rsquo;ll also make friends and learn teamwork. Sports, whether a little or a lot, can have positive effects. </span></p>
+<p class="m_vd_text"><span class="ta123_dich">We admire the talent and dedication of young athletes, but we also wonder if they&rsquo;re losing something. Their focus is very narrow. </span></p>
+<p class="m_vd_text"><span class="ta123_dich">If they devote most of their time to sports, are they neglecting schoolwork? What about other interests? Children should try out many different activities. In addition, many young athletes are pressured by parents or coaches to succeed. </span></p>
+<p class="m_vd_text"><span class="ta123_dich">Kids whose drive comes from inside usually do okay, but others can be unhappy and have health and emotional problems. So sports, like anything else in excess, can have negative effects too. </span></p>
+</div>
+<div class="space15">&nbsp;</div>
+</div>
+<div class="vd_download">&nbsp;</div>
+<div class="vd_download">Bản dịch</div>
+<div class="vd_download">&nbsp;</div>
+<div class="vd_download">
+<p>Hầu hết trẻ em đều th&iacute;ch chơi thể thao. Điều đ&oacute; quan trọng đối với họ, nhưng đối với đa số, đ&oacute; chỉ l&agrave; một loại hoạt động trong số rất nhiều hoạt động họ l&agrave;m.</p>
+<p>Tuy nhi&ecirc;n, đối với một số &iacute;t trẻ em, thể thao đ&atilde; trở th&agrave;nh cả cuộc đời ch&uacute;ng. Họ d&agrave;nh gần như to&agrave;n bộ thời gian v&agrave; sức lực để luyện tập. Điều n&agrave;y c&oacute; cả ưu điểm v&agrave; nhược điểm.</p>
+<p>&nbsp;</p>
+<p>Thể thao tốt cho trẻ nhỏ về nhiều mặt. Trẻ em th&iacute;ch thể thao thường c&oacute; sức khỏe tốt hơn. Ch&uacute;ng ph&aacute;t triển những th&oacute;i quen tốt về tập thể dục h&agrave;ng ng&agrave;y để giữ cho ch&uacute;ng khỏe mạnh khi trưởng th&agrave;nh.</p>
+<p>Ng&agrave;y nay, nhiều trẻ em v&agrave; người lớn bị thừa c&acirc;n nhưng những người y&ecirc;u th&iacute;ch thể thao vẫn giữ được v&oacute;c d&aacute;ng c&acirc;n đối. Ngo&agrave;i ra, bằng c&aacute;ch ph&aacute;t triển khả năng thể chất, trẻ sẽ học c&aacute;ch l&agrave;m việc chăm chỉ để đạt được mục ti&ecirc;u.</p>
+<p>Th&agrave;nh t&iacute;ch thể thao của họ sẽ khiến họ cảm thấy h&agrave;i l&ograve;ng về bản th&acirc;n. Họ cũng sẽ kết bạn v&agrave; học c&aacute;ch l&agrave;m việc theo nh&oacute;m. Thể thao d&ugrave; &iacute;t hay nhiều đều c&oacute; thể mang lại những t&aacute;c động t&iacute;ch cực.</p>
+<p>Ch&uacute;ng t&ocirc;i ngưỡng mộ t&agrave;i năng v&agrave; sự cống hiến của c&aacute;c vận động vi&ecirc;n trẻ, nhưng ch&uacute;ng t&ocirc;i cũng tự hỏi liệu họ c&oacute; đang đ&aacute;nh mất điều g&igrave; kh&ocirc;ng. Trọng t&acirc;m của họ rất hẹp.</p>
+<p>Nếu d&agrave;nh phần lớn thời gian cho thể thao, liệu họ c&oacute; bỏ b&ecirc; việc học kh&ocirc;ng? C&ograve;n những sở th&iacute;ch kh&aacute;c th&igrave; sao? Trẻ em n&ecirc;n thử nhiều hoạt động kh&aacute;c nhau. Ngo&agrave;i ra, nhiều vận động vi&ecirc;n trẻ c&ograve;n bị cha mẹ hoặc huấn luyện vi&ecirc;n g&acirc;y &aacute;p lực phải th&agrave;nh c&ocirc;ng.</p>
+<p>Những đứa trẻ c&oacute; động lực từ b&ecirc;n trong thường kh&ocirc;ng sao, nhưng những đứa trẻ kh&aacute;c c&oacute; thể kh&ocirc;ng vui v&agrave; gặp c&aacute;c vấn đề về sức khỏe cũng như cảm x&uacute;c. V&igrave; vậy, thể thao, giống như bất cứ hoạt động n&agrave;o qu&aacute; mức, cũng c&oacute; thể c&oacute; những t&aacute;c động ti&ecirc;u cực.</p>
+</div>
+</div>
+</div>

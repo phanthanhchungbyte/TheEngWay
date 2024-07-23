@@ -1,0 +1,39 @@
+<h1 style="text-align: center;"><span style="color: #3598db;"><strong>Cấu tr&uacute;c chung của một bức thư tiếng Anh th&ocirc;ng thường</strong></span></h1>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="https://cdn.getmidnight.com/45d07b00b0188a892509950ff919e14e/2021/12/Formal-Letter-1-1-.png" alt="" width="500" height="281"></strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3><span style="color: #e03e2d;">==&gt; Để viết bức thư bằng tiếng Anh chuy&ecirc;n nghiệp, bạn cần ghi nhớ về cấu tr&uacute;c chuẩn của n&oacute;, bao gồm:</span></h3>
+<p>&nbsp;</p>
+<h3><span id="1_Heading_%E2%80%93_Chu_de_thu" class="ez-toc-section"></span><span style="color: #3598db;"><strong>1. Heading &ndash; Chủ đề thư</strong></span></h3>
+<p>Trong phần Heading sẽ tr&igrave;nh b&agrave;y những th&ocirc;ng tin cơ bản của người gửi:</p>
+<ul>
+<li>Họ t&ecirc;n.</li>
+<li>Th&ocirc;ng tin li&ecirc;n lạc.</li>
+<li>Địa chỉ người nhận.</li>
+<li>Ng&agrave;y, th&aacute;ng gửi thư.</li>
+</ul>
+<p>Sau đ&oacute;, bạn cần viết một c&acirc;u mở đầu để dẫn v&agrave;o nội dung ch&iacute;nh của bức thư. V&iacute; dụ về đoạn mở đầu:</p>
+<p><em>&ldquo;Dear Mr. Tuan,</em></p>
+<p><em>Thank you so much for your beautiful Christmas presents!&rdquo;</em></p>
+<p>&nbsp;</p>
+<h3><span id="2_Body_%E2%80%93_Noi_dung_thu" class="ez-toc-section"></span><span style="color: #3598db;"><strong>2. Body &ndash; Nội dung thư</strong></span></h3>
+<p>Nội dung l&agrave; phần quan trọng nhất, thể hiện mục đ&iacute;ch ch&iacute;nh của bức thư &ndash; tr&igrave;nh b&agrave;y tất cả l&yacute; do v&agrave; sự việc.</p>
+<p>Giả sử khi viết thư xin việc, bạn cần nhấn mạnh:</p>
+<ol>
+<li>Kinh nghiệm l&agrave;m việc.</li>
+<li>Điểm mạnh của bản th&acirc;n.</li>
+<li>L&yacute; do v&igrave; sao bạn ph&ugrave; hợp với vị tr&iacute; m&agrave; c&ocirc;ng ty đang tuyển dụng.</li>
+<li>Mong muốn được phỏng vấn.</li>
+<li>Cung cấp th&ocirc;ng tin li&ecirc;n lạc: SĐT &ndash; Email.</li>
+<li>Đ&iacute;nh k&egrave;m CV.</li>
+</ol>
+<p>Trong&nbsp;<strong>c&aacute;ch viết thư tiếng Anh</strong>, bạn cần lưu &yacute; về ng&ocirc;n ngữ sử dụng phải ph&ugrave; hợp với từng đối tượng nhận thư. Nếu gửi thư cho gia đ&igrave;nh, bạn b&egrave;&hellip; bạn kh&ocirc;ng cần sử dụng c&aacute;c loại c&acirc;u trang trọng.</p>
+<p>Ngược lại, nếu bạn viết thư để xin việc, x&aacute;c nhận th&ocirc;ng tin, thư cho cấp tr&ecirc;n&hellip; th&igrave; n&ecirc;n cần sự trang trọng v&agrave; tuyệt đối kh&ocirc;ng sử dụng c&aacute;c từ ngữ mang t&iacute;nh học thuật hay mắc lỗi ngữ ph&aacute;p &ndash; v&igrave; điều n&agrave;y thể hiện bạn kh&ocirc;ng chuy&ecirc;n nghiệp.</p>
+<p>&nbsp;</p>
+<h3><span id="3_Complimentary_close_%E2%80%93_Loi_ket" class="ez-toc-section"></span><span style="color: #3598db;"><strong>3. Complimentary close &ndash; Lời kết</strong></span></h3>
+<p>Phần kết thư sẽ bao gồm lời ch&agrave;o v&agrave; chữ k&yacute;. Bạn cần ghi nhớ phần ch&agrave;o mở đầu v&agrave; phần kết phải li&ecirc;n kết với nhau.</p>
+<p><strong>V&iacute; dụ</strong>: Mở đầu l&agrave; &ldquo;Sir&rdquo; th&igrave; kết th&uacute;c l&agrave; &ldquo;Faithfully&rdquo; hoặc mở đầu l&agrave; &ldquo;Dear Mr.&rdquo; th&igrave; kết th&uacute;c l&agrave; &ldquo;Sincerely&rdquo;.</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://www.thebalancemoney.com/thmb/vpgA-ZBueeWtHCP3t8jKbB8CKjY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/sample-letter-format-2063479-Final-edit-818c959e2de34d6b99e3b4823669ac58.jpg" alt="" width="500" height="333"></p>

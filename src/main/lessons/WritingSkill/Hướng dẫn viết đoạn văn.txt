@@ -1,0 +1,152 @@
+<div class="comment_bai_hoc clear">
+<div class="vd_box">
+<div class="vd_box_tit">&nbsp;</div>
+<div class="stt_detail_video">
+<div id="goldenkids_member"></div>
+<div id="paid_member"></div>
+<div id="tickerbg" style="position: absolute;"></div>
+<div id="ticker" style="position: absolute; display: none;"></div>
+<div class="lesson_main">
+<div id="ubaPlayer"></div>
+<div class="lesson_box">
+<h1 class="lesson_title" style="text-align: center;"><span style="color: #3598db;">How to write a paragraph (C&aacute;ch viết đoạn văn)</span></h1>
+<center><img style="display: block; margin-left: auto; margin-right: auto;" src="https://noidung.tienganh123.com/file/baihoc/writing/basic/bai18/bai18.jpg" width="358" height="419"></center>
+<div class="lesson_content_head">&nbsp;</div>
+<div class="stt_seg">
+<div class="stt_seg_title">&nbsp;</div>
+<div class="stt_seg_title">&nbsp;</div>
+<h2 class="stt_seg_content"><span style="color: #e03e2d;"><strong>1. C&aacute;c bước thực hiện</strong></span></h2>
+<h4 class="stt_seg_content"><br><em>a) Suy nghĩ cẩn thận về những điều bạn định viết</em>.</h4>
+<div class="stt_seg_content">&nbsp;<br>H&atilde;y tử hỏi m&igrave;nh: <br>- M&igrave;nh n&ecirc;n trả lời c&acirc;u hỏi của b&agrave;i như thế n&agrave;o?<br>- Phần quan trọng nhất của c&acirc;u hỏi l&agrave; g&igrave;? <br>- M&igrave;nh n&ecirc;n viết c&acirc;u chủ đề như thế n&agrave;o?<br>- M&igrave;nh n&ecirc;n d&ugrave;ng những sự việc, &yacute; kiến n&agrave;o để bổ trợ cho c&acirc;u đề t&agrave;i? <br>- M&igrave;nh phải viết như thế n&agrave;o để đoạn văn hay v&agrave; l&ocirc;i cuốn? <br>- M&igrave;nh c&oacute; cần phải bổ sung th&ecirc;m c&aacute;c sự kiện thuộc đề t&agrave;i đ&oacute; hay kh&ocirc;ng? <br>- Phải t&igrave;m c&aacute;c sự kiện đ&oacute; ở đ&acirc;u?</div>
+<h4 class="stt_seg_content"><br><em>b) C&aacute;c bạn h&atilde;y mở cuốn sổ tay của bạn hoặc đơn giản chỉ l&agrave; một tờ giấy nh&aacute;p rồi viết c&acirc;u trả lời của những c&acirc;u hỏi tr&ecirc;n v&agrave;o đ&oacute;</em>.</h4>
+<div class="stt_seg_content">&nbsp;</div>
+<div class="stt_seg_content">Tuy nhi&ecirc;n c&aacute;c bạn cũng kh&ocirc;ng cần phải d&agrave;nh qu&aacute; nhiều thời gian cho bước n&agrave;y; đừng viết qu&aacute; chi tiết, chỉ cần viết ngắn gọn đủ để gi&uacute;p bạn nhớ được mục đ&iacute;ch v&agrave; phương thức để viết đoạn văn.</div>
+<div class="stt_seg_content">&nbsp;</div>
+<h4 class="stt_seg_content"><br><em>c) C&aacute;c bạn h&atilde;y thu thập c&aacute;c sự việc, sự kiện li&ecirc;n quan đến đề t&agrave;i của đoạn văn.</em></h4>
+<div class="stt_seg_content">&nbsp;</div>
+<div class="stt_seg_content">Sau đ&oacute; bạn h&atilde;y t&igrave;m trong số những sự việc, sự kiện đ&oacute; phần c&oacute; thể trả lời c&acirc;u hỏi của bạn rồi viết ra giấy.</div>
+<div class="stt_seg_content"><br><br><em><strong>Gợi &yacute; để tiết kiệm thời gian</strong>:</em><br><br>C&aacute;c bạn h&atilde;y đảm bảo rằng những sự việc, sự kiện bạn viết đều li&ecirc;n quan đến c&acirc;u hỏi bạn đang trả lời trong đoạn văn. Nếu viết về qu&aacute; nhiều sự việc, sự kiện m&agrave; kh&ocirc;ng chọn lọc kỹ sẽ l&agrave;m mất rất nhiều thời gian của bạn cũng như l&agrave;m giảm chất lượng của đoạn văn.</div>
+<h4 class="stt_seg_content"><br><br><em>d)B&ecirc;n cạnh những sự việc, sự kiện bạn thu thập được, c&aacute;c bạn h&atilde;y tự hỏi m&igrave;nh</em>:</h4>
+<div class="stt_seg_content">&nbsp;</div>
+<div class="stt_seg_content">M&igrave;nh c&ograve;n muốn n&oacute;i th&ecirc;m điều g&igrave; về đề t&agrave;i n&agrave;y nữa? Tại sao mọi người lại th&iacute;ch đề t&agrave;i n&agrave;y? Tại sao đề t&agrave;i n&agrave;y quan trọng?</div>
+<h4 class="stt_seg_content"><br><br>e)<em> Sau đ&oacute; c&aacute;c bạn h&atilde;y t&igrave;m &yacute; ch&iacute;nh của đoạn văn rồi chọn phần quan trọng nhất m&agrave; bạn định tr&igrave;nh b&agrave;y</em>.</h4>
+<div class="stt_seg_content">&nbsp;</div>
+<div class="stt_seg_content">Nếu bạn kh&ocirc;ng thể chọn được phần quan trọng nhất h&atilde;y chọn bất kỳ một phần để bắt đầu đoạn văn.</div>
+<h4 class="stt_seg_content"><br><br><em>f) C&aacute;c bạn h&atilde;y tổ chức c&aacute;c sự việc v&agrave; c&aacute;c &yacute; của bạn theo hướng bổ trợ, ph&aacute;t triển &yacute; ch&iacute;nh</em>.</h4>
+<div class="stt_seg_content">&nbsp;</div>
+<div class="stt_seg_content">Khi c&aacute;c bạn đ&atilde; chọn được phần quan trọng nhất của đoạn văn bạn phải t&igrave;m ra phương thức ph&ugrave; hợp nhất để truyền đạt cho người đọc.<br><br>C&aacute;c bạn h&atilde;y nh&igrave;n lại phần sự việc, sự kiện m&agrave; bạn đ&atilde; viết ra cũng như c&aacute;c &yacute; của bạn về đề t&agrave;i để quyết định xem phần n&agrave;o sẽ ph&ugrave; hợp nhất để bổ trợ &yacute; ch&iacute;nh cho đoạn văn. Khi bạn đ&atilde; chọn được sự việc, sự kiện v&agrave; &yacute; kiến bạn định d&ugrave;ng th&igrave; h&atilde;y tự hỏi m&igrave;nh xem n&ecirc;n đặt ch&uacute;ng ở chỗ n&agrave;o trong đoạn văn.</div>
+<div class="stt_seg_content">&nbsp;</div>
+<div class="stt_seg_content">&nbsp;</div>
+</div>
+<div class="stt_seg">
+<h2 class="stt_seg_title"><span style="color: #e03e2d;">2. Khi tiến h&agrave;nh viết</span></h2>
+<div class="stt_seg_content">
+<ol style="list-style-type: lower-alpha;">
+<li>C&aacute;c bạn h&atilde;y mở sổ tay hoặc file word tr&ecirc;n m&aacute;y t&iacute;nh</li>
+<li>Sau đ&oacute; c&aacute;c bạn h&atilde;y viết c&acirc;u chủ đề, những c&acirc;u bổ trợ v&agrave; c&acirc;u kết.</li>
+<li>C&aacute;c bạn h&atilde;y ch&uacute; &yacute; viết những c&acirc;u đơn giản v&agrave; r&otilde; r&agrave;ng để b&agrave;y tỏ &yacute; kiến của m&igrave;nh.</li>
+<li>H&atilde;y cố gắng tập trung v&agrave;o &yacute; ch&iacute;nh của đoạn văn, tr&aacute;nh đi lệch hướng.</li>
+<li>C&aacute;c bạn n&ecirc;n sử dụng từ điển để t&igrave;m th&ecirc;m từ c&oacute; thể gi&uacute;p bạn bộc lộ &yacute; kiến ri&ecirc;ng.</li>
+</ol>
+</div>
+</div>
+<div class="stt_seg">
+<h2 class="stt_seg_title"><span style="color: #e03e2d;">3. Chỉnh sửa đoạn văn</span></h2>
+<div class="stt_seg_content">&nbsp;</div>
+<div class="stt_seg_content">
+<p><strong>a) Về ngữ ph&aacute;p v&agrave; ch&iacute;nh tả</strong></p>
+<p>&nbsp;</p>
+<ul>
+<li>C&aacute;c bạn h&atilde;y kiểm tra lại phần ch&iacute;nh tả trong b&agrave;i của bạn.</li>
+<li>C&aacute;c bạn h&atilde;y kiểm tra lại phần ngữ ph&aacute;p trong b&agrave;i của bạn.</li>
+<li>Đọc lại đoạn văn của bạn một lần nữa.</li>
+<li>C&aacute;c bạn h&atilde;y chắc rằng mỗi c&acirc;u đều c&oacute; chủ ngữ v&agrave; vị ngữ.</li>
+<li>C&aacute;c bạn h&atilde;y kiểm tra lại xem chủ ngữ v&agrave; vị ngữ c&oacute; tương đồng với nhau hay kh&ocirc;ng.</li>
+<li>C&aacute;c bạn h&atilde;y kiểm tra lại th&igrave; của mỗi c&acirc;u.</li>
+<li>C&aacute;c bạn h&atilde;y đảm bảo rằng mỗi c&acirc;u đều l&agrave; c&acirc;u c&oacute; nghĩa.</li>
+</ul>
+<br><strong>b) Văn phong v&agrave; c&aacute;ch tổ chức đoạn văn</strong></div>
+<div class="stt_seg_content">
+<ul>
+<li>C&aacute;c bạn h&atilde;y đảm bảo rằng đoạn văn của bạn c&oacute; c&acirc;u chủ đề.</li>
+<li>C&aacute;c bạn h&atilde;y đảm bảo rằng những c&acirc;u bổ trợ đều tập trung v&agrave;o &yacute; ch&iacute;nh.</li>
+<li>C&aacute;c bạn h&atilde;y đảm bảo rằng đoạn văn của m&igrave;nh c&oacute; c&acirc;u kết tốt.</li>
+<li>Một lần nữa c&aacute;c bạn h&atilde;y đảm bảo tất cả c&aacute;c c&acirc;u trong b&agrave;i đều n&oacute;i đ&uacute;ng chủ để, tập trung v&agrave;o &yacute; ch&iacute;nh.</li>
+<li>Cuối c&ugrave;ng c&aacute;c bạn h&atilde;y kiểm tra lại xem đoạn văn của bạn c&oacute; th&uacute; vị kh&ocirc;ng.</li>
+</ul>
+</div>
+</div>
+<div class="stt_seg">
+<div class="stt_seg_title"><strong>c) Lưu &yacute;</strong></div>
+<div class="stt_seg_title">&nbsp;</div>
+<div class="stt_seg_content">
+<ul>
+<li>Sự li&ecirc;n kết một c&aacute;ch tr&ocirc;i chảy giữa c&aacute;c c&acirc;u l&agrave; một trong những yếu tố quan trọng để gi&uacute;p người đọc c&oacute; thể dễ d&agrave;ng hiểu được những &yacute; m&agrave; bạn muốn biểu đạt trong đoạn văn.</li>
+<li>Sử dụng c&aacute;c từ nối nhằm hệ thống lại c&aacute;c phần ch&iacute;nh của đoạn văn. Sử dụng những từ nối l&agrave; phương thức quan trọng gi&uacute;p li&ecirc;n kết c&aacute;c phần ch&iacute;nh của đoạn văn.</li>
+</ul>
+</div>
+<div class="stt_seg_content"><br>V&iacute; dụ
+<div class="space10">&nbsp;</div>
+<p>&nbsp;</p>
+<p class="text_indent"><span class="text_ta">My hometown, Wheaton, is famous for several amazing natural features. <strong>First</strong>, it is noted for the Wheaton River, which is very wide and beautiful. On either side of <strong>this river</strong>, which is 175 feet wide, are many willow trees which have long branches that can move gracefully in the wind. In autumn the leaves of <strong>these</strong> trees fall and cover the riverbanks like golden snow.</span> <span class="text_ta" style="background: none; cursor: none;"><strong>Second</strong>, on the other side of the town is Wheaton Hill, which is unusual because it is very steep. Even though it is steep, climbing <strong>this</strong> hill is not dangerous, because there are some firm rocks along the sides that can be used as stairs. There are no trees around <strong>this</strong> hill, so it stands clearly against the sky and can be seen from many miles away. </span> <span class="text_ta" style="background: none; cursor: none;"><strong>The third amazing feature</strong> is the Big Old Tree. This tree stands two hundred feet tall and is probably about six hundred years old. <strong>These three landmarks</strong> are truly amazing and make my hometown a famous place.</span></p>
+<br>Những từ b&ocirc;i đậm đ&oacute; được gọi l&agrave; từ nối nhằm hệ thống lại c&aacute;c phần ch&iacute;nh của đoạn văn. Sử dụng những từ nối l&agrave; phương thức quan trọng gi&uacute;p li&ecirc;n kết c&aacute;c phần ch&iacute;nh của đoạn văn.<br><br><br>Sau đ&acirc;y b&agrave;i giảng sẽ giới thiệu cho c&aacute;c bạn một số từ nối:</div>
+<div class="stt_seg_content">&nbsp;<br>
+<table>
+<tbody>
+<tr class="first_tr">
+<td>Từ nối</td>
+<td>Nghĩa</td>
+<td>Từ nối</td>
+<td>Nghĩa</td>
+</tr>
+<tr>
+<td><strong>For example</strong>,</td>
+<td>V&iacute; dụ như</td>
+<td><strong>For instance</strong>,</td>
+<td>V&iacute; dụ như</td>
+</tr>
+<tr>
+<td><strong>One example of (this) is</strong></td>
+<td>Một v&iacute; dụ (về vấn đề n&agrave;y) l&agrave;</td>
+<td><strong>First, Second, Third, etc</strong>.</td>
+<td>Đầu ti&ecirc;n, thứ hai, thứ 3</td>
+</tr>
+<tr>
+<td><strong>As another example</strong>,</td>
+<td>Một v&iacute; dụ kh&aacute;c l&agrave;</td>
+<td><strong>Another example of [x] is (that)</strong></td>
+<td>Một v&iacute; dụ kh&aacute;c của (x) l&agrave;</td>
+</tr>
+<tr>
+<td><strong>Finally,</strong></td>
+<td>Cuối c&ugrave;ng</td>
+<td><strong>In conclusion</strong>,</td>
+<td>Kết luận/T&oacute;m lại l&agrave;</td>
+</tr>
+<tr>
+<td><strong>To summarize</strong>,</td>
+<td>Kết luận l&agrave;</td>
+<td><strong>On the one hand</strong>,</td>
+<td>Mặt kh&aacute;c</td>
+</tr>
+<tr>
+<td><strong>On the other hand</strong>,</td>
+<td>Mặt kh&aacute;c</td>
+<td><strong>However</strong>,</td>
+<td>Tuy nhi&ecirc;n</td>
+</tr>
+<tr>
+<td>...,<strong> but</strong>...</td>
+<td>nhưng</td>
+<td><strong>Also,</strong></td>
+<td>Hơn nữa</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

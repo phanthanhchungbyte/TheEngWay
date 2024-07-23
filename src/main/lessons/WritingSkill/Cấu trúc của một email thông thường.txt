@@ -1,0 +1,59 @@
+<h1 style="text-align: center;"><span style="color: #3598db;"><strong>Cấu tr&uacute;c của một email th&ocirc;ng thường&nbsp;</strong></span></h1>
+<p>&nbsp;</p>
+<p><span style="color: #3598db;"><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="https://contenthub-static.grammarly.com/blog/wp-content/uploads/2023/08/Formal_Email.png" alt="" width="500" height="263"></strong></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><span style="color: #e03e2d;"><strong>1. Greeting (Ch&agrave;o hỏi)</strong></span></h2>
+<p>Mở đầu email l&agrave; phần Greeting (ch&agrave;o hỏi), đ&acirc;y l&agrave; bước cực kỳ quan trọng v&igrave; sẽ l&agrave; thước đo đầu ti&ecirc;n để g&acirc;y ấn tượng v&agrave; tạo thiện cảm với người nhận email. Mở đầu email bằng một lời ch&agrave;o l&agrave; điều đương nhi&ecirc;n, nhưng &ldquo;ch&agrave;o&rdquo; l&agrave;m sao cho đ&uacute;ng th&igrave; kh&ocirc;ng phải ai cũng biết.</p>
+<p>Nếu bạn đ&atilde; biết t&ecirc;n người nhận v&agrave; mối quan hệ giữa bạn với người nhận l&agrave; một mối quan hệ lịch sự, y&ecirc;u cầu sự trang trọng, nghi&ecirc;m t&uacute;c, bạn n&ecirc;n sử dụng c&aacute;c danh xưng như Mr (cho đ&agrave;n &ocirc;ng), Mrs (cho phụ nữ đ&atilde; kết h&ocirc;n), Ms (cho phụ nữ chưa lập gia đ&igrave;nh hoặc nếu kh&ocirc;ng chắc chắn đ&atilde; kết h&ocirc;n hay chưa)&hellip; v&agrave; nhớ l&agrave; sử dụng &ldquo;first name&rdquo; trong trường hợp n&agrave;y. V&iacute; dụ như&nbsp;Dear Mr. Bill/ Dear Mrs. Nancy/ Dear Ms Lily<em>.</em></p>
+<p>Nếu bạn kh&ocirc;ng biết người nhận l&agrave; nam hay nữ th&igrave; hay viết chung l&agrave; Dear Sir/Madam.</p>
+<p>&nbsp;</p>
+<h2><span id="2_Opening_comment_Loi_chao_hoi" class="ez-toc-section"></span><span style="color: #e03e2d;"><strong>2. Opening comment (Lời ch&agrave;o hỏi)</strong></span></h2>
+<p>Sau khi đ&atilde; ch&agrave;o hỏi, bạn n&ecirc;n tiếp tục email tiếng Anh với lời hỏi thăm về t&igrave;nh h&igrave;nh sức khỏe, c&ocirc;ng việc của người nhận như:</p>
+<ul>
+<li>I hope you are doing well&nbsp;<em>(Hy vọng anh vẫn khỏe)</em>&nbsp;</li>
+<li>How have you been?&nbsp;<em>(Anh dạo n&agrave;y thế n&agrave;o?)</em>.</li>
+</ul>
+<p>Ngo&agrave;i ra, đối với một bức thư hồi đ&aacute;p, tức l&agrave; bạn viết email để trả lời email của họ, bạn n&ecirc;n mở đầu bằng việc cảm ơn hoặc thể hiện cảm x&uacute;c vui mừng v&agrave; tr&acirc;n trọng khi nhận được email đ&oacute;. Việc bạn cảm ơn l&agrave;m người đọc cảm thấy thoải m&aacute;i v&agrave; cảm gi&aacute;c được t&ocirc;n trọng, đồng thời l&agrave;m cho bạn trở n&ecirc;n lịch sự hơn. V&iacute; dụ như:</p>
+<ul>
+<li>I am very happy to receive your email&nbsp;<em>(T&ocirc;i rất vui khi nhận được mail của bạn)</em></li>
+<li>Thank you for your email&nbsp;<em>(Cảm ơn email của bạn).</em></li>
+</ul>
+<p>&nbsp;</p>
+<div class="content-wrapper">&nbsp;</div>
+<h2><span id="3_Introduction_Phan_mo_dau" class="ez-toc-section"></span><span style="color: #e03e2d;"><strong>3. Introduction (Phần mở đầu)</strong></span></h2>
+<p>Phần n&agrave;y sẽ l&agrave; l&uacute;c để bạn tr&igrave;nh b&agrave;y l&yacute; do viết email tiếng Anh. Để thực hiện nội dung email ở phần n&agrave;y, bạn c&oacute; thể sử dụng mẫu c&acirc;u:</p>
+<ul>
+<li>I am writing to ask for the information about&hellip;&nbsp;<em>(T&ocirc;i viết thư n&agrave;y để y&ecirc;u cầu qu&yacute; vị cung cấp th&ocirc;ng tin về&hellip;)</em></li>
+<li>I am writing with reference to&hellip;&nbsp;<em>(T&ocirc;i viết thư n&agrave;y để đề cập đến&hellip;)</em></li>
+<li>I am writing to enquire about&hellip;&nbsp;<em>(T&ocirc;i viết thư để y&ecirc;u cầu&hellip;).</em></li>
+</ul>
+<p>Trong nhiều trường hợp cần đến sự trang trọng, lịch sự, bạn cũng c&oacute; thể sử dụng c&aacute;c c&acirc;u hỏi gi&aacute;n tiếp như:&nbsp;Might I take a moment of your time to&hellip;?<em>&nbsp;(T&ocirc;i c&oacute; thể xin ch&uacute;t thời gian của bạn)</em>. Đối với những trường hợp kh&ocirc;ng cần trang trọng qu&aacute; m&agrave; hướng đến sự th&acirc;n mật, gần gũi, bạn c&oacute; thể sử dụng &ldquo;I just want to&hellip;&rdquo;&nbsp;<em>(T&ocirc;i viết email n&agrave;y để)</em></p>
+<p>V&igrave; l&agrave; phần đầu của email, ảnh hưởng đến c&aacute;ch nh&igrave;n nhận v&agrave; đ&aacute;nh gi&aacute; của người nhận về bạn, bạn cần đảm bảo phần n&agrave;y ngắn gọn, s&uacute;c t&iacute;ch, r&otilde; r&agrave;ng v&agrave; kh&ocirc;ng mắc c&aacute;c lỗi ngữ ph&aacute;p cũng như ch&iacute;nh tả.</p>
+<figure id="attachment_15962" class="wp-caption aligncenter" aria-describedby="caption-attachment-15962"><img class="wp-image-15962 size-full" src="https://topicanative.edu.vn/wp-content/uploads/2020/06/viet-email-bang-tieng-anh-10-2.jpeg" alt="H&atilde;y thể hiện văn phong sự trang trọng l&agrave; lịch sự trong email tiếng Anh" width="800" height="533">
+<figcaption id="caption-attachment-15962" class="wp-caption-text"></figcaption>
+</figure>
+<h2>&nbsp;</h2>
+<h2><span id="4_Main_point_Noi_dung_chinh" class="ez-toc-section"></span><span style="color: #e03e2d;"><strong>4. Main point (Nội dung ch&iacute;nh)</strong></span></h2>
+<p>Maint point ch&iacute;nh l&agrave; phần để bạn đưa ra nội dung ch&iacute;nh trong email.&nbsp;T&ugrave;y v&agrave;o từng trường hợp cũng như mục đ&iacute;ch của người viết sẽ c&oacute; những c&aacute;ch&nbsp; triển khai nội dung ch&iacute;nh kh&aacute;c nhau.&nbsp;&Yacute; ch&iacute;nh vẫn l&agrave; đưa ra những th&ocirc;ng tin cụ thể về vấn đề m&agrave; bạn đang nhắc tới, muốn truyền đạt hoặc b&agrave;n luận với người nhận.</p>
+<p>Một v&agrave;i mẫu c&acirc;u th&ocirc;ng dụng bạn c&oacute; thể sử dụng trong phần maint point:</p>
+<ul>
+<li>I am interested in&hellip; and I would like to&hellip;&nbsp;<em>(T&ocirc;i rất quan t&acirc;m đến&hellip; v&agrave; muốn&hellip;)</em></li>
+<li>We carefully consider&hellip; and it is our intention to&hellip;&nbsp;<em>(Ch&uacute;ng t&ocirc;i đ&atilde; cẩn thận xem x&eacute;t&hellip; v&agrave; mong muốn được&hellip;)</em></li>
+<li>Regarding&hellip;/ Concerning&hellip;/ With regards to&hellip;&nbsp;<em>(Về vấn đề&hellip;)</em></li>
+<li>Attached you will find&hellip;&nbsp;<em>(Bạn sẽ t&igrave;m thấy&hellip; được đ&iacute;nh k&egrave;m trong email n&agrave;y).</em></li>
+</ul>
+<p>&nbsp;</p>
+<h2><span id="5_Concluding_sentence_Phan_ket_thuc" class="ez-toc-section"></span><span style="color: #e03e2d;"><strong>5. Concluding sentence (Phần kết th&uacute;c)</strong></span></h2>
+<p>T&ugrave;y v&agrave;o từng trường hợp kh&aacute;c nhau, sẽ c&oacute; Concluding sentence (lời kết th&uacute;c) kh&aacute;c nhau.&nbsp;Để tỏ r&otilde; thiện ch&iacute;, bạn kh&ocirc;ng n&ecirc;n kết th&uacute;c email như một lời ch&agrave;o đơn giản m&agrave; n&ecirc;n b&agrave;y tỏ &yacute; muốn giữ li&ecirc;n lạc v&agrave; nhận phản hồi từ người nhận email.</p>
+<p>Bạn c&oacute; thể sử dụng mẫu c&acirc;u sau trong phần c&acirc;u kết trong email tiếng Anh:</p>
+<ul>
+<li>Let me know if you need any more information. (H&atilde;y cho t&ocirc;i biết nếu anh/chị cần th&ecirc;m bất cứ th&ocirc;ng tin g&igrave;).</li>
+<li>Please do not hesitate to contact me if you need further information. (Đừng ngại ngần li&ecirc;n lạc với t&ocirc;i nếu anh/chị cần th&ecirc;m th&ocirc;ng tin).</li>
+<li>I am looking forward to hearing from you soon. (Mong nhận được hồi &acirc;m sớm từ bạn)</li>
+</ul>
+<p>&nbsp;</p>
+<h2><span id="6_Signing_off_Ky_ten" class="ez-toc-section"></span><span style="color: #e03e2d;"><strong>6. Signing off (K&yacute; t&ecirc;n)</strong></span></h2>
+<p>Mặc d&ugrave; phần n&agrave;y chỉ đơn giản l&agrave; k&yacute; t&ecirc;n người viết để kết th&uacute;c email nhưng đ&acirc;y được coi l&agrave; phần thể hiện được t&igrave;nh cảm cũng như ph&eacute;p lịch sự. T&ugrave;y v&agrave;o từng trường hợp, bạn c&oacute; thể d&ugrave;ng c&aacute;ch k&yacute; t&ecirc;n kh&aacute;c nhau.</p>
+<p>Nếu trong trường hợp mối quan hệ th&acirc;n mật, bạn c&oacute; thể d&ugrave;ng Best wishes, Regards, All the best, Talk to you soon, Have a nice/ good/ wonderful day!</p>
+<p>Trong trường hợp trang trọng, bạn n&ecirc;n viết lời ch&agrave;o với những từ như Best regards, Warm regards, Sincerely/ Yours sincerely, Your faithfully, (khi phần ch&agrave;o hỏi bắt đầu bằng Dear Sir/ Madam).</p>

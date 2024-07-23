@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/skills/skill.css">
     <link rel="stylesheet" href="css/footer.css">
+    <scrip href="js/searchLesson.js"></scrip>
 </head>
 
 <body>
@@ -27,8 +28,13 @@
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <ul class="menu-items">
             <li class="search">
-                <i class="fad fa-search"></i>
-                <input class="search-bar" placeholder="Search lessons here">
+                <form action="${pageContext.request.contextPath}/actSearchLessonServlet" method="get">
+                    <i class="fad fa-search"></i>
+                    <input class="search-bar" id="search-bar" name="searchString" placeholder="Search lessons here" onkeyup="searchSuggestions()">
+                    <button type="submit" class="search-button">Search</button>
+                    <div id="suggestions" class="suggestions"></div>
+                </form>
+
             </li>
             <li> <a href="${pageContext.request.contextPath}/login" class="navlogin">Đăng nhập</a> </li>
             <li> <a href="${pageContext.request.contextPath}/register" class="registerlogin">Đăng ký</a> </li>

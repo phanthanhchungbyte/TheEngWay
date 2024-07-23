@@ -8,11 +8,14 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
           type="text/css" />
-    <link rel="stylesheet" href="../../css/navbar.css">
-    <link rel="stylesheet" href="../../css/coursenav.css">
-    <link rel="stylesheet" href="../../css/content.css">
-    <link rel="stylesheet" href="../../css/skills/skill.css">
-    <link rel="stylesheet" href="../../css/footer.css">
+    <base href="${pageContext.request.contextPath}"/>
+    <link rel="icon" href="imgs/favicon/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/coursenav.css">
+    <link rel="stylesheet" type="text/css" href="css/content.css">
+    <link rel="stylesheet" type="text/css" href="css/skills/skill.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <scrip href="js/searchLesson.js"></scrip>
     <style>
         [role="progressbar"] {
             --size: 132px;
@@ -83,14 +86,19 @@
     <nav class="top-nav">
         <div>
             <a class="logo" href="${pageContext.request.contextPath}/index">
-                <img src="../../imgs/TheEngWayLogo.png" alt="The Logo">
+                <img src="imgs/TheEngWayLogo.png" alt="The Logo">
             </a>
         </div>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <ul class="menu-items">
             <li class="search">
-                <i class="fad fa-search"></i>
-                <input class="search-bar" placeholder="Search lessons here">
+                <form action="${pageContext.request.contextPath}/actSearchLessonServlet" method="get">
+                    <i class="fad fa-search"></i>
+                    <input class="search-bar" id="search-bar" name="searchString" placeholder="Search lessons here" onkeyup="searchSuggestions()">
+                    <button type="submit" class="search-button">Search</button>
+                    <div id="suggestions" class="suggestions"></div>
+                </form>
+
             </li>
             <li> <a href="${pageContext.request.contextPath}/login" class="navlogin">Đăng nhập</a> </li>
             <li> <a href="${pageContext.request.contextPath}/register" class="registerlogin">Đăng ký</a> </li>
@@ -138,7 +146,7 @@
             <li>
                 <a href="#">TA Trung học PT</a>
                 <ul class="dropdown">
-                    <li><a href="">Tiếng Anh lớp 10</a></li>
+                    <li><a href="#">Tiếng Anh lớp 10</a></li>
                     <li><a href="#">Tiếng Anh lớp 11</a></li>
                     <li><a href="#">Tiếng Anh lớp 12</a></li>
                 </ul>
@@ -156,147 +164,146 @@
         </ul>
     </div>
 
-    <div class="banner">
-        <a href="#"><img src="../../imgs/VIP-image.png" alt="VIP banner"></a>
-    </div>
-
     <div class="skill-container">
         <div class="skill-title">
             <p>Kĩ năng</p>
             <p>Đọc</p>
         </div>
 
-        <div class="easy-card card">
-            <div class="skill-level">
-                <h3>Đọc tiếng Anh trình độ dễ</h3>
+        <%-- Lessondisplay is used to display ythe dynamic lesson content --%>
+        <section class="lesson-display">
+            <div class="card">
+                <div class="skill-level">
+                    <h3>Reading IELTS</h3>
+                </div>
+
+                <div class="inner-content">
+                    <p class="goal">Trong phần học này chúng ta sẽ cùng đọc các bài tiếng Anh trình độ dễ và làm bài tập cuối
+                        mỗi bài</p>
+                    <div class="mini-card">
+                        <img src="../../imgs/skills_reading/reading_no1.png" alt="">
+                        <div>
+                            <h4>Australian painter Margaret Preston</h4>
+                            <p>Margaret Rose McPherson in Port Adelaide, South Australia in 1875, the daughter of David
+                                McPherson, a Scottish marine engineer and his wife Prudence Lyle. She and her sister ...</p>
+                        </div>
+                    </div>
+
+                    <div class="mini-card">
+                        <img src="../../imgs/skills_reading/reading_no2.png" alt="">
+                        <div>
+                            <h4>William Gilbert and Magnetism</h4>
+                            <p>The 16th and 17th centuries saw two great pioneers of modern science: Galileo and Gilbert. The
+                                impact of their findings in eminent. Gilbert was the first modern scientist, also the acceridted
+                                father of the science of eletricity and magnetism...</p>
+                        </div>
+                    </div>
+
+                    <div class="mini-card">
+                        <img src="../../imgs/skills_reading/reading_no3.png" alt="">
+                        <div>
+                            <h4>The dingo debate</h4>
+                            <p>Glaziers see them as pessts, and poisoning is common, but some biologists think Australia's
+                                dingoes are the best weapon in a war against imported cats and foxes. A plane flies a slow
+                                pattern</p>
+                        </div>
+                    </div>
+
+                    <div class="button-div">
+                        <button>Xem tất cả >>></button>
+                    </div>
+                </div>
             </div>
 
-            <div class="inner-content">
-                <p class="goal">Trong phần học này chúng ta sẽ cùng đọc các bài tiếng Anh trình độ dễ và làm bài tập cuối
-                    mỗi bài</p>
-                <div class="mini-card">
-                    <img src="../../imgs/skills_reading/reading_no1.png" alt="">
-                    <div>
-                        <h4>Australian painter Margaret Preston</h4>
-                        <p>Margaret Rose McPherson in Port Adelaide, South Australia in 1875, the daughter of David
-                            McPherson, a Scottish marine engineer and his wife Prudence Lyle. She and her sister ...</p>
-                    </div>
+            <div class="mid-card card">
+                <div class="skill-level">
+                    <h3>Reading B1</h3>
                 </div>
-
-                <div class="mini-card">
-                    <img src="../../imgs/skills_reading/reading_no2.png" alt="">
-                    <div>
-                        <h4>William Gilbert and Magnetism</h4>
-                        <p>The 16th and 17th centuries saw two great pioneers of modern science: Galileo and Gilbert. The
-                            impact of their findings in eminent. Gilbert was the first modern scientist, also the acceridted
-                            father of the science of eletricity and magnetism...</p>
+                <div class="inner-content">
+                    <p class="goal">Trong phần học này chúng ta sẽ cùng đọc các bài tiếng Anh trình độ trung bình và làm bài
+                        tập cuối mỗi bài</p>
+                    <div class="mini-card">
+                        <img src="../../imgs/skills_reading/reading_no4.png" alt="">
+                        <div>
+                            <h4>Australian parrots and their adaptation</h4>
+                            <p>Margaret Preston was born Margaret Rose McPherson in Port Adelaide, South Australia in 1875, the
+                                daughter of David McPherson, a Scottish marine engineer and his wife Prudence Lyle. She and her
+                                sister</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="mini-card">
-                    <img src="../../imgs/skills_reading/reading_no3.png" alt="">
-                    <div>
-                        <h4>The dingo debate</h4>
-                        <p>Glaziers see them as pessts, and poisoning is common, but some biologists think Australia's
-                            dingoes are the best weapon in a war against imported cats and foxes. A plane flies a slow
-                            pattern</p>
+                    <div class="mini-card">
+                        <img src="../../imgs/skills_reading/reading_no4.png" alt="">
+                        <div>
+                            <h4>Australian parrots and their adaptation</h4>
+                            <p>Margaret Preston was born Margaret Rose McPherson in Port Adelaide, South Australia in 1875, the
+                                daughter of David McPherson, a Scottish marine engineer and his wife Prudence Lyle. She and her
+                                sister</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="button-div">
-                    <button>Xem tất cả >>></button>
+                    <div class="mini-card">
+                        <img src="../../imgs/skills_reading/reading_no4.png" alt="">
+                        <div>
+                            <h4>Australian parrots and their adaptation</h4>
+                            <p>Margaret Preston was born Margaret Rose McPherson in Port Adelaide, South Australia in 1875, the
+                                daughter of David McPherson, a Scottish marine engineer and his wife Prudence Lyle. She and her
+                                sister</p>
+                        </div>
+                    </div>
+
+                    <div class="button-div">
+                        <button>Xem tất cả >>></button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="mid-card card">
-            <div class="skill-level">
-                <h3>Đọc tiếng Anh trình độ trung bình</h3>
-            </div>
-            <div class="inner-content">
-                <p class="goal">Trong phần học này chúng ta sẽ cùng đọc các bài tiếng Anh trình độ trung bình và làm bài
-                    tập cuối mỗi bài</p>
-                <div class="mini-card">
-                    <img src="../../imgs/skills_reading/reading_no4.png" alt="">
-                    <div>
-                        <h4>Australian parrots and their adaptation</h4>
-                        <p>Margaret Preston was born Margaret Rose McPherson in Port Adelaide, South Australia in 1875, the
-                            daughter of David McPherson, a Scottish marine engineer and his wife Prudence Lyle. She and her
-                            sister</p>
-                    </div>
+            <div class="hard-card card">
+                <div class="skill-level">
+                    <h3>Reading A1</h3>
                 </div>
-
-                <div class="mini-card">
-                    <img src="../../imgs/skills_reading/reading_no4.png" alt="">
-                    <div>
-                        <h4>Australian parrots and their adaptation</h4>
-                        <p>Margaret Preston was born Margaret Rose McPherson in Port Adelaide, South Australia in 1875, the
-                            daughter of David McPherson, a Scottish marine engineer and his wife Prudence Lyle. She and her
-                            sister</p>
+                <div class="inner-content">
+                    <p class="goal">Trong phần học này chúng ta sẽ cùng đọc các bài tiếng Anh trình độ khó và làm bài tập
+                        cuối mỗi bài</p>
+                    <div class="mini-card">
+                        <img src="../../imgs/skills_reading/reading_no5.png" alt="">
+                        <div>
+                            <h4>Fear of the Unknown</h4>
+                            <p>American companies fear that innovation is the secret of success-and that they cannot innovate.
+                                And the small Umagic office in midtown Manhattan, a team of 30 computer...</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="mini-card">
-                    <img src="../../imgs/skills_reading/reading_no4.png" alt="">
-                    <div>
-                        <h4>Australian parrots and their adaptation</h4>
-                        <p>Margaret Preston was born Margaret Rose McPherson in Port Adelaide, South Australia in 1875, the
-                            daughter of David McPherson, a Scottish marine engineer and his wife Prudence Lyle. She and her
-                            sister</p>
+                    <div class="mini-card">
+                        <img src="../../imgs/skills_reading/reading_no5.png" alt="">
+                        <div>
+                            <h4>Fear of the Unknown</h4>
+                            <p>American companies fear that innovation is the secret of success-and that they cannot innovate.
+                                And the small Umagic office in midtown Manhattan, a team of 30 computer...</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="button-div">
-                    <button>Xem tất cả >>></button>
+                    <div class="mini-card">
+                        <img src="../../imgs/skills_reading/reading_no5.png" alt="">
+                        <div>
+                            <h4>Fear of the Unknown</h4>
+                            <p>American companies fear that innovation is the secret of success-and that they cannot innovate.
+                                And the small Umagic office in midtown Manhattan, a team of 30 computer...</p>
+                        </div>
+                    </div>
+
+                    <div class="button-div">
+                        <button>Xem tất cả >>></button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="hard-card card">
-            <div class="skill-level">
-                <h3>Đọc tiếng Anh trình độ khó</h3>
-            </div>
-            <div class="inner-content">
-                <p class="goal">Trong phần học này chúng ta sẽ cùng đọc các bài tiếng Anh trình độ khó và làm bài tập
-                    cuối mỗi bài</p>
-                <div class="mini-card">
-                    <img src="../../imgs/skills_reading/reading_no5.png" alt="">
-                    <div>
-                        <h4>Fear of the Unknown</h4>
-                        <p>American companies fear that innovation is the secret of success-and that they cannot innovate.
-                            And the small Umagic office in midtown Manhattan, a team of 30 computer...</p>
-                    </div>
-                </div>
-
-                <div class="mini-card">
-                    <img src="../../imgs/skills_reading/reading_no5.png" alt="">
-                    <div>
-                        <h4>Fear of the Unknown</h4>
-                        <p>American companies fear that innovation is the secret of success-and that they cannot innovate.
-                            And the small Umagic office in midtown Manhattan, a team of 30 computer...</p>
-                    </div>
-                </div>
-
-                <div class="mini-card">
-                    <img src="../../imgs/skills_reading/reading_no5.png" alt="">
-                    <div>
-                        <h4>Fear of the Unknown</h4>
-                        <p>American companies fear that innovation is the secret of success-and that they cannot innovate.
-                            And the small Umagic office in midtown Manhattan, a team of 30 computer...</p>
-                    </div>
-                </div>
-
-                <div class="button-div">
-                    <button>Xem tất cả >>></button>
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
 
     <div class="footer">
         <div class="copyright">
             <p><b>Copyright TheEngWay.com © 2023 - 2024</b></p>
-            <img src="../../imgs/logogov.png" alt="Bộ Công thương">
+            <img src="imgs/logogov.png" alt="Bộ Công thương">
         </div>
         <div class="contact_phone">
             <p><b>Contact us via phone numbers:</b></p>
@@ -317,13 +324,44 @@
             </div>
         </div>
     </div>
-
-    <div class="clear"></div>
-
 </div>
-<script type="text/javascript">
 
+<script type="text/javascript">
+    let contextPath = `${pageContext.request.contextPath}`;
+    let loggedInUser = `${sessionScope.loggedInUser}`;
+    let userType = `${sessionScope.loggedInUser.getUserType()}`
+    let username = `${sessionScope.loggedInUser.getUserName()}`;
+    let avatar = `${sessionScope.loggedInUser.getAvatar()}`;
+    let curLessons = null;
+
+    let lessonId = `${pageContext.request.getAttribute("lesson_id")}`;
+
+    let pathname = window.location.pathname;
+    let folderRegex = new RegExp(`^${pageContext.request.contextPath}/skillListening/[0-9]+$`);
+    let lessonRegex = new RegExp(`^${pageContext.request.contextPath}/skillListening/[0-9]+/([a-zA-Z0-9_]+)$`)
+
+    let demoLessonArray = `${pageContext.request.getAttribute("demo_lessons")}`;
+    let allLessonArray = `${pageContext.request.getAttribute("all_lessons")}`;
+    let lessonDataArray = `${pageContext.request.getAttribute("lesson_data")}`;
+    // Lesson contents variables
+    let commentClone = null;
+    let commentBtn = null;
+
+    // Change the home logo navigation based on usertype
+    switch(userType) {
+        case "Teacher":
+            document.querySelector("#home-navigation").href = contextPath + "/teacherHome";
+            break;
+        case "Student":
+            document.querySelector("#home-navigation").href = contextPath + "/studentHome";
+            break;
+        default:
+            document.querySelector("#home-navigation").href = contextPath + "/index";
+    }
 </script>
+<script src="js/toggleHomeBar.js"></script>
+<script type="module" src="js/loadContentDynamic.js"></script>
+<script type="text/javascript" src="js/commentRender.js"></script>
 </body>
 
 </html>

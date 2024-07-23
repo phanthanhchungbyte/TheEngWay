@@ -40,7 +40,7 @@
 }
 
 .main-content {
-    width: 93%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 2em;
     font-family: Libre_Franklin;
@@ -334,19 +334,37 @@
 }
 
 .createlesson-section {
-    background-color: #a6d283;
+    background-color: #464f8d;
     padding: 1.5em;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 10px;
     font-size: var(--fs-400);
     align-items: center;
-    margin: 5rem auto;
+    margin: 0 auto;
+    width: 90%;
+
+    h1, p {
+        color: white;
+    }
 
     .edit-title {
+        display: flex;
         font-family: Send_Flowers, sans-serif;
         text-align: left;
-        margin-bottom: 0.9rem;
+        justify-content: space-between;
+
         font-size: var(--fs-600);
+        button {
+            padding: 0.5rem 1.25rem;
+            border-radius: 10px;
+            background-color: papayawhip;
+            border: 2px white solid;
+            cursor: pointer;
+            &:hover {
+                background-color: white;
+            }
+        }
+
     }
 
     .edit-form-section {
@@ -400,50 +418,6 @@
                 }
             }
 
-            button.lesson-avatar-btn + dialog{
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                padding: 1.5em;
-                text-align: center;
-                div:first-child {
-                    margin-top: 1em;
-                    width: fit-content;
-                    margin-inline: auto;
-
-                    > img {
-                        outline: 1px dashed black;
-                        outline-offset: 3px;
-                    }
-                }
-
-                > ul {
-                    margin-top: 1em;
-                    display: grid;
-                    grid-template-columns: repeat(4, 1fr);
-                    column-gap: 0.7em;
-                    row-gap: 0.3em;
-                }
-
-                > ul img {
-                    &:hover {
-                        outline: 5px solid black;
-                        outline-offset: -5px;
-                        cursor: pointer;
-                    }
-                }
-
-                button {
-                    padding: 0.5em 1em;
-                    margin-top: 1em;
-                    outline: 1px dashed green;
-                    outline-offset: 5px;
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-            }
-
             input:focus {
                 outline: 1px solid black;
             }
@@ -471,14 +445,6 @@
 
         .lesson-content textarea {
             width: 90%;
-        }
-
-        /* For quiz section */
-        .createquiz-section div{
-            width: 95%;
-            margin: 0 auto;
-            margin-top: 1.5em;
-            font-weight: bold;
         }
     }
 
@@ -541,68 +507,22 @@
         }
     }
 
-    .toggle {
-        padding: 0.5em 0px;
-
-        input[type="checkbox"] {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            /* Right: 100vh to make the checkbox still interactable, but not visible on screen. */
-            right: 100vh;
-            cursor: pointer;
-        }
-
-        input[type="checkbox"] + label {
-            position: relative;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            width: fit-content;
-        }
-
-        input[type="checkbox"] + label::before {
-            display: inline-block;
-            margin-right: 0.5em;
-            content: "";
-            width: 4em;
-            height: 2em;
-            border-radius: 2em;
-            background-color: #DDD;
-            transition: background-color 200ms ease-in-out;
-        }
-
-        input[type="checkbox"]:focus + label::before {
-            outline: 1px solid rgb(149, 149, 149);
-        }
-
-        input[type="checkbox"]:checked + label::before {
-            background-color: rgb(155, 255, 92);
-        }
-
-        input[type="checkbox"] + label::after {
-            position: absolute;
-            content: "";
-            height: 1.7em;
-            width: 1.7em;
-            background-color: white;
-            left: 0.2em;
-            border-radius: 50%;
-            transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
-        }
-
-        input[type="checkbox"]:checked + label::after {
-            transform: translateX(110%);
-            background-color: hsl(133, 100%, 93%);
-        }
-
-    }
-
     .quiz-creator {
         background-color: white;
         border: 1px solid black;
         border-radius: 10px;
         padding-bottom: 1em;
+
+        .mc-quiz-title {
+            width: fit-content;
+            margin-left: 1em;
+            margin-top: 1em;
+
+            input {
+                margin-left: 1em;
+                padding: 0.5rem 0.75rem;
+            }
+        }
     }
 
     .quiz-creator .button-row {
@@ -921,5 +841,171 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+    }
+}
+
+/* For quiz section */
+.createquiz-section {
+    border-radius: 10px;
+    background-color: #464f8d;
+    padding-bottom: 2.5rem;
+    color: black;
+}
+
+.createquiz-section div{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    font-weight: bold;
+}
+
+.createquiz-section .quiztype-choose {
+    display: flex;
+    justify-content: space-between;
+}
+
+.createquiz-section .matching_quiz {
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: floralwhite;
+
+    .matching-title, .matching-creation-number {
+        margin-left: 1rem;
+        width: max-content;
+        display: flex;
+        justify-content: space-between;
+
+        input {
+            margin-left: 1rem;
+        }
+    }
+
+    .matching-creator {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        border-radius: 10px;
+        border: 1px solid black;
+        padding: 1em;
+
+        /* Style all of the inputs */
+        input:not([type="checkbox"]) {
+            padding-block: 0.5rem;
+            padding-inline: 0.15rem;
+            box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.24);
+            font-size: var(--fs-400);
+            font-family: Libre_Franklin, sans-serif;
+        }
+
+        input[type="checkbox"] {
+            width: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .matching-left {
+            width: 50%;
+            .matching-content {
+                padding: 0.2rem 2.5rem;
+            }
+            .matching-content-checkbox {
+                padding: 0.2rem 0.2rem;
+            }
+        }
+        .matching-right {
+            width: 50%;
+            .matching-content {
+                padding: 0.2rem 2.5rem;
+            }
+            .matching-content-checkbox {
+                padding: 0.2rem 0.2rem;
+            }
+        }
+        .checkbox-title {
+            display: flex;
+            p {
+                margin-left: 1.5rem;
+            }
+        }
+
+    }
+
+    .matching-mode-btn {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: 1px solid black;
+        background-color: #619b8f;
+        color: white;
+        font-weight: bold;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.createquiz-section .cloze_quiz {
+    background-color: floralwhite;
+    padding: 1rem;
+    border-radius: 10px;
+
+    section input[type = "text"] {
+        padding: 0.4rem 0.75rem;
+        margin-left: 1rem;
+    }
+
+    .control-cloze-quiz {
+        width: fit-content;
+        margin-left: 0;
+
+        button {
+            padding: 0.5rem 0.75rem;
+            background-color: #a9c880;
+            border-color: whitesmoke;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+
+    dialog:first-of-type {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 1rem;
+        margin-inline: auto;
+        text-align: center;
+        z-index: 3;
+        top: 50%;
+        transform: translateY(-50%);
+        height: fit-content;
+
+        .select-cloze-type-div {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+        select {
+            margin: 0 auto;
+            padding: 0.5rem 0.75rem;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.24);
+
+            option {
+                padding: 0.5rem 0.75rem;
+            }
+        }
+
+        button {
+            margin-top: 9ch
+        }
+    }
+
+    dialog:last-of-type {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 1rem;
+        margin-inline: auto;
+        text-align: center;
+        color: black;
+        z-index: 3;
+        top: 50%;
+        transform: translateY(-50%);
+        height: fit-content;
     }
 }

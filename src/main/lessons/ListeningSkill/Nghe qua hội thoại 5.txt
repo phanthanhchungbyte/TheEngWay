@@ -1,0 +1,117 @@
+<h2 style="text-align: center;"><span style="color: #3598db;">Lesson 5: A Dog's Tale</span></h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: center;"><span style="color: #e03e2d;"><em>C&aacute;c em h&atilde;y c&ugrave;ng xem video dưới đ&acirc;y nh&eacute;!</em></span></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;"><iframe src="https://www.youtube.com/embed/npZvAFbqX98" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: left; padding-left: 40px;"><span style="color: #e03e2d;"><em>Bảng từ mới:</em></span></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">
+<table style="border-collapse: collapse; width: 100.01%; height: 533.681px;" border="1"><colgroup><col style="width: 33.2931%;"><col style="width: 33.2931%;"><col style="width: 33.2931%;"></colgroup>
+<tbody>
+<tr style="height: 37.9167px;">
+<td><strong>English</strong></td>
+<td><strong>Tiếng Việt</strong></td>
+<td><strong>Audio</strong></td>
+</tr>
+<tr style="height: 37.9167px;">
+<td>horror film (n)</td>
+<td>phim kinh dị</td>
+<td>&nbsp;</td>
+</tr>
+<tr style="height: 37.9167px;">
+<td>
+<p>frightening (adj)</p>
+<p>/ˈfraɪtnɪŋ/</p>
+</td>
+<td>đ&aacute;ng sợ</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/f/fri/frigh/frightening__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9167px;">
+<td>
+<p>ghost (n)</p>
+<p>/ɡəʊst/</p>
+</td>
+<td>ma</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/g/gho/ghost/ghost__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9167px;">
+<td>
+<p>cottage (n)</p>
+<p>/ˈkɒtɪdʒ/</p>
+</td>
+<td>căn nh&agrave; tranh</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/cot/cotta/cottage__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9167px;">
+<td>
+<p>accident (n)</p>
+<p>/ˈ&aelig;ksɪdənt/</p>
+</td>
+<td>tai nạn</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/a/acc/accid/accident__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9167px;">
+<td>
+<p>howl (v)</p>
+<p>/haʊl/</p>
+</td>
+<td>h&uacute;</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/how/howl_/howl__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9167px;">
+<td>
+<p>chase (v)</p>
+<p>/tʃeɪs/</p>
+</td>
+<td>đuổi</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/cha/chase/chase__gb_3.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9167px;">
+<td>
+<p>skeleton (n)</p>
+<p>/ˈskelɪtn/</p>
+</td>
+<td>bộ xương</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/ske/skele/skeleton__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9167px;">
+<td>
+<p>logical (adj)</p>
+<p>/ˈlɒdʒɪkl/</p>
+</td>
+<td>mang t&iacute;nh logic</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/l/log/logic/logical__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9167px;">
+<td>
+<p>explanation (n)</p>
+<p>/ˌekspləˈneɪʃn/</p>
+</td>
+<td>lời giải th&iacute;ch</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/e/exp/expla/explanation__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 37.9167px;">
+<td>
+<p>story (n)</p>
+<p>/ˈstɔːri/</p>
+</td>
+<td>c&acirc;u chuyện</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/sto/story/story__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>

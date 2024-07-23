@@ -1,0 +1,200 @@
+<h2 style="text-align: center;"><span style="color: #3598db;">Lesson 1: A Clean Sweep</span></h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align: center;"><span style="color: #e03e2d;"><em>C&aacute;c em h&atilde;y c&ugrave;ng xem video dưới đ&acirc;y nh&eacute;!</em></span></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;"><span style="color: #e03e2d;"><em><iframe src="https://www.youtube.com/embed/tjzb7CJ9NP8" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></em></span></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: left; padding-left: 40px;"><span style="color: #e03e2d;"><em>Bảng từ mới:</em></span></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">
+<table style="border-collapse: collapse; width: 100.01%; height: 1212.08px;" border="1"><colgroup><col style="width: 33.2931%;"><col style="width: 33.2931%;"><col style="width: 33.2931%;"></colgroup>
+<tbody>
+<tr style="height: 35.9028px;">
+<td>English</td>
+<td>Tiếng Việt</td>
+<td>Nghe</td>
+</tr>
+<tr style="height: 106.273px;">
+<td>
+<p>housework (n)</p>
+<p>/ˈhaʊswɜːk/</p>
+</td>
+<td>việc nh&agrave;</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/hou/house/housework__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 106.273px;">
+<td>
+<p>milk (n)</p>
+<p>/mɪlk/</p>
+</td>
+<td>sữa</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/m/mil/milk_/milk__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 106.273px;">
+<td>
+<p>bread (n)</p>
+<p>/bred/</p>
+</td>
+<td>b&aacute;nh m&igrave;</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/bre/bread/bread__us_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 106.273px;">
+<td>
+<p>cup (n)</p>
+<p>/kʌp/</p>
+</td>
+<td>cốc</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/cup/cup__/cup__gb_3.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 106.273px;">
+<td>
+<p>washing up (n)</p>
+<p>/ˌwɒʃɪŋ ˈʌp/</p>
+</td>
+<td>rửa b&aacute;t</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/w/was/washi/washing_up_1_gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 106.273px;">
+<td>
+<p>cooking (n)</p>
+<p>/ˈkʊkɪŋ/</p>
+</td>
+<td>nấu ăn</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/coo/cooki/cooking__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>tidy (adj)</p>
+<p>/ˈtaɪdi/</p>
+</td>
+<td>sạch sẽ</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/tid/tidy_/tidy__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>rota (n)</p>
+<p>/ˈrəʊtə/</p>
+</td>
+<td>bảng ph&acirc;n c&ocirc;ng</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/r/rot/rota_/rota__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>shopping (n)</p>
+<p>/ˈʃɒpɪŋ/</p>
+</td>
+<td>mua sắm</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/sho/shopp/shopping__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>clean (v)</p>
+<p>/kliːn/</p>
+</td>
+<td>dọn dẹp</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/cle/clean/clean__gb_2.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>bathroom (n)</p>
+<p>/ˈbɑː&theta;ruːm/</p>
+</td>
+<td>ph&ograve;ng tắm</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/b/bat/bathr/bathroom__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>living room (n)</p>
+<p>/ˈlɪvɪŋ ruːm/</p>
+</td>
+<td>ph&ograve;ng kh&aacute;ch</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/l/liv/livin/living_room_1_gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>week (n)</p>
+<p>/wiːk/</p>
+</td>
+<td>tuần</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/w/wee/week_/week__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>Monday (n)</p>
+<p>/ˈmʌndeɪ/</p>
+</td>
+<td>thứ hai</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/m/mon/monda/monday__gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>Friday (n)</p>
+<p>/ˈfraɪdeɪ/</p>
+</td>
+<td>thứ s&aacute;u</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/f/fri/frida/friday_1_gb_1.mp3" controls="controls"></audio></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>&nbsp;Wednesday (n)</p>
+<p>/ˈwenzdeɪ/</p>
+</td>
+<td>thứ tư&nbsp;</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/w/wed/wedne/wednesday_1_gb_1.mp3" controls="controls"></audio>&nbsp;</td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>&nbsp;Thursday (n)</p>
+<p>/ˈ&theta;ɜːzdeɪ/</p>
+</td>
+<td>&nbsp;thứ năm</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/thu/thurs/thursday_1_gb_1.mp3" controls="controls"></audio>&nbsp;</td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>&nbsp;Tuesday (n)</p>
+<p>/ˈtjuːzdeɪ/</p>
+</td>
+<td>thứ ba&nbsp;</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/tue/tuesd/tuesday__gb_1.mp3" controls="controls"></audio>&nbsp;</td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>weekend (n)</p>
+<p>/ˌwiːkˈend/</p>
+</td>
+<td>cuối tuần&nbsp;</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/w/wee/weeke/weekend__gb_1.mp3" controls="controls"></audio>&nbsp;</td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>&nbsp;floor (n)</p>
+<p>/flɔː(r)/</p>
+</td>
+<td>s&agrave;n&nbsp;</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/f/flo/floor/floor__gb_3.mp3" controls="controls"></audio>&nbsp;</td>
+</tr>
+<tr style="height: 35.9028px;">
+<td>
+<p>&nbsp;house (n)</p>
+<p>/haʊs/</p>
+</td>
+<td>nh&agrave;&nbsp;</td>
+<td><audio src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/hou/house/house__gb_3.mp3" controls="controls"></audio>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>

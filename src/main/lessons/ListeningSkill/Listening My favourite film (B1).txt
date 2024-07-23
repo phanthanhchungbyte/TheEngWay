@@ -1,0 +1,77 @@
+<h2 style="text-align: center;"><span style="color: #3598db;">My favorite film</span></h2>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;"><em><span style="color: #e03e2d;">C&aacute;c em h&atilde;y nghe audio dưới đ&acirc;y:</span></em></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;"><audio src="https://bd748f642cf8b253d59c-5c160b94f727c0d27cbeccc854542bc6.ssl.cf1.rackcdn.com/B1_my_favourite_film.mp3" controls="controls"></audio></div>
+<div style="text-align: center;">&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><em><span style="color: #e03e2d;">Transcript:</span></em></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div style="text-align: center;">
+<table style="border-collapse: collapse; width: 100.01%; height: 229.317px;" border="1"><colgroup><col style="width: 49.9879%;"><col style="width: 49.9879%;"></colgroup>
+<tbody>
+<tr style="height: 49.8032px; background-color: #c2e0f4;">
+<td><strong>English</strong></td>
+<td><strong>Tiếng Việt</strong></td>
+</tr>
+<tr style="height: 35.9028px;">
+<td style="text-align: left;">
+<p><strong>A (girl)</strong></p>
+<p>I really like&nbsp;<em>The Notebook</em>; it's a romantic classic. The story is about a poor boy, called Noah, who meets a rich girl, called Allie, and they fall in love over one summer. But of course there are problems. Allie's parents don't approve of Noah because he's poor and they get separated, then a lot of time passes before they can get together again. She goes away to college and he writes to her every day, but she doesn't get the letters. Then after quite a long time, Noah buys an old house which he promised to restore for Allie. He does it up and she sees a newspaper article about it and goes to find him again. You can probably guess the rest, but it's a bit complicated because she is engaged to another man. Noah is played by Ryan Gosling, who's my favourite actor, and he stops the film being too soppy &ndash; but you still cry a lot at the end. Rachel McAdams is really good too, as Allie.</p>
+</td>
+<td style="text-align: left;">
+<p><strong>A (c&ocirc; g&aacute;i)</strong></p>
+<p>T&ocirc;i thực sự th&iacute;ch The Notebook; đ&oacute; l&agrave; một t&aacute;c phẩm kinh điển l&atilde;ng mạn. C&acirc;u chuyện kể về một ch&agrave;ng trai ngh&egrave;o t&ecirc;n l&agrave; Noah gặp một c&ocirc; g&aacute;i gi&agrave;u c&oacute; t&ecirc;n l&agrave; Allie v&agrave; họ y&ecirc;u nhau trong một m&ugrave;a h&egrave;. Nhưng tất nhi&ecirc;n l&agrave; c&oacute; vấn đề. Cha mẹ của Allie kh&ocirc;ng chấp nhận Noah v&igrave; anh ấy ngh&egrave;o v&agrave; họ phải xa nhau, sau đ&oacute; rất nhiều thời gian tr&ocirc;i qua họ mới c&oacute; thể gặp lại nhau. C&ocirc; đi học đại học v&agrave; anh viết thư cho c&ocirc; mỗi ng&agrave;y, nhưng c&ocirc; kh&ocirc;ng nhận được thư. Sau một thời gian kh&aacute; d&agrave;i, Noah mua được một ng&ocirc;i nh&agrave; cũ m&agrave; anh hứa sẽ sửa chữa lại cho Allie. Anh ấy l&agrave;m điều đ&oacute; v&agrave; c&ocirc; ấy nh&igrave;n thấy một b&agrave;i b&aacute;o về n&oacute; v&agrave; đi t&igrave;m anh ấy một lần nữa. Bạn c&oacute; thể đo&aacute;n được phần c&ograve;n lại, nhưng n&oacute; hơi phức tạp v&igrave; c&ocirc; ấy đ&atilde; đ&iacute;nh h&ocirc;n với một người đ&agrave;n &ocirc;ng kh&aacute;c. Noah do Ryan Gosling thủ vai, diễn vi&ecirc;n y&ecirc;u th&iacute;ch của t&ocirc;i, v&agrave; anh ấy khiến bộ phim trở n&ecirc;n qu&aacute; buồn tẻ - nhưng cuối c&ugrave;ng bạn vẫn kh&oacute;c rất nhiều. Rachel McAdams cũng rất xuất sắc trong vai Allie.</p>
+</td>
+</tr>
+<tr style="height: 35.9028px;">
+<td style="text-align: left;">
+<p><strong>B (boy)</strong></p>
+<p>I think my favourite film is&nbsp;<em>Skyfall</em>, the last James Bond movie. It stars Daniel Craig again and Javier Bardem is this really evil baddie. They're both great, and so is Judi Dench as M, Bond's boss. It's a bit different to other Bond films. The story is more important, although there is still a lot of action. It's really well filmed, especially in the scenes which are shot in Shanghai and Scotland, and it's really exciting, of course. Bond is also a bit different &ndash; although he does amazing things, he seems older and that makes him more human and the story more realistic. Oh, the song by Adele is great, too. You know it won an Oscar?</p>
+</td>
+<td style="text-align: left;">
+<p><strong>B (cậu b&eacute;)</strong></p>
+<p>T&ocirc;i nghĩ bộ phim y&ecirc;u th&iacute;ch của t&ocirc;i l&agrave; Skyfall, bộ phim James Bond cuối c&ugrave;ng. Phim c&oacute; sự tham gia của Daniel Craig một lần nữa v&agrave; Javier Bardem ch&iacute;nh l&agrave; kẻ phản diện thực sự độc &aacute;c n&agrave;y. Cả hai đều tuyệt vời, v&agrave; Judi Dench trong vai M, sếp của Bond cũng vậy. N&oacute; hơi kh&aacute;c so với c&aacute;c phim Bond kh&aacute;c. C&acirc;u chuyện quan trọng hơn, mặc d&ugrave; vẫn c&oacute; nhiều h&agrave;nh động. N&oacute; được quay rất tốt, đặc biệt l&agrave; những cảnh quay ở Thượng Hải v&agrave; Scotland, v&agrave; tất nhi&ecirc;n l&agrave; n&oacute; thực sự rất th&uacute; vị. Bond cũng hơi kh&aacute;c một ch&uacute;t &ndash; mặc d&ugrave; anh ấy l&agrave;m được những điều đ&aacute;ng kinh ngạc nhưng anh ấy c&oacute; vẻ gi&agrave; hơn v&agrave; điều đ&oacute; khiến anh ấy trở n&ecirc;n giống con người hơn v&agrave; c&acirc;u chuyện cũng thực tế hơn. Ồ, b&agrave;i h&aacute;t của Adele cũng hay lắm. Bạn biết n&oacute; đ&atilde; gi&agrave;nh được giải Oscar?</p>
+</td>
+</tr>
+<tr style="height: 35.9028px;">
+<td style="text-align: left;">
+<p><strong>C (girl)</strong></p>
+<p>It's not a very recent film, but I love&nbsp;<em>Pride and Prejudice</em> &ndash;&nbsp;the version with Keira Knightley as Elizabeth Bennet and Matthew Macfadyen as Mr Darcy. The story is really clever and interesting, besides being romantic. It's all about how we tend to jump to conclusions about people and we're often completely wrong. Elizabeth thinks Mr Darcy is stuck up and snobbish at the beginning of the film, but at the end she realises she has been completely wrong and he isn't like that at all. She also realises he has an enormous house and that maybe helps her fall in love with him too! After I saw the film I read the book by Jane Austen and I really recommend that too. Although it was published 200 years ago, it's still a great read and really funny in parts.</p>
+</td>
+<td style="text-align: left;">
+<p><strong>C (c&ocirc; g&aacute;i)</strong></p>
+<p>Đ&acirc;y kh&ocirc;ng phải l&agrave; một bộ phim mới ra mắt nhưng t&ocirc;i y&ecirc;u th&iacute;ch Pride and Prejudice - phi&ecirc;n bản c&oacute; Keira Knightley trong vai Elizabeth Bennet v&agrave; Matthew Macfadyen trong vai Mr Darcy. C&acirc;u chuyện thực sự rất th&ocirc;ng minh v&agrave; th&uacute; vị, b&ecirc;n cạnh đ&oacute; l&agrave; sự l&atilde;ng mạn. Tất cả đều nằm ở c&aacute;ch ch&uacute;ng ta c&oacute; xu hướng đưa ra kết luận vội v&agrave;ng về mọi người v&agrave; ch&uacute;ng ta thường ho&agrave;n to&agrave;n sai lầm. Elizabeth cho rằng anh Darcy bế tắc v&agrave; hợm hĩnh ở đầu phim, nhưng cuối phim c&ocirc; nhận ra m&igrave;nh đ&atilde; ho&agrave;n to&agrave;n sai lầm v&agrave; anh ấy kh&ocirc;ng hề như vậy ch&uacute;t n&agrave;o. C&ocirc; cũng nhận ra anh c&oacute; một ng&ocirc;i nh&agrave; khổng lồ v&agrave; điều đ&oacute; c&oacute; thể khiến c&ocirc; y&ecirc;u anh! Sau khi xem bộ phim, t&ocirc;i đ&atilde; đọc cuốn s&aacute;ch của Jane Austen v&agrave; t&ocirc;i cũng thực sự khuy&ecirc;n bạn n&ecirc;n đọc cuốn s&aacute;ch đ&oacute;. Mặc d&ugrave; n&oacute; đ&atilde; được xuất bản c&aacute;ch đ&acirc;y 200 năm nhưng n&oacute; vẫn l&agrave; một cuốn s&aacute;ch hay v&agrave; c&oacute; nhiều phần thực sự h&agrave;i hước.</p>
+</td>
+</tr>
+<tr style="height: 35.9028px;">
+<td style="text-align: left;">
+<p><strong>D (boy)</strong></p>
+<p>My favourite film has to be&nbsp;<em>The Matrix</em>. Even though it was made back in 1999, it still feels really modern. It's about this ordinary man, Neo, played by Keanu Reeves, who works with computers during the day and is a hacker at night. One day he is contacted by a woman who introduces him to a very strange man: Morpheus. Morpheus explains to Neo that what he thinks of as real is actually fiction and the world is run by evil machines who have imprisoned and tricked the human race. Laurence Fishburne is terrific as Morpheus, and Keanu Reeves is excellent, but the best thing about the film is the special effects. I can watch it again and again.</p>
+</td>
+<td style="text-align: left;">
+<p><strong>D (cậu b&eacute;)</strong></p>
+<p>Bộ phim y&ecirc;u th&iacute;ch của t&ocirc;i phải l&agrave; The Matrix. Mặc d&ugrave; được sản xuất từ ​​năm 1999 nhưng n&oacute; vẫn mang lại cảm gi&aacute;c rất hiện đại. Phim kể về người đ&agrave;n &ocirc;ng b&igrave;nh thường Neo, do Keanu Reeves thủ vai, người l&agrave;m việc với m&aacute;y t&iacute;nh v&agrave;o ban ng&agrave;y v&agrave; l&agrave; một hacker v&agrave;o ban đ&ecirc;m. Một ng&agrave;y nọ, anh được một người phụ nữ li&ecirc;n lạc v&agrave; giới thiệu cho anh một người đ&agrave;n &ocirc;ng rất lạ: Morpheus. Morpheus giải th&iacute;ch với Neo rằng những g&igrave; anh ta nghĩ l&agrave; c&oacute; thật thực ra chỉ l&agrave; hư cấu v&agrave; thế giới được điều h&agrave;nh bởi những cỗ m&aacute;y độc &aacute;c đ&atilde; giam cầm v&agrave; lừa gạt lo&agrave;i người. Laurence Fishburne xuất sắc trong vai Morpheus, v&agrave; Keanu Reeves rất xuất sắc, nhưng điều hay nhất của bộ phim l&agrave; những hiệu ứng đặc biệt. T&ocirc;i c&oacute; thể xem đi xem lại.</p>
+</td>
+</tr>
+<tr style="height: 35.9028px;">
+<td style="text-align: left;">
+<p><strong>E (girl)</strong></p>
+<p><em>Let the Right One In</em> is my favourite film. There are two versions, the first is Swedish and the second American &ndash; I prefer the original, Swedish version. It's a modern vampire film and also a kind of love story, but it's really unsentimental and a bit scary in places. Oskar is a young boy with a lot of problems. He is being bullied at school and wants revenge on the bullies. Then some new neighbours move in next door and he becomes friends with Eli, a beautiful but strange girl. I won't tell you any more, because it will spoil the story, but expect a serial killer, a lot of violence and blood-drinking. If you like that kind of thing, you'll love this.</p>
+</td>
+<td style="text-align: left;">
+<p><strong>E (c&ocirc; g&aacute;i)</strong></p>
+<p>Let the Right One In l&agrave; bộ phim t&ocirc;i y&ecirc;u th&iacute;ch nhất. C&oacute; hai phi&ecirc;n bản, phi&ecirc;n bản đầu ti&ecirc;n l&agrave; tiếng Thụy Điển v&agrave; phi&ecirc;n bản thứ hai l&agrave; của Mỹ &ndash; t&ocirc;i th&iacute;ch phi&ecirc;n bản gốc tiếng Thụy Điển hơn. Đ&oacute; l&agrave; một bộ phim về ma c&agrave; rồng hiện đại v&agrave; cũng l&agrave; một thể loại truyện t&igrave;nh y&ecirc;u, nhưng n&oacute; thực sự v&ocirc; cảm v&agrave; c&oacute; đ&ocirc;i chỗ hơi đ&aacute;ng sợ. Oskar l&agrave; một cậu b&eacute; c&oacute; rất nhiều vấn đề. Anh ấy đang bị bắt nạt ở trường v&agrave; muốn trả th&ugrave; những kẻ bắt nạt. Sau đ&oacute;, một số người h&agrave;ng x&oacute;m mới chuyển đến sống cạnh nh&agrave; v&agrave; anh kết bạn với Eli, một c&ocirc; g&aacute;i xinh đẹp nhưng xa lạ. T&ocirc;i sẽ kh&ocirc;ng kể cho bạn th&ecirc;m nữa, v&igrave; n&oacute; sẽ l&agrave;m hỏng c&acirc;u chuyện, nhưng h&atilde;y chờ đợi một kẻ giết người h&agrave;ng loạt, nhiều cảnh bạo lực v&agrave; uống m&aacute;u. Nếu bạn th&iacute;ch điều đ&oacute;, bạn sẽ th&iacute;ch điều n&agrave;y.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</div>

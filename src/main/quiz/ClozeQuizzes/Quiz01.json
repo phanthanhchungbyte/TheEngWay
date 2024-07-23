@@ -1,0 +1,21 @@
+[ {
+  "questionId" : 1,
+  "question" : "What is the color of rose?",
+  "options" : [ {
+    "optionId" : 1,
+    "optionText" : "Red",
+    "isCorrect" : true
+  }, {
+    "optionId" : 2,
+    "optionText" : "Blue",
+    "isCorrect" : false
+  }, {
+    "optionId" : 3,
+    "optionText" : "Pink",
+    "isCorrect" : false
+  }, {
+    "optionId" : 4,
+    "optionText" : "Orange",
+    "isCorrect" : false
+  } ]
+} ]

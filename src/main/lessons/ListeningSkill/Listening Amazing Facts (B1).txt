@@ -1,0 +1,184 @@
+<h2 style="text-align: center;"><span style="color: #3598db;">Amazing facts</span></h2>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;"><em><span style="color: #e03e2d;">C&aacute;c em h&atilde;y nghe audio dưới đ&acirc;y:</span></em></div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;">&nbsp;</div>
+<div style="text-align: center;"><audio src="https://bd748f642cf8b253d59c-5c160b94f727c0d27cbeccc854542bc6.ssl.cf1.rackcdn.com/B1_amazing_facts.mp3" controls="controls"></audio></div>
+<div style="text-align: center;">&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><em><span style="color: #e03e2d;">Transcript:</span></em></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div style="text-align: center;">
+<table style="border-collapse: collapse; width: 100.01%; height: 49.8056px;" border="1"><colgroup><col style="width: 49.9879%;"><col style="width: 49.9879%;"></colgroup>
+<tbody>
+<tr style="height: 49.8056px; background-color: #c2e0f4;">
+<td><strong>English</strong></td>
+<td><strong>Tiếng Việt</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:</strong> Hey, I'm reading this really interesting article about the human body.</p>
+</td>
+<td style="text-align: left;"><strong>A:</strong> N&agrave;y, t&ocirc;i đang đọc một b&agrave;i viết rất th&uacute; vị về cơ thể con người.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:&nbsp;</strong>Yeah? Well, we know all about that from biology lessons.</p>
+</td>
+<td style="text-align: left;"><strong>B:</strong> Ừ? Ch&agrave;, ch&uacute;ng ta biết tất cả về điều đ&oacute; từ những b&agrave;i học sinh học.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:</strong> No, we didn't learn much at all at school! They're discovering loads more things all the time. Really amazing things! Did you know that only about one tenth of the cells in your body are really you? The rest are bacteria.</p>
+</td>
+<td style="text-align: left;"><strong>A:</strong> Kh&ocirc;ng, ch&uacute;ng t&ocirc;i kh&ocirc;ng học được g&igrave; nhiều ở trường! Họ lu&ocirc;n kh&aacute;m ph&aacute; được nhiều thứ hơn. Những điều thực sự tuyệt vời! Bạn c&oacute; biết rằng chỉ c&oacute; khoảng 1/10 tế b&agrave;o trong cơ thể bạn thực sự l&agrave; bạn? Phần c&ograve;n lại l&agrave; vi khuẩn.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:</strong> What? I'm not really me?</p>
+</td>
+<td style="text-align: left;"><strong>B:</strong> C&aacute;i g&igrave;? T&ocirc;i thực sự kh&ocirc;ng phải l&agrave; t&ocirc;i?</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:</strong> No, of course you are you, but you also have millions, or trillions, of bacteria in you.</p>
+</td>
+<td style="text-align: left;"><strong>A:</strong> Kh&ocirc;ng, tất nhi&ecirc;n bạn l&agrave; bạn, nhưng bạn cũng c&oacute; h&agrave;ng triệu hoặc h&agrave;ng ngh&igrave;n tỷ vi khuẩn trong người.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:</strong> Eeeeuuugh!</p>
+</td>
+<td style="text-align: left;"><strong>B: </strong>Eoooooo!</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:&nbsp;</strong>No, they're mostly really helpful. Someone did an experiment to see if animals can live without bacteria, and he found that a lot of them died or had to have a special diet. Animals need bacteria to digest food, you see. So we're better off with bacteria.</p>
+</td>
+<td style="text-align: left;"><strong>A: </strong>Kh&ocirc;ng, ch&uacute;ng hầu như thực sự hữu &iacute;ch. Ai đ&oacute; đ&atilde; l&agrave;m một th&iacute; nghiệm để xem liệu động vật c&oacute; thể sống m&agrave; kh&ocirc;ng cần vi khuẩn hay kh&ocirc;ng v&agrave; &ocirc;ng ph&aacute;t hiện ra rằng rất nhiều trong số ch&uacute;ng đ&atilde; chết hoặc phải c&oacute; một chế độ ăn ki&ecirc;ng đặc biệt. Động vật cần vi khuẩn để ti&ecirc;u h&oacute;a thức ăn, bạn thấy đấy. V&igrave; vậy, ch&uacute;ng ta sẽ tốt hơn với vi khuẩn.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:&nbsp;</strong>Unless the bacteria are bad.</p>
+</td>
+<td style="text-align: left;"><strong>B:</strong> Trừ khi vi khuẩn xấu.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:&nbsp;</strong>Unless they are bad, but they're nearly all good. Oh yeah, and going back to cells, do you know how many cells you have in your body?</p>
+</td>
+<td style="text-align: left;"><strong>A:</strong> Trừ khi ch&uacute;ng xấu, nhưng hầu hết ch&uacute;ng đều tốt. Ồ v&acirc;ng, v&agrave; quay trở lại với tế b&agrave;o, bạn c&oacute; biết cơ thể m&igrave;nh c&oacute; bao nhi&ecirc;u tế b&agrave;o kh&ocirc;ng?</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:</strong> Quite a lot, I'd say. A good few.</p>
+</td>
+<td style="text-align: left;"><strong>B:</strong> Kh&aacute; nhiều, t&ocirc;i c&oacute; thể n&oacute;i vậy. Một số &iacute;t tốt.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:</strong> Yeah, but how many?</p>
+</td>
+<td style="text-align: left;"><strong>A: </strong>Ừ, nhưng c&oacute; bao nhi&ecirc;u?</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:</strong> I don't know. I'm not mathematical.</p>
+</td>
+<td style="text-align: left;"><strong>B: </strong>T&ocirc;i kh&ocirc;ng biết. T&ocirc;i kh&ocirc;ng phải l&agrave; nh&agrave; to&aacute;n học.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:&nbsp;</strong>7 octillion! That's 7 plus 27 noughts.</p>
+</td>
+<td style="text-align: left;"><strong>A:</strong> 7 octillion! Đ&oacute; l&agrave; 7 th&ecirc;m 27 số 0.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:</strong> I knew it was a lot.</p>
+</td>
+<td style="text-align: left;"><strong>B: </strong>T&ocirc;i biết l&agrave; rất nhiều.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:&nbsp;</strong>OK, that's an amazingly huge number, almost impossible to imagine. But the really weird thing is that most of the atoms are empty space, just air or nothingness. And if you took out the empty space, you could fit your body inside a tiny cube which measures one 500th of a centimetre on either side. That's a box measuring 0.002 of a centimetre on each side. You'd be much too small to see.</p>
+</td>
+<td style="text-align: left;"><strong>A:</strong> Được rồi, đ&oacute; l&agrave; một con số khổng lồ đ&aacute;ng kinh ngạc, gần như kh&ocirc;ng thể tưởng tượng được. Nhưng điều thực sự kỳ lạ l&agrave; hầu hết c&aacute;c nguy&ecirc;n tử đều l&agrave; kh&ocirc;ng gian trống rỗng, chỉ l&agrave; kh&ocirc;ng kh&iacute; hoặc hư v&ocirc;. V&agrave; nếu bạn loại bỏ khoảng trống, bạn c&oacute; thể đặt cơ thể m&igrave;nh v&agrave;o trong một khối lập phương nhỏ c&oacute; k&iacute;ch thước 1/500 cm ở mỗi cạnh. Đ&oacute; l&agrave; một c&aacute;i hộp c&oacute; k&iacute;ch thước 0,002 cm mỗi cạnh. Bạn sẽ qu&aacute; nhỏ để c&oacute; thể nh&igrave;n thấy.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:</strong>&nbsp;Mmm, I can imagine that. It sounds like something that would happen in a really bad Hollywood movie. You know, a mad scientist goes: (<em>funny voice</em>) 'I'm going to extract all the air from your body'. OK, enough facts for one day.</p>
+</td>
+<td style="text-align: left;"><strong>B:</strong> Mmm, t&ocirc;i c&oacute; thể tưởng tượng được điều đ&oacute;. Nghe c&oacute; vẻ như điều g&igrave; đ&oacute; sẽ xảy ra trong một bộ phim Hollywood thực sự tồi tệ. Bạn biết đấy, một nh&agrave; khoa học đi&ecirc;n đ&atilde; n&oacute;i: (giọng h&agrave;i hước) 'T&ocirc;i sẽ h&uacute;t hết kh&ocirc;ng kh&iacute; ra khỏi cơ thể bạn'. Được rồi, đủ th&ocirc;ng tin cho một ng&agrave;y rồi.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:&nbsp;</strong>Don't go! One last thing, did you know &hellip;</p>
+</td>
+<td style="text-align: left;"><strong>A:</strong> Đừng đi! Một điều cuối c&ugrave;ng, bạn c&oacute; biết&hellip;</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:</strong> No.</p>
+</td>
+<td style="text-align: left;"><strong>B: </strong>Kh&ocirc;ng.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:&nbsp;</strong>Did you know that you probably have mites in your eyelashes?</p>
+</td>
+<td style="text-align: left;"><strong>A:</strong> Bạn c&oacute; biết rằng c&oacute; thể c&oacute; ve trong l&ocirc;ng mi của bạn kh&ocirc;ng?</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:&nbsp;</strong>Mites in my eyelashes? What are mites exactly anyway?</p>
+</td>
+<td style="text-align: left;"><strong>B:</strong> Con ve trong l&ocirc;ng mi của t&ocirc;i? Ch&iacute;nh x&aacute;c th&igrave; bọ ve l&agrave; g&igrave;?</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:</strong> Yeah, they're very small creatures, like insects, only not insects. They're about a third of a millimetre long, so you can't really see them. These particular mites live in eyelashes and eyebrows.</p>
+</td>
+<td style="text-align: left;"><strong>A: </strong>V&acirc;ng, ch&uacute;ng l&agrave; những sinh vật rất nhỏ, giống như c&ocirc;n tr&ugrave;ng, chỉ c&oacute; điều l&agrave; kh&ocirc;ng phải c&ocirc;n tr&ugrave;ng. Ch&uacute;ng d&agrave;i khoảng 1/3 milimet n&ecirc;n bạn thực sự kh&ocirc;ng thể nh&igrave;n thấy ch&uacute;ng. Những con ve đặc biệt n&agrave;y sống ở l&ocirc;ng mi v&agrave; l&ocirc;ng m&agrave;y.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:</strong> But in mine?</p>
+</td>
+<td style="text-align: left;"><strong>B:</strong> Nhưng b&ecirc;n trong t&ocirc;i?</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:&nbsp;</strong>Well, maybe not. Only about 50% of people have them, and more older people. So you might not have any. Anyway, they're completely harmless, they just eat dead skin.</p>
+</td>
+<td style="text-align: left;"><strong>A: </strong>V&acirc;ng, c&oacute; lẽ l&agrave; kh&ocirc;ng. Chỉ c&oacute; khoảng 50% d&acirc;n số mắc phải, số người lớn tuổi c&ograve;n nhiều hơn. V&igrave; vậy, bạn c&oacute; thể kh&ocirc;ng c&oacute; bất kỳ. D&ugrave; sao th&igrave; ch&uacute;ng ho&agrave;n to&agrave;n v&ocirc; hại, ch&uacute;ng chỉ ăn da chết m&agrave; th&ocirc;i.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:</strong> Yeah, right, harmless. I really would have preferred not to know that.</p>
+</td>
+<td style="text-align: left;"><strong>B:</strong> Ừ, đ&uacute;ng rồi, v&ocirc; hại. T&ocirc;i thực sự kh&ocirc;ng muốn biết điều đ&oacute; hơn.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>A:</strong> Sorry.</p>
+</td>
+<td style="text-align: left;"><strong>A:</strong> Xin lỗi.</td>
+</tr>
+<tr>
+<td style="text-align: left;">
+<p><strong>B:</strong> I mean, really!</p>
+</td>
+<td style="text-align: left;"><strong>B:&nbsp;</strong>Thiệt t&igrave;nh!</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</div>

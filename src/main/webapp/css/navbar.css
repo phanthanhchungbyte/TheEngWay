@@ -12,11 +12,19 @@
     src: url(../fonts/LibreFranklin-Regular.ttf);
 }
 
+body {
+    background:
+            calc(.9*39px) calc(.9*39px)/calc(2*39px) calc(2*39px) conic-gradient(at 20% 20%, #0000 75%, #7254ED 0),
+            calc(-.1*39px) calc(-.1*39px)/calc(2*39px) calc(2*39px) conic-gradient(at 20% 20%, #0000 75%, #7254ED 0),
+            calc(.7*39px) calc(.7*39px)/calc(2*39px) calc(2*39px) conic-gradient(at 40% 40%, #0000 75%, #5D0CFF 0),
+            calc(-.3*39px) calc(-.3*39px)/calc(2*39px) calc(2*39px) conic-gradient(at 40% 40%, #0000 75%, #5D0CFF 0),
+            conic-gradient(from 90deg at 20% 20%, #7254ED 25%, #5D0CFF 0) 0 0/39px 39px;
+}
 
 :root {
-    --maincolor: #fff5dc;
+    --maincolor: #1f1a58;
     --navbuttons: #e6842a;
-    --background: #97cecc;
+    --background: #b4befe;
     --oxford-blue: #011638;
     --fs-xl: 3rem;
     --fs-lg: 1.75rem;
@@ -30,7 +38,7 @@
 .container {
     max-width: 1284px;
     margin: 0 auto;
-    background-color: #97CECC;
+    background-color: #b4befe;
 }
 
 @media only screen and (width >= 1000px) {
@@ -38,6 +46,11 @@
         padding: 1em 1em;
         background-color: var(--maincolor);
         display: flex;
+
+        .logo h1 {
+            font-family: Libre_Franklin, sans-serif;
+            color: white;
+        }
 
         div {
             width: 20%;
@@ -53,7 +66,7 @@
         .menu-items {
             width: 80%;
             display: flex;
-            font-family: Libre_Franklin sans-serif;
+            font-family: Libre_Franklin, sans-serif;
             justify-content: space-evenly;
             align-items: center;
         }
@@ -66,7 +79,6 @@
                 width: 100%;
                 padding: 0.45em 0px;
                 padding-left: 2rem;
-                border-radius: 15px;
             }
 
             i {
@@ -77,11 +89,14 @@
         }
         li:not(:nth-child(1)) {
             padding: 0.5em 1em;
-            background-color: var(--navbuttons);
+            background-color: #1f1a58;
             border-radius: 8px;
 
             a {
+                border-radius: 10px;
                 color: white;
+                border: 2px solid white;
+                padding: 0.5rem 1rem;
             }
         }
 
@@ -98,16 +113,11 @@
         position: relative;
         z-index: 2;
         width: 100%;
-        font-family: Libre_Franklin sans-serif;
+        font-family: Libre_Franklin, sans-serif;
         padding: 1em 0;
 
-        .logo {
-            margin: 2em 1em;
-        }
-
-        .logo img {
-            min-width: 100px;
-            width: 10%;
+        .logo h1 {
+            color: white;
         }
 
 
@@ -118,7 +128,7 @@
             top: 100%;
             width: 100%;
             left: 0;
-            background-color: #fe640b;
+            background-color: #1f1a58;
             transform: scale(1, 0);
             transform-origin: top;
             transition: transform 400ms ease-in-out;
@@ -131,7 +141,6 @@
                 padding: 0.45em 0px;
                 min-width: 50%;
                 padding-left: 2rem;
-                border-radius: 15px;
             }
 
             i {
@@ -189,7 +198,7 @@
         .nav-toggle-label span::before,
         .nav-toggle-label span::after {
             display: block;
-            background-color: black;
+            background-color: white;
             height: 4px;
             width: 2em;
             border-radius: 2px;

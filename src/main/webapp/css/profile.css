@@ -1,620 +1,292 @@
-@font-face {
-    font-family: Libre_Franklin;
-    src: url(../fonts/LibreFranklin-Regular.ttf);
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: disc;
 }
 
-@font-face {
-    font-family: Segoe_Script;
-    src: url(../fonts/Segoe-Script.ttf);
-}
-
-@font-face {
-    font-family: Send_Flowers;
-    src: url(../fonts/SendFlowers-Regular.ttf);
-}
-
-:root {
-    --skin-color: #fff5dc;
-    --fs-xl: 3rem;
-    --fs-lg: 1.75rem;
-    --fs-600: 1.5rem;
-    --fs-500: 1.25rem;
-    --fs-400: 1rem;
-    --fs-300: 0.75rem;
-    --fs-200: 0.5rem;
-    --progress:
-            linear-gradient(#fff8,#fff0),
-            repeating-linear-gradient(135deg,#0003 0 10px,#0000 0 20px),
-            #31c6f7;
-}
-
-.banner {
-    width: 93%;
-    margin: 0 auto;
-    display:block;
-    margin-top: 20px;
-}
-
-.banner img {
-    width: 100%;
-}
-
-.main-content {
-    width: 93%;
-    margin: 0 auto;
-    margin-top: 2em;
-    font-family: Libre_Franklin;
-}
-
-.student-profile {
-    section.wall-student-card {
-        background-color: #a6d283;
-        padding: 1.5em;
-        border: 1px solid black;
-        border-radius: 10px;
-        font-size: var(--fs-400);
-    }
-
-    .student-maininfo {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding-bottom: 1rem;
-
-        .student-info {
-            display: flex;
-            width: 50%;
-        }
-
-        .student-info .student-avatar {
-            text-align: center;
-        }
-
-        .student-info .student-avatar h2{
-            margin-top: 0.5em;
-        }
-
-        .student-info .student-bio{
-            margin-left: 15%;
-            line-height: 2.15rem;
-
-            p {
-                padding-left: 1em;
-            }
-
-            p:last-child {
-                margin-top: 1em;
-                font-style: italic;
-            }
-
-            p:last-child > a {
-                color: blue;
-
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-        }
-
-        .student-info .student-avatar img {
-            border-radius: 50%;
-        }
-
-        .student-buttonside {
-            width: 50%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .student-buttons {
-            width: 30%;
-            margin-right: 10%;
-
-            li {
-                margin-top: 0.5em;
-            }
-
-            li button {
-                width: 100%;
-                padding: 0.45rem;
-                min-width: fit-content;
-                border-radius: 10px;
-                display: flex;
-                justify-content: flex-start;
-                font-size: var(--fs-400);
-
-                i {
-                    margin-right: 10px;
-                }
-            }
-
-            li:last-child button {
-                background-color: #ff5a5a;
-                color: white;
-
-                i {
-                    color: white;
-                }
-            }
-        }
-    }
-
-    .separator {
-        width: 100%;
-        height: 2px;
-        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-    }
-
-    .student-statistics {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        font-family: Segoe_Script;
-
-        .student-individual-statistic {
-            padding: 10px;
-            text-align: center;
-        }
-
-        .student-individual-statistic h1 {
-            font-size: var(--fs-600);
-            margin-bottom: 0.25em;
-        }
-
-        .student-individual-statistic span {
-            font-size: var(--fs-xl);
-        }
-    }
-
-    section.profile-sections {
-        border: black solid 1px;
-        margin-top: 2vh;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-around;
-        font-size: var(--fs-600);
-        padding: 0.5em 0;
-        text-decoration: underline;
-        background-color: #a6d283;
-
-        .section-link {
-            width: 33%;
-            text-align: center;
-        }
-
-        .section-link:not(:last-child) {
-            border-right: 2px solid black;
-        }
-    }
-
-    .VIP-status-ribbon {
-        p {
-            position: relative;
-            margin: 0.7em;
-            padding: 0.5em 0.6em;
-            text-align: center;
-            margin-inline: auto;
-            width: 50%;
-            font-size: 1.75rem;
-            background-color: #e10c54;
-            z-index: 1;
-            color: whitesmoke;
-
-            span {
-                color: gold;
-            }
-        }
-
-        p::before, p::after {
-            content: "";
-            width: 2.4em;
-            height: 100%;
-
-            position: absolute;
-            top: 14px;
-            z-index: -1;
-
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25% 50%);
-
-            background-color: #e10c54;
-            background-image: linear-gradient(45deg, transparent 50%, #c11a54 50%);
-            background-size: 0.5em 0.5em;
-            background-repeat: no-repeat;
-            background-position: bottom right;
-        }
-
-        p::before {
-            left: -2em;
-        }
-
-        p::after {
-            right: -2em;
-            transform: scaleX(-1);
-        }
-    }
-
-    .wall-profile-statcard {
-        margin-top: 4vh;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+.student-basic-profile {
+    .student-info {
+        margin-top: 2em;
         padding: 1em 0;
-
-        > div {
-            width: 40%;
-            padding: 2em 0.5em;
-            border-radius: 10px;
-            border: 1px solid rgba(0, 0, 0, 0.445);
-        }
-
-        .profile-level {
-            .profile-level-inner {
-                height: 100%;
-                width: 90%;
-                margin-inline: auto;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                position: relative;
-                label {
-                    font-size: calc(var(--fs-600));
-                    font-weight: bold;
-                }
-
-                .progress {
-                    width: 90%;
-                    margin-inline: auto;
-                    progress {
-                        padding: 1rem 0px;
-                        width: 100%;
-                    }
-                }
-
-                .start-end {
-                    display: flex;
-                    margin-inline: auto;
-                    width: 90%;
-                    justify-content: space-between;
-                    span {
-                        font-size: var(--fs-lg);
-                    }
-                }
-
-
-                p {
-                    text-align: center;
-                    font-size: var(--fs-lg);
-                    font-weight: 600;
-                }
-
-                background: url(../imgs/profile_assets/swsh.png);
-                background-size: 45%;
-                background-repeat: no-repeat;
-                background-position: center;
-
-            }
-            background: linear-gradient(180deg, #5BE22B 0%, #70E049 52%, #3B8B1F 100%);
-        }
-
-        .profile-streak {
-            .profile-streak-inner {
-                width: 90%;
-                height: 100%;
-                margin-inline: auto;
-            }
-            background-image: linear-gradient(180deg, #FFF5D3  0%, #FDF8E7 51%, #C7BD9D 100%);
-
-            .profile-streak-info {
-                display: flex;
-                justify-content: space-between;
-            }
-
-            .profile-streak-weekbar {
-                margin-top: 1em;
-                display: flex;
-                justify-content: space-between;
-
-
-                i {
-                    color: #bababa;
-                }
-
-                i.on {
-                    color: #00ff09;
-                }
-
-                p {
-                    text-align: center;
-                    font-size: var(--fs-500);
-                }
-            }
-        }
-    }
-}
-
-.wall-profile-achievements {
-    background-color: #a6d283;
-    padding: 1.5em;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: var(--fs-400);
-    align-items: center;
-    width: 90%;
-    margin: auto;
-    .achievement-title {
-        text-align: center;
-        font-family: Send_Flowers;
-        font-size: var(--fs-600);
-        margin-bottom: 0.9rem;
-    }
-    .achievement-card {
+        background-color: #56479c;
         display: flex;
-        border: 1px solid black;
-        border-top: none;
-        .achievement-cup {
-            width: 15%;
-            img {
-                width: 85%;
-            }
-        }
-        .achievement-progress {
-            width: 100%;
-            justify-content: space-between;
-            margin: auto 0px;
-            position: relative;
-            h2 {
-                margin-bottom: 0.7rem;
-                font-size: var(--fs-600);
-            }
-            progress {
-                width: 90%;
-                padding: 1rem 0;
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+        justify-content: space-around;
+        align-items: center;
 
-            progress::after {
-                content: "30/100";
-                text-align: center;
-                font-size: var(--fs-300);
-                position: absolute;
-                width: 100%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                pointer-events: none;
-                background-color: transparent;
-            }
-
-
-        }
-    }
-
-}
-
-.wall-comment {
-    background-color: #a6d283;
-    padding: 1.5em;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: var(--fs-400);
-    align-items: center;
-    width: 90%;
-    margin: 1.5rem auto;
-    .comment-title {
-        font-family: Send_Flowers, sans-serif;
-        margin-bottom: 0.9rem;
-        font-size: var(--fs-600);
-        text-align: center;
-    }
-    .comment-bar {
-        display: flex;
-        border: 1px solid black;
-        border-top: none;
-        .comment-avatar {
-            width: 10%;
+        .student-avatar {
+            display: flex;
             align-items: center;
+            min-width: 300px;
+            justify-content: space-between;
+            font-family: Inter, sans-serif;
+
+            h2 span {
+                color: whitesmoke;
+            }
+
             img {
+                width: 120px;
                 border-radius: 50%;
-                width: 70%;
-                margin: 0.4rem 0.4rem;
             }
         }
-        .comment-content {
-            p {
-                margin-top: 0.4rem;
+
+        button {
+            &:hover {
+                font-weight: bold;
             }
-            p:last-child {
-                margin-top: 2.3rem;
-            }
+
+            cursor: pointer;
+            height: fit-content;
+            padding: 0.5em 0.75em;
+            font-size: 1.15rem;
+            font-family: Libre_Franklin,
+            sans-serif;
+            border-radius: 7px;
+            border: none;
+            box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+        }
+    }
+}
+
+.profile-settings {
+    display: flex;
+    margin-top: 3em;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    font-family: Libre_Franklin, sans-serif;
+    background-color: #f71735;
+
+    .section-link {
+        width: 33%;
+        text-align: center;
+        padding: 0.5em 1em;
+        cursor: pointer;
+
+        a {
+            color: aliceblue;
         }
     }
 
+    .section-link:hover {
+        background-color: rgb(248, 154, 154);
+
+        a {
+            color: black;
+            font-weight: bold;
+        }
+    }
 }
 
-@media only screen and (1000px <= width <= 1589px) {
-    :root {
-        --fs-600: 1.25rem;
-        --fs-xl: 2rem;
-        --fs-400: 1.1rem;
+.student-data {
+    display: flex;
+    margin-top: 6em;
+    justify-content: space-between;
+
+    .student-buttons {
+        li {
+            list-style-type: none;
+            margin: 0.7rem 0;
+            width: 30ch;
+
+            button {
+                display: flex;
+                width: 100%;
+                margin-bottom: 1.15em;
+                border: none;
+                padding: 0.7em;
+                box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+                -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+                background-color: #002147;
+                font-size: 1.05rem;
+                cursor: pointer;
+            }
+
+            button:hover {
+                font-weight: bold;
+            }
+        }
+
+        li:nth-child(2n + 1) button {
+            background-color: #002147;
+            color: white;
+        }
+
+        li:nth-child(2n+1) i {
+            color: white;
+            margin-right: 0.7rem;
+        }
+
+        li:nth-child(2n) button {
+            background-color: #1890ff;
+            color: white;
+        }
+
+        li:nth-child(2n) i {
+            color: white;
+            margin-right: 0.7rem;
+        }
+
     }
 
     .student-info {
-        flex-direction: column;
-        text-align: center;
-    }
-    .student-profile .student-maininfo .student-info {
-        .student-bio {
-            margin-left: 0;
+        background-color: #1f1a38;
+        width: max(60%, 600px);
+        border-radius: 10px 0 0 10px;
+        margin-left: 10%;
+        margin-bottom: 5em;
+        padding: 2em 0;
+
+        li {
+            border-top: 1px dashed white;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            padding: 1.5em;
+            font-family: sans-serif;
+
+            p {
+                color: white;
+                font-size: 1.5rem;
+            }
+
+            span {
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
+
+        li:nth-child(2n) {
+            background-color: #312c4d;
+        }
+
+        li:last-child {
+            border-bottom: 1px dashed white;
         }
     }
 
-    .student-profile .student-maininfo {
-        .student-buttonside {
-            justify-content: center;
-            margin: 0 auto;
+    .friend-info {
+        background-color: #cad3f5;
+        width: max(60%, 600px);
+        border-radius: 10px 0 0 10px;
+        margin-left: 10%;
+        margin-bottom: 5em;
+        padding: 2em 0;
+
+        img {
+            width: 15%;
+            border-radius: 50%;
         }
 
-        .student-buttons li{
-            margin-top: 0.75em;
+        h3 {
+            /*align-items: left;*/
+            text-align: left;
+            margin-right: 10rem;
         }
-    }
-}
 
-/* Styling the popup for avatar changing */
-.modal {
-    max-width: 50ch;
-    padding: 2.5em 2em;
-    text-align: center;
-    align-items: center;
-    margin-inline: auto;
-    margin-top: 40vh;
-    z-index: 4;
-
-    .input-avatar {
-        display: flex;
-        justify-content: center;
-
-        > * {
-            width: 70%;
+        li {
+            list-style-type: none;
+            border-top: 1px dashed white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5em;
+            font-family: sans-serif;
         }
-    }
-}
 
-.modal h3 {
-    margin-bottom: 1em;
-}
-
-.modal img{
-    border-radius: 50%;
-}
-
-.modal button {
-    display: block;
-    margin-inline: auto;
-    margin-top: 1em;
-    width: max-content;
-    padding: 0.35em 0.75em;
-    border-radius: 5px;
-    background-color: rgb(255, 170, 170);
-    border: none;
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-.modal .submit-avatar {
-    background-color: #a6d283;
-}
-
-#modal2 {
-    z-index: 5;
-    margin-inline: auto;
-    padding: 1em;
-    text-align: center;
-    margin-top: 10vh;
-
-    img {
-        margin: 10px 0;
-    }
-
-    button {
-        margin-top: 0.5em;
-        padding: 0.5em 1.5em;
-        background-color: #31c6f7;
-        border: none;
-        border-radius: 6px;
-    }
-
-    button:hover {
-        cursor: pointer;
-    }
-}
-
-.personalinfo-section {
-    background-color: #a6d283;
-    padding: 1.5em;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: var(--fs-400);
-    align-items: center;
-    width: 90%;
-    margin: 1.5rem auto;
-
-    .personalinfo-title {
-        display: flex;
-        justify-content: space-between;
-        font-family: Send_Flowers, sans-serif;
-        text-align: left;
-        margin-bottom: 0.9rem;
-        font-size: var(--fs-600);
-    }
-
-    .changeinfo-button {
-        position: relative;
-    }
-
-    .changeinfo-button i {
-        position: absolute;
-        top: 25%;
-        left: 5%;
-        font-size: var(--fs-400);
-    }
-
-    .changeinfo-button button{
-        padding: 0.7em 2em;
-        padding-left: 2.2em;
-        border-radius: 10px;
-        font-family: Libre_Franklin;
-
-        &:hover {
+        button {
+            width: 7rem;
+            height: 2rem;
+            border-radius: 5px;
             cursor: pointer;
+            color: white;
+            background-color: red;
+            border: none;
+            box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+
+            &:hover {
+                background-color: rgb(248, 154, 154);
+                color: black;
+            }
+        }
+
+
+    }
+
+    .comment-section {
+        background-color: #cad3f5;
+        width: max(60%, 600px);
+        border-radius: 10px 0 0 10px;
+        margin-left: 10%;
+        margin-bottom: 5em;
+        padding: 2em 0;
+
+
+        li {
+            list-style-type: none;
+            border-top: 1px dashed white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5em;
+            font-family: sans-serif;
+            margin-right: 15rem;
+
+            .comment-redirect {
+                display: none;
+            }
+
+            span {
+                margin-top: 0.3rem;
+                font-style: italic;
+            }
+
+            p {
+                margin-top: 0.7rem;
+            }
+
+            img {
+                width: 15%;
+                border-radius: 50%;
+            }
+
+            h3 {
+                /*align-items: left;*/
+                text-align: left;
+                margin-right: 10rem;
+            }
         }
     }
 
-    .profile-section {
-        background-color: var(--skin-color);
-        padding: 1em 0px;
-        font-size: var(--fs-500);
-    }
-
-    .profile-section .profile-row {
+    .pagination ol {
         display: flex;
-        flex-wrap: wrap;
-        width: 80%;
-        margin-inline: auto;
-        justify-content: space-between;
-        padding: 0.6rem 0px;
-        align-items: center;
-    }
-
-    .profile-section .profile-row p {
-        width: 50%;
-        text-align: left;
-    }
-}
-
-@media only screen and (width < 1000px) {
-    .student-profile section.wall-profile-statcard > div {
-        margin-top: 2em;
-        width: max(60%, 350px);
-    }
-
-    .student-profile .student-maininfo .student-info,
-    .student-profile .student-maininfo .student-buttonside {
-        width: 100%;
         justify-content: center;
+
+        button {
+            display: flex;
+            align-items: center;
+            font-family: Libre_Franklin, sans-serif;
+            width: fit-content;
+            padding: 1em 1em;
+            border: 1px solid #00688b;
+            /* Darker colder shade */
+            border-radius: 5px;
+            background-image: linear-gradient(180deg, #5f9ea0 0%, #4682b4 49%, #2e8b57 50%, #004953 100%);
+            /* Darker colder shades */
+            transition: transform, color, border-color, 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        button:hover {
+            cursor: pointer;
+            transform: scale(1.35);
+            border-radius: 50%;
+            color: white;
+            border-color: #cad3f5;
+        }
     }
 
-    .student-profile .student-maininfo .student-buttons{
-        margin-top: 1em;
-        margin-inline: auto;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
 }

@@ -1,36 +1,39 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page contentType="text/html" pageEncoding="utf-8" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imgs/favicon/favicon.ico">
-    <title> Xác nhận </title>
-    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+          type="text/css" />
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/coursenav.css">
-    <link rel="stylesheet" href="css/content.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/login.css">
-    <style>
-        .footer {
-            margin-top: 5em;
-        }
-    </style>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <scrip href="js/searchLesson.js"></scrip>
 </head>
+
 <body>
 <div class="container">
+
     <nav class="top-nav">
-        <div>
+        <div class="logodiv">
             <a class="logo" href="${pageContext.request.contextPath}/index">
-                <img src="imgs/TheEngWayLogo.png" alt="The Logo">
+                <h1>TheEngWay</h1>
             </a>
         </div>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <ul class="menu-items">
             <li class="search">
-                <i class="fad fa-search"></i>
-                <input class="search-bar" placeholder="Search lessons here">
+                <form action="${pageContext.request.contextPath}/actSearchLessonServlet" method="get">
+                    <i class="fad fa-search"></i>
+                    <input class="search-bar" id="search-bar" name="searchString" placeholder="Search lessons here" onkeyup="searchSuggestions()">
+                    <button type="submit" class="search-button">Search</button>
+                    <div id="suggestions" class="suggestions"></div>
+                </form>
+
             </li>
             <li> <a href="${pageContext.request.contextPath}/login" class="navlogin">Đăng nhập</a> </li>
             <li> <a href="${pageContext.request.contextPath}/register" class="registerlogin">Đăng ký</a> </li>
@@ -40,109 +43,83 @@
         </label>
     </nav>
 
-    <div class="course-div">
+    <section class="course-div">
         <ul class="course-nav" aria-label="nav">
             <li>
-                <a href="${pageContext.request.contextPath}/index"><i class="far fa-home-lg-alt fa-2x"></i></a>
+                <a href="${pageContext.request.contextPath}/studentHome"><i class="far fa-home-lg-alt fa-2x"></i></a>
             </li>
             <li>
-                <a href="#">Kĩ năng</a>
-                <ul class="dropdown">
-                    <li><a href="${pageContext.request.contextPath}/skillListening">Listening</a></li>
-                    <li><a href="${pageContext.request.contextPath}/skillReading">Reading</a></li>
-                    <li><a href="${pageContext.request.contextPath}/skillWriting">Writing</a></li>
-                    <li><a href="#">Grammar</a></li>
-                    <li><a href="#">Từ vựng</a></li>
-                </ul>
+                <a href="${pageContext.request.contextPath}/skills/vocabulary.jsp">Từ vựng</a>
             </li>
             <li>
-                <a href="#">TA Tiểu học</a>
-                <ul class="dropdown">
-                    <li><a href="#">Tiếng Anh lớp 1</a></li>
-                    <li><a href="#">Tiếng Anh lớp 2</a></li>
-                    <li><a href="#">Tiếng Anh lớp 3</a></li>
-                    <li><a href="#">Tiếng Anh lớp 4</a></li>
-                    <li><a href="#">Tiếng Anh lớp 5</a></li>
-                </ul>
+                <a href="${pageContext.request.contextPath}/skills/grammar.jsp">Ngữ pháp</a>
             </li>
             <li>
-                <a href="#">TA Trung học CS</a>
-                <ul class="dropdown">
-                    <li><a href="#">Tiếng Anh lớp 6</a></li>
-                    <li><a href="#">Tiếng Anh lớp 7</a></li>
-                    <li><a href="#">Tiếng Anh lớp 8</a></li>
-                    <li><a href="#">Tiếng Anh lớp 9</a></li>
-                </ul>
+                <a href="${pageContext.request.contextPath}/skills/pronunciation.jsp">Phát âm</a>
             </li>
             <li>
-                <a href="#">TA Trung học PT</a>
-                <ul class="dropdown">
-                    <li><a href="#">Tiếng Anh lớp 10</a></li>
-                    <li><a href="#">Tiếng Anh lớp 11</a></li>
-                    <li><a href="#">Tiếng Anh lớp 12</a></li>
-                </ul>
+                <a href="${pageContext.request.contextPath}/skills/vocabulary.jsp">Kĩ năng</a>
             </li>
             <li>
-                <a href="#">Tổng hợp</a>
-                <ul class="dropdown">
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="#">Cuộc thi</a></li>
-                    <li><a href="#">Test Kiểm tra trình độ</a></li>
-                    <li><a href="#">Kiểm tra các khối</a></li>
-                    <li><a href="#">Bài tập chấm điểm</a></li>
-                </ul>
+                <a href="${pageContext.request.contextPath}/skills/vocabulary.jsp">Kiểm tra</a>
+            </li>
+            <li>
+                <a href="#">Quiz</a>
+            </li>
+            <li>
+                <a href="">FAQs</a>
             </li>
         </ul>
-    </div>
-
-    <div class="banner">
-        <a href="#"><img src="imgs/VIP-image.png" alt="VIP banner"></a>
-    </div>
+    </section>
 
     <div class="main-content">
-        <div class="content">
-            <div class="login-form">
-                <div class="login-shape">
-                    <div class="login-title">
-                        <h2>NHẬP OTP</h2>
-                    </div>
+        <div class="login-form">
+            <div class="login-shape">
+                <div class="login-title">
+                    <h1>NHẬP OTP</h1>
                 </div>
+            </div>
 
-                <div class="login-input">
-                    <form action="${pageContext.request.contextPath}/actVerifyOTP" method="post">
-                        <div class="input-group">
-                            <i class="fas fa-key fa-2x"></i>
-                            <div class="label"><label for="verificationCode">Nhập OTP</label></div>
-                            <div class="input"><input type="text" id="verificationCode" name="verificationCode" required></div>
-                        </div>
-                        <div class="login-confirmation">
-                            <button type="submit">Xác nhận</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="login-input">
+                <form action="${pageContext.request.contextPath}/actVerifyOTP" method="post">
+                    <div class="input-group">
+                        <div class="label"><label for="verificationCode">Nhập OTP</label></div>
+                        <div class="input"><input type="text" id="verificationCode" name="verificationCode" required></div>
+                    </div>
+                    <div class="login-confirmation">
+                        <button type="submit">Xác nhận OTP</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <div class="footer">
         <div class="copyright">
-            <p><b>Copyright TheEngWay.com © 2023 - 2024</b></p>
-            <img src="imgs/logogov.png" alt="Bộ Công thương">
+            <p class="heading-para">Copyright TheEngWay.com © 2023 - 2024</p>
         </div>
         <div class="contact_phone">
-            <p><b>Contact us via phone numbers:</b></p>
-            <br>
-            <p><i class="fad fa-phone fa-2x"></i> +84 696969696</p>
-        </div>
-        <div class="contact_social">
-            <p class="contact_paragraph"><b>Contact us via social medias:</b></p>
+            <p class="heading-para">Contact us via email:</p>
             <div class="contact-information">
                 <div class="contact-line">
-                    <i class="fab fa-facebook fa-2x"></i>
+                    <p><i class="far fa-at fa-lg"></i> theengwaymaster@8zulieu.com</p>
+                </div>
+
+                <div class="contact-line">
+                    <p><i class="fas fa-phone-alt fa-lg"></i> +84 0359 271 620</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="contact_social">
+            <p class="heading-para">Contact us via social medias:</p>
+            <div class="contact-information">
+                <div class="contact-line">
+                    <i class="fab fa-facebook fa-lg"></i>
                     <a href="#">facebook.com/TheEngWay</a>
                 </div>
                 <div class="contact-line">
-                    <i class="fab fa-linkedin-in fa-2x"></i>
+                    <i class="fab fa-linkedin-in fa-lg"></i>
                     <a href="#">linkedin.com/TheEngWay</a>
                 </div>
             </div>
